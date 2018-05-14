@@ -7,8 +7,7 @@
 
     *cd client
          npm run build
-         ng build --watch --poll
-    
+            
     cd server
         npm run start-dev
   
