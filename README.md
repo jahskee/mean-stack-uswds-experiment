@@ -3,7 +3,8 @@
 ## During Development
 
     *cd client
-        ng build --watch --poll
+         npm run build
+         ng build --watch --poll
     
     cd server
         npm run start-dev
