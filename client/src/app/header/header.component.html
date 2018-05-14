@@ -1,29 +1,115 @@
-<div id='header'>
-    <!--
-        style='display: flex;text-align: left; align-items: center; 
-     margin-left: 3rem; width: 100%'>-->
-    <div id='header-top' style='display: flex;text-align: left; align-items: center; 
-    margin-left: 3rem; width: 100%'>
-        <img src="/assets/uswds-1.6.3/img/favicons/favicon-57.png" alt="U.S. flag" style='width: 2.5rem;
-            height: 2.1rem; margin-right: 0.8rem'>
-        <span style='margin-right: 0.4rem'>An official website of the United States government</span>
-        <button class="usa-accordion-button usa-banner-button" aria-expanded="false" aria-controls="gov-banner">
+<header style='margin:0'>
+  <div class="usa-banner">
+    <div class="usa-accordion">
+      <header class="usa-banner-header">
+        <div class="usa-grid usa-banner-inner" style='width: 600px; margin-left:0; text-align: left'>
+          <img src="/assets/uswds-1.6.3/img/favicons/favicon-57.png" alt="U.S. flag">
+          <span>An official website of the United States government</span>
+          <button class="usa-accordion-button usa-banner-button" aria-expanded="false" aria-controls="gov-banner">
             <span class="usa-banner-button-text">Here's how you know</span>
+          </button>
+        </div>
+      </header>
+      <div class="usa-banner-content usa-grid usa-accordion-content" id="gov-banner">
+        <div class="usa-banner-guidance-gov usa-width-one-half">
+          <img class="usa-banner-icon usa-media_block-img" src="/assets/uswds-1.6.3/img/icon-dot-gov.svg" alt="Dot gov">
+          <div class="usa-media_block-body">
+            <p>
+              <strong>The .gov means it’s official.</strong>
+              <br> Federal government websites often end in .gov or .mil. Before sharing sensitive information, make sure you’re
+              on a federal government site.
+            </p>
+          </div>
+        </div>
+        <div class="usa-banner-guidance-ssl usa-width-one-half">
+          <img class="usa-banner-icon usa-media_block-img" src="/assets/uswds-1.6.3/img/icon-https.svg" alt="Https">
+          <div class="usa-media_block-body">
+            <p>
+              <strong>The site is secure.</strong>
+              <br> The
+              <strong>https://</strong> ensures that you are connecting to the official website and that any information you provide
+              is encrypted and transmitted securely.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="usa-header usa-header-basic" role="banner">
+    <div class="usa-nav-container">
+      <div class="usa-navbar">
+        <div class="usa-logo" id="basic-logo">
+          <em class="usa-logo-text">
+            <a href="/" title="Home" aria-label="Home">
+              US Department of Agriculture
+            </a>
+          </em>
+        </div>
+        <button class="usa-menu-btn">Menu</button>
+      </div>
+
+      <nav role="navigation" class="usa-nav">
+
+        <button class="usa-nav-close">
+          <img src="/assets/uswds-1.6.3/img/close.svg" alt="close">
         </button>
-
+        <ul class="usa-nav-primary usa-accordion">
+          <li>
+            <button class="usa-accordion-button usa-nav-link" aria-expanded="false" aria-controls="basic-nav-section-one">
+              <span>Section title</span>
+            </button>
+            <ul id="basic-nav-section-one" class="usa-nav-submenu">
+              <li>
+                <a href="#">Subsection title</a>
+              </li>
+              <li>
+                <a href="#">Subsection title</a>
+              </li>
+              <li>
+                <a href="#">Subsection title</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <button class="usa-accordion-button usa-nav-link" aria-expanded="false" aria-controls="basic-nav-section-two">
+              <span>Simple terms</span>
+            </button>
+            <ul id="basic-nav-section-two" class="usa-nav-submenu">
+              <li>
+                <a href="#">Subsection title</a>
+              </li>
+              <li>
+                <a href="#">Subsection title</a>
+              </li>
+              <li>
+                <a href="#">Subsection title</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="usa-nav-link" href="javascript:void(0)">
+              <span>Distinct from each other</span>
+            </a>
+          </li>
+        </ul>
+      <!--
+        <form class="usa-search usa-search-small ">
+          <div role="search">
+            <label class="usa-sr-only" for="basic-search-field-small">Search small</label>
+            <input id="basic-search-field-small" type="search" name="search">
+            <button type="submit">
+              <span class="usa-sr-only">Search</span>
+            </button>
+          </div>
+        </form>
+    
+      -->
+      </nav>
     </div>
-
-    <div id='header-mid' style='display:flex; vertical-align: middle; align-items: center;
-                                background-color: #006044; height: 80px; '>
-        <header class="usa-banner-header" style='display:flex; vertical-align: middle; color: white; margin-left: 3rem; '>
-            <h1>US Department of Agriculture</h1>
-        </header>
-    </div>
-
-    <div id='header-bottom'>
-        <img src='/assets/images/logo/usda-01.png'>
+  </header>
+  <div class="usa-overlay"></div>
+</header>
 
 
-    </div>
-
-</div>
+<main id="main-content"></main>
