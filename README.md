@@ -2,10 +2,11 @@
 
 ## During Development
 
-    cd client
-    npm start
+    *cd client
+        ng build watch
+    
     cd server
-    npm run start-dev
+        npm run start-dev
   
 # Access Dev  
     access client: http://localhost:8080
