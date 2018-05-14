@@ -1,4 +1,4 @@
-<header style='margin:0'>
+<div id='my-header' style='margin:0'>
   <div class="usa-banner">
     <div class="usa-accordion">
       <header class="usa-banner-header">
@@ -35,17 +35,24 @@
       </div>
     </div>
   </div>
-
+ <style>
+   my-logo {
+    margin: 0; text-align: left;
+   }
+ </style>
   <header class="usa-header usa-header-basic" role="banner">
+    <div id='my-top-menu' style = 'width: 100vw; background-color:#006747; 
+                                  color:white; padding: 10px; padding-left: 30px; display: flex; flex-direction: row' >      
+        <img src='/assets/images/logo/usda-circle.png' style='width: 80px; height: 80px; text-align: left; margin-right: 10px;
+        vertical-align: middle' >
+        <div> 
+          <h3 style='margin: 0; text-align: left; padding-top: 15px'>U.S. Department of Agriculture </h3>
+          <h4 style='margin: 0; text-align: left; padding-top: 5px'>eAuthentication Service</h4>
+        </div>
+      </div>
     <div class="usa-nav-container">
       <div class="usa-navbar">
-        <div class="usa-logo" id="basic-logo">
-          <em class="usa-logo-text">
-            <a href="/" title="Home" aria-label="Home">
-              US Department of Agriculture
-            </a>
-          </em>
-        </div>
+        
         <button class="usa-menu-btn">Menu</button>
       </div>
 
@@ -109,7 +116,7 @@
     </div>
   </header>
   <div class="usa-overlay"></div>
-</header>
+</div>
 
 
 <main id="main-content"></main>
