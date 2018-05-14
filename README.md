@@ -10,8 +10,13 @@
             
     cd server
         npm run start-dev
-  
-# Access Dev  
+
+## In Production
+   
+   cd server
+   nohup npm start &
+   
+## Access Dev  
     access client: https://localhost
     
 ## View components CSS
