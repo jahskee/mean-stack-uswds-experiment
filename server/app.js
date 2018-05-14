@@ -98,7 +98,8 @@ app.use("/", express.static(path.join(__dirname, "../client/dist")));
 app.use(function(req, res, next) {
   var err = new Error("Not Found");
   err.status = 404;
-  res.redirect("/");
+  res.end()
+  //res.redirect("/");
 });
 
 // error handler
