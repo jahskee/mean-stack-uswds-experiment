@@ -1,10 +1,11 @@
 # MEAN Stack USWDS & RWD - Containerized
 
 ## During Development
-  cd client
-  npm start
-  cd server
-  npm run start-dev
+
+    cd client
+    npm start
+    cd server
+    npm run start-dev
   
 # Access Dev  
   access client: http://localhost:8080
