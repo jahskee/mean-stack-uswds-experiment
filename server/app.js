@@ -42,6 +42,8 @@ app.use(bodyparser.json());
 app.engine("html", require("ejs").renderFile);
 app.set("view engine", "html");
 
+console.log('Environment: ' + process.env.APP_ENVIRONMENT)
+
 // generate jwt tokent - simple implementation
 app.get("/token", function(req, res) {
   try {
@@ -74,6 +76,7 @@ app.use("/api", function(req, res, next) {
 
 // Protect route with JWT Token
 app.use("/api*", function(req, res, next) {
+ // if (process.env.APP_ENVIRONMENT === 'dev') next();
   var token = req.query.token;
   jwt.verify(token, "supersecret", function(err, decoded) {
     if (!err) {
