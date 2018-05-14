@@ -190,7 +190,7 @@ module.exports = "#header {\n  position:absolute;\n  top:0;\n  width:100%;\n  he
 /***/ "./src/app/header/header.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id='header'>\n    <h1>\n       Contacts App\n      </h1>\n</div>\n\n"
+module.exports = "<div id='header'>\n    <h1>\n       Contacts App\n      </h1>\n      <header class=\"usa-banner-header\">\n        <div class=\"usa-grid usa-banner-inner\">\n            <img src=\"../../dist/img/favicons/favicon-57.png\" alt=\"U.S. flag\">\n            <p>An official website of the United States government</p>\n            <button class=\"usa-accordion-button usa-banner-button\" aria-expanded=\"false\" aria-controls=\"gov-banner\">\n                <span class=\"usa-banner-button-text\">Here's how you know</span>\n        </button>\n        </div>\n    </header>\n</div>\n\n"
 
 /***/ }),
 
