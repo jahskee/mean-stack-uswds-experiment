@@ -1,9 +1,9 @@
- /* You can add global styles to this file, and also import other style files */
- * {
+/* You can add global styles to this file, and also import other style files */
+* {
   box-sizing: border-box; }
 
 html {
-  padding: 0;
+  padding: 2;
   font-size: 11px; }
 
 body {
@@ -37,5 +37,4 @@ h5 {
   font-style: italic; }
 
 input {
-    padding-left: 10px;
-}
+  padding-left: 10px; }
