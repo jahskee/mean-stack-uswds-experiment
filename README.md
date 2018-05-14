@@ -3,8 +3,12 @@
 ## During Development
   cd client
   npm start
-  access http://localhost:8080
+  cd server
+  npm run start-dev
   
+# Access Dev  
+  access client: http://localhost:8080
+    
 ## View components CSS
   https://components.designsystem.digital.gov/
 
