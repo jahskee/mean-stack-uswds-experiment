@@ -1,6 +1,6 @@
 # MEAN Stack USWDS & RWD - Containerized
 
-## View component CSS
+## View components CSS
 https://components.designsystem.digital.gov/
 
 ## Base documentation
