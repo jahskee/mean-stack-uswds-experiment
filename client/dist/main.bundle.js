@@ -20,7 +20,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\" class='container-fluid'>\n  <app-header></app-header>\n  <router-outlet></router-outlet>\n  <app-footer></app-footer>\n</div>  \n\n\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center;\" class='container-fluid'>\n  <app-header></app-header>\n  <router-outlet></router-outlet>\n  <app-footer></app-footer>\n</div>  \n\n\n"
 
 /***/ }),
 
@@ -130,17 +130,17 @@ exports.AppModule = AppModule;
 
 /***/ }),
 
-/***/ "./src/app/footer/footer.component.css":
-/***/ (function(module, exports) {
-
-module.exports = "footer {  \n  position:absolute;\n  bottom:0;\n  width:100%;\n  height:50px;   /* Height of the footer */\n  background:rgb(145, 199, 226);\n}\n\np {\n  margin-top: 10px;\n  margin-bottom: 0;\n}"
-
-/***/ }),
-
 /***/ "./src/app/footer/footer.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<footer>\n    <p>\n        <div>\n            Project #7\n        </div>      \n        <div>\n            CSCI E-31: Web Development with Node.JS\n        </div>\n   \n</footer>\n"
+module.exports = "<footer style='background-color: #006044; color: white'>\n    <p>\n        <div>\n            Project #7\n        </div>      \n        <div>\n            CSCI E-31: Web Development with Node.JS\n        </div>\n   \n</footer>\n"
+
+/***/ }),
+
+/***/ "./src/app/footer/footer.component.scss":
+/***/ (function(module, exports) {
+
+module.exports = "footer {\n  bottom: 0;\n  width: 100%;\n  height: 50px;\n  /* Height of the footer */\n  background: #91c7e2; }\n\np {\n  margin-top: 10px;\n  margin-bottom: 0; }\n"
 
 /***/ }),
 
@@ -169,7 +169,7 @@ var FooterComponent = /** @class */ (function () {
         core_1.Component({
             selector: 'app-footer',
             template: __webpack_require__("./src/app/footer/footer.component.html"),
-            styles: [__webpack_require__("./src/app/footer/footer.component.css")]
+            styles: [__webpack_require__("./src/app/footer/footer.component.scss")]
         }),
         __metadata("design:paramtypes", [])
     ], FooterComponent);
@@ -180,17 +180,17 @@ exports.FooterComponent = FooterComponent;
 
 /***/ }),
 
-/***/ "./src/app/header/header.component.css":
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
 /***/ "./src/app/header/header.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id='header'>\n    <!--\n        style='display: flex;text-align: left; align-items: center; \n     margin-left: 3rem; width: 100%'>-->\n    <div id='header-top' style='display: flex;text-align: left; align-items: center; \n    margin-left: 3rem; width: 100%'>      \n            <img src=\"/assets/uswds-1.6.3/img/favicons/favicon-57.png\" alt=\"U.S. flag\" style='width: 2.5rem;\n            height: 2.1rem; margin-right: 0.8rem'>\n            <span style='margin-right: 0.4rem'>An official website of the United States government</span>\n            <button class=\"usa-accordion-button usa-banner-button\" aria-expanded=\"false\" aria-controls=\"gov-banner\">\n                <span class=\"usa-banner-button-text\">Here's how you know</span>\n            </button>\n       \n    </div>\n\n    <div id='header-mid' style='background-color: lightblue; height: 80px'>\n        <header class=\"usa-banner-header\">\n            <h1>Contacts App1 </h1>\n        </header>\n    </div>\n\n    <div id='header-bottom'>\n\n\n\n    </div>\n</div>"
+module.exports = "<div id='header'>\n    <!--\n        style='display: flex;text-align: left; align-items: center; \n     margin-left: 3rem; width: 100%'>-->\n    <div id='header-top' style='display: flex;text-align: left; align-items: center; \n    margin-left: 3rem; width: 100%'>\n        <img src=\"/assets/uswds-1.6.3/img/favicons/favicon-57.png\" alt=\"U.S. flag\" style='width: 2.5rem;\n            height: 2.1rem; margin-right: 0.8rem'>\n        <span style='margin-right: 0.4rem'>An official website of the United States government</span>\n        <button class=\"usa-accordion-button usa-banner-button\" aria-expanded=\"false\" aria-controls=\"gov-banner\">\n            <span class=\"usa-banner-button-text\">Here's how you know</span>\n        </button>\n\n    </div>\n\n    <div id='header-mid' style='display:flex; vertical-align: middle; align-items: center;\n                                background-color: #006044; height: 80px; '>\n        <header class=\"usa-banner-header\" style='display:flex; vertical-align: middle; color: white; margin-left: 3rem; '>\n            <h1>US Department of Agriculture</h1>\n        </header>\n    </div>\n\n    <div id='header-bottom'>\n        <img src='/assets/images/logo/usda-01.png'>\n\n\n    </div>\n\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/header/header.component.scss":
+/***/ (function(module, exports) {
+
+module.exports = ""
 
 /***/ }),
 
@@ -219,7 +219,7 @@ var HeaderComponent = /** @class */ (function () {
         core_1.Component({
             selector: 'app-header',
             template: __webpack_require__("./src/app/header/header.component.html"),
-            styles: [__webpack_require__("./src/app/header/header.component.css")]
+            styles: [__webpack_require__("./src/app/header/header.component.scss")]
         }),
         __metadata("design:paramtypes", [])
     ], HeaderComponent);
