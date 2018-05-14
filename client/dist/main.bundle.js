@@ -183,14 +183,14 @@ exports.FooterComponent = FooterComponent;
 /***/ "./src/app/header/header.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "#header {\n  position:absolute;\n  top:0;\n  width:100%;\n  height:60px;   /* Height of the footer */\n  background:rgb(145, 199, 226);\n  padding-top: 10px;\n}"
+module.exports = ""
 
 /***/ }),
 
 /***/ "./src/app/header/header.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id='header'>\n    <h1>\n       Contacts App\n      </h1>\n      <header class=\"usa-banner-header\">\n        <div class=\"usa-grid usa-banner-inner\">\n            <img src=\"../../dist/img/favicons/favicon-57.png\" alt=\"U.S. flag\">\n            <p>An official website of the United States government</p>\n            <button class=\"usa-accordion-button usa-banner-button\" aria-expanded=\"false\" aria-controls=\"gov-banner\">\n                <span class=\"usa-banner-button-text\">Here's how you know</span>\n        </button>\n        </div>\n    </header>\n</div>\n\n"
+module.exports = "<div id='header'>\n    <!--\n        style='display: flex;text-align: left; align-items: center; \n     margin-left: 3rem; width: 100%'>-->\n    <div id='header-top' style='display: flex;text-align: left; align-items: center; \n    margin-left: 3rem; width: 100%'>      \n            <img src=\"/assets/uswds-1.6.3/img/favicons/favicon-57.png\" alt=\"U.S. flag\" style='width: 2.5rem;\n            height: 2.1rem; margin-right: 0.8rem'>\n            <span style='margin-right: 0.4rem'>An official website of the United States government</span>\n            <button class=\"usa-accordion-button usa-banner-button\" aria-expanded=\"false\" aria-controls=\"gov-banner\">\n                <span class=\"usa-banner-button-text\">Here's how you know</span>\n            </button>\n       \n    </div>\n\n    <div id='header-mid' style='background-color: lightblue; height: 80px'>\n        <header class=\"usa-banner-header\">\n            <h1>Contacts App1 </h1>\n        </header>\n    </div>\n\n    <div id='header-bottom'>\n\n\n\n    </div>\n</div>"
 
 /***/ }),
 

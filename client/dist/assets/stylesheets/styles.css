@@ -3,13 +3,13 @@
   box-sizing: border-box; }
 
 html {
-  padding: 2;
-  font-size: 11px; }
+  padding: 0;
+  font-size: 8px; }
 
 body {
   padding: 0;
   margin: 0;
-  font: 14px Lato, "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 8px Lato, "Lucida Grande", Helvetica, Arial, sans-serif;
   min-width: 470px; }
 
 h1 {
