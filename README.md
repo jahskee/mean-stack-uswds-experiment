@@ -8,12 +8,12 @@
     *cd client
          npm run build
             
-    cd server
+     cd server
         npm run start-dev
 
 ## In Production
    
-   cd server
+   cd server   
    nohup npm start &
    
 ## Access Dev  
