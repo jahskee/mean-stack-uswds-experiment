@@ -1,15 +1,22 @@
 # MEAN Stack USWDS & RWD - Containerized
 
+## USWDS Website
+   https://designsystem.digital.gov/
+
 ## During Development
 
     *cd client
          npm run build
-         ng build --watch --poll
-    
-    cd server
+            
+     cd server
         npm run start-dev
-  
-# Access Dev  
+
+## In Production
+   
+   cd server   
+   nohup npm start &
+   
+## Access Dev  
     access client: https://localhost
     
 ## View components CSS
