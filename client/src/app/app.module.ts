@@ -5,26 +5,33 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './customer/public/header/header.component';
-import { FooterComponent } from './customer/public/footer/footer.component';
+import { HeaderComponent } from './_common/header/header.component';
+import { FooterComponent } from './_common/footer/footer.component';
 
-import { Page1Component } from './customer/public/page1/page1.component';
-import { AddContactFormComponent } from './customer/public/page1/add-contact-form/add-contact-form.component';
-import { ContactListComponent } from './customer/public/page1/contact-list/contact-list.component';
-import { Page2Component } from './customer/public/page2/page2.component';
+import { AddContactFormComponent } from './public/page1/add-contact-form/add-contact-form.component';
+import { ContactListComponent } from './public/page1/contact-list/contact-list.component';
+import { Page2Component } from './public/page2/page2.component';
 
 import { ContactService } from './services/contact.service';
 import { ReactiveFormsModule } from '@angular/forms';
-import { RegisterComponent } from './customer/public/register/register.component';
-import { SigninComponent } from './customer/public/signin/signin.component';
+import { RegisterComponent } from './public/register/register.component';
+import { SigninComponent } from './public/signin/signin.component';
+import { ServicepageComponent } from './public/servicepage/servicepage.component';
+import { PartnersComponent } from './public/partners/partners.component';
+import { ContactComponent } from './public/contact/contact.component';
+import { PasswordResetComponent } from './public/password-reset/password-reset.component';
+import { HomeComponent } from './public/home/home.component';
 
 const routes: Routes = [
-  { path: 'page1', component: Page1Component },
   { path: 'signin', component: SigninComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'partners', component: PartnersComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'service', component: ServicepageComponent },
   { path: 'page2/:contactId', component: Page2Component },
-  { path: '', component: Page1Component },
-  { path: '**', component: Page1Component },
+  { path: 'passwordreset', component: PasswordResetComponent },
+  { path: '', component: HomeComponent },
+  { path: '**', component: HomeComponent },
 ];
 
 @NgModule({
@@ -34,10 +41,14 @@ const routes: Routes = [
     FooterComponent,
     AddContactFormComponent,
     ContactListComponent,
-    Page1Component,
     Page2Component,
     RegisterComponent,   
-    SigninComponent
+    SigninComponent, 
+    ServicepageComponent, 
+    PartnersComponent,    
+    ContactComponent, 
+    PasswordResetComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
