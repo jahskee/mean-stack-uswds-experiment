@@ -5,18 +5,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './customer/header/header.component';
-import { FooterComponent } from './customer/footer/footer.component';
+import { HeaderComponent } from './customer/public/header/header.component';
+import { FooterComponent } from './customer/public/footer/footer.component';
 
-import { Page1Component } from './customer/page1/page1.component';
-import { AddContactFormComponent } from './customer/page1/add-contact-form/add-contact-form.component';
-import { ContactListComponent } from './customer/page1/contact-list/contact-list.component';
-import { Page2Component } from './customer/page2/page2.component';
+import { Page1Component } from './customer/public/page1/page1.component';
+import { AddContactFormComponent } from './customer/public/page1/add-contact-form/add-contact-form.component';
+import { ContactListComponent } from './customer/public/page1/contact-list/contact-list.component';
+import { Page2Component } from './customer/public/page2/page2.component';
 
 import { ContactService } from './services/contact.service';
 import { ReactiveFormsModule } from '@angular/forms';
-import { RegisterComponent } from './customer/register/register.component';
-import { SigninComponent } from './customer/signin/signin.component';
+import { RegisterComponent } from './customer/public/register/register.component';
+import { SigninComponent } from './customer/public/signin/signin.component';
 
 const routes: Routes = [
   { path: 'page1', component: Page1Component },
