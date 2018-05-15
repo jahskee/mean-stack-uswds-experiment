@@ -1,6 +1,6 @@
-<div id="add-contact-form" class='card' (click)='formClick()'>
-  <div class='card-header'><h4>New Contact</h4></div>
-  <div class='card-body'>
+<div id="add-contact-form"  (click)='formClick()' style='margin-right: 1rem; margin-top: 1rem'>
+  <div style='text-align: left;'>New Contact</div>
+  <div>
       <form (ngSubmit)='onSubmit(contact)' [formGroup]='contact' >
    
           <div>

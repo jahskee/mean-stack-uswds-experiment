@@ -93,6 +93,8 @@ var contact_list_component_1 = __webpack_require__("./src/app/page1/contact-list
 var page2_component_1 = __webpack_require__("./src/app/page2/page2.component.ts");
 var contact_service_1 = __webpack_require__("./src/app/services/contact.service.ts");
 var forms_1 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+var register_component_1 = __webpack_require__("./src/app/register/register.component.ts");
+var login_component_1 = __webpack_require__("./src/app/login/login.component.ts");
 var routes = [
     { path: 'page1', component: page1_component_1.Page1Component },
     { path: 'page2/:contactId', component: page2_component_1.Page2Component },
@@ -111,7 +113,9 @@ var AppModule = /** @class */ (function () {
                 add_contact_form_component_1.AddContactFormComponent,
                 contact_list_component_1.ContactListComponent,
                 page1_component_1.Page1Component,
-                page2_component_1.Page2Component
+                page2_component_1.Page2Component,
+                register_component_1.RegisterComponent,
+                login_component_1.LoginComponent
             ],
             imports: [
                 platform_browser_1.BrowserModule,
@@ -183,7 +187,7 @@ exports.FooterComponent = FooterComponent;
 /***/ "./src/app/header/header.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id='my-header' style='margin:0'>\n  <div class=\"usa-banner\">\n    <div class=\"usa-accordion\">\n      <header class=\"usa-banner-header\">\n        <div class=\"usa-grid usa-banner-inner\" style='width: 600px; margin-left:0; text-align: left'>\n          <img src=\"/assets/uswds-1.6.3/img/favicons/favicon-57.png\" alt=\"U.S. flag\">\n          <span>An official website of the United States government</span>\n          <button class=\"usa-accordion-button usa-banner-button\" aria-expanded=\"false\" aria-controls=\"gov-banner\">\n            <span class=\"usa-banner-button-text\">Here's how you know</span>\n          </button>\n        </div>\n      </header>\n      <div class=\"usa-banner-content usa-grid usa-accordion-content\" id=\"gov-banner\">\n        <div class=\"usa-banner-guidance-gov usa-width-one-half\">\n          <img class=\"usa-banner-icon usa-media_block-img\" src=\"/assets/uswds-1.6.3/img/icon-dot-gov.svg\" alt=\"Dot gov\">\n          <div class=\"usa-media_block-body\">\n            <p>\n              <strong>The .gov means it’s official.</strong>\n              <br> Federal government websites often end in .gov or .mil. Before sharing sensitive information, make sure you’re\n              on a federal government site.\n            </p>\n          </div>\n        </div>\n        <div class=\"usa-banner-guidance-ssl usa-width-one-half\">\n          <img class=\"usa-banner-icon usa-media_block-img\" src=\"/assets/uswds-1.6.3/img/icon-https.svg\" alt=\"Https\">\n          <div class=\"usa-media_block-body\">\n            <p>\n              <strong>The site is secure.</strong>\n              <br> The\n              <strong>https://</strong> ensures that you are connecting to the official website and that any information you provide\n              is encrypted and transmitted securely.\n            </p>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n <style>\n   my-logo {\n    margin: 0; text-align: left;\n   }\n </style>\n  <header class=\"usa-header usa-header-basic\" role=\"banner\">\n    <div id='my-top-menu' style = 'width: 100vw; background-color:#006747; \n                                  color:white; padding: 10px; padding-left: 30px; display: flex; flex-direction: row' >      \n        <img src='/assets/images/logo/usda-circle.png' style='width: 80px; height: 80px; text-align: left; margin-right: 10px;\n        vertical-align: middle' >\n        <div> \n          <h3 style='margin: 0; text-align: left; padding-top: 15px'>U.S. Department of Agriculture </h3>\n          <h4 style='margin: 0; text-align: left; padding-top: 5px'>eAuthentication Service</h4>\n        </div>\n      </div>\n    <div class=\"usa-nav-container\">\n      <div class=\"usa-navbar\">\n        \n        <button class=\"usa-menu-btn\">Menu</button>\n      </div>\n\n      <nav role=\"navigation\" class=\"usa-nav\">\n\n        <button class=\"usa-nav-close\">\n          <img src=\"/assets/uswds-1.6.3/img/close.svg\" alt=\"close\">\n        </button>\n        <ul class=\"usa-nav-primary usa-accordion\">\n          <li>\n            <button class=\"usa-accordion-button usa-nav-link\" aria-expanded=\"false\" aria-controls=\"basic-nav-section-one\">\n              <span>Section title</span>\n            </button>\n            <ul id=\"basic-nav-section-one\" class=\"usa-nav-submenu\">\n              <li>\n                <a href=\"#\">Subsection title</a>\n              </li>\n              <li>\n                <a href=\"#\">Subsection title</a>\n              </li>\n              <li>\n                <a href=\"#\">Subsection title</a>\n              </li>\n            </ul>\n          </li>\n          <li>\n            <button class=\"usa-accordion-button usa-nav-link\" aria-expanded=\"false\" aria-controls=\"basic-nav-section-two\">\n              <span>Simple terms</span>\n            </button>\n            <ul id=\"basic-nav-section-two\" class=\"usa-nav-submenu\">\n              <li>\n                <a href=\"#\">Subsection title</a>\n              </li>\n              <li>\n                <a href=\"#\">Subsection title</a>\n              </li>\n              <li>\n                <a href=\"#\">Subsection title</a>\n              </li>\n            </ul>\n          </li>\n          <li>\n            <a class=\"usa-nav-link\" href=\"javascript:void(0)\">\n              <span>Distinct from each other</span>\n            </a>\n          </li>\n        </ul>\n      <!--\n        <form class=\"usa-search usa-search-small \">\n          <div role=\"search\">\n            <label class=\"usa-sr-only\" for=\"basic-search-field-small\">Search small</label>\n            <input id=\"basic-search-field-small\" type=\"search\" name=\"search\">\n            <button type=\"submit\">\n              <span class=\"usa-sr-only\">Search</span>\n            </button>\n          </div>\n        </form>\n    \n      -->\n      </nav>\n    </div>\n  </header>\n  <div class=\"usa-overlay\"></div>\n</div>\n\n\n<main id=\"main-content\"></main>"
+module.exports = "<div id='my-header' style='margin:0'>\n  <div class=\"usa-banner\">\n    <div class=\"usa-accordion\">\n      <header class=\"usa-banner-header\">\n        <div class=\"usa-grid usa-banner-inner\" style='width: 600px; margin-left:0; text-align: left'>\n          <img src=\"/assets/uswds-1.6.3/img/favicons/favicon-57.png\" alt=\"U.S. flag\">\n          <span>An official website of the United States government</span>\n          <button class=\"usa-accordion-button usa-banner-button\" aria-expanded=\"false\" aria-controls=\"gov-banner\">\n            <span class=\"usa-banner-button-text\">Here's how you know</span>\n          </button>\n        </div>\n      </header>\n      <div class=\"usa-banner-content usa-grid usa-accordion-content\" id=\"gov-banner\">\n        <div class=\"usa-banner-guidance-gov usa-width-one-half\">\n          <img class=\"usa-banner-icon usa-media_block-img\" src=\"/assets/uswds-1.6.3/img/icon-dot-gov.svg\" alt=\"Dot gov\">\n          <div class=\"usa-media_block-body\">\n            <p>\n              <strong>The .gov means it’s official.</strong>\n              <br> Federal government websites often end in .gov or .mil. Before sharing sensitive information, make sure you’re\n              on a federal government site.\n            </p>\n          </div>\n        </div>\n        <div class=\"usa-banner-guidance-ssl usa-width-one-half\">\n          <img class=\"usa-banner-icon usa-media_block-img\" src=\"/assets/uswds-1.6.3/img/icon-https.svg\" alt=\"Https\">\n          <div class=\"usa-media_block-body\">\n            <p>\n              <strong>The site is secure.</strong>\n              <br> The\n              <strong>https://</strong> ensures that you are connecting to the official website and that any information you provide\n              is encrypted and transmitted securely.\n            </p>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n <style>\n   my-logo {\n    margin: 0; text-align: left;\n   }\n </style>\n  <header class=\"usa-header usa-header-basic\" role=\"banner\">\n\n      <div style='float: right;'>\n          <button>Sign In</button>\n          <button>Register</button>\n        </div>\n    <div id='my-top-menu' style = 'border: 1px solid red;width: 100vw; background-color:#006747; \n                                  color:white; padding: 10px; padding-left: 30px;' >      \n    \n      <div style='display: flex; flex-direction: row'>\n          <img src='/assets/images/logo/usda-circle.png' style='width: 80px; height: 80px; text-align: left; margin-right: 10px;\n          vertical-align: middle' >\n          <div> \n            <h3 style='margin: 0; text-align: left; padding-top: 15px'>U.S. Department of Commerce </h3>\n            <h4 style='margin: 0; text-align: left; padding-top: 5px'>eAuthentication Service</h4>\n          </div>\n      </div>\n        \n\n     </div>\n\n       \n    <div class=\"usa-nav-container\">\n      <div class=\"usa-navbar\">\n        \n        <button class=\"usa-menu-btn\">Menu</button>\n      </div>\n\n      <nav role=\"navigation\" class=\"usa-nav\">\n\n        <button class=\"usa-nav-close\">\n          <img src=\"/assets/uswds-1.6.3/img/close.svg\" alt=\"close\">\n        </button>\n        <ul class=\"usa-nav-primary usa-accordion\">\n          <li>\n            <button class=\"usa-accordion-button usa-nav-link\" aria-expanded=\"false\" aria-controls=\"basic-nav-section-one\">\n              <span>Section title</span>\n            </button>\n            <ul id=\"basic-nav-section-one\" class=\"usa-nav-submenu\">\n              <li>\n                <a href=\"#\">Subsection title</a>\n              </li>\n              <li>\n                <a href=\"#\">Subsection title</a>\n              </li>\n              <li>\n                <a href=\"#\">Subsection title</a>\n              </li>\n            </ul>\n          </li>\n          <li>\n            <button class=\"usa-accordion-button usa-nav-link\" aria-expanded=\"false\" aria-controls=\"basic-nav-section-two\">\n              <span>Simple terms</span>\n            </button>\n            <ul id=\"basic-nav-section-two\" class=\"usa-nav-submenu\">\n              <li>\n                <a href=\"#\">Subsection title</a>\n              </li>\n              <li>\n                <a href=\"#\">Subsection title</a>\n              </li>\n              <li>\n                <a href=\"#\">Subsection title</a>\n              </li>\n            </ul>\n          </li>\n          <li>\n            <a class=\"usa-nav-link\" href=\"javascript:void(0)\">\n              <span>Distinct from each other</span>\n            </a>\n          </li>\n        </ul>\n      <!--\n        <form class=\"usa-search usa-search-small \">\n          <div role=\"search\">\n            <label class=\"usa-sr-only\" for=\"basic-search-field-small\">Search small</label>\n            <input id=\"basic-search-field-small\" type=\"search\" name=\"search\">\n            <button type=\"submit\">\n              <span class=\"usa-sr-only\">Search</span>\n            </button>\n          </div>\n        </form>\n    \n      -->\n      </nav>\n    </div>\n  </header>\n  <div class=\"usa-overlay\"></div>\n</div>\n\n\n<main id=\"main-content\"></main>"
 
 /***/ }),
 
@@ -230,10 +234,60 @@ exports.HeaderComponent = HeaderComponent;
 
 /***/ }),
 
+/***/ "./src/app/login/login.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  login works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/login/login.component.scss":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/login/login.component.ts":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var LoginComponent = /** @class */ (function () {
+    function LoginComponent() {
+    }
+    LoginComponent.prototype.ngOnInit = function () {
+    };
+    LoginComponent = __decorate([
+        core_1.Component({
+            selector: 'app-login',
+            template: __webpack_require__("./src/app/login/login.component.html"),
+            styles: [__webpack_require__("./src/app/login/login.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], LoginComponent);
+    return LoginComponent;
+}());
+exports.LoginComponent = LoginComponent;
+
+
+/***/ }),
+
 /***/ "./src/app/page1/add-contact-form/add-contact-form.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"add-contact-form\" class='card' (click)='formClick()'>\n  <div class='card-header'><h4>New Contact</h4></div>\n  <div class='card-body'>\n      <form (ngSubmit)='onSubmit(contact)' [formGroup]='contact' >\n   \n          <div>\n              <div class='form-group'>\n                  <input type='text' placeholder=\"Firstname\" formControlName='firstname' class='form-control'/>  \n                  <small class=\"form-text text-danger\" *ngIf=\"contact.get('firstname').hasError('required') && contact.get('firstname').touched\">\n                      Firstname is required!\n                  </small>      \n              </div>           \n            \n           \n              <div class='form-group'>\n                  <input type='text' placeholder=\"Lastname\" formControlName='lastname'  class='form-control'/>\n                  <small class=\"form-text text-danger\" *ngIf=\"contact.get('lastname').hasError('required') && contact.get('lastname').touched\">\n                     Lastname is required!\n                  </small> \n              </div>          \n           \n              <div class='form-group'>\n                  <input type='text' placeholder=\"Phone\" formControlName='phone'  class='form-control'/>\n                  <small class=\"form-text text-danger\" *ngIf=\"contact.get('phone').hasError('required') && contact.get('phone').touched\">\n                      Phone is required!\n                  </small> \n              </div>             \n          </div>\n          <div class='alert alert-success' style='margin: 0;margin-bottom: 5px;' *ngIf=\"isShowMessage\">\n              {{message}}         \n          </div>          \n          <button type='submit' [disabled]=\"contact.invalid\" > Add Contact </button>    \n        </form>\n       \n  </div>\n \n</div>\n"
+module.exports = "<div id=\"add-contact-form\"  (click)='formClick()' style='margin-right: 1rem; margin-top: 1rem'>\n  <div style='text-align: left;'>New Contact</div>\n  <div>\n      <form (ngSubmit)='onSubmit(contact)' [formGroup]='contact' >\n   \n          <div>\n              <div class='form-group'>\n                  <input type='text' placeholder=\"Firstname\" formControlName='firstname' class='form-control'/>  \n                  <small class=\"form-text text-danger\" *ngIf=\"contact.get('firstname').hasError('required') && contact.get('firstname').touched\">\n                      Firstname is required!\n                  </small>      \n              </div>           \n            \n           \n              <div class='form-group'>\n                  <input type='text' placeholder=\"Lastname\" formControlName='lastname'  class='form-control'/>\n                  <small class=\"form-text text-danger\" *ngIf=\"contact.get('lastname').hasError('required') && contact.get('lastname').touched\">\n                     Lastname is required!\n                  </small> \n              </div>          \n           \n              <div class='form-group'>\n                  <input type='text' placeholder=\"Phone\" formControlName='phone'  class='form-control'/>\n                  <small class=\"form-text text-danger\" *ngIf=\"contact.get('phone').hasError('required') && contact.get('phone').touched\">\n                      Phone is required!\n                  </small> \n              </div>             \n          </div>\n          <div class='alert alert-success' style='margin: 0;margin-bottom: 5px;' *ngIf=\"isShowMessage\">\n              {{message}}         \n          </div>          \n          <button type='submit' [disabled]=\"contact.invalid\" > Add Contact </button>    \n        </form>\n       \n  </div>\n \n</div>\n"
 
 /***/ }),
 
@@ -314,14 +368,14 @@ exports.AddContactFormComponent = AddContactFormComponent;
 /***/ "./src/app/page1/contact-list/contact-list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"contact-list\">\n    <table class=\"table\">\n        <thead>\n          <tr>\n            <th scope=\"col\">ID</th>\n            <th scope=\"col\">First</th>\n            <th scope=\"col\">Last</th>\n            <th scope=\"col\">Phone</th>\n            <th scope=\"col\">Action</th>\n          </tr>\n        </thead>\n        <tbody (addAccountEvent)='addContactEventHandler()'>\n          <tr *ngFor='let contact of contacts' >\n              <th scope=\"row\">{{contact._id}}</th>\n              <td>{{contact.firstname}}</td>\n              <td>{{contact.lastname}}</td>\n              <td>{{contact.phone}}</td>\n              <td><a routerLink='/page2/{{contact._id}}' routerLinkActive='active'>Edit/Del</a></td>\n          </tr>\n        </tbody>\n      </table>\n</div>"
+module.exports = "<div id=\"contact-list\">\n       <table style='margin-top:1rem'>\n          <caption style='margin-bottom:5px'>Bordered table</caption>\n          <thead>\n              <tr>\n                  <th scope=\"col\">ID</th>\n                  <th scope=\"col\">First</th>\n                  <th scope=\"col\">Last</th>\n                  <th scope=\"col\">Phone</th>\n                  <th scope=\"col\">Action</th>\n                </tr>\n          \n          </thead>\n          <tbody>\n              <tr *ngFor='let contact of contacts' >\n                  <th scope=\"row\">{{contact._id}}</th>\n                  <td>{{contact.firstname}}</td>\n                  <td>{{contact.lastname}}</td>\n                  <td>{{contact.phone}}</td>\n                  <td><a routerLink='/page2/{{contact._id}}' routerLinkActive='active'>Edit/Del</a></td>\n              </tr>\n            </tbody>\n      </table>\n      \n</div>"
 
 /***/ }),
 
 /***/ "./src/app/page1/contact-list/contact-list.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = "#contact-list {\n  border: 1px solid lightgray;\n  margin-left: 10px;\n  height: 500px;\n  width: 600px; }\n  #contact-list table td {\n    text-align: left; }\n"
+module.exports = ""
 
 /***/ }),
 
@@ -426,7 +480,7 @@ exports.Page1Component = Page1Component;
 /***/ "./src/app/page2/page2.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id='page2'>\n  \n  <div id='contact-view'  class=\"card\">\n      <div class='card-header'>\n          <h4>View Contact</h4>\n      </div>\n      <div class='card-body'>\n          <div id='row2'>\n              <div id='photo'>\n                <img src='/assets/images/blank-face.jpeg'>\n              </div>\n              <div id='info' *ngIf='isEditMode'>\n                <form (ngSubmit)='onSubmitSave(contact.id)' [formGroup]='contactForm' >\n                  <table>\n                    <tr>\n                      <td id='label'>ID</td>               \n                      \n                      <td id='input'>\n                        <span>{{contact._id}}</span>                 \n                      </td>\n                    </tr>\n                    <tr>\n                      <td>Firstname</td>\n                      <td class='form-group'>\n                        <input type='text' formControlName='firstname' placeholder=\"Firstname\" class='form-control' />\n                        <small class=\"form-text text-danger\" *ngIf=\"contactForm.get('firstname').hasError('required') && contactForm.get('firstname').touched\">\n                            Firstname is required!\n                        </small>      \n                      </td>\n                    </tr>\n                    <tr>\n                      <td>Lastname</td>\n                      <td class='form-group'>\n                        <input type='text' formControlName='lastname' placeholder=\"Lastname\"  class='form-control'  />\n                        <small class=\"form-text text-danger\" *ngIf=\"contactForm.get('lastname').hasError('required') && contactForm.get('lastname').touched\">\n                            Lastname is required!\n                        </small> \n                      </td>\n                    </tr>\n                    <tr>\n                      <td>Phone</td>\n                      <td class='form-group'>\n                        <input type='text' formControlName='phone' placeholder=\"Phone\"  class='form-control' />\n                        <small class=\"form-text text-danger\" *ngIf=\"contactForm.get('phone').hasError('required') && contactForm.get('phone').touched\">\n                            Phone is required!\n                        </small> \n                      </td>\n                    </tr>\n                  </table>\n                  <div id='buttons'>\n                      <button class=\"btn btn-secondary\" [disabled]=\"contactForm.invalid\" >Save</button>\n                      <button class=\"btn btn-secondary\" (click)='clickCancel()' >Cancel</button>\n                    \n                  </div>\n                </form>\n            </div>\n      \n            <div id='info' *ngIf='!isEditMode' >             \n                    <table>\n                        <tr>\n                          <td id='label'>ID</td>\n                          <td id='input'>{{contact._id}}</td>\n                        </tr>\n                        <tr>\n                          <td>Firstname</td>\n                          <td>{{contact.firstname}}</td>\n                        </tr>\n                        <tr>\n                          <td>Lastname</td>\n                          <td>{{contact.lastname}}</td>\n                        </tr>\n                        <tr>\n                          <td>Phone</td>\n                          <td>{{contact.phone}}</td>\n                        </tr>\n                      </table>\n                      <div class='alert alert-success' style='margin: 0;margin-top: 5px;' *ngIf=\"isShowMessage\">\n                          {{message}}         \n                      </div>\n\n                      <div id='buttons' *ngIf=\"isShowButtons\">\n                          <button class=\"btn btn-secondary\" (click)='clickEdit()'>Edit</button>  \n                          <button class=\"btn btn-secondary\" (click)='deleteContact(contact._id)'>Delete</button>                           \n                      </div>\n                     \n            \n        </div>\n      </div>\n  </div> \n \n</div>\n<a style='width: 100px; text-align: center; margin-top: 10px' routerLink='/page1' routerLinkActive='active' class='btn btn-secondary'>Back</a>"
+module.exports = "<div id='page2' style='margin-top: 0'>\n  \n  <div id='contact-view'  class=\"card\">\n      <div class='card-header'>\n          <h4>View Contact</h4>\n      </div>\n      <div class='card-body'>\n          <div id='row2'>\n              <div id='photo'>\n                <img src='/assets/images/blank-face.jpeg'>\n              </div>\n              <div id='info' *ngIf='isEditMode'>\n                <form (ngSubmit)='onSubmitSave(contact.id)' [formGroup]='contactForm' >\n                  <table>\n                    <tr>\n                      <td id='label'>ID</td>               \n                      \n                      <td id='input'>\n                        <span>{{contact._id}}</span>                 \n                      </td>\n                    </tr>\n                    <tr>\n                      <td>Firstname</td>\n                      <td class='form-group'>\n                        <input type='text' formControlName='firstname' placeholder=\"Firstname\" class='form-control' />\n                        <small class=\"form-text text-danger\" *ngIf=\"contactForm.get('firstname').hasError('required') && contactForm.get('firstname').touched\">\n                            Firstname is required!\n                        </small>      \n                      </td>\n                    </tr>\n                    <tr>\n                      <td>Lastname</td>\n                      <td class='form-group'>\n                        <input type='text' formControlName='lastname' placeholder=\"Lastname\"  class='form-control'  />\n                        <small class=\"form-text text-danger\" *ngIf=\"contactForm.get('lastname').hasError('required') && contactForm.get('lastname').touched\">\n                            Lastname is required!\n                        </small> \n                      </td>\n                    </tr>\n                    <tr>\n                      <td>Phone</td>\n                      <td class='form-group'>\n                        <input type='text' formControlName='phone' placeholder=\"Phone\"  class='form-control' />\n                        <small class=\"form-text text-danger\" *ngIf=\"contactForm.get('phone').hasError('required') && contactForm.get('phone').touched\">\n                            Phone is required!\n                        </small> \n                      </td>\n                    </tr>\n                  </table>\n                  <div id='buttons'>\n                      <button class=\"btn btn-secondary\" [disabled]=\"contactForm.invalid\" >Save</button>\n                      <button class=\"btn btn-secondary\" (click)='clickCancel()' >Cancel</button>\n                    \n                  </div>\n                </form>\n            </div>\n      \n            <div id='info' *ngIf='!isEditMode' >             \n                    <table>\n                        <tr>\n                          <td id='label'>ID</td>\n                          <td id='input'>{{contact._id}}</td>\n                        </tr>\n                        <tr>\n                          <td>Firstname</td>\n                          <td>{{contact.firstname}}</td>\n                        </tr>\n                        <tr>\n                          <td>Lastname</td>\n                          <td>{{contact.lastname}}</td>\n                        </tr>\n                        <tr>\n                          <td>Phone</td>\n                          <td>{{contact.phone}}</td>\n                        </tr>\n                      </table>\n                      <div class='alert alert-success' style='margin: 0;margin-top: 5px;' *ngIf=\"isShowMessage\">\n                          {{message}}         \n                      </div>\n\n                      <div id='buttons' *ngIf=\"isShowButtons\">\n                          <button class=\"btn btn-secondary\" (click)='clickEdit()'>Edit</button>  \n                          <button class=\"btn btn-secondary\" (click)='deleteContact(contact._id)'>Delete</button>                           \n                      </div>\n                     \n            \n        </div>\n      </div>\n  </div> \n \n</div>\n<a style='width: 100px; text-align: center; margin-top: 10px' routerLink='/page1' routerLinkActive='active' class='btn btn-secondary'>Back</a>"
 
 /***/ }),
 
@@ -534,6 +588,56 @@ var Page2Component = /** @class */ (function () {
     return Page2Component;
 }());
 exports.Page2Component = Page2Component;
+
+
+/***/ }),
+
+/***/ "./src/app/register/register.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  register works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/register/register.component.scss":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/register/register.component.ts":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var RegisterComponent = /** @class */ (function () {
+    function RegisterComponent() {
+    }
+    RegisterComponent.prototype.ngOnInit = function () {
+    };
+    RegisterComponent = __decorate([
+        core_1.Component({
+            selector: 'app-register',
+            template: __webpack_require__("./src/app/register/register.component.html"),
+            styles: [__webpack_require__("./src/app/register/register.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], RegisterComponent);
+    return RegisterComponent;
+}());
+exports.RegisterComponent = RegisterComponent;
 
 
 /***/ }),

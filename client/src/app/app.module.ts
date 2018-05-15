@@ -14,6 +14,8 @@ import { Page2Component } from './page2/page2.component';
 
 import { ContactService } from './services/contact.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: 'page1', component: Page1Component },
@@ -31,7 +33,9 @@ const routes: Routes = [
     AddContactFormComponent,
     ContactListComponent,
     Page1Component,
-    Page2Component
+    Page2Component,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
