@@ -8,8 +8,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './_common/header/header.component';
 import { FooterComponent } from './_common/footer/footer.component';
 
-import { AddContactFormComponent } from './public/page1/add-contact-form/add-contact-form.component';
-import { ContactListComponent } from './public/page1/contact-list/contact-list.component';
+import { AddContactFormComponent } from './public/home/add-contact-form/add-contact-form.component';
+import { ContactListComponent } from './public/home/contact-list/contact-list.component';
 import { Page2Component } from './public/page2/page2.component';
 
 import { ContactService } from './services/contact.service';
