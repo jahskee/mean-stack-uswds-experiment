@@ -35,11 +35,12 @@
       </div>
     </div>
   </div>
- <style>
-   my-logo {
-    margin: 0; text-align: left;
-   }
- </style>
+  <style>
+    my-logo {
+      margin: 0;
+      text-align: left;
+    }
+  </style>
   <header class="usa-header usa-header-basic" role="banner">
 
     <form class="usa-search usa-search-small" style="padding: 5px 5px 0 0">
@@ -52,25 +53,25 @@
       </div>
     </form>
 
-    <div id='my-top-menu' style = 'width: 100vw; background-color:#006747; 
-                                  color:white; padding: 10px; padding-left: 30px;' >      
-    
+    <div id='my-top-menu' style='width: 100vw; background-color:#006747; 
+                                  color:white; padding: 10px; padding-left: 30px;'>
+
       <div style='display: flex; flex-direction: row'>
-          <img src='/assets/images/logo/usda-circle.png' style='width: 80px; height: 80px; text-align: left; margin-right: 10px;
-          vertical-align: middle' >
-          <div> 
-            <h3 style='margin: 0; text-align: left; padding-top: 15px'>U.S. Department of Agriculture </h3>
-            <h4 style='margin: 0; text-align: left; padding-top: 5px'>eAuthentication Service</h4>
-          </div>
+        <img src='/assets/images/logo/usda-circle.png' style='width: 80px; height: 80px; text-align: left; margin-right: 10px;
+          vertical-align: middle'>
+        <div>
+          <h3 style='margin: 0; text-align: left; padding-top: 15px'>U.S. Department of Agriculture </h3>
+          <h4 style='margin: 0; text-align: left; padding-top: 5px'>eAuthentication Service</h4>
+        </div>
       </div>
-        
 
-     </div>
 
-       
+    </div>
+
+
     <div class="usa-nav-container">
       <div class="usa-navbar">
-        
+
         <button class="usa-menu-btn">Menu</button>
       </div>
 
@@ -81,15 +82,15 @@
         </button>
         <ul class="usa-nav-primary usa-accordion">
           <li>
-            <a class="usa-nav-link" href="javascript:void(0)">
+            <a class="usa-nav-link" routerLink="/">
               <span>Home</span>
-            </a>         
+            </a>
           </li>
           <li>
             <a class="usa-nav-link" href="javascript:void(0)">
               <span>Services</span>
             </a>
-          
+
           </li>
           <li>
             <a class="usa-nav-link" href="javascript:void(0)">
@@ -97,26 +98,21 @@
             </a>
           </li>
           <li>
-            <a class="usa-nav-link" href="javascript:void(0)">
-              <span>Contact Us</span>
+            <a class="usa-nav-link" routerLink="/heroes">
+              <span>Heroes</span>
             </a>
           </li>
           <li>
-            <a class="usa-nav-link" href="javascript:void(0)">
-              <span>Sign In</span>
+            <a class="usa-nav-link" routerLink="/login">
+              <span>Sign in</span>
             </a>
           </li>
           <li>
-            <a class="usa-nav-link" href="javascript:void(0)">
+              <a class="usa-nav-link" routerLink="/register">
               <span>Register</span>
             </a>
           </li>
         </ul>
-      
-      
-
-         
-     
       </nav>
     </div>
   </header>
