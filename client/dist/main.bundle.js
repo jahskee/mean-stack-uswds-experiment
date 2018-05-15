@@ -925,7 +925,7 @@ exports.ContactService = ContactService;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.environment = {
     production: false,
-    apiurl: 'https://localhost'
+    apiurl: 'https://stratteos.us'
 };
 
 
