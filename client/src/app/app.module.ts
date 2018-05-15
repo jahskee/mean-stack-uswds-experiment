@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -19,11 +20,11 @@ import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: 'page1', component: Page1Component },
+  { path: 'login', component: LoginComponent },
   { path: 'page2/:contactId', component: Page2Component },
   { path: '', component: Page1Component },
   { path: '**', component: Page1Component },
 ];
-
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ const routes: Routes = [
     BrowserModule,
     HttpClientModule,  
     ReactiveFormsModule,
+    FormsModule,
     RouterModule.forRoot(routes),
   ],
   providers: [ContactService],

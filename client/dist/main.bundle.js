@@ -84,6 +84,7 @@ var platform_browser_1 = __webpack_require__("./node_modules/@angular/platform-b
 var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var router_1 = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
 var http_1 = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+var forms_1 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
 var app_component_1 = __webpack_require__("./src/app/app.component.ts");
 var header_component_1 = __webpack_require__("./src/app/header/header.component.ts");
 var footer_component_1 = __webpack_require__("./src/app/footer/footer.component.ts");
@@ -92,11 +93,12 @@ var add_contact_form_component_1 = __webpack_require__("./src/app/page1/add-cont
 var contact_list_component_1 = __webpack_require__("./src/app/page1/contact-list/contact-list.component.ts");
 var page2_component_1 = __webpack_require__("./src/app/page2/page2.component.ts");
 var contact_service_1 = __webpack_require__("./src/app/services/contact.service.ts");
-var forms_1 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+var forms_2 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
 var register_component_1 = __webpack_require__("./src/app/register/register.component.ts");
 var login_component_1 = __webpack_require__("./src/app/login/login.component.ts");
 var routes = [
     { path: 'page1', component: page1_component_1.Page1Component },
+    { path: 'login', component: login_component_1.LoginComponent },
     { path: 'page2/:contactId', component: page2_component_1.Page2Component },
     { path: '', component: page1_component_1.Page1Component },
     { path: '**', component: page1_component_1.Page1Component },
@@ -120,7 +122,8 @@ var AppModule = /** @class */ (function () {
             imports: [
                 platform_browser_1.BrowserModule,
                 http_1.HttpClientModule,
-                forms_1.ReactiveFormsModule,
+                forms_2.ReactiveFormsModule,
+                forms_1.FormsModule,
                 router_1.RouterModule.forRoot(routes),
             ],
             providers: [contact_service_1.ContactService],
@@ -187,7 +190,7 @@ exports.FooterComponent = FooterComponent;
 /***/ "./src/app/header/header.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id='my-header' style='margin:0'>\n  <div class=\"usa-banner\">\n    <div class=\"usa-accordion\">\n      <header class=\"usa-banner-header\">\n        <div class=\"usa-grid usa-banner-inner\" style='width: 600px; margin-left:0; text-align: left'>\n          <img src=\"/assets/uswds-1.6.3/img/favicons/favicon-57.png\" alt=\"U.S. flag\">\n          <span>An official website of the United States government</span>\n          <button class=\"usa-accordion-button usa-banner-button\" aria-expanded=\"false\" aria-controls=\"gov-banner\">\n            <span class=\"usa-banner-button-text\">Here's how you know</span>\n          </button>\n        </div>\n      </header>\n      <div class=\"usa-banner-content usa-grid usa-accordion-content\" id=\"gov-banner\">\n        <div class=\"usa-banner-guidance-gov usa-width-one-half\">\n          <img class=\"usa-banner-icon usa-media_block-img\" src=\"/assets/uswds-1.6.3/img/icon-dot-gov.svg\" alt=\"Dot gov\">\n          <div class=\"usa-media_block-body\">\n            <p>\n              <strong>The .gov means it’s official.</strong>\n              <br> Federal government websites often end in .gov or .mil. Before sharing sensitive information, make sure you’re\n              on a federal government site.\n            </p>\n          </div>\n        </div>\n        <div class=\"usa-banner-guidance-ssl usa-width-one-half\">\n          <img class=\"usa-banner-icon usa-media_block-img\" src=\"/assets/uswds-1.6.3/img/icon-https.svg\" alt=\"Https\">\n          <div class=\"usa-media_block-body\">\n            <p>\n              <strong>The site is secure.</strong>\n              <br> The\n              <strong>https://</strong> ensures that you are connecting to the official website and that any information you provide\n              is encrypted and transmitted securely.\n            </p>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n <style>\n   my-logo {\n    margin: 0; text-align: left;\n   }\n </style>\n  <header class=\"usa-header usa-header-basic\" role=\"banner\">\n\n      <div style='float: right;'>\n          <button>Sign In</button>\n          <button>Register</button>\n        </div>\n    <div id='my-top-menu' style = 'border: 1px solid red;width: 100vw; background-color:#006747; \n                                  color:white; padding: 10px; padding-left: 30px;' >      \n    \n      <div style='display: flex; flex-direction: row'>\n          <img src='/assets/images/logo/usda-circle.png' style='width: 80px; height: 80px; text-align: left; margin-right: 10px;\n          vertical-align: middle' >\n          <div> \n            <h3 style='margin: 0; text-align: left; padding-top: 15px'>U.S. Department of Commerce </h3>\n            <h4 style='margin: 0; text-align: left; padding-top: 5px'>eAuthentication Service</h4>\n          </div>\n      </div>\n        \n\n     </div>\n\n       \n    <div class=\"usa-nav-container\">\n      <div class=\"usa-navbar\">\n        \n        <button class=\"usa-menu-btn\">Menu</button>\n      </div>\n\n      <nav role=\"navigation\" class=\"usa-nav\">\n\n        <button class=\"usa-nav-close\">\n          <img src=\"/assets/uswds-1.6.3/img/close.svg\" alt=\"close\">\n        </button>\n        <ul class=\"usa-nav-primary usa-accordion\">\n          <li>\n            <button class=\"usa-accordion-button usa-nav-link\" aria-expanded=\"false\" aria-controls=\"basic-nav-section-one\">\n              <span>Section title</span>\n            </button>\n            <ul id=\"basic-nav-section-one\" class=\"usa-nav-submenu\">\n              <li>\n                <a href=\"#\">Subsection title</a>\n              </li>\n              <li>\n                <a href=\"#\">Subsection title</a>\n              </li>\n              <li>\n                <a href=\"#\">Subsection title</a>\n              </li>\n            </ul>\n          </li>\n          <li>\n            <button class=\"usa-accordion-button usa-nav-link\" aria-expanded=\"false\" aria-controls=\"basic-nav-section-two\">\n              <span>Simple terms</span>\n            </button>\n            <ul id=\"basic-nav-section-two\" class=\"usa-nav-submenu\">\n              <li>\n                <a href=\"#\">Subsection title</a>\n              </li>\n              <li>\n                <a href=\"#\">Subsection title</a>\n              </li>\n              <li>\n                <a href=\"#\">Subsection title</a>\n              </li>\n            </ul>\n          </li>\n          <li>\n            <a class=\"usa-nav-link\" href=\"javascript:void(0)\">\n              <span>Distinct from each other</span>\n            </a>\n          </li>\n        </ul>\n      <!--\n        <form class=\"usa-search usa-search-small \">\n          <div role=\"search\">\n            <label class=\"usa-sr-only\" for=\"basic-search-field-small\">Search small</label>\n            <input id=\"basic-search-field-small\" type=\"search\" name=\"search\">\n            <button type=\"submit\">\n              <span class=\"usa-sr-only\">Search</span>\n            </button>\n          </div>\n        </form>\n    \n      -->\n      </nav>\n    </div>\n  </header>\n  <div class=\"usa-overlay\"></div>\n</div>\n\n\n<main id=\"main-content\"></main>"
+module.exports = "<div id='my-header' style='margin:0'>\n  <div class=\"usa-banner\">\n    <div class=\"usa-accordion\">\n      <header class=\"usa-banner-header\">\n        <div class=\"usa-grid usa-banner-inner\" style='width: 600px; margin-left:0; text-align: left'>\n          <img src=\"/assets/uswds-1.6.3/img/favicons/favicon-57.png\" alt=\"U.S. flag\">\n          <span>An official website of the United States government</span>\n          <button class=\"usa-accordion-button usa-banner-button\" aria-expanded=\"false\" aria-controls=\"gov-banner\">\n            <span class=\"usa-banner-button-text\">Here's how you know</span>\n          </button>\n        </div>\n      </header>\n      <div class=\"usa-banner-content usa-grid usa-accordion-content\" id=\"gov-banner\">\n        <div class=\"usa-banner-guidance-gov usa-width-one-half\">\n          <img class=\"usa-banner-icon usa-media_block-img\" src=\"/assets/uswds-1.6.3/img/icon-dot-gov.svg\" alt=\"Dot gov\">\n          <div class=\"usa-media_block-body\">\n            <p>\n              <strong>The .gov means it’s official.</strong>\n              <br> Federal government websites often end in .gov or .mil. Before sharing sensitive information, make sure you’re\n              on a federal government site.\n            </p>\n          </div>\n        </div>\n        <div class=\"usa-banner-guidance-ssl usa-width-one-half\">\n          <img class=\"usa-banner-icon usa-media_block-img\" src=\"/assets/uswds-1.6.3/img/icon-https.svg\" alt=\"Https\">\n          <div class=\"usa-media_block-body\">\n            <p>\n              <strong>The site is secure.</strong>\n              <br> The\n              <strong>https://</strong> ensures that you are connecting to the official website and that any information you provide\n              is encrypted and transmitted securely.\n            </p>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n <style>\n   my-logo {\n    margin: 0; text-align: left;\n   }\n </style>\n  <header class=\"usa-header usa-header-basic\" role=\"banner\">\n\n      <div style='float: right;'>\n          <button (click)='clickSignIn()'>Sign In</button>\n          <button>Register</button>\n        </div>\n    <div id='my-top-menu' style = 'width: 100vw; background-color:#006747; \n                                  color:white; padding: 10px; padding-left: 30px;' >      \n    \n      <div style='display: flex; flex-direction: row'>\n          <img src='/assets/images/logo/usda-circle.png' style='width: 80px; height: 80px; text-align: left; margin-right: 10px;\n          vertical-align: middle' >\n          <div> \n            <h3 style='margin: 0; text-align: left; padding-top: 15px'>U.S. Department of Agriculture </h3>\n            <h4 style='margin: 0; text-align: left; padding-top: 5px'>eAuthentication Service</h4>\n          </div>\n      </div>\n        \n\n     </div>\n\n       \n    <div class=\"usa-nav-container\">\n      <div class=\"usa-navbar\">\n        \n        <button class=\"usa-menu-btn\">Menu</button>\n      </div>\n\n      <nav role=\"navigation\" class=\"usa-nav\">\n\n        <button class=\"usa-nav-close\">\n          <img src=\"/assets/uswds-1.6.3/img/close.svg\" alt=\"close\">\n        </button>\n        <ul class=\"usa-nav-primary usa-accordion\">\n          <li>\n            <a class=\"usa-nav-link\" href=\"javascript:void(0)\">\n              <span>Home</span>\n            </a>         \n          </li>\n          <li>\n            <a class=\"usa-nav-link\" href=\"javascript:void(0)\">\n              <span>Services</span>\n            </a>\n          \n          </li>\n          <li>\n            <a class=\"usa-nav-link\" href=\"javascript:void(0)\">\n              <span>Partners</span>\n            </a>\n          </li>\n          <li>\n            <a class=\"usa-nav-link\" href=\"javascript:void(0)\">\n              <span>Contact Us</span>\n            </a>\n          </li>\n        </ul>\n      \n        <form class=\"usa-search usa-search-small \">\n          <div role=\"search\">\n            <label class=\"usa-sr-only\" for=\"basic-search-field-small\">Search small</label>\n            <input id=\"basic-search-field-small\" type=\"search\" name=\"search\">\n            <button type=\"submit\">\n              <span class=\"usa-sr-only\">Search</span>\n            </button>\n          </div>\n        </form>\n    \n     \n      </nav>\n    </div>\n  </header>\n  <div class=\"usa-overlay\"></div>\n</div>\n\n\n<main id=\"main-content\"></main>"
 
 /***/ }),
 
@@ -214,10 +217,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var router_1 = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
 var HeaderComponent = /** @class */ (function () {
-    function HeaderComponent() {
+    function HeaderComponent(router) {
+        this.router = router;
     }
     HeaderComponent.prototype.ngOnInit = function () {
+    };
+    HeaderComponent.prototype.clickSignIn = function () {
+        this.router.navigateByUrl('/login');
     };
     HeaderComponent = __decorate([
         core_1.Component({
@@ -225,7 +233,7 @@ var HeaderComponent = /** @class */ (function () {
             template: __webpack_require__("./src/app/header/header.component.html"),
             styles: [__webpack_require__("./src/app/header/header.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [router_1.Router])
     ], HeaderComponent);
     return HeaderComponent;
 }());
@@ -237,7 +245,7 @@ exports.HeaderComponent = HeaderComponent;
 /***/ "./src/app/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  login works!\n</p>\n"
+module.exports = "\n<form class=\"usa-form\" style='margin: 0 auto; padding-top: 20px'>\n  <fieldset>\n    <legend class=\"usa-drop_text\">Sign in</legend>\n    <span>or <a href=\"javascript:void(0);\">create an account</a></span>\n\n    <label for=\"username\">Username or email address</label>\n    <input id=\"username\" name=\"username\" type=\"text\" autocapitalize=\"off\" autocorrect=\"off\">\n\n    <label for=\"password-sign-in\">Password</label>\n    <input id=\"password-sign-in\" name=\"password\" type=\"password\">\n    <p class=\"usa-form-note\">\n      <a title=\"Show password\" href=\"javascript:void(0);\"\n        class=\"usa-show_password\"\n        aria-controls=\"password-sign-in\">Show password</a>\n    </p>\n\n    <input type=\"submit\" value=\"Sign in\">\n    <p><a href=\"javascript:void(0);\" title=\"Forgot username\">\n      Forgot username?</a></p>\n    <p><a href=\"javascript:void(0);\" title=\"Forgot password\">\n      Forgot password?</a></p>\n  </fieldset>\n</form>\n\n"
 
 /***/ }),
 
