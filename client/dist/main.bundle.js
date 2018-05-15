@@ -193,8 +193,8 @@ var forms_1 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js")
 var app_component_1 = __webpack_require__("./src/app/app.component.ts");
 var header_component_1 = __webpack_require__("./src/app/_common/header/header.component.ts");
 var footer_component_1 = __webpack_require__("./src/app/_common/footer/footer.component.ts");
-var add_contact_form_component_1 = __webpack_require__("./src/app/public/home/add-contact-form/add-contact-form.component.ts");
-var contact_list_component_1 = __webpack_require__("./src/app/public/home/contact-list/contact-list.component.ts");
+var add_contact_form_component_1 = __webpack_require__("./src/app/public/servicepage/add-contact-form/add-contact-form.component.ts");
+var contact_list_component_1 = __webpack_require__("./src/app/public/servicepage/contact-list/contact-list.component.ts");
 var page2_component_1 = __webpack_require__("./src/app/public/page2/page2.component.ts");
 var contact_service_1 = __webpack_require__("./src/app/services/contact.service.ts");
 var forms_2 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
@@ -304,143 +304,10 @@ exports.ContactComponent = ContactComponent;
 
 /***/ }),
 
-/***/ "./src/app/public/home/add-contact-form/add-contact-form.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div id=\"add-contact-form\"  (click)='formClick()' style='margin-right: 1rem; margin-top: 1rem'>\n  <div style='text-align: left;'>New Contact</div>\n  <div>\n      <form (ngSubmit)='onSubmit(contact)' [formGroup]='contact' >\n   \n          <div>\n              <div class='form-group'>\n                  <input type='text' placeholder=\"Firstname\" formControlName='firstname' class='form-control'/>  \n                  <small class=\"form-text text-danger\" *ngIf=\"contact.get('firstname').hasError('required') && contact.get('firstname').touched\">\n                      Firstname is required!\n                  </small>      \n              </div>           \n            \n           \n              <div class='form-group'>\n                  <input type='text' placeholder=\"Lastname\" formControlName='lastname'  class='form-control'/>\n                  <small class=\"form-text text-danger\" *ngIf=\"contact.get('lastname').hasError('required') && contact.get('lastname').touched\">\n                     Lastname is required!\n                  </small> \n              </div>          \n           \n              <div class='form-group'>\n                  <input type='text' placeholder=\"Phone\" formControlName='phone'  class='form-control'/>\n                  <small class=\"form-text text-danger\" *ngIf=\"contact.get('phone').hasError('required') && contact.get('phone').touched\">\n                      Phone is required!\n                  </small> \n              </div>             \n          </div>\n          <div class='alert alert-success' style='margin: 0;margin-bottom: 5px;' *ngIf=\"isShowMessage\">\n              {{message}}         \n          </div>          \n          <button type='submit' [disabled]=\"contact.invalid\" > Add Contact </button>    \n        </form>\n       \n  </div>\n \n</div>\n"
-
-/***/ }),
-
-/***/ "./src/app/public/home/add-contact-form/add-contact-form.component.scss":
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/public/home/add-contact-form/add-contact-form.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var contact_service_1 = __webpack_require__("./src/app/services/contact.service.ts");
-var forms_1 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
-var AddContactFormComponent = /** @class */ (function () {
-    function AddContactFormComponent(contactService) {
-        this.contactService = contactService;
-        this.addContactEvent = new core_1.EventEmitter();
-        this.message = '';
-        this.isShowMessage = false;
-    }
-    AddContactFormComponent.prototype.ngOnInit = function () {
-        this.contact = new forms_1.FormGroup({
-            firstname: new forms_1.FormControl('', forms_1.Validators.required),
-            lastname: new forms_1.FormControl('', forms_1.Validators.required),
-            phone: new forms_1.FormControl('', forms_1.Validators.required),
-        });
-    };
-    AddContactFormComponent.prototype.onSubmit = function () {
-        var _this = this;
-        var contactObj = this.contact.value;
-        this.contactService.createContact(contactObj).subscribe(function (data) {
-            _this.addContactEvent.emit();
-            console.log('create new contact success!');
-            _this.contact.reset();
-        });
-        this.message = 'Contact created.';
-        this.isShowMessage = true;
-        console.log('contact: ' + JSON.stringify(contactObj));
-    };
-    AddContactFormComponent.prototype.formClick = function () {
-        this.message = '';
-        this.isShowMessage = false;
-    };
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", Object)
-    ], AddContactFormComponent.prototype, "addContactEvent", void 0);
-    AddContactFormComponent = __decorate([
-        core_1.Component({
-            selector: 'app-add-contact-form',
-            template: __webpack_require__("./src/app/public/home/add-contact-form/add-contact-form.component.html"),
-            styles: [__webpack_require__("./src/app/public/home/add-contact-form/add-contact-form.component.scss")],
-        }),
-        __metadata("design:paramtypes", [contact_service_1.ContactService])
-    ], AddContactFormComponent);
-    return AddContactFormComponent;
-}());
-exports.AddContactFormComponent = AddContactFormComponent;
-
-
-/***/ }),
-
-/***/ "./src/app/public/home/contact-list/contact-list.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div id=\"contact-list\">\n       <table style='margin-top:1rem'>\n          <caption style='margin-bottom:5px'>Bordered table</caption>\n          <thead>\n              <tr>\n                  <th scope=\"col\">ID</th>\n                  <th scope=\"col\">First</th>\n                  <th scope=\"col\">Last</th>\n                  <th scope=\"col\">Phone</th>\n                  <th scope=\"col\">Action</th>\n                </tr>\n          \n          </thead>\n          <tbody>\n              <tr *ngFor='let contact of contacts' >\n                  <th scope=\"row\">{{contact._id}}</th>\n                  <td>{{contact.firstname}}</td>\n                  <td>{{contact.lastname}}</td>\n                  <td>{{contact.phone}}</td>\n                  <td><a routerLink='/page2/{{contact._id}}' routerLinkActive='active'>Edit/Del</a></td>\n              </tr>\n            </tbody>\n      </table>\n      \n</div>"
-
-/***/ }),
-
-/***/ "./src/app/public/home/contact-list/contact-list.component.scss":
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/public/home/contact-list/contact-list.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var ContactListComponent = /** @class */ (function () {
-    function ContactListComponent() {
-    }
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], ContactListComponent.prototype, "contacts", void 0);
-    ContactListComponent = __decorate([
-        core_1.Component({
-            selector: 'app-contact-list',
-            template: __webpack_require__("./src/app/public/home/contact-list/contact-list.component.html"),
-            styles: [__webpack_require__("./src/app/public/home/contact-list/contact-list.component.scss")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], ContactListComponent);
-    return ContactListComponent;
-}());
-exports.ContactListComponent = ContactListComponent;
-
-
-/***/ }),
-
 /***/ "./src/app/public/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"page1\">\n    <app-add-contact-form (addContactEvent)=\"updateContactList()\"></app-add-contact-form>\n    <app-contact-list [contacts]=\"contacts\" > </app-contact-list>\n</div>"
+module.exports = "\n<div class=\"usa-banner\">\n        <div class=\"usa-accordion\">\n          <header class=\"usa-banner-header\">\n            <div class=\"usa-grid usa-banner-inner\">\n            <img src=\"/assets/uswds-1.6.3/img/favicons/favicon-57.png\" alt=\"U.S. flag\">\n            <p>An official website of the United States government</p>\n            <button class=\"usa-accordion-button usa-banner-button\"\n              aria-expanded=\"false\" aria-controls=\"gov-banner\">\n              <span class=\"usa-banner-button-text\">Here's how you know</span>\n            </button>\n            </div>\n          </header>\n          <div class=\"usa-banner-content usa-grid usa-accordion-content\" id=\"gov-banner\">\n            <div class=\"usa-banner-guidance-gov usa-width-one-half\">\n              <img class=\"usa-banner-icon usa-media_block-img\" src=\"/assets/uswds-1.6.3/icon-dot-gov.svg\" alt=\"Dot gov\">\n              <div class=\"usa-media_block-body\">\n                <p>\n                  <strong>The .gov means it’s official.</strong>\n                  <br>\n                  Federal government websites often end in .gov or .mil. Before sharing sensitive information, make sure you’re on a federal government site.\n                </p>\n              </div>\n            </div>\n            <div class=\"usa-banner-guidance-ssl usa-width-one-half\">\n              <img class=\"usa-banner-icon usa-media_block-img\" src=\"/assets/uswds-1.6.3/icon-https.svg\" alt=\"Https\">\n              <div class=\"usa-media_block-body\">\n                <p>\n                  <strong>The site is secure.</strong>\n                  <br>\n                  The <strong>https://</strong> ensures that you are connecting to the official website and that any information you provide is encrypted and transmitted securely.\n                </p>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>"
 
 /***/ }),
 
@@ -467,20 +334,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var contact_service_1 = __webpack_require__("./src/app/services/contact.service.ts");
 var HomeComponent = /** @class */ (function () {
-    function HomeComponent(contactService) {
-        this.contactService = contactService;
+    function HomeComponent() {
         this.contacts = null;
     }
     HomeComponent.prototype.ngOnInit = function () {
-        this.updateContactList();
-    };
-    HomeComponent.prototype.updateContactList = function () {
-        var _this = this;
-        this.contactService.listContacts().subscribe(function (contacts) {
-            _this.contacts = contacts;
-        });
     };
     HomeComponent = __decorate([
         core_1.Component({
@@ -488,7 +346,7 @@ var HomeComponent = /** @class */ (function () {
             template: __webpack_require__("./src/app/public/home/home.component.html"),
             styles: [__webpack_require__("./src/app/public/home/home.component.scss")]
         }),
-        __metadata("design:paramtypes", [contact_service_1.ContactService])
+        __metadata("design:paramtypes", [])
     ], HomeComponent);
     return HomeComponent;
 }());
@@ -762,10 +620,143 @@ exports.RegisterComponent = RegisterComponent;
 
 /***/ }),
 
+/***/ "./src/app/public/servicepage/add-contact-form/add-contact-form.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div id=\"add-contact-form\"  (click)='formClick()' style='margin-right: 1rem; margin-top: 1rem'>\n  <div style='text-align: left;'>New Contact</div>\n  <div>\n      <form (ngSubmit)='onSubmit(contact)' [formGroup]='contact' >\n   \n          <div>\n              <div class='form-group'>\n                  <input type='text' placeholder=\"Firstname\" formControlName='firstname' class='form-control'/>  \n                  <small class=\"form-text text-danger\" *ngIf=\"contact.get('firstname').hasError('required') && contact.get('firstname').touched\">\n                      Firstname is required!\n                  </small>      \n              </div>           \n            \n           \n              <div class='form-group'>\n                  <input type='text' placeholder=\"Lastname\" formControlName='lastname'  class='form-control'/>\n                  <small class=\"form-text text-danger\" *ngIf=\"contact.get('lastname').hasError('required') && contact.get('lastname').touched\">\n                     Lastname is required!\n                  </small> \n              </div>          \n           \n              <div class='form-group'>\n                  <input type='text' placeholder=\"Phone\" formControlName='phone'  class='form-control'/>\n                  <small class=\"form-text text-danger\" *ngIf=\"contact.get('phone').hasError('required') && contact.get('phone').touched\">\n                      Phone is required!\n                  </small> \n              </div>             \n          </div>\n          <div class='alert alert-success' style='margin: 0;margin-bottom: 5px;' *ngIf=\"isShowMessage\">\n              {{message}}         \n          </div>          \n          <button type='submit' [disabled]=\"contact.invalid\" > Add Contact </button>    \n        </form>\n       \n  </div>\n \n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/public/servicepage/add-contact-form/add-contact-form.component.scss":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/public/servicepage/add-contact-form/add-contact-form.component.ts":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var contact_service_1 = __webpack_require__("./src/app/services/contact.service.ts");
+var forms_1 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+var AddContactFormComponent = /** @class */ (function () {
+    function AddContactFormComponent(contactService) {
+        this.contactService = contactService;
+        this.addContactEvent = new core_1.EventEmitter();
+        this.message = '';
+        this.isShowMessage = false;
+    }
+    AddContactFormComponent.prototype.ngOnInit = function () {
+        this.contact = new forms_1.FormGroup({
+            firstname: new forms_1.FormControl('', forms_1.Validators.required),
+            lastname: new forms_1.FormControl('', forms_1.Validators.required),
+            phone: new forms_1.FormControl('', forms_1.Validators.required),
+        });
+    };
+    AddContactFormComponent.prototype.onSubmit = function () {
+        var _this = this;
+        var contactObj = this.contact.value;
+        this.contactService.createContact(contactObj).subscribe(function (data) {
+            _this.addContactEvent.emit();
+            console.log('create new contact success!');
+            _this.contact.reset();
+        });
+        this.message = 'Contact created.';
+        this.isShowMessage = true;
+        console.log('contact: ' + JSON.stringify(contactObj));
+    };
+    AddContactFormComponent.prototype.formClick = function () {
+        this.message = '';
+        this.isShowMessage = false;
+    };
+    __decorate([
+        core_1.Output(),
+        __metadata("design:type", Object)
+    ], AddContactFormComponent.prototype, "addContactEvent", void 0);
+    AddContactFormComponent = __decorate([
+        core_1.Component({
+            selector: 'app-add-contact-form',
+            template: __webpack_require__("./src/app/public/servicepage/add-contact-form/add-contact-form.component.html"),
+            styles: [__webpack_require__("./src/app/public/servicepage/add-contact-form/add-contact-form.component.scss")],
+        }),
+        __metadata("design:paramtypes", [contact_service_1.ContactService])
+    ], AddContactFormComponent);
+    return AddContactFormComponent;
+}());
+exports.AddContactFormComponent = AddContactFormComponent;
+
+
+/***/ }),
+
+/***/ "./src/app/public/servicepage/contact-list/contact-list.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div id=\"contact-list\">\n       <table style='margin-top:1rem'>\n          <caption style='margin-bottom:5px'>Bordered table</caption>\n          <thead>\n              <tr>\n                  <th scope=\"col\">ID</th>\n                  <th scope=\"col\">First</th>\n                  <th scope=\"col\">Last</th>\n                  <th scope=\"col\">Phone</th>\n                  <th scope=\"col\">Action</th>\n                </tr>\n          \n          </thead>\n          <tbody>\n              <tr *ngFor='let contact of contacts' >\n                  <th scope=\"row\">{{contact._id}}</th>\n                  <td>{{contact.firstname}}</td>\n                  <td>{{contact.lastname}}</td>\n                  <td>{{contact.phone}}</td>\n                  <td><a routerLink='/page2/{{contact._id}}' routerLinkActive='active'>Edit/Del</a></td>\n              </tr>\n            </tbody>\n      </table>\n      \n</div>"
+
+/***/ }),
+
+/***/ "./src/app/public/servicepage/contact-list/contact-list.component.scss":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/public/servicepage/contact-list/contact-list.component.ts":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var ContactListComponent = /** @class */ (function () {
+    function ContactListComponent() {
+    }
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Object)
+    ], ContactListComponent.prototype, "contacts", void 0);
+    ContactListComponent = __decorate([
+        core_1.Component({
+            selector: 'app-contact-list',
+            template: __webpack_require__("./src/app/public/servicepage/contact-list/contact-list.component.html"),
+            styles: [__webpack_require__("./src/app/public/servicepage/contact-list/contact-list.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], ContactListComponent);
+    return ContactListComponent;
+}());
+exports.ContactListComponent = ContactListComponent;
+
+
+/***/ }),
+
 /***/ "./src/app/public/servicepage/servicepage.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  servicepage works!\n</p>\n"
+module.exports = "<div id=\"page1\">\n    <app-add-contact-form (addContactEvent)=\"updateContactList()\"></app-add-contact-form>\n    <app-contact-list [contacts]=\"contacts\" > </app-contact-list>\n</div>"
 
 /***/ }),
 

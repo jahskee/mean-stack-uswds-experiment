@@ -1,3 +1,4 @@
-<p>
-  servicepage works!
-</p>
+<div id="page1">
+    <app-add-contact-form (addContactEvent)="updateContactList()"></app-add-contact-form>
+    <app-contact-list [contacts]="contacts" > </app-contact-list>
+</div>

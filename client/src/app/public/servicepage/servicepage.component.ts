@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContactService } from '../../services/contact.service';
 
 @Component({
   selector: 'app-servicepage',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServicepageComponent implements OnInit {
 
-  constructor() { }
-
+  contacts = null;
+  constructor(private contactService: ContactService) { }
+  
   ngOnInit() {
+    this.updateContactList();
   }
 
+  updateContactList() {
+    this.contactService.listContacts().subscribe(contacts => {
+      this.contacts = contacts;
+    });  
+  }
 }
