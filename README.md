@@ -8,6 +8,9 @@
    '<a routerLink="/Service/Sign_in"><button class="btn btn-success pull-right" > Add Customer</button></a>'
 
    import { Router } from '@angular/router';
+   
+   constructor(private router: Router){
+   }
 
    btnClick= function () {
            this.router.navigateByUrl('/user');
