@@ -310,7 +310,7 @@ exports.ContactComponent = ContactComponent;
 /***/ "./src/app/public/crud/add-contact-form/add-contact-form.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"add-contact-form\"  (click)='formClick()' style=\"margin-right: 1rem; margin-top: 1rem\">\n  <div style='text-align: left;'>New Contact</div>\n  <div>\n      <form (ngSubmit)='onSubmit(contact)' [formGroup]='contact' >\n   \n          <div>\n              <div class='form-group'>\n                  <input type='text' placeholder=\"Firstname\" formControlName='firstname' class='form-control'/>  \n                  <small class=\"form-text text-danger\" *ngIf=\"contact.get('firstname').hasError('required') && contact.get('firstname').touched\">\n                      Firstname is required!\n                  </small>      \n              </div>           \n            \n           \n              <div class='form-group'>\n                  <input type='text' placeholder=\"Lastname\" formControlName='lastname'  class='form-control'/>\n                  <small class=\"form-text text-danger\" *ngIf=\"contact.get('lastname').hasError('required') && contact.get('lastname').touched\">\n                     Lastname is required!\n                  </small> \n              </div>          \n           \n              <div class='form-group'>\n                  <input type='text' placeholder=\"Phone\" formControlName='phone'  class='form-control'/>\n                  <small class=\"form-text text-danger\" *ngIf=\"contact.get('phone').hasError('required') && contact.get('phone').touched\">\n                      Phone is required!\n                  </small> \n              </div>             \n          </div>\n          <div class='alert alert-success' style='margin: 0;margin-bottom: 5px;' *ngIf=\"isShowMessage\">\n              {{message}}         \n          </div>          \n          <button type='submit' [disabled]=\"contact.invalid\" > Add Contact </button>    \n        </form>\n       \n  </div>\n \n</div>\n"
+module.exports = "<div id=\"add-contact-form\" (click)='formClick()' style=\"margin-right: 1rem; margin-top: 1rem\">\n    <div style='text-align: left;'>New Contact</div>\n    <div>\n        <form (ngSubmit)='onSubmit(contact)' [formGroup]='contact'>\n            <fieldset>\n                <div>\n                    <div class='form-group'>\n                        <input type='text' placeholder=\"Firstname\" formControlName='firstname' class='form-control' />\n                        <small class=\"form-text text-danger\" *ngIf=\"contact.get('firstname').hasError('required') && contact.get('firstname').touched\">\n                            Firstname is required!\n                        </small>\n                    </div>\n\n                    <div class='form-group'>\n                        <input type='text' placeholder=\"Lastname\" formControlName='lastname' class='form-control' />\n                        <small class=\"form-text text-danger\" *ngIf=\"contact.get('lastname').hasError('required') && contact.get('lastname').touched\">\n                            Lastname is required!\n                        </small>\n                    </div>\n\n                    <div class='form-group'>\n                        <input type='text' placeholder=\"Phone\" formControlName='phone' class='form-control' />\n                        <small class=\"form-text text-danger\" *ngIf=\"contact.get('phone').hasError('required') && contact.get('phone').touched\">\n                            Phone is required!\n                        </small>\n                    </div>\n                </div>\n                <div class='alert alert-success' style='margin: 0;margin-bottom: 5px;' *ngIf=\"isShowMessage\">\n                    {{message}}\n                </div>\n                <button type='submit' [disabled]=\"contact.invalid\"> Add Contact </button>\n            </fieldset>\n        </form>\n\n    </div>\n\n</div>"
 
 /***/ }),
 
@@ -443,7 +443,7 @@ exports.ContactListComponent = ContactListComponent;
 /***/ "./src/app/public/crud/crud.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"page1\" style='display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 0 auto'>\n    <app-add-contact-form (addContactEvent)=\"updateContactList()\"></app-add-contact-form>\n    <app-contact-list [contacts]=\"contacts\" > </app-contact-list>\n</div>"
+module.exports = "<div id=\"page1\" style='display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 0 auto'>\n    <h2>CRUD operations</h2>\n    <app-add-contact-form (addContactEvent)=\"updateContactList()\"></app-add-contact-form>\n    <app-contact-list [contacts]=\"contacts\" > </app-contact-list>\n</div>\n<div class=\"usa-grid usa-footer-return-to-top\">\n    <a href=\"/crud#\">Return to top</a>\n</div>"
 
 /***/ }),
 
@@ -470,10 +470,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var contact_service_1 = __webpack_require__("./src/app/services/contact.service.ts");
 var CrudComponent = /** @class */ (function () {
-    function CrudComponent() {
+    function CrudComponent(contactService) {
+        this.contactService = contactService;
+        this.contacts = null;
     }
     CrudComponent.prototype.ngOnInit = function () {
+        this.updateContactList();
+    };
+    CrudComponent.prototype.updateContactList = function () {
+        var _this = this;
+        this.contactService.listContacts().subscribe(function (contacts) {
+            _this.contacts = contacts;
+        });
     };
     CrudComponent = __decorate([
         core_1.Component({
@@ -481,7 +491,7 @@ var CrudComponent = /** @class */ (function () {
             template: __webpack_require__("./src/app/public/crud/crud.component.html"),
             styles: [__webpack_require__("./src/app/public/crud/crud.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [contact_service_1.ContactService])
     ], CrudComponent);
     return CrudComponent;
 }());
