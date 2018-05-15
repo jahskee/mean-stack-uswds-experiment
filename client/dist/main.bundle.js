@@ -95,10 +95,11 @@ var page2_component_1 = __webpack_require__("./src/app/customer/page2/page2.comp
 var contact_service_1 = __webpack_require__("./src/app/services/contact.service.ts");
 var forms_2 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
 var register_component_1 = __webpack_require__("./src/app/customer/register/register.component.ts");
-var login_component_1 = __webpack_require__("./src/app/customer/login/login.component.ts");
+var signin_component_1 = __webpack_require__("./src/app/customer/signin/signin.component.ts");
 var routes = [
     { path: 'page1', component: page1_component_1.Page1Component },
-    { path: 'login', component: login_component_1.LoginComponent },
+    { path: 'signin', component: signin_component_1.SigninComponent },
+    { path: 'register', component: register_component_1.RegisterComponent },
     { path: 'page2/:contactId', component: page2_component_1.Page2Component },
     { path: '', component: page1_component_1.Page1Component },
     { path: '**', component: page1_component_1.Page1Component },
@@ -117,7 +118,7 @@ var AppModule = /** @class */ (function () {
                 page1_component_1.Page1Component,
                 page2_component_1.Page2Component,
                 register_component_1.RegisterComponent,
-                login_component_1.LoginComponent
+                signin_component_1.SigninComponent
             ],
             imports: [
                 platform_browser_1.BrowserModule,
@@ -190,7 +191,7 @@ exports.FooterComponent = FooterComponent;
 /***/ "./src/app/customer/header/header.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id='my-header' style='margin:0'>\n  <div class=\"usa-banner\">\n    <div class=\"usa-accordion\">\n      <header class=\"usa-banner-header\">\n        <div class=\"usa-grid usa-banner-inner\" style='width: 600px; margin-left:0; text-align: left'>\n          <img src=\"/assets/uswds-1.6.3/img/favicons/favicon-57.png\" alt=\"U.S. flag\">\n          <span>An official website of the United States government</span>\n          <button class=\"usa-accordion-button usa-banner-button\" aria-expanded=\"false\" aria-controls=\"gov-banner\">\n            <span class=\"usa-banner-button-text\">Here's how you know</span>\n          </button>\n        </div>\n      </header>\n      <div class=\"usa-banner-content usa-grid usa-accordion-content\" id=\"gov-banner\">\n        <div class=\"usa-banner-guidance-gov usa-width-one-half\">\n          <img class=\"usa-banner-icon usa-media_block-img\" src=\"/assets/uswds-1.6.3/img/icon-dot-gov.svg\" alt=\"Dot gov\">\n          <div class=\"usa-media_block-body\">\n            <p>\n              <strong>The .gov means it’s official.</strong>\n              <br> Federal government websites often end in .gov or .mil. Before sharing sensitive information, make sure you’re\n              on a federal government site.\n            </p>\n          </div>\n        </div>\n        <div class=\"usa-banner-guidance-ssl usa-width-one-half\">\n          <img class=\"usa-banner-icon usa-media_block-img\" src=\"/assets/uswds-1.6.3/img/icon-https.svg\" alt=\"Https\">\n          <div class=\"usa-media_block-body\">\n            <p>\n              <strong>The site is secure.</strong>\n              <br> The\n              <strong>https://</strong> ensures that you are connecting to the official website and that any information you provide\n              is encrypted and transmitted securely.\n            </p>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <style>\n    my-logo {\n      margin: 0;\n      text-align: left;\n    }\n  </style>\n  <header class=\"usa-header usa-header-basic\" role=\"banner\">\n\n    <form class=\"usa-search usa-search-small\" style=\"padding: 5px 5px 0 0\">\n      <div role=\"search\">\n        <label class=\"usa-sr-only\" for=\"basic-search-field-small\">Search small</label>\n        <input id=\"basic-search-field-small\" type=\"search\" name=\"search\">\n        <button type=\"submit\">\n          <span class=\"usa-sr-only\">Search</span>\n        </button>\n      </div>\n    </form>\n\n    <div id='my-top-menu' style='width: 100vw; background-color:#006747; \n                                  color:white; padding: 10px; padding-left: 30px;'>\n\n      <div style='display: flex; flex-direction: row'>\n        <img src='/assets/images/logo/usda-circle.png' style='width: 80px; height: 80px; text-align: left; margin-right: 10px;\n          vertical-align: middle'>\n        <div>\n          <h3 style='margin: 0; text-align: left; padding-top: 15px'>U.S. Department of Agriculture </h3>\n          <h4 style='margin: 0; text-align: left; padding-top: 5px'>eAuthentication Service</h4>\n        </div>\n      </div>\n\n\n    </div>\n\n\n    <div class=\"usa-nav-container\">\n      <div class=\"usa-navbar\">\n\n        <button class=\"usa-menu-btn\">Menu</button>\n      </div>\n\n      <nav role=\"navigation\" class=\"usa-nav\">\n\n        <button class=\"usa-nav-close\">\n          <img src=\"/assets/uswds-1.6.3/img/close.svg\" alt=\"close\">\n        </button>\n        <ul class=\"usa-nav-primary usa-accordion\">\n          <li>\n            <a class=\"usa-nav-link\" routerLink=\"/\">\n              <span>Home</span>\n            </a>\n          </li>\n          <li>\n            <a class=\"usa-nav-link\" href=\"javascript:void(0)\">\n              <span>Services</span>\n            </a>\n\n          </li>\n          <li>\n            <a class=\"usa-nav-link\" href=\"javascript:void(0)\">\n              <span>Partners</span>\n            </a>\n          </li>\n          <li>\n            <a class=\"usa-nav-link\" routerLink=\"/heroes\">\n              <span>Heroes</span>\n            </a>\n          </li>\n          <li>\n            <a class=\"usa-nav-link\" routerLink=\"/login\">\n              <span>Sign in</span>\n            </a>\n          </li>\n          <li>\n              <a class=\"usa-nav-link\" routerLink=\"/register\">\n              <span>Register</span>\n            </a>\n          </li>\n        </ul>\n      </nav>\n    </div>\n  </header>\n  <div class=\"usa-overlay\"></div>\n</div>\n\n\n<main id=\"main-content\"></main>"
+module.exports = "<div id='my-header' style='margin:0; margin-bottom: 3rem'>\n  <div class=\"usa-banner\">\n    <div class=\"usa-accordion\">\n      <header class=\"usa-banner-header\">\n        <div class=\"usa-grid usa-banner-inner\" style='width: 600px; margin-left:0; text-align: left'>\n          <img src=\"/assets/uswds-1.6.3/img/favicons/favicon-57.png\" alt=\"U.S. flag\">\n          <span>An official website of the United States government</span>\n          <button class=\"usa-accordion-button usa-banner-button\" aria-expanded=\"false\" aria-controls=\"gov-banner\">\n            <span class=\"usa-banner-button-text\">Here's how you know</span>\n          </button>\n        </div>\n      </header>\n      <div class=\"usa-banner-content usa-grid usa-accordion-content\" id=\"gov-banner\">\n        <div class=\"usa-banner-guidance-gov usa-width-one-half\">\n          <img class=\"usa-banner-icon usa-media_block-img\" src=\"/assets/uswds-1.6.3/img/icon-dot-gov.svg\" alt=\"Dot gov\">\n          <div class=\"usa-media_block-body\">\n            <p>\n              <strong>The .gov means it’s official.</strong>\n              <br> Federal government websites often end in .gov or .mil. Before sharing sensitive information, make sure you’re\n              on a federal government site.\n            </p>\n          </div>\n        </div>\n        <div class=\"usa-banner-guidance-ssl usa-width-one-half\">\n          <img class=\"usa-banner-icon usa-media_block-img\" src=\"/assets/uswds-1.6.3/img/icon-https.svg\" alt=\"Https\">\n          <div class=\"usa-media_block-body\">\n            <p>\n              <strong>The site is secure.</strong>\n              <br> The\n              <strong>https://</strong> ensures that you are connecting to the official website and that any information you provide\n              is encrypted and transmitted securely.\n            </p>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <style>\n    my-logo {\n      margin: 0;\n      text-align: left;\n    }\n  </style>\n  <header class=\"usa-header usa-header-basic\" role=\"banner\">\n\n    <form class=\"usa-search usa-search-small\" style=\"padding: 5px 5px 0 0\">\n      <div role=\"search\">\n        <label class=\"usa-sr-only\" for=\"basic-search-field-small\">Search small</label>\n        <input id=\"basic-search-field-small\" type=\"search\" name=\"search\">\n        <button type=\"submit\">\n          <span class=\"usa-sr-only\">Search</span>\n        </button>\n      </div>\n    </form>\n\n    <div id='my-top-menu' style='width: 100vw; background-color:#006747; \n                                  color:white; padding: 10px; padding-left: 30px;'>\n\n      <div style='display: flex; flex-direction: row'>\n        <img src='/assets/images/logo/usda-circle.png' style='width: 80px; height: 80px; text-align: left; margin-right: 10px;\n          vertical-align: middle'>\n        <div>\n          <h3 style='margin: 0; text-align: left; padding-top: 15px'>U.S. Department of Agriculture </h3>\n          <h4 style='margin: 0; text-align: left; padding-top: 5px'>eAuthentication Service</h4>\n        </div>\n      </div>\n\n\n    </div>\n\n\n    <div class=\"usa-nav-container\">\n      <div class=\"usa-navbar\">\n\n        <button class=\"usa-menu-btn\">Menu</button>\n      </div>\n\n      <nav role=\"navigation\" class=\"usa-nav\">\n\n        <button class=\"usa-nav-close\">\n          <img src=\"/assets/uswds-1.6.3/img/close.svg\" alt=\"close\">\n        </button>\n        <ul class=\"usa-nav-primary usa-accordion\">\n          <li>\n            <a class=\"usa-nav-link\" routerLink=\"/\">\n              <span>Home</span>\n            </a>\n          </li>\n          <li>\n            <a class=\"usa-nav-link\" href=\"javascript:void(0)\">\n              <span>Services</span>\n            </a>\n\n          </li>\n          <li>\n            <a class=\"usa-nav-link\" href=\"javascript:void(0)\">\n              <span>Partners</span>\n            </a>\n          </li>\n          <li>\n            <a class=\"usa-nav-link\" routerLink=\"/heroes\">\n              <span>Heroes</span>\n            </a>\n          </li>\n          <li>\n            <a class=\"usa-nav-link\" routerLink=\"/signin\">\n              <span>Sign in</span>\n            </a>\n          </li>\n          <li>\n              <a class=\"usa-nav-link\" routerLink=\"/register\">\n              <span>Register</span>\n            </a>\n          </li>\n        </ul>\n      </nav>\n    </div>\n  </header>\n  <div class=\"usa-overlay\"></div>\n</div>\n\n\n<main id=\"main-content\"></main>"
 
 /***/ }),
 
@@ -238,56 +239,6 @@ var HeaderComponent = /** @class */ (function () {
     return HeaderComponent;
 }());
 exports.HeaderComponent = HeaderComponent;
-
-
-/***/ }),
-
-/***/ "./src/app/customer/login/login.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "\n<form class=\"usa-form\" style='margin: 0 auto; padding-top: 20px'>\n  <fieldset>\n    <legend class=\"usa-drop_text\">Sign in</legend>\n    <span>or <a href=\"javascript:void(0);\">create an account</a></span>\n\n    <label for=\"username\">Username or email address</label>\n    <input id=\"username\" name=\"username\" type=\"text\" autocapitalize=\"off\" autocorrect=\"off\">\n\n    <label for=\"password-sign-in\">Password</label>\n    <input id=\"password-sign-in\" name=\"password\" type=\"password\">\n    <p class=\"usa-form-note\">\n      <a title=\"Show password\" href=\"javascript:void(0);\"\n        class=\"usa-show_password\"\n        aria-controls=\"password-sign-in\">Show password</a>\n    </p>\n\n    <input type=\"submit\" value=\"Sign in\">\n    <p><a href=\"javascript:void(0);\" title=\"Forgot username\">\n      Forgot username?</a></p>\n    <p><a href=\"javascript:void(0);\" title=\"Forgot password\">\n      Forgot password?</a></p>\n  </fieldset>\n</form>\n\n"
-
-/***/ }),
-
-/***/ "./src/app/customer/login/login.component.scss":
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/customer/login/login.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var LoginComponent = /** @class */ (function () {
-    function LoginComponent() {
-    }
-    LoginComponent.prototype.ngOnInit = function () {
-    };
-    LoginComponent = __decorate([
-        core_1.Component({
-            selector: 'app-login',
-            template: __webpack_require__("./src/app/customer/login/login.component.html"),
-            styles: [__webpack_require__("./src/app/customer/login/login.component.scss")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], LoginComponent);
-    return LoginComponent;
-}());
-exports.LoginComponent = LoginComponent;
 
 
 /***/ }),
@@ -603,7 +554,7 @@ exports.Page2Component = Page2Component;
 /***/ "./src/app/customer/register/register.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  register works!\n</p>\n"
+module.exports = "<form class=\"usa-form-large\" style=\"margin: 0 auto\">\n    <fieldset>\n      <legend>Mailing address</legend>\n      <label for=\"mailing-address-1\">Street address 1</label>\n      <input id=\"mailing-address-1\" name=\"mailing-address-1\" type=\"text\">\n\n      <label for=\"mailing-address-2\">Street address 2 <span class=\"usa-input-label-helper\">(optional)</span></label>\n      <input id=\"mailing-address-2\" name=\"mailing-address-2\" type=\"text\">\n\n      <div>\n        <div class=\"usa-input-grid usa-input-grid-medium\">\n          <label for=\"city\">City</label>\n          <input id=\"city\" name=\"city\" type=\"text\">\n        </div>\n\n        <div class=\"usa-input-grid usa-input-grid-small\">\n          <label for=\"state\">State</label>\n          <select id=\"state\" name=\"state\">\n            <option value>- Select -</option>\n            <option value=\"AL\">Alabama</option>\n            <option value=\"AK\">Alaska</option>\n            <option value=\"AZ\">Arizona</option>\n            <option value=\"AR\">Arkansas</option>\n            <option value=\"CA\">California</option>\n            <option value=\"CO\">Colorado</option>\n            <option value=\"CT\">Connecticut</option>\n            <option value=\"DE\">Delaware</option>\n            <option value=\"DC\">District of Columbia</option>\n            <option value=\"FL\">Florida</option>\n            <option value=\"GA\">Georgia</option>\n            <option value=\"HI\">Hawaii</option>\n            <option value=\"ID\">Idaho</option>\n            <option value=\"IL\">Illinois</option>\n            <option value=\"IN\">Indiana</option>\n            <option value=\"IA\">Iowa</option>\n            <option value=\"KS\">Kansas</option>\n            <option value=\"KY\">Kentucky</option>\n            <option value=\"LA\">Louisiana</option>\n            <option value=\"ME\">Maine</option>\n            <option value=\"MD\">Maryland</option>\n            <option value=\"MA\">Massachusetts</option>\n            <option value=\"MI\">Michigan</option>\n            <option value=\"MN\">Minnesota</option>\n            <option value=\"MS\">Mississippi</option>\n            <option value=\"MO\">Missouri</option>\n            <option value=\"MT\">Montana</option>\n            <option value=\"NE\">Nebraska</option>\n            <option value=\"NV\">Nevada</option>\n            <option value=\"NH\">New Hampshire</option>\n            <option value=\"NJ\">New Jersey</option>\n            <option value=\"NM\">New Mexico</option>\n            <option value=\"NY\">New York</option>\n            <option value=\"NC\">North Carolina</option>\n            <option value=\"ND\">North Dakota</option>\n            <option value=\"OH\">Ohio</option>\n            <option value=\"OK\">Oklahoma</option>\n            <option value=\"OR\">Oregon</option>\n            <option value=\"PA\">Pennsylvania</option>\n            <option value=\"RI\">Rhode Island</option>\n            <option value=\"SC\">South Carolina</option>\n            <option value=\"SD\">South Dakota</option>\n            <option value=\"TN\">Tennessee</option>\n            <option value=\"TX\">Texas</option>\n            <option value=\"UT\">Utah</option>\n            <option value=\"VT\">Vermont</option>\n            <option value=\"VA\">Virginia</option>\n            <option value=\"WA\">Washington</option>\n            <option value=\"WV\">West Virginia</option>\n            <option value=\"WI\">Wisconsin</option>\n            <option value=\"WY\">Wyoming</option>\n            <option value=\"AA\">AA - Armed Forces Americas</option>\n            <option value=\"AE\">AE - Armed Forces Africa</option>\n            <option value=\"AE\">AE - Armed Forces Canada</option>\n            <option value=\"AE\">AE - Armed Forces Europe</option>\n            <option value=\"AE\">AE - Armed Forces Middle East</option>\n            <option value=\"AP\">AP - Armed Forces Pacific</option>\n          </select>\n        </div>\n      </div>\n\n      <label for=\"zip\">ZIP</label>\n      <input class=\"usa-input-medium\" id=\"zip\" name=\"zip\" type=\"text\" pattern=\"[\\d]{5}(-[\\d]{4})?\">\n    </fieldset>\n  </form>"
 
 /***/ }),
 
@@ -646,6 +597,56 @@ var RegisterComponent = /** @class */ (function () {
     return RegisterComponent;
 }());
 exports.RegisterComponent = RegisterComponent;
+
+
+/***/ }),
+
+/***/ "./src/app/customer/signin/signin.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<form class=\"usa-form\" style='margin: 0 auto;'>\n    <fieldset>\n      <legend class=\"usa-drop_text\">Sign in</legend>\n      <span>or <a href=\"javascript:void(0);\">create an account</a></span>\n  \n      <label for=\"username\">Username or email address</label>\n      <input id=\"username\" name=\"username\" type=\"text\" autocapitalize=\"off\" autocorrect=\"off\">\n  \n      <label for=\"password-sign-in\">Password</label>\n      <input id=\"password-sign-in\" name=\"password\" type=\"password\">\n      <p class=\"usa-form-note\">\n        <a title=\"Show password\" href=\"javascript:void(0);\"\n          class=\"usa-show_password\"\n          aria-controls=\"password-sign-in\">Show password</a>\n      </p>\n  \n      <input type=\"submit\" value=\"Sign in\">\n      <p><a href=\"javascript:void(0);\" title=\"Forgot username\">\n        Forgot username?</a></p>\n      <p><a href=\"javascript:void(0);\" title=\"Forgot password\">\n        Forgot password?</a></p>\n    </fieldset>\n  </form>"
+
+/***/ }),
+
+/***/ "./src/app/customer/signin/signin.component.scss":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/customer/signin/signin.component.ts":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var SigninComponent = /** @class */ (function () {
+    function SigninComponent() {
+    }
+    SigninComponent.prototype.ngOnInit = function () {
+    };
+    SigninComponent = __decorate([
+        core_1.Component({
+            selector: 'app-signin',
+            template: __webpack_require__("./src/app/customer/signin/signin.component.html"),
+            styles: [__webpack_require__("./src/app/customer/signin/signin.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], SigninComponent);
+    return SigninComponent;
+}());
+exports.SigninComponent = SigninComponent;
 
 
 /***/ }),

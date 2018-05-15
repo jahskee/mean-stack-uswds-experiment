@@ -16,11 +16,12 @@ import { Page2Component } from './customer/page2/page2.component';
 import { ContactService } from './services/contact.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './customer/register/register.component';
-import { LoginComponent } from './customer/login/login.component';
+import { SigninComponent } from './customer/signin/signin.component';
 
 const routes: Routes = [
   { path: 'page1', component: Page1Component },
-  { path: 'login', component: LoginComponent },
+  { path: 'signin', component: SigninComponent },
+  { path: 'register', component: RegisterComponent },
   { path: 'page2/:contactId', component: Page2Component },
   { path: '', component: Page1Component },
   { path: '**', component: Page1Component },
@@ -35,8 +36,8 @@ const routes: Routes = [
     ContactListComponent,
     Page1Component,
     Page2Component,
-    RegisterComponent,
-    LoginComponent
+    RegisterComponent,   
+    SigninComponent
   ],
   imports: [
     BrowserModule,
