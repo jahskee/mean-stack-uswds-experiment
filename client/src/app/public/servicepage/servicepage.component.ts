@@ -8,16 +8,11 @@ import { ContactService } from '../../services/contact.service';
 })
 export class ServicepageComponent implements OnInit {
 
-  contacts = null;
-  constructor(private contactService: ContactService) { }
+  contructor() {}
   
   ngOnInit() {
-    this.updateContactList();
+
   }
 
-  updateContactList() {
-    this.contactService.listContacts().subscribe(contacts => {
-      this.contacts = contacts;
-    });  
-  }
+
 }

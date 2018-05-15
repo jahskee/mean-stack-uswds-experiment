@@ -8,8 +8,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './_common/header/header.component';
 import { FooterComponent } from './_common/footer/footer.component';
 
-import { AddContactFormComponent } from './public/servicepage/add-contact-form/add-contact-form.component';
-import { ContactListComponent } from './public/servicepage/contact-list/contact-list.component';
+import { AddContactFormComponent } from './public/crud/add-contact-form/add-contact-form.component';
+import { ContactListComponent } from './public/crud/contact-list/contact-list.component';
 import { Page2Component } from './public/page2/page2.component';
 
 import { ContactService } from './services/contact.service';
@@ -21,6 +21,7 @@ import { PartnersComponent } from './public/partners/partners.component';
 import { ContactComponent } from './public/contact/contact.component';
 import { PasswordResetComponent } from './public/password-reset/password-reset.component';
 import { HomeComponent } from './public/home/home.component';
+import { CrudComponent } from './public/crud/crud.component';
 
 const routes: Routes = [
   { path: 'signin', component: SigninComponent },
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'partners', component: PartnersComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'service', component: ServicepageComponent },
+  { path: 'crud', component: CrudComponent },
   { path: 'page2/:contactId', component: Page2Component },
   { path: 'passwordreset', component: PasswordResetComponent },
   { path: '', component: HomeComponent },
@@ -49,6 +51,7 @@ const routes: Routes = [
     ContactComponent, 
     PasswordResetComponent,
     HomeComponent,
+    CrudComponent,
   ],
   imports: [
     BrowserModule,

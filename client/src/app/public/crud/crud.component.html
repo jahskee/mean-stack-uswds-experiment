@@ -1,0 +1,4 @@
+<div id="page1" style='display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 0 auto'>
+    <app-add-contact-form (addContactEvent)="updateContactList()"></app-add-contact-form>
+    <app-contact-list [contacts]="contacts" > </app-contact-list>
+</div>
