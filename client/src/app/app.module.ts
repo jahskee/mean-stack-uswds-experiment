@@ -5,18 +5,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './customer/header/header.component';
+import { FooterComponent } from './customer/footer/footer.component';
 
-import { Page1Component } from './page1/page1.component';
-import { AddContactFormComponent } from './page1/add-contact-form/add-contact-form.component';
-import { ContactListComponent } from './page1/contact-list/contact-list.component';
-import { Page2Component } from './page2/page2.component';
+import { Page1Component } from './customer/page1/page1.component';
+import { AddContactFormComponent } from './customer/page1/add-contact-form/add-contact-form.component';
+import { ContactListComponent } from './customer/page1/contact-list/contact-list.component';
+import { Page2Component } from './customer/page2/page2.component';
 
 import { ContactService } from './services/contact.service';
 import { ReactiveFormsModule } from '@angular/forms';
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './customer/register/register.component';
+import { LoginComponent } from './customer/login/login.component';
 
 const routes: Routes = [
   { path: 'page1', component: Page1Component },

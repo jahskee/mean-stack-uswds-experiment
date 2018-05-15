@@ -42,10 +42,16 @@
  </style>
   <header class="usa-header usa-header-basic" role="banner">
 
-      <div style='float: right;'>
-          <button (click)='clickSignIn()'>Sign In</button>
-          <button>Register</button>
-        </div>
+    <form class="usa-search usa-search-small" style="padding: 5px 5px 0 0">
+      <div role="search">
+        <label class="usa-sr-only" for="basic-search-field-small">Search small</label>
+        <input id="basic-search-field-small" type="search" name="search">
+        <button type="submit">
+          <span class="usa-sr-only">Search</span>
+        </button>
+      </div>
+    </form>
+
     <div id='my-top-menu' style = 'width: 100vw; background-color:#006747; 
                                   color:white; padding: 10px; padding-left: 30px;' >      
     
@@ -95,18 +101,21 @@
               <span>Contact Us</span>
             </a>
           </li>
+          <li>
+            <a class="usa-nav-link" href="javascript:void(0)">
+              <span>Sign In</span>
+            </a>
+          </li>
+          <li>
+            <a class="usa-nav-link" href="javascript:void(0)">
+              <span>Register</span>
+            </a>
+          </li>
         </ul>
       
-        <form class="usa-search usa-search-small ">
-          <div role="search">
-            <label class="usa-sr-only" for="basic-search-field-small">Search small</label>
-            <input id="basic-search-field-small" type="search" name="search">
-            <button type="submit">
-              <span class="usa-sr-only">Search</span>
-            </button>
-          </div>
-        </form>
-    
+      
+
+         
      
       </nav>
     </div>
