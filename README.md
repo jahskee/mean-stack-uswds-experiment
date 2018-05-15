@@ -10,6 +10,9 @@
             
      cd server
         npm run start-dev
+        
+## Angular 2 generate component
+   ng generate component
 
 ## In Production
    
