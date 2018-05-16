@@ -1,5 +1,8 @@
 # MEAN Stack USWDS & RWD - Containerized
 
+## RWD Checker on localhost and live site
+   http://responsivedesignchecker.com
+
 ## Website prototype
    https://www.stratteos.us
 
