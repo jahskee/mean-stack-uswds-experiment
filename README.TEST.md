@@ -1,7 +1,7 @@
 
-Notes:
-.toEquals() - test object values
-.toBe() - test primitive values
+## Notes:
+    .toEquals() - test object values
+    .toBe() - test primitive values
 
 // --------- actions.test.js -------------
 import * as actions from './actions'
