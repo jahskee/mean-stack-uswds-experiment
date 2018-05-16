@@ -1,4 +1,6 @@
 
+# JEST Testing
+
 ## Notes:
     .toEquals() - test object values
     .toBe() - test primitive values
