@@ -1,3 +1,14 @@
+## Notes:
+    * BDD (Behavioral Driven Development)
+    - Jasmine (full feature), 
+    - Mocha (just a test runner), 
+    - JEST build on top of Jasmine 
+    - Sinon got Fake Http Server
+
+## Assertion Libraries
+    Chai (expect, should, assert)
+    should.js (should)
+    expect.js (expect)
 
 # JEST Testing
 
@@ -42,3 +53,9 @@ import * as actions from './actions'
 ## Command line
     npm t -- --watch is equals to
     jest --watch
+
+## Terms
+    Spies, Mock, Fake Objects, Test Doubles
+
+## Future Readings
+    Asynchronous Testing
