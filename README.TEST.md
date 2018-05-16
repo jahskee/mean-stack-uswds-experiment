@@ -70,3 +70,27 @@ import * as actions from './actions'
 
 ## Future Readings
     Asynchronous Testing
+
+    Functional Testing is black box testing not concerned with source code
+    https://www.guru99.com/functional-testing.html
+
+### Types of Functional testing are (run first)
+    Unit Testing
+    Smoke Testing
+    Sanity Testing
+    Integration Testing
+    White box testing
+    Black Box testing
+    User Acceptance testing
+    Regression Testing
+
+### Types of Non functional testing are (run second)
+    Performance Testing
+    Load Testing
+    Volume Testing
+    Stress Testing
+    Security Testing
+    Installation Testing
+    Penetration Testing
+    Compatibility Testing
+    Migration Testing
