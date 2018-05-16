@@ -20,6 +20,15 @@
 import * as actions from './actions'
 
 ## group similar tests and test snapshots
+
+    describe('calculator', function() {
+    describe('add()', function() {
+        it('should add 2 numbers togoether', function() {
+        // assertions here
+        });
+    });
+    });
+
     describe('updateUser returns actions',() => {
 
         it('returns an action', () => {
@@ -34,6 +43,7 @@ import * as actions from './actions'
             expect(actions.updateUser({name: ''})).toMatchSnapshot()
         })
     })
+
 
 ## individual testing with primitives
     --------- sum.test.js -------------
