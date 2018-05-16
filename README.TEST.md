@@ -23,7 +23,8 @@ import * as actions from './actions'
     })
 
 ## individual testing with primitives
-// --------- sum.test.js -------------
+    --------- sum.test.js -------------
+
     test('sum 1 and 1', () => {
         expect(sum(1,1)).toBe(2)
     })
