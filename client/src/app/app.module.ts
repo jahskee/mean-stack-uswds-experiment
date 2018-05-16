@@ -34,8 +34,10 @@ const routes: Routes = [
   //{ path: '**', component: CrudComponent },
   { path: 'page2/:contactId', component: Page2Component },
   { path: 'passwordreset', component: PasswordResetComponent },
-  { path: '', component: HomeComponent },
-  { path: '**', component: HomeComponent },
+  //{ path: 'home', component: HomeComponent },
+  //{ path: '**', component: HomeComponent },
+  { path: '', component: RegisterComponent },
+  { path: '**', component: RegisterComponent },
 ];
 
 @NgModule({

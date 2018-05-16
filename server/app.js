@@ -26,10 +26,10 @@ app.use(httpsRedirect(true));
 // connect to database with mongoose
 require("./components/utils/dbconnect");
 
-app.use(cookieparser("cscie31-secret"));
+app.use(cookieparser("secret"));
 app.use(
   session({
-    secret: "cscie31",
+    secret: "secret",
     resave: "true",
     saveUninitialized: "true"
   })
@@ -75,21 +75,29 @@ app.use("/api", function(req, res, next) {
 });
 
 // Protect route with JWT Token
-app.use("/api*", function(req, res, next) {
- // if (process.env.APP_ENVIRONMENT === 'dev') next();
-  var token = req.query.token;
-  jwt.verify(token, "supersecret", function(err, decoded) {
-    if (!err) {
-      next();
-    } else {
-      res.send("API Access Not Authorized!");
-    }
-  });
+app.use("/api/*", function(req, res, next) {
+  console.log('Environment '+process.env.APP_ENVIRONMENT)
+  if (process.env.APP_ENVIRONMENT === 'dev'){ next(); }
+  else {
+    var token = req.query.token;
+    jwt.verify(token, "supersecret", function(err, decoded) {
+      if (!err) {
+        next();
+      } else {
+        res.send("API Access Not Authorized!");
+      }
+    });
+  }
+ 
 });
 
 // setup routes
 const apiContacts = require("./components/routes/api/api-contacts");
 app.use("/api/contacts", apiContacts);
+
+// setup routes
+const apiCustomers = require("./components/routes/api/api-customers");
+app.use("/api/customers", apiCustomers);
 
 // add angular files
 app.use("/", express.static(path.join(__dirname, "../client/dist")));

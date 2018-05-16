@@ -1,19 +1,22 @@
-<form class="usa-form" style="margin: 0 auto">
+<form class="usa-form" style="margin: 0 auto" (ngSubmit)='onSubmit(customer)' [formGroup]='customer'>
     <fieldset>
-      <legend>Name</legend>
-      <label for="title">Title <span class="usa-input-label-helper">(optional)</span></label>
-      <input class="usa-input-tiny" id="title" name="title" type="text">
+      <legend>Sign Up</legend>
+    
+      <div id='grp1'>
+        <input formControlName='firstname' id="first-name" placeholder='First Name' name="first-name" type="text" required aria-required="true">
+        <input formControlName='lastname' id="last-name" placeholder='Last Name' name="last-name" type="text" required aria-required="true">
+        <input formControlName='email' id="email" placeholder='Email' name="email" type="email" required aria-required="true"> 
+        <input formControlName='phone' id="phone" placeholder='Phone' name="phone" type="text" required aria-required="true">   
+      </div>
 
-      <label for="first-name">First name</label>
-      <input id="first-name" name="first-name" type="text" required aria-required="true">
-
-      <label for="middle-name">Middle name <span class="usa-input-label-helper">(optional)</span></label>
-      <input id="middle-name" name="middle-name" type="text">
-
-      <label for="last-name">Last name</label>
-      <input id="last-name" name="last-name" type="text" required aria-required="true">
-
+      <div id='grp2' style='margin: 2rem 0'>         
+        <input formControlName='password1' id="password" placeholder='Password' name="password1" type="password" required>
+        <input formControlName='password2' id="password" placeholder='Confirm Password' name="password2" type="password" required>
+      </div>
+      <button  type='submit' [disabled]="customer.invalid"> Submit </button>
+     
     </fieldset>
+        
   </form>
   <div class="usa-grid usa-footer-return-to-top">
       <a href="/register#">Return to top</a>

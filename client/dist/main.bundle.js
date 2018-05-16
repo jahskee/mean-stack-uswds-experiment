@@ -217,8 +217,10 @@ var routes = [
     //{ path: '**', component: CrudComponent },
     { path: 'page2/:contactId', component: page2_component_1.Page2Component },
     { path: 'passwordreset', component: password_reset_component_1.PasswordResetComponent },
-    { path: '', component: home_component_1.HomeComponent },
-    { path: '**', component: home_component_1.HomeComponent },
+    //{ path: 'home', component: HomeComponent },
+    //{ path: '**', component: HomeComponent },
+    { path: '', component: register_component_1.RegisterComponent },
+    { path: '**', component: register_component_1.RegisterComponent },
 ];
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -771,7 +773,7 @@ exports.PasswordResetComponent = PasswordResetComponent;
 /***/ "./src/app/public/register/register.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<form class=\"usa-form\" style=\"margin: 0 auto\">\n    <fieldset>\n      <legend>Name</legend>\n      <label for=\"title\">Title <span class=\"usa-input-label-helper\">(optional)</span></label>\n      <input class=\"usa-input-tiny\" id=\"title\" name=\"title\" type=\"text\">\n\n      <label for=\"first-name\">First name</label>\n      <input id=\"first-name\" name=\"first-name\" type=\"text\" required aria-required=\"true\">\n\n      <label for=\"middle-name\">Middle name <span class=\"usa-input-label-helper\">(optional)</span></label>\n      <input id=\"middle-name\" name=\"middle-name\" type=\"text\">\n\n      <label for=\"last-name\">Last name</label>\n      <input id=\"last-name\" name=\"last-name\" type=\"text\" required aria-required=\"true\">\n\n    </fieldset>\n  </form>\n  <div class=\"usa-grid usa-footer-return-to-top\">\n      <a href=\"/register#\">Return to top</a>\n  </div>"
+module.exports = "<form class=\"usa-form\" style=\"margin: 0 auto\" (ngSubmit)='onSubmit(customer)' [formGroup]='customer'>\n    <fieldset>\n      <legend>Sign Up</legend>\n    \n      <div id='grp1'>\n        <input formControlName='firstname' id=\"first-name\" placeholder='First Name' name=\"first-name\" type=\"text\" required aria-required=\"true\">\n        <input formControlName='lastname' id=\"last-name\" placeholder='Last Name' name=\"last-name\" type=\"text\" required aria-required=\"true\">\n        <input formControlName='email' id=\"email\" placeholder='Email' name=\"email\" type=\"email\" required aria-required=\"true\"> \n        <input formControlName='phone' id=\"phone\" placeholder='Phone' name=\"phone\" type=\"text\" required aria-required=\"true\">   \n      </div>\n\n      <div id='grp2' style='margin: 2rem 0'>         \n        <input formControlName='password1' id=\"password\" placeholder='Password' name=\"password1\" type=\"password\" required>\n        <input formControlName='password2' id=\"password\" placeholder='Confirm Password' name=\"password2\" type=\"password\" required>\n      </div>\n      <button  type='submit' [disabled]=\"customer.invalid\"> Submit </button>\n     \n    </fieldset>\n        \n  </form>\n  <div class=\"usa-grid usa-footer-return-to-top\">\n      <a href=\"/register#\">Return to top</a>\n  </div>"
 
 /***/ }),
 
@@ -798,10 +800,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var forms_1 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
 var RegisterComponent = /** @class */ (function () {
     function RegisterComponent() {
     }
     RegisterComponent.prototype.ngOnInit = function () {
+        this.customer = new forms_1.FormGroup({
+            firstname: new forms_1.FormControl('', forms_1.Validators.required),
+            lastname: new forms_1.FormControl('', forms_1.Validators.required),
+            email: new forms_1.FormControl('', forms_1.Validators.required),
+            password1: new forms_1.FormControl('', forms_1.Validators.required),
+            password2: new forms_1.FormControl('', forms_1.Validators.required),
+        });
+    };
+    RegisterComponent.prototype.onSubmit = function () {
+        var customerObj = this.customer.value;
+        /*
+        this.contactService.createContact(contactObj).subscribe(data => {
+          this.addContactEvent.emit();
+          console.log('create new contact success!');
+          this.contact.reset();
+        });
+        this.message = 'Contact created.'
+        this.isShowMessage = true;
+        console.log('contact: '+JSON.stringify(contactObj))
+        */
     };
     RegisterComponent = __decorate([
         core_1.Component({
