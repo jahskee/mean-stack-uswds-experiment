@@ -36,6 +36,6 @@ import * as actions from './actions'
         expect(sum(20, 30)).toBe(50)
     })
 
-## Command lilne
+## Command line
     npm t -- --watch is equals to
     jest --watch
