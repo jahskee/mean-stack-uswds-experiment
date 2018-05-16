@@ -34,14 +34,14 @@ body {
 /* query for tablet devices */
 @media only screen and (min-width: 600px) and (max-width: 1024px) {
   body {
-    background: red;
+    //background: red;
   }
 }
 
 /* query for mobile devices */
 @media only screen and (max-width: 599px) {
   body {
-    background: green;
+   // background: green;
   }
 
   #page1 {
