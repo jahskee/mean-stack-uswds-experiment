@@ -5,6 +5,7 @@
     - JEST build on top of Jasmine 
     - Sinon got Fake Http Server
 
+    - Mocha, Jasmine & Jest all uses (describe, it)
 ## Assertion Libraries
     Chai (expect, should, assert)
     should.js (should)
