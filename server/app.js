@@ -13,7 +13,7 @@ const session = require("express-session");
 const jwt = require("jsonwebtoken");
 
 // initialize express app
-const app = express();
+var app = express();
 
 // ------- node express configurations --------
 // add gz deflate - must be the first uses
@@ -92,8 +92,9 @@ app.use("/api/*", function(req, res, next) {
 });
 
 /* ============= API Routes =============*/
-const setupAPIRoutes = require('./components/routes/setup-routes')
-setupAPIRoutes(app)
+const setupCrud = require('./components/setup-crud');
+setupCrud(app)
+
 
 
 // add angular files
