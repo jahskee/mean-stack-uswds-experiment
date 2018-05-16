@@ -76,9 +76,12 @@ app.use("/api", function(req, res, next) {
 
 // Protect route with JWT Token
 app.use("/api/*", function(req, res, next) {
+  
   console.log('Environment '+process.env.APP_ENVIRONMENT)
-  if (process.env.APP_ENVIRONMENT === 'dev'){ next(); }
-  else {
+
+  if (process.env.APP_ENVIRONMENT === 'dev'){ 
+    next(); 
+  } else {
     var token = req.query.token;
     jwt.verify(token, "supersecret", function(err, decoded) {
       if (!err) {
