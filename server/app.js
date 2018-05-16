@@ -92,7 +92,7 @@ app.use("/api/*", function(req, res, next) {
 });
 
 /* ============= API Routes =============*/
-const setupCrud = require('./components/setup-crud');
+const setupCrud = require('./components/models/_setup-crud');
 setupCrud(app)
 
 
