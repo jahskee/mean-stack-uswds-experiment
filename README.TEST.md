@@ -11,11 +11,15 @@
     should.js (should)
     expect.js (expect)
 
-# JEST Testing
+# JEST Testing 
+    https://facebook.github.io/jest/docs/en/getting-started.html
 
 ## Notes:
     .toEquals() - test object values
     .toBe() - test primitive values
+
+## Jest setup and teardown
+    https://facebook.github.io/jest/docs/en/setup-teardown.html    
 
 ## --------- actions.test.js -------------
 import * as actions from './actions'
