@@ -91,13 +91,10 @@ app.use("/api/*", function(req, res, next) {
  
 });
 
-// setup routes
-const apiContacts = require("./components/routes/api/api-contacts");
-app.use("/api/contacts", apiContacts);
+/* ============= API Routes =============*/
+const setupAPIRoutes = require('./components/routes/setup-routes')
+setupAPIRoutes(app)
 
-// setup routes
-const apiCustomers = require("./components/routes/api/api-customers");
-app.use("/api/customers", apiCustomers);
 
 // add angular files
 app.use("/", express.static(path.join(__dirname, "../client/dist")));
