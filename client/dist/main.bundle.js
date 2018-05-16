@@ -212,11 +212,11 @@ var routes = [
     { path: 'partners', component: partners_component_1.PartnersComponent },
     { path: 'contact', component: contact_component_1.ContactComponent },
     { path: 'service', component: servicepage_component_1.ServicepageComponent },
-    { path: 'crud', component: crud_component_1.CrudComponent },
+    //{ path: 'crud', component: CrudComponent },
+    { path: '', component: crud_component_1.CrudComponent },
+    { path: '**', component: crud_component_1.CrudComponent },
     { path: 'page2/:contactId', component: page2_component_1.Page2Component },
     { path: 'passwordreset', component: password_reset_component_1.PasswordResetComponent },
-    { path: '', component: home_component_1.HomeComponent },
-    { path: '**', component: home_component_1.HomeComponent },
 ];
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -443,7 +443,7 @@ exports.ContactListComponent = ContactListComponent;
 /***/ "./src/app/public/crud/crud.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"page1\" style='display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 0 auto'>\n    <h2>CRUD operations</h2>\n    <app-add-contact-form (addContactEvent)=\"updateContactList()\"></app-add-contact-form>\n    <app-contact-list [contacts]=\"contacts\" > </app-contact-list>\n</div>\n<div class=\"usa-grid usa-footer-return-to-top\">\n    <a href=\"/crud#\">Return to top</a>\n</div>"
+module.exports = "<div id=\"page1\" >\n    <h2>CRUD operations</h2>\n    <app-add-contact-form (addContactEvent)=\"updateContactList()\"></app-add-contact-form>\n    <app-contact-list [contacts]=\"contacts\" > </app-contact-list>\n</div>\n<div class=\"usa-grid usa-footer-return-to-top\">\n    <a href=\"/crud#\">Return to top</a>\n</div>"
 
 /***/ }),
 

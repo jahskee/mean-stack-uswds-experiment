@@ -29,11 +29,13 @@ const routes: Routes = [
   { path: 'partners', component: PartnersComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'service', component: ServicepageComponent },
-  { path: 'crud', component: CrudComponent },
+  //{ path: 'crud', component: CrudComponent },
+  { path: '', component: CrudComponent },
+  { path: '**', component: CrudComponent },
   { path: 'page2/:contactId', component: Page2Component },
   { path: 'passwordreset', component: PasswordResetComponent },
-  { path: '', component: HomeComponent },
-  { path: '**', component: HomeComponent },
+ // { path: '', component: HomeComponent },
+ // { path: '**', component: HomeComponent },
 ];
 
 @NgModule({

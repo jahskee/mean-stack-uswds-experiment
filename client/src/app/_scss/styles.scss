@@ -1,22 +1,51 @@
 //@import 'parts/01-init';
 //@import 'parts/02-header';
 footer {
-    color: white;
+  color: white;
 }
 
 .usa-banner-inner {
-
 }
 
 .usa-nav {
-    padding-top: 0;
+  padding-top: 0;
 }
 
 #page2 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .usa-nav-container {
-    height: 50px
+  height: 50px;
 }
 
+body {
+  background-color: lightblue;
+}
+
+#page1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* query for tablet devices */
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  body {
+    background: red;
+  }
+}
+
+/* query for mobile devices */
+@media only screen and (max-width: 599px) {
+  body {
+    background: green;
+  }
+
+  #page1 {
+    display: block !important;
+    //align-items: inherit !;
+  }
+}
