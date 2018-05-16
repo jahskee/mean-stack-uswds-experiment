@@ -1,5 +1,8 @@
 # MEAN Stack USWDS & RWD - Containerized
 
+## Generic CRUD Lib for mongoDB
+   https://www.npmjs.com/package/node-express-crud-router
+
 ## RWD Checker on localhost and live site
    http://responsivedesignchecker.com
 
