@@ -21,6 +21,22 @@
 ## Jest setup and teardown
     https://facebook.github.io/jest/docs/en/setup-teardown.html    
 
+    beforeEach(() => {
+    initializeCityDatabase();
+    });
+
+    afterEach(() => {
+    clearCityDatabase();
+    });
+
+    beforeAll(() => {
+    return initializeCityDatabase();
+    });
+
+    afterAll(() => {
+    return clearCityDatabase();
+    });
+
 ## --------- actions.test.js -------------
 import * as actions from './actions'
 
