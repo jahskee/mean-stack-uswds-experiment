@@ -1,4 +1,3 @@
-//const customerModel = require('./models/customerModel');
 var RouterFactory = require('node-express-crud-router').RouterFactory;
 
 setupCrud = (app) => {
