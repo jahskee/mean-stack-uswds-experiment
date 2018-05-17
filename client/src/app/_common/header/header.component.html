@@ -1,4 +1,4 @@
-<div id='my-header' style='margin:0; margin-bottom: 3rem'>
+<div id='my-header'>
   <div class="usa-banner">
     <div class="usa-accordion">
       <header class="usa-banner-header">
@@ -35,12 +35,7 @@
       </div>
     </div>
   </div>
-  <style>
-    my-logo {
-      margin: 0;
-      text-align: left;
-    }
-  </style>
+
   <header class="usa-header usa-header-basic" role="banner">
 
     <form class="usa-search usa-search-small" style="padding: 5px 5px 0 0">
@@ -53,19 +48,15 @@
       </div>
     </form>
 
-    <div id='my-top-menu' style='width: 100vw; background-color:#006747; 
-                                  color:white; padding: 10px; padding-left: 30px;'>
+    <div id='my-top-menu'>
 
       <div style='display: flex; flex-direction: row'>
-        <img src='/assets/images/logo/usda-circle.png' style='width: 80px; height: 80px; text-align: left; margin-right: 10px;
-          vertical-align: middle'>
+        <img src='/assets/images/logo/usda-circle.png' id='usda_logo'>
         <div>
-          <h3 style='margin: 0; text-align: left; padding-top: 15px'>U.S. Department of Agriculture (Prototype) </h3>
-          <h4 style='margin: 0; text-align: left; padding-top: 5px'>eAuthentication Service</h4>
+          <h3 id='logo_text1'>U.S. Department of Agriculture (Prototype) </h3>
+          <h4 id='logo_text2'>eAuthentication Service</h4>
         </div>
       </div>
-
-
     </div>
 
 
@@ -87,13 +78,13 @@
             </a>
           </li>
           <li>
-              <a class="usa-nav-link" routerLink="/service">
+            <a class="usa-nav-link" routerLink="/service">
               <span>Services</span>
             </a>
 
           </li>
           <li>
-              <a class="usa-nav-link" routerLink="/crud">
+            <a class="usa-nav-link" routerLink="/crud">
               <span>CRUD</span>
             </a>
           </li>
@@ -108,7 +99,7 @@
             </a>
           </li>
           <li>
-              <a class="usa-nav-link" routerLink="/register">
+            <a class="usa-nav-link" routerLink="/register">
               <span>Register</span>
             </a>
           </li>
