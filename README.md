@@ -12,6 +12,9 @@
 ## USWDS Website
    https://designsystem.digital.gov/
 
+## Force redirect to https://www
+   https://www.npmjs.com/package/node-force-domain
+   
 ## Angular2 click to next page
 
    '<a routerLink="/Service/Sign_in"><button class="btn btn-success pull-right" > Add Customer</button></a>'
