@@ -28,28 +28,18 @@ secured_server.listen(secured_port);
 secured_server.on('error', onError);
 secured_server.on('listening', onListening);
 
-// Create HTTP and redirect all to HTTPS server.
-//var server = http.createServer(function(req,res){
-  //res.redirect("https://localhost:8443");
-  
-//});
-
+server = http.createServer(app)
+server.listen(80, '::', function() {
+    console.log('listener');
+});
 
 var server = http.createServer(app);
 server.listen(port);
 
-// set up a route to redirect http to https
-/*
-http.get('/page1', function(req, res) {  
-	console.log('what the heck')
-  res.redirect('https://localhost:8443' + req.url);
-});
-*/
 
 /**
  * Normalize a port into a number, string, or false.
  */
-
 function normalizePort(val) {
   var port = parseInt(val, 10);
 
