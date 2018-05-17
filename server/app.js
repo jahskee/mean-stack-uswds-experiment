@@ -1,8 +1,8 @@
 "use strict";
 
 const express = require("express");
-const httpsRedirect = require("express-https-redirect");
-
+//const httpsRedirect = require("express-https-redirect");
+const forceDomain = require('forcedomain');
 const compression = require("compression");
 const path = require("path");
 const favicon = require("serve-favicon");
@@ -21,7 +21,13 @@ const conf_gzip = require("./conf/gzip");
 app.use(compression({ filter: conf_gzip.shouldCompress }));
 
 // redirect all to secured traffic
-app.use(httpsRedirect(true));
+//app.use(httpsRedirect(true));
+
+app.use(forceDomain({
+  hostname: 'www.stratteos.us',
+  port: 443,
+  protocol: 'https'
+}));
 
 // connect to database with mongoose
 require("./components/utils/dbconnect");
