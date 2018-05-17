@@ -15,7 +15,7 @@ export class CrudComponent implements OnInit {
   }
 
   updateContactList() {
-    this.contactService.listContacts().subscribe(contacts => {
+    this.contactService.list('contact').subscribe(contacts => {
       this.contacts = contacts;
     });  
   }

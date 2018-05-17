@@ -10,8 +10,9 @@ export class ContactService {
   
   token='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphaHNrZWVAeWFob28uY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNTI2MTU0ODA0LCJleHAiOjMxNTU1MjYxNTQ4MDR9.Sac4KgisLlJjknCVrPSK8YU5wusu0I69OlffwcEcJho';
   
-  listContacts(){
-    return this.http.get(this.apiurl + '/api/contacts?token='+this.token);
+  list(modelName){
+   // modelName = modelName.toLowerCase()
+    return this.http.get(this.apiurl + `/api/${modelName}?token=${this.token}`);
   }
 
   getContact(id){
