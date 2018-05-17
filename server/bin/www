@@ -32,10 +32,10 @@ server = http.createServer(app)
 server.listen(80, '::', function() {
     console.log('listener');
 });
-
+/*
 var server = http.createServer(app);
 server.listen(port);
-
+*/
 
 /**
  * Normalize a port into a number, string, or false.
