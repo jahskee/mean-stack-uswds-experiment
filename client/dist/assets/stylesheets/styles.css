@@ -21,7 +21,8 @@ body {
   margin: 0 auto; }
 
 legend {
-  padding-top: 5rem; }
+  padding-top: 5rem;
+  padding-bottom: 2rem; }
 
 /* query for tablet devices */
 /* query for mobile devices */
