@@ -29,7 +29,7 @@ export class AddContactFormComponent {
   onSubmit() {   
     const contactObj = this.contact.value;
     
-    this.crudService.createContact(contactObj).subscribe(data => {
+    this.crudService.create('Contact', contactObj).subscribe(data => {
       this.addContactEvent.emit();
       console.log('create new contact success!');
       this.contact.reset();

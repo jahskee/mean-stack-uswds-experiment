@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 
+// node express generic crud
+// https://www.npmjs.com/package/node-express-crud-router
+
 @Injectable()
 export class CrudService {
     
@@ -13,23 +16,26 @@ export class CrudService {
   
   list(modelName){
    // modelName = modelName.toLowerCase()
-    return this.http.get(this.apiurl + `/api/${modelName.toLowerCase()}s?token=${this.token}`);
+    return this.http.get(`${this.apiurl}/api/${modelName.toLowerCase()}s?token=${this.token}`);
   }
 
-  getContact(id){
-    return this.http.get(this.apiurl + '/api/contacts/read/' + id+'?token='+this.token);
+  create(modelName, dataObj) { 
+    return this.http.post(`${this.apiurl}/api/${modelName.toLowerCase()}s?token=${this.token}`, dataObj);
+  }
+
+  read(modelName, id){
+    return this.http.get(`${this.apiurl}/api/${modelName.toLowerCase()}s/${id}?token=${this.token}`);
   }
   
-  createContact(contactObj) { 
-    return this.http.post(this.apiurl + '/api/contacts/create?token='+this.token, contactObj);
+  // bulk update is possible, see documentation
+  update(modelName, dataObj) {
+    console.log(dataObj)
+    let url = `${this.apiurl}/api/${modelName.toLowerCase()}s/${dataObj._id}`;   
+    return this.http.put(url, dataObj);
   }
 
-  deleteContact(id) {
-    return this.http.delete(this.apiurl + '/api/contacts/delete/'+id+'?token='+this.token);
-  }
-
-  updateContact(contactObj) {
-    return this.http.put(this.apiurl + '/api/contacts/update?token='+this.token, contactObj);
+  delete(modelName, id) {
+    return this.http.delete(`${this.apiurl}/api/${modelName.toLowerCase()}s/delete/${id}?token=${this.token}`);
   }
 
 }

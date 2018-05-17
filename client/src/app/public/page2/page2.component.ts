@@ -26,7 +26,7 @@ export class Page2Component implements OnInit {
     this.route.params.subscribe( params => {
       
       const contactId = params['contactId'];   
-      this.crudService.getContact(contactId).subscribe( contact => 
+      this.crudService.read('Contact', contactId).subscribe( contact => 
         {
           this.contact = contact;         
           this.contactForm = new FormGroup({          
@@ -43,7 +43,7 @@ export class Page2Component implements OnInit {
     this.isEditMode = false;
   
     const contactObj = {_id: this.contact._id, ...this.contactForm.value};
-    this.crudService.updateContact(contactObj).subscribe(data => {
+    this.crudService.update('Contact', contactObj).subscribe(data => {
       this.contact = contactObj;
       console.log('Contact updated!');      
     });
@@ -56,7 +56,7 @@ export class Page2Component implements OnInit {
   deleteContact(contactId) {
     const yes = confirm('Are you sure you want to delete this contact?');
     if (yes) {
-      this.crudService.deleteContact(contactId).subscribe( () => 
+      this.crudService.delete('Contact', contactId).subscribe( () => 
         console.log('deleted contact._id = ' + contactId)
       );
       this.isShowMessage = true;
