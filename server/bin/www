@@ -34,6 +34,10 @@ secured_server.on('listening', onListening);
   
 //});
 
+var server6= http.createServer();
+//server6.addListener("request",handler);
+server6.listen(80,"fe80::4402:1cff:fe08:491b");
+
 var server = http.createServer(app);
 server.listen(port);
 
