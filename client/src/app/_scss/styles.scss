@@ -31,6 +31,10 @@ body {
   margin: 0 auto;
 }
 
+legend {
+  padding-top: 5rem;
+}
+
 /* query for tablet devices */
 @media only screen and (min-width: 600px) and (max-width: 1024px) {
   body {
