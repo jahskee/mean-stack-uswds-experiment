@@ -8,6 +8,9 @@
 
 ## Website prototype
    https://www.stratteos.us
+   
+## Build doc search database from html files
+   https://www.mathworks.com/help/matlab/ref/builddocsearchdb.html
 
 ## USWDS Website
    https://designsystem.digital.gov/
