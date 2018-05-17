@@ -213,8 +213,6 @@ var routes = [
     { path: 'contact', component: contact_component_1.ContactComponent },
     { path: 'service', component: servicepage_component_1.ServicepageComponent },
     { path: 'crud', component: crud_component_1.CrudComponent },
-    //{ path: '', component: CrudComponent },
-    //{ path: '**', component: CrudComponent },
     { path: 'page2/:contactId', component: page2_component_1.Page2Component },
     { path: 'passwordreset', component: password_reset_component_1.PasswordResetComponent },
     { path: 'home', component: home_component_1.HomeComponent },

@@ -30,8 +30,6 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'service', component: ServicepageComponent },
   { path: 'crud', component: CrudComponent },
-  //{ path: '', component: CrudComponent },
-  //{ path: '**', component: CrudComponent },
   { path: 'page2/:contactId', component: Page2Component },
   { path: 'passwordreset', component: PasswordResetComponent },
   { path: 'home', component: HomeComponent },
