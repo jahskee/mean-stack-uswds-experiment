@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ContactService } from '../../services/contact.service';
+import { CrudService } from '../../services/crud.service';
 
 @Component({
   selector: 'app-servicepage',

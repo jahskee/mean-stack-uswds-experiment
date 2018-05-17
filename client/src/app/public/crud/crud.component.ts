@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ContactService } from '../../services/contact.service';
+import { CrudService } from '../../services/crud.service';
 
 @Component({
   selector: 'app-crud',
@@ -8,15 +8,16 @@ import { ContactService } from '../../services/contact.service';
 })
 export class CrudComponent implements OnInit {
   contacts = null;
-  constructor(private contactService: ContactService) { }
+  constructor(private crudService: CrudService) { }
 
   ngOnInit() {
     this.updateContactList();
   }
 
   updateContactList() {
-    this.contactService.list('Contact').subscribe(contacts => {
+    this.crudService.list('Contact').subscribe(contacts => {
       this.contacts = contacts;
     });  
   }
+
 }

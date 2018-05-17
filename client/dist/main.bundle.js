@@ -196,7 +196,7 @@ var footer_component_1 = __webpack_require__("./src/app/_common/footer/footer.co
 var add_contact_form_component_1 = __webpack_require__("./src/app/public/crud/add-contact-form/add-contact-form.component.ts");
 var contact_list_component_1 = __webpack_require__("./src/app/public/crud/contact-list/contact-list.component.ts");
 var page2_component_1 = __webpack_require__("./src/app/public/page2/page2.component.ts");
-var contact_service_1 = __webpack_require__("./src/app/services/contact.service.ts");
+var crud_service_1 = __webpack_require__("./src/app/services/crud.service.ts");
 var forms_2 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
 var register_component_1 = __webpack_require__("./src/app/public/register/register.component.ts");
 var signin_component_1 = __webpack_require__("./src/app/public/signin/signin.component.ts");
@@ -250,7 +250,7 @@ var AppModule = /** @class */ (function () {
                 forms_1.FormsModule,
                 router_1.RouterModule.forRoot(routes),
             ],
-            providers: [contact_service_1.ContactService],
+            providers: [crud_service_1.CrudService],
             bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);
@@ -341,11 +341,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var contact_service_1 = __webpack_require__("./src/app/services/contact.service.ts");
+var crud_service_1 = __webpack_require__("./src/app/services/crud.service.ts");
 var forms_1 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
 var AddContactFormComponent = /** @class */ (function () {
-    function AddContactFormComponent(contactService) {
-        this.contactService = contactService;
+    function AddContactFormComponent(crudService) {
+        this.crudService = crudService;
         this.addContactEvent = new core_1.EventEmitter();
         this.message = '';
         this.isShowMessage = false;
@@ -360,7 +360,7 @@ var AddContactFormComponent = /** @class */ (function () {
     AddContactFormComponent.prototype.onSubmit = function () {
         var _this = this;
         var contactObj = this.contact.value;
-        this.contactService.createContact(contactObj).subscribe(function (data) {
+        this.crudService.createContact(contactObj).subscribe(function (data) {
             _this.addContactEvent.emit();
             console.log('create new contact success!');
             _this.contact.reset();
@@ -383,9 +383,10 @@ var AddContactFormComponent = /** @class */ (function () {
             template: __webpack_require__("./src/app/public/crud/add-contact-form/add-contact-form.component.html"),
             styles: [__webpack_require__("./src/app/public/crud/add-contact-form/add-contact-form.component.scss")],
         }),
-        __metadata("design:paramtypes", [contact_service_1.ContactService])
+        __metadata("design:paramtypes", [typeof (_a = typeof crud_service_1.CrudService !== "undefined" && crud_service_1.CrudService) === "function" && _a || Object])
     ], AddContactFormComponent);
     return AddContactFormComponent;
+    var _a;
 }());
 exports.AddContactFormComponent = AddContactFormComponent;
 
@@ -474,10 +475,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var contact_service_1 = __webpack_require__("./src/app/services/contact.service.ts");
+var crud_service_1 = __webpack_require__("./src/app/services/crud.service.ts");
 var CrudComponent = /** @class */ (function () {
-    function CrudComponent(contactService) {
-        this.contactService = contactService;
+    function CrudComponent(crudService) {
+        this.crudService = crudService;
         this.contacts = null;
     }
     CrudComponent.prototype.ngOnInit = function () {
@@ -485,7 +486,7 @@ var CrudComponent = /** @class */ (function () {
     };
     CrudComponent.prototype.updateContactList = function () {
         var _this = this;
-        this.contactService.list('Contact').subscribe(function (contacts) {
+        this.crudService.list('Contact').subscribe(function (contacts) {
             _this.contacts = contacts;
         });
     };
@@ -495,9 +496,10 @@ var CrudComponent = /** @class */ (function () {
             template: __webpack_require__("./src/app/public/crud/crud.component.html"),
             styles: [__webpack_require__("./src/app/public/crud/crud.component.scss")]
         }),
-        __metadata("design:paramtypes", [contact_service_1.ContactService])
+        __metadata("design:paramtypes", [typeof (_a = typeof crud_service_1.CrudService !== "undefined" && crud_service_1.CrudService) === "function" && _a || Object])
     ], CrudComponent);
     return CrudComponent;
+    var _a;
 }());
 exports.CrudComponent = CrudComponent;
 
@@ -594,11 +596,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var router_1 = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-var contact_service_1 = __webpack_require__("./src/app/services/contact.service.ts");
+var crud_service_1 = __webpack_require__("./src/app/services/crud.service.ts");
 var forms_1 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
 var Page2Component = /** @class */ (function () {
-    function Page2Component(contactService, route) {
-        this.contactService = contactService;
+    function Page2Component(crudService, route) {
+        this.crudService = crudService;
         this.route = route;
         this.isEditMode = false;
         this.isShowMessage = false;
@@ -610,7 +612,7 @@ var Page2Component = /** @class */ (function () {
         var _this = this;
         this.route.params.subscribe(function (params) {
             var contactId = params['contactId'];
-            _this.contactService.getContact(contactId).subscribe(function (contact) {
+            _this.crudService.getContact(contactId).subscribe(function (contact) {
                 _this.contact = contact;
                 _this.contactForm = new forms_1.FormGroup({
                     firstname: new forms_1.FormControl(_this.contact.firstname, forms_1.Validators.required),
@@ -624,7 +626,7 @@ var Page2Component = /** @class */ (function () {
         var _this = this;
         this.isEditMode = false;
         var contactObj = __assign({ _id: this.contact._id }, this.contactForm.value);
-        this.contactService.updateContact(contactObj).subscribe(function (data) {
+        this.crudService.updateContact(contactObj).subscribe(function (data) {
             _this.contact = contactObj;
             console.log('Contact updated!');
         });
@@ -635,7 +637,7 @@ var Page2Component = /** @class */ (function () {
     Page2Component.prototype.deleteContact = function (contactId) {
         var yes = confirm('Are you sure you want to delete this contact?');
         if (yes) {
-            this.contactService.deleteContact(contactId).subscribe(function () {
+            this.crudService.deleteContact(contactId).subscribe(function () {
                 return console.log('deleted contact._id = ' + contactId);
             });
             this.isShowMessage = true;
@@ -660,10 +662,10 @@ var Page2Component = /** @class */ (function () {
             template: __webpack_require__("./src/app/public/page2/page2.component.html"),
             styles: [__webpack_require__("./src/app/public/page2/page2.component.scss")],
         }),
-        __metadata("design:paramtypes", [contact_service_1.ContactService,
-            router_1.ActivatedRoute])
+        __metadata("design:paramtypes", [typeof (_a = typeof crud_service_1.CrudService !== "undefined" && crud_service_1.CrudService) === "function" && _a || Object, router_1.ActivatedRoute])
     ], Page2Component);
     return Page2Component;
+    var _a;
 }());
 exports.Page2Component = Page2Component;
 
@@ -939,7 +941,7 @@ exports.SigninComponent = SigninComponent;
 
 /***/ }),
 
-/***/ "./src/app/services/contact.service.ts":
+/***/ "./src/app/services/crud.service.ts":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -957,35 +959,35 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var http_1 = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
 var environment_1 = __webpack_require__("./src/environments/environment.ts");
-var ContactService = /** @class */ (function () {
-    function ContactService(http) {
+var CrudService = /** @class */ (function () {
+    function CrudService(http) {
         this.http = http;
         this.apiurl = environment_1.environment.apiurl;
         this.token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphaHNrZWVAeWFob28uY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNTI2MTU0ODA0LCJleHAiOjMxNTU1MjYxNTQ4MDR9.Sac4KgisLlJjknCVrPSK8YU5wusu0I69OlffwcEcJho';
     }
-    ContactService.prototype.list = function (modelName) {
+    CrudService.prototype.list = function (modelName) {
         // modelName = modelName.toLowerCase()
         return this.http.get(this.apiurl + ("/api/" + modelName.toLowerCase() + "s?token=" + this.token));
     };
-    ContactService.prototype.getContact = function (id) {
+    CrudService.prototype.getContact = function (id) {
         return this.http.get(this.apiurl + '/api/contacts/read/' + id + '?token=' + this.token);
     };
-    ContactService.prototype.createContact = function (contactObj) {
+    CrudService.prototype.createContact = function (contactObj) {
         return this.http.post(this.apiurl + '/api/contacts/create?token=' + this.token, contactObj);
     };
-    ContactService.prototype.deleteContact = function (id) {
+    CrudService.prototype.deleteContact = function (id) {
         return this.http.delete(this.apiurl + '/api/contacts/delete/' + id + '?token=' + this.token);
     };
-    ContactService.prototype.updateContact = function (contactObj) {
+    CrudService.prototype.updateContact = function (contactObj) {
         return this.http.put(this.apiurl + '/api/contacts/update?token=' + this.token, contactObj);
     };
-    ContactService = __decorate([
+    CrudService = __decorate([
         core_1.Injectable(),
         __metadata("design:paramtypes", [http_1.HttpClient])
-    ], ContactService);
-    return ContactService;
+    ], CrudService);
+    return CrudService;
 }());
-exports.ContactService = ContactService;
+exports.CrudService = CrudService;
 
 
 /***/ }),

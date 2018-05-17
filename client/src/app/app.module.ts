@@ -12,7 +12,7 @@ import { AddContactFormComponent } from './public/crud/add-contact-form/add-cont
 import { ContactListComponent } from './public/crud/contact-list/contact-list.component';
 import { Page2Component } from './public/page2/page2.component';
 
-import { ContactService } from './services/contact.service';
+import { CrudService } from './services/crud.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './public/register/register.component';
 import { SigninComponent } from './public/signin/signin.component';
@@ -64,7 +64,7 @@ const routes: Routes = [
     FormsModule,
     RouterModule.forRoot(routes),
   ],
-  providers: [ContactService],
+  providers: [CrudService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

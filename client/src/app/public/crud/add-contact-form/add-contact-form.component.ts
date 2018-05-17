@@ -1,5 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
-import { ContactService } from '../../../services/contact.service';
+import { CrudService } from '../../../services/crud.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -10,7 +10,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 export class AddContactFormComponent {
 
-  constructor(private contactService: ContactService) { }
+  constructor(private crudService: CrudService) { }
 
   @Output() addContactEvent = new EventEmitter();
 
@@ -29,7 +29,7 @@ export class AddContactFormComponent {
   onSubmit() {   
     const contactObj = this.contact.value;
     
-    this.contactService.createContact(contactObj).subscribe(data => {
+    this.crudService.createContact(contactObj).subscribe(data => {
       this.addContactEvent.emit();
       console.log('create new contact success!');
       this.contact.reset();

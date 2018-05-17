@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ContactService } from '../../services/contact.service';
+import { CrudService } from '../../services/crud.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -19,14 +19,14 @@ export class Page2Component implements OnInit {
   contactForm:FormGroup;
 
   constructor(
-    private contactService: ContactService, 
+    private crudService: CrudService, 
     private route:ActivatedRoute) { }
   
   ngOnInit() {
     this.route.params.subscribe( params => {
       
       const contactId = params['contactId'];   
-      this.contactService.getContact(contactId).subscribe( contact => 
+      this.crudService.getContact(contactId).subscribe( contact => 
         {
           this.contact = contact;         
           this.contactForm = new FormGroup({          
@@ -43,7 +43,7 @@ export class Page2Component implements OnInit {
     this.isEditMode = false;
   
     const contactObj = {_id: this.contact._id, ...this.contactForm.value};
-    this.contactService.updateContact(contactObj).subscribe(data => {
+    this.crudService.updateContact(contactObj).subscribe(data => {
       this.contact = contactObj;
       console.log('Contact updated!');      
     });
@@ -56,7 +56,7 @@ export class Page2Component implements OnInit {
   deleteContact(contactId) {
     const yes = confirm('Are you sure you want to delete this contact?');
     if (yes) {
-      this.contactService.deleteContact(contactId).subscribe( () => 
+      this.crudService.deleteContact(contactId).subscribe( () => 
         console.log('deleted contact._id = ' + contactId)
       );
       this.isShowMessage = true;
