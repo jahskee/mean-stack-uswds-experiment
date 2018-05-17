@@ -485,7 +485,7 @@ var CrudComponent = /** @class */ (function () {
     };
     CrudComponent.prototype.updateContactList = function () {
         var _this = this;
-        this.contactService.list('contact').subscribe(function (contacts) {
+        this.contactService.list('Contact').subscribe(function (contacts) {
             _this.contacts = contacts;
         });
     };
@@ -965,7 +965,7 @@ var ContactService = /** @class */ (function () {
     }
     ContactService.prototype.list = function (modelName) {
         // modelName = modelName.toLowerCase()
-        return this.http.get(this.apiurl + ("/api/" + modelName + "?token=" + this.token));
+        return this.http.get(this.apiurl + ("/api/" + modelName.toLowerCase() + "s?token=" + this.token));
     };
     ContactService.prototype.getContact = function (id) {
         return this.http.get(this.apiurl + '/api/contacts/read/' + id + '?token=' + this.token);

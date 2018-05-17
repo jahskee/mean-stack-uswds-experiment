@@ -12,7 +12,7 @@ export class ContactService {
   
   list(modelName){
    // modelName = modelName.toLowerCase()
-    return this.http.get(this.apiurl + `/api/${modelName}?token=${this.token}`);
+    return this.http.get(this.apiurl + `/api/${modelName.toLowerCase()}s?token=${this.token}`);
   }
 
   getContact(id){
