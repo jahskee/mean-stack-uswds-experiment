@@ -491,10 +491,9 @@ var CrudComponent = /** @class */ (function () {
             template: __webpack_require__("./src/app/public/crud/crud.component.html"),
             styles: [__webpack_require__("./src/app/public/crud/crud.component.scss")]
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof crud_service_1.CrudService !== "undefined" && crud_service_1.CrudService) === "function" && _a || Object])
+        __metadata("design:paramtypes", [crud_service_1.CrudService])
     ], CrudComponent);
     return CrudComponent;
-    var _a;
 }());
 exports.CrudComponent = CrudComponent;
 
@@ -889,7 +888,7 @@ exports.ServicepageComponent = ServicepageComponent;
 /***/ "./src/app/public/signin/signin.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<form class=\"usa-form\" style='margin: 0 auto; margin-bottom: 5rem'>\n    <fieldset  >\n      <legend class=\"usa-drop_text\" >Sign in</legend>\n      <span>or  <a class=\"usa-nav-link\" routerLink=\"/register\">create an account</a></span>\n  \n      <label for=\"username\">Username or email address</label>\n      <input id=\"username\" name=\"username\" type=\"text\" autocapitalize=\"off\" autocorrect=\"off\">\n  \n      <label for=\"password-sign-in\">Password</label>\n      <input id=\"password-sign-in\" name=\"password\" type=\"password\">\n      <p class=\"usa-form-note\">\n        <a title=\"Show password\" href=\"javascript:void(0);\"\n          class=\"usa-show_password\"\n          aria-controls=\"password-sign-in\">Show password</a>\n      </p>\n  \n      <input type=\"submit\" value=\"Sign in\">\n      <p>\n      \n        <a class=\"usa-nav-link\"  title=\"Password Reset\" routerLink=\"/passwordreset\">Forgot Password</a></p>\n      <p><a href=\"javascript:void(0);\" title=\"Forgot password\">\n        Forgot password?</a></p>\n    </fieldset>\n  </form>\n  <div class=\"usa-grid usa-footer-return-to-top\">\n      <a href=\"/signin#\">Return to top</a>\n  </div>"
+module.exports = "<form class=\"usa-form\" style='margin: 0 auto; margin-bottom: 5rem'>\n    <fieldset  >\n      <legend class=\"usa-drop_text\" >Sign in</legend>\n      <span>or  <a class=\"usa-nav-link\" routerLink=\"/register\">create an account</a></span>  \n     \n      <input id=\"username\"  placeholder=\"Username\" name=\"username\" type=\"text\" autocapitalize=\"off\" autocorrect=\"off\">\n  \n    \n      <input id=\"password-sign-in\" placeholder=\"Password\" name=\"password\" type=\"password\">\n      <p class=\"usa-form-note\">\n        <a title=\"Show password\" href=\"javascript:void(0);\"\n          class=\"usa-show_password\"\n          aria-controls=\"password-sign-in\">Show password</a>\n      </p>\n  \n      <input type=\"submit\" value=\"Sign in\">\n      <p>\n      \n        <a class=\"usa-nav-link\"  title=\"Password Reset\" routerLink=\"/passwordreset\">Forgot Password</a></p>\n      <p><a href=\"javascript:void(0);\" title=\"Forgot password\">\n        Forgot password?</a></p>\n    </fieldset>\n  </form>\n  <div class=\"usa-grid usa-footer-return-to-top\">\n      <a href=\"/signin#\">Return to top</a>\n  </div>"
 
 /***/ }),
 
