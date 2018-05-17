@@ -28,18 +28,13 @@ secured_server.listen(secured_port);
 secured_server.on('error', onError);
 secured_server.on('listening', onListening);
 
-var server6 = http.createServer()
-server6.listen(80, '::', function() {
-    console.log('listener');
-});
-/*
 var server = http.createServer(app);
 server.listen(port);
-*/
 
 /**
  * Normalize a port into a number, string, or false.
  */
+
 function normalizePort(val) {
   var port = parseInt(val, 10);
 
