@@ -967,23 +967,22 @@ var CrudService = /** @class */ (function () {
         this.token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphaHNrZWVAeWFob28uY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNTI2MTU0ODA0LCJleHAiOjMxNTU1MjYxNTQ4MDR9.Sac4KgisLlJjknCVrPSK8YU5wusu0I69OlffwcEcJho';
     }
     CrudService.prototype.list = function (modelName) {
-        // modelName = modelName.toLowerCase()
         return this.http.get(this.apiurl + "/api/" + modelName.toLowerCase() + "s?token=" + this.token);
     };
     CrudService.prototype.create = function (modelName, dataObj) {
-        return this.http.post(this.apiurl + "/api/" + modelName.toLowerCase() + "s?token=" + this.token, dataObj);
+        var url = this.apiurl + "/api/" + modelName.toLowerCase() + "s?token=" + this.token;
+        return this.http.post(url, dataObj);
     };
     CrudService.prototype.read = function (modelName, id) {
         return this.http.get(this.apiurl + "/api/" + modelName.toLowerCase() + "s/" + id + "?token=" + this.token);
     };
     // bulk update is possible, see documentation
     CrudService.prototype.update = function (modelName, dataObj) {
-        console.log(dataObj);
-        var url = this.apiurl + "/api/" + modelName.toLowerCase() + "s/" + dataObj._id;
+        var url = this.apiurl + "/api/" + modelName.toLowerCase() + "s/" + dataObj._id + "?token=" + this.token;
         return this.http.put(url, dataObj);
     };
     CrudService.prototype.delete = function (modelName, id) {
-        return this.http.delete(this.apiurl + "/api/" + modelName.toLowerCase() + "s/delete/" + id + "?token=" + this.token);
+        return this.http.delete(this.apiurl + "/api/" + modelName.toLowerCase() + "s/" + id + "?token=" + this.token);
     };
     CrudService = __decorate([
         core_1.Injectable(),

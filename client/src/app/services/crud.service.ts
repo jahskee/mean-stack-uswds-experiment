@@ -15,12 +15,12 @@ export class CrudService {
   token='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphaHNrZWVAeWFob28uY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNTI2MTU0ODA0LCJleHAiOjMxNTU1MjYxNTQ4MDR9.Sac4KgisLlJjknCVrPSK8YU5wusu0I69OlffwcEcJho';
   
   list(modelName){
-   // modelName = modelName.toLowerCase()
     return this.http.get(`${this.apiurl}/api/${modelName.toLowerCase()}s?token=${this.token}`);
   }
 
   create(modelName, dataObj) { 
-    return this.http.post(`${this.apiurl}/api/${modelName.toLowerCase()}s?token=${this.token}`, dataObj);
+    const url = `${this.apiurl}/api/${modelName.toLowerCase()}s?token=${this.token}`;
+    return this.http.post(url, dataObj);
   }
 
   read(modelName, id){
@@ -29,13 +29,13 @@ export class CrudService {
   
   // bulk update is possible, see documentation
   update(modelName, dataObj) {
-    console.log(dataObj)
-    let url = `${this.apiurl}/api/${modelName.toLowerCase()}s/${dataObj._id}`;   
+
+    const url = `${this.apiurl}/api/${modelName.toLowerCase()}s/${dataObj._id}?token=${this.token}`;   
     return this.http.put(url, dataObj);
   }
 
   delete(modelName, id) {
-    return this.http.delete(`${this.apiurl}/api/${modelName.toLowerCase()}s/delete/${id}?token=${this.token}`);
+    return this.http.delete(`${this.apiurl}/api/${modelName.toLowerCase()}s/${id}?token=${this.token}`);
   }
 
 }
