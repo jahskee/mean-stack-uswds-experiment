@@ -24,6 +24,9 @@ legend {
   padding-top: 5rem;
   padding-bottom: 2rem; }
 
+input {
+  border: 1px solid lightgray; }
+
 /* query for tablet devices */
 /* query for mobile devices */
 @media only screen and (max-width: 599px) {

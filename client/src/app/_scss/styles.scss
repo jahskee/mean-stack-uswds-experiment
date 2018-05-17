@@ -36,6 +36,9 @@ legend {
   padding-bottom: 2rem;
 }
 
+input {
+  border: 1px solid lightgray;
+}
 /* query for tablet devices */
 @media only screen and (min-width: 600px) and (max-width: 1024px) {
   body {
