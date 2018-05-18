@@ -1,8 +1,12 @@
 # Kubernetes and Minikube
 
+## installations
     sudo dnf install VirtualBox (minikube)
-    sudo dnf install Kubernetes
+    sudo dnf install kubernetes-client
     sudo dnf install etcd
+
+## install minikube
+    curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.27.0/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
 
 ## etcd
     ### Overview
