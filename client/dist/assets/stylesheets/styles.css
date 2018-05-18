@@ -32,3 +32,6 @@ input, table, tr, th, td {
 @media only screen and (max-width: 599px) {
   #page1 {
     display: block !important; } }
+
+#sign-in-form #username {
+  margin-top: 2rem; }

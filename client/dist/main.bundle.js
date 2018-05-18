@@ -70,7 +70,7 @@ exports.FooterComponent = FooterComponent;
 /***/ "./src/app/_common/header/header.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id='my-header'>\n  <div class=\"usa-banner\">\n    <div class=\"usa-accordion\">\n      <header class=\"usa-banner-header\">\n        <div class=\"usa-grid usa-banner-inner\" style='width: 600px; margin-left:0; text-align: left'>\n          <img src=\"/assets/uswds-1.6.3/img/favicons/favicon-57.png\" alt=\"U.S. flag\">\n          <span>An official website of the United States government</span>\n          <button class=\"usa-accordion-button usa-banner-button\" aria-expanded=\"false\" aria-controls=\"gov-banner\">\n            <span class=\"usa-banner-button-text\">Here's how you know</span>\n          </button>\n        </div>\n      </header>\n      <div class=\"usa-banner-content usa-grid usa-accordion-content\" id=\"gov-banner\">\n        <div class=\"usa-banner-guidance-gov usa-width-one-half\">\n          <img class=\"usa-banner-icon usa-media_block-img\" src=\"/assets/uswds-1.6.3/img/icon-dot-gov.svg\" alt=\"Dot gov\">\n          <div class=\"usa-media_block-body\">\n            <p>\n              <strong>The .gov means it’s official.</strong>\n              <br> Federal government websites often end in .gov or .mil. Before sharing sensitive information, make sure you’re\n              on a federal government site.\n            </p>\n          </div>\n        </div>\n        <div class=\"usa-banner-guidance-ssl usa-width-one-half\">\n          <img class=\"usa-banner-icon usa-media_block-img\" src=\"/assets/uswds-1.6.3/img/icon-https.svg\" alt=\"Https\">\n          <div class=\"usa-media_block-body\">\n            <p>\n              <strong>The site is secure.</strong>\n              <br> The\n              <strong>https://</strong> ensures that you are connecting to the official website and that any information you provide\n              is encrypted and transmitted securely.\n            </p>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <header id='my-header1' class=\"usa-header usa-header-basic\" role=\"banner\">\n\n    <form class=\"usa-search usa-search-small\" style=\"padding: 5px 5px 0 0\">\n      <div role=\"search\">\n        <label class=\"usa-sr-only\" for=\"basic-search-field-small\">Search small</label>\n        <input id=\"basic-search-field-small\" type=\"search\" name=\"search\">\n        <button type=\"submit\">\n          <span class=\"usa-sr-only\">Search</span>\n        </button>\n      </div>\n    </form>\n\n    <div id='my-top-menu'>\n\n      <div style='display: flex; flex-direction: row'>\n        <img src='/assets/images/logo/usda-circle.png' id='usda_logo'>\n        <div>\n          <h3 id='logo_text1'>U.S. Department of Agriculture (Prototype) </h3>\n          <h4 id='logo_text2'>eAuthentication Service</h4>\n        </div>\n      </div>\n    </div>\n\n\n    <div class=\"usa-nav-container\">\n      <div class=\"usa-navbar\">\n\n        <button class=\"usa-menu-btn\">Menu</button>\n      </div>\n\n      <nav role=\"navigation\" class=\"usa-nav\">\n\n        <button class=\"usa-nav-close\">\n          <img src=\"/assets/uswds-1.6.3/img/close.svg\" alt=\"close\">\n        </button>\n        <ul class=\"usa-nav-primary usa-accordion\">\n          <li>\n            <a class=\"usa-nav-link\" routerLink=\"/\">\n              <span>Home</span>\n            </a>\n          </li>\n          <li>\n            <a class=\"usa-nav-link\" routerLink=\"/service\">\n              <span>Services</span>\n            </a>\n\n          </li>\n          <li>\n            <a class=\"usa-nav-link\" routerLink=\"/crud\">\n              <span>CRUD</span>\n            </a>\n          </li>\n          <li>\n            <a class=\"usa-nav-link\" routerLink=\"/contact\">\n              <span>Contact</span>\n            </a>\n          </li>\n          <li>\n            <a class=\"usa-nav-link\" routerLink=\"/signin\">\n              <span>Sign in</span>\n            </a>\n          </li>\n          <li>\n            <a class=\"usa-nav-link\" routerLink=\"/register\">\n              <span>Register</span>\n            </a>\n          </li>\n        </ul>\n      </nav>\n    </div>\n  </header>\n  <div class=\"usa-overlay\"></div>\n</div>\n\n\n<main id=\"main-content\"></main>"
+module.exports = "<div id='my-header'>\n  <div class=\"usa-banner\">\n    <div class=\"usa-accordion\">\n      <header class=\"usa-banner-header\">\n        <div class=\"usa-grid usa-banner-inner\" style='width: 600px; margin-left:0; text-align: left'>\n          <img src=\"/assets/uswds-1.6.3/img/favicons/favicon-57.png\" alt=\"U.S. flag\">\n          <span>An official website of the United States government</span>\n          <button class=\"usa-accordion-button usa-banner-button\" aria-expanded=\"false\" aria-controls=\"gov-banner\">\n            <span class=\"usa-banner-button-text\">Here's how you know</span>\n          </button>\n        </div>\n      </header>\n      <div class=\"usa-banner-content usa-grid usa-accordion-content\" id=\"gov-banner\">\n        <div class=\"usa-banner-guidance-gov usa-width-one-half\">\n          <img class=\"usa-banner-icon usa-media_block-img\" src=\"/assets/uswds-1.6.3/img/icon-dot-gov.svg\" alt=\"Dot gov\">\n          <div class=\"usa-media_block-body\">\n            <p>\n              <strong>The .gov means it’s official.</strong>\n              <br> Federal government websites often end in .gov or .mil. Before sharing sensitive information, make sure you’re\n              on a federal government site.\n            </p>\n          </div>\n        </div>\n        <div class=\"usa-banner-guidance-ssl usa-width-one-half\">\n          <img class=\"usa-banner-icon usa-media_block-img\" src=\"/assets/uswds-1.6.3/img/icon-https.svg\" alt=\"Https\">\n          <div class=\"usa-media_block-body\">\n            <p>\n              <strong>The site is secure.</strong>\n              <br> The\n              <strong>https://</strong> ensures that you are connecting to the official website and that any information you provide\n              is encrypted and transmitted securely.\n            </p>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <header id='my-header1' class=\"usa-header usa-header-basic\" role=\"banner\">\n\n    <form class=\"usa-search usa-search-small\" style=\"padding: 5px 5px 0 0\">\n      <div role=\"search\">\n        <label class=\"usa-sr-only\" for=\"basic-search-field-small\">Search small</label>\n        <input id=\"basic-search-field-small\" type=\"search\" name=\"search\">\n        <button type=\"submit\">\n          <span class=\"usa-sr-only\">Search</span>\n        </button>\n      </div>\n    </form>\n\n    <div id='my-top-menu'>\n\n      <div style='display: flex; flex-direction: row'>\n        <img src='/assets/images/logo/usda-circle.png' id='usda_logo'>\n        <div>\n          <h3 id='logo_text1'>U.S. Department of Agriculture (Prototype) </h3>\n          <h4 id='logo_text2'>eAuthentication Service</h4>\n        </div>\n      </div>\n    </div>\n\n\n    <div class=\"usa-nav-container\">\n      <div class=\"usa-navbar\">\n\n        <button class=\"usa-menu-btn\">Menu</button>\n      </div>\n\n      <nav role=\"navigation\" class=\"usa-nav\">\n\n        <button class=\"usa-nav-close\">\n          <img src=\"/assets/uswds-1.6.3/img/close.svg\" alt=\"close\">\n        </button>\n        <ul class=\"usa-nav-primary usa-accordion\">\n          <li>\n            <a class=\"usa-nav-link\" routerLink=\"/\">\n              <span>Home</span>\n            </a>\n          </li>\n          <li>\n            <a class=\"usa-nav-link\" routerLink=\"/service\">\n              <span>Services</span>\n            </a>\n\n          </li>\n          <li>\n            <a class=\"usa-nav-link\" routerLink=\"/crud\">\n              <span>CRUD</span>\n            </a>\n          </li>\n          <li>\n            <a class=\"usa-nav-link\" routerLink=\"/contact\">\n              <span>Contact</span>\n            </a>\n          </li>\n          <li>\n            <a class=\"usa-nav-link\" routerLink=\"/signin\">\n              <span>Sign In</span>\n            </a>\n          </li>\n          <li>\n            <a class=\"usa-nav-link\" routerLink=\"/signup\">\n              <span>Sign Up</span>\n            </a>\n          </li>\n        </ul>\n      </nav>\n    </div>\n  </header>\n  <div class=\"usa-overlay\"></div>\n</div>\n\n\n<main id=\"main-content\"></main>"
 
 /***/ }),
 
@@ -198,7 +198,6 @@ var contact_list_component_1 = __webpack_require__("./src/app/public/crud/contac
 var page2_component_1 = __webpack_require__("./src/app/public/page2/page2.component.ts");
 var crud_service_1 = __webpack_require__("./src/app/services/crud.service.ts");
 var forms_2 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
-var register_component_1 = __webpack_require__("./src/app/public/register/register.component.ts");
 var signin_component_1 = __webpack_require__("./src/app/public/signin/signin.component.ts");
 var servicepage_component_1 = __webpack_require__("./src/app/public/servicepage/servicepage.component.ts");
 var partners_component_1 = __webpack_require__("./src/app/public/partners/partners.component.ts");
@@ -206,9 +205,10 @@ var contact_component_1 = __webpack_require__("./src/app/public/contact/contact.
 var password_reset_component_1 = __webpack_require__("./src/app/public/password-reset/password-reset.component.ts");
 var home_component_1 = __webpack_require__("./src/app/public/home/home.component.ts");
 var crud_component_1 = __webpack_require__("./src/app/public/crud/crud.component.ts");
+var signup_component_1 = __webpack_require__("./src/app/public/signup/signup.component.ts");
 var routes = [
     { path: 'signin', component: signin_component_1.SigninComponent },
-    { path: 'register', component: register_component_1.RegisterComponent },
+    { path: 'signup', component: signup_component_1.SignupComponent },
     { path: 'partners', component: partners_component_1.PartnersComponent },
     { path: 'contact', component: contact_component_1.ContactComponent },
     { path: 'service', component: servicepage_component_1.ServicepageComponent },
@@ -230,7 +230,6 @@ var AppModule = /** @class */ (function () {
                 add_contact_form_component_1.AddContactFormComponent,
                 contact_list_component_1.ContactListComponent,
                 page2_component_1.Page2Component,
-                register_component_1.RegisterComponent,
                 signin_component_1.SigninComponent,
                 servicepage_component_1.ServicepageComponent,
                 partners_component_1.PartnersComponent,
@@ -238,6 +237,7 @@ var AppModule = /** @class */ (function () {
                 password_reset_component_1.PasswordResetComponent,
                 home_component_1.HomeComponent,
                 crud_component_1.CrudComponent,
+                signup_component_1.SignupComponent,
             ],
             imports: [
                 platform_browser_1.BrowserModule,
@@ -766,78 +766,6 @@ exports.PasswordResetComponent = PasswordResetComponent;
 
 /***/ }),
 
-/***/ "./src/app/public/register/register.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<form class=\"usa-form\" style=\"margin: 0 auto\" (ngSubmit)='onSubmit(customer)' [formGroup]='customer'>\n    <fieldset>     \n      <legend class=\"usa-drop_text\">Sign Up</legend>\n      <div id='grp1'>\n        <input formControlName='firstname' id=\"first-name\" placeholder='First Name' name=\"first-name\" type=\"text\" required aria-required=\"true\">\n        <input formControlName='lastname' id=\"last-name\" placeholder='Last Name' name=\"last-name\" type=\"text\" required aria-required=\"true\">\n        <input formControlName='email' id=\"email\" placeholder='Email' name=\"email\" type=\"email\" required aria-required=\"true\"> \n        <input formControlName='phone' id=\"phone\" placeholder='Phone' name=\"phone\" type=\"text\" required aria-required=\"true\">   \n      </div>\n\n      <div id='grp2' style='margin: 2rem 0'>         \n        <input formControlName='password1' id=\"password1\" placeholder='Password' name=\"password1\" type=\"password\" required>\n        <input formControlName='password2' id=\"password2\" placeholder='Confirm Password' name=\"password2\" type=\"password\" required>\n      </div>\n      <button  type='submit' [disabled]=\"customer.invalid\"> Submit </button>\n     \n    </fieldset>\n        \n  </form>\n  <div class=\"usa-grid usa-footer-return-to-top\">\n      <a href=\"/register#\">Return to top</a>\n  </div>"
-
-/***/ }),
-
-/***/ "./src/app/public/register/register.component.scss":
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/public/register/register.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var forms_1 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
-var RegisterComponent = /** @class */ (function () {
-    function RegisterComponent() {
-    }
-    RegisterComponent.prototype.ngOnInit = function () {
-        this.customer = new forms_1.FormGroup({
-            firstname: new forms_1.FormControl('', forms_1.Validators.required),
-            lastname: new forms_1.FormControl('', forms_1.Validators.required),
-            email: new forms_1.FormControl('', forms_1.Validators.required),
-            phone: new forms_1.FormControl('', forms_1.Validators.required),
-            password1: new forms_1.FormControl('', forms_1.Validators.required),
-            password2: new forms_1.FormControl('', forms_1.Validators.required),
-        });
-    };
-    RegisterComponent.prototype.onSubmit = function () {
-        var customerObj = this.customer.value;
-        /*
-        this.contactService.createContact(contactObj).subscribe(data => {
-          this.addContactEvent.emit();
-          console.log('create new contact success!');
-          this.contact.reset();
-        });
-        this.message = 'Contact created.'
-        this.isShowMessage = true;
-        console.log('contact: '+JSON.stringify(contactObj))
-        */
-    };
-    RegisterComponent = __decorate([
-        core_1.Component({
-            selector: 'app-register',
-            template: __webpack_require__("./src/app/public/register/register.component.html"),
-            styles: [__webpack_require__("./src/app/public/register/register.component.scss")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], RegisterComponent);
-    return RegisterComponent;
-}());
-exports.RegisterComponent = RegisterComponent;
-
-
-/***/ }),
-
 /***/ "./src/app/public/servicepage/servicepage.component.html":
 /***/ (function(module, exports) {
 
@@ -888,7 +816,7 @@ exports.ServicepageComponent = ServicepageComponent;
 /***/ "./src/app/public/signin/signin.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<form class=\"usa-form\" style='margin: 0 auto; margin-bottom: 5rem'>\n    <fieldset  >\n      <legend class=\"usa-drop_text\" >Sign in</legend>\n      <span>or  <a class=\"usa-nav-link\" routerLink=\"/register\">create an account</a></span>  \n     \n      <input id=\"username\"  placeholder=\"Username\" name=\"username\" type=\"text\" autocapitalize=\"off\" autocorrect=\"off\">\n  \n    \n      <input id=\"password-sign-in\" placeholder=\"Password\" name=\"password\" type=\"password\">\n      <p class=\"usa-form-note\">\n        <a title=\"Show password\" href=\"javascript:void(0);\"\n          class=\"usa-show_password\"\n          aria-controls=\"password-sign-in\">Show password</a>\n      </p>\n  \n      <input type=\"submit\" value=\"Sign in\">\n      <p>\n      \n        <a class=\"usa-nav-link\"  title=\"Password Reset\" routerLink=\"/passwordreset\">Forgot Password</a></p>\n     \n    </fieldset>\n  </form>\n  <div class=\"usa-grid usa-footer-return-to-top\">\n      <a href=\"/signin#\">Return to top</a>\n  </div>"
+module.exports = "<form id='sign-in-form' class=\"usa-form\" style='margin: 0 auto; margin-bottom: 5rem'>\n    <fieldset  >\n      <legend class=\"usa-drop_text\" >Sign in</legend>\n      <span>or  <a class=\"usa-nav-link\" routerLink=\"/register\">create an account</a></span>  \n     \n      <input id=\"username\" placeholder=\"Username\" name=\"username\" type=\"text\" autocapitalize=\"off\" autocorrect=\"off\">\n  \n    \n      <input id=\"password-sign-in\" placeholder=\"Password\" name=\"password\" type=\"password\">\n      <p class=\"usa-form-note\">\n        <a title=\"Show password\" href=\"javascript:void(0);\"\n          class=\"usa-show_password\"\n          aria-controls=\"password-sign-in\">Show password</a>\n      </p>\n  \n      <input type=\"submit\" value=\"Sign in\">\n      <p>\n      \n        <a class=\"usa-nav-link\"  title=\"Password Reset\" routerLink=\"/passwordreset\">Forgot Password</a></p>\n     \n    </fieldset>\n  </form>\n  <div class=\"usa-grid usa-footer-return-to-top\">\n      <a href=\"/signin#\">Return to top</a>\n  </div>"
 
 /***/ }),
 
@@ -931,6 +859,78 @@ var SigninComponent = /** @class */ (function () {
     return SigninComponent;
 }());
 exports.SigninComponent = SigninComponent;
+
+
+/***/ }),
+
+/***/ "./src/app/public/signup/signup.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<form class=\"usa-form\" style=\"margin: 0 auto\" (ngSubmit)='onSubmit(customer)' [formGroup]='customer'>\n  <fieldset>     \n    <legend class=\"usa-drop_text\">Sign Up</legend>\n    <div id='grp1'>\n      <input formControlName='firstname' id=\"first-name\" placeholder='First Name' name=\"first-name\" type=\"text\" required aria-required=\"true\">\n      <input formControlName='lastname' id=\"last-name\" placeholder='Last Name' name=\"last-name\" type=\"text\" required aria-required=\"true\">\n      <input formControlName='email' id=\"email\" placeholder='Email' name=\"email\" type=\"email\" required aria-required=\"true\"> \n      <input formControlName='phone' id=\"phone\" placeholder='Phone' name=\"phone\" type=\"text\" required aria-required=\"true\">   \n    </div>\n\n    <div id='grp2' style='margin: 2rem 0'>         \n      <input formControlName='password1' id=\"password1\" placeholder='Password' name=\"password1\" type=\"password\" required>\n      <input formControlName='password2' id=\"password2\" placeholder='Confirm Password' name=\"password2\" type=\"password\" required>\n    </div>\n    <button  type='submit' [disabled]=\"customer.invalid\"> Submit </button>\n   \n  </fieldset>\n      \n</form>\n<div class=\"usa-grid usa-footer-return-to-top\">\n    <a href=\"/register#\">Return to top</a>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/public/signup/signup.component.scss":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/public/signup/signup.component.ts":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var forms_1 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+var SignupComponent = /** @class */ (function () {
+    function SignupComponent() {
+    }
+    SignupComponent.prototype.ngOnInit = function () {
+        this.customer = new forms_1.FormGroup({
+            firstname: new forms_1.FormControl('', forms_1.Validators.required),
+            lastname: new forms_1.FormControl('', forms_1.Validators.required),
+            email: new forms_1.FormControl('', forms_1.Validators.required),
+            phone: new forms_1.FormControl('', forms_1.Validators.required),
+            password1: new forms_1.FormControl('', forms_1.Validators.required),
+            password2: new forms_1.FormControl('', forms_1.Validators.required),
+        });
+    };
+    SignupComponent.prototype.onSubmit = function () {
+        var customerObj = this.customer.value;
+        /*
+        this.contactService.createContact(contactObj).subscribe(data => {
+          this.addContactEvent.emit();
+          console.log('create new contact success!');
+          this.contact.reset();
+        });
+        this.message = 'Contact created.'
+        this.isShowMessage = true;
+        console.log('contact: '+JSON.stringify(contactObj))
+        */
+    };
+    SignupComponent = __decorate([
+        core_1.Component({
+            selector: 'app-signup',
+            template: __webpack_require__("./src/app/public/signup/signup.component.html"),
+            styles: [__webpack_require__("./src/app/public/signup/signup.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], SignupComponent);
+    return SignupComponent;
+}());
+exports.SignupComponent = SignupComponent;
 
 
 /***/ }),

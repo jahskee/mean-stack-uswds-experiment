@@ -14,7 +14,6 @@ import { Page2Component } from './public/page2/page2.component';
 
 import { CrudService } from './services/crud.service';
 import { ReactiveFormsModule } from '@angular/forms';
-import { RegisterComponent } from './public/register/register.component';
 import { SigninComponent } from './public/signin/signin.component';
 import { ServicepageComponent } from './public/servicepage/servicepage.component';
 import { PartnersComponent } from './public/partners/partners.component';
@@ -22,10 +21,11 @@ import { ContactComponent } from './public/contact/contact.component';
 import { PasswordResetComponent } from './public/password-reset/password-reset.component';
 import { HomeComponent } from './public/home/home.component';
 import { CrudComponent } from './public/crud/crud.component';
+import { SignupComponent } from './public/signup/signup.component';
 
 const routes: Routes = [
   { path: 'signin', component: SigninComponent },
-  { path: 'register', component: RegisterComponent },
+  { path: 'signup', component: SignupComponent },
   { path: 'partners', component: PartnersComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'service', component: ServicepageComponent },
@@ -46,7 +46,6 @@ const routes: Routes = [
     AddContactFormComponent,
     ContactListComponent,
     Page2Component,
-    RegisterComponent,   
     SigninComponent, 
     ServicepageComponent, 
     PartnersComponent,    
@@ -54,6 +53,7 @@ const routes: Routes = [
     PasswordResetComponent,
     HomeComponent,
     CrudComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
