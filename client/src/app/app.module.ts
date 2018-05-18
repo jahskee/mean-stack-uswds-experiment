@@ -16,7 +16,6 @@ import { CrudService } from './services/crud.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SigninComponent } from './public/signin/signin.component';
 import { ServicepageComponent } from './public/servicepage/servicepage.component';
-import { ContactComponent } from './public/contact/contact.component';
 import { PasswordResetComponent } from './public/password-reset/password-reset.component';
 import { HomeComponent } from './public/home/home.component';
 import { CrudComponent } from './public/crud/crud.component';
@@ -47,7 +46,6 @@ const routes: Routes = [
     Page2Component,
     SigninComponent, 
     ServicepageComponent, 
-    ContactComponent, 
     PasswordResetComponent,
     HomeComponent,
     CrudComponent,
