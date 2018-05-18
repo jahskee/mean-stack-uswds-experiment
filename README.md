@@ -9,6 +9,15 @@
 ## Website prototype
    https://www.stratteos.us
    
+## Basic Dockerfile
+
+      FROM node8.11
+      WORKDIR /app
+      ADD . /app
+      RUN npm install
+      EXPOSE 3000
+      CMD npm start
+   
 ## Build doc search database from html files
    https://www.mathworks.com/help/matlab/ref/builddocsearchdb.html
 
