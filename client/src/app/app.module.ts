@@ -16,18 +16,17 @@ import { CrudService } from './services/crud.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SigninComponent } from './public/signin/signin.component';
 import { ServicepageComponent } from './public/servicepage/servicepage.component';
-import { PartnersComponent } from './public/partners/partners.component';
 import { ContactComponent } from './public/contact/contact.component';
 import { PasswordResetComponent } from './public/password-reset/password-reset.component';
 import { HomeComponent } from './public/home/home.component';
 import { CrudComponent } from './public/crud/crud.component';
 import { SignupComponent } from './public/signup/signup.component';
+import { ContactusComponent } from './public/contactus/contactus.component';
 
 const routes: Routes = [
   { path: 'signin', component: SigninComponent },
   { path: 'signup', component: SignupComponent },
-  { path: 'partners', component: PartnersComponent },
-  { path: 'contact', component: ContactComponent },
+  { path: 'contactus', component: ContactusComponent },
   { path: 'service', component: ServicepageComponent },
   { path: 'crud', component: CrudComponent },
   { path: 'page2/:contactId', component: Page2Component },
@@ -48,12 +47,12 @@ const routes: Routes = [
     Page2Component,
     SigninComponent, 
     ServicepageComponent, 
-    PartnersComponent,    
     ContactComponent, 
     PasswordResetComponent,
     HomeComponent,
     CrudComponent,
     SignupComponent,
+    ContactusComponent,
   ],
   imports: [
     BrowserModule,
