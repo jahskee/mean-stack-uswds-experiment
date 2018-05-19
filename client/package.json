@@ -11,7 +11,8 @@
     "build": "ng build --prod",
     "build-css": "node-sass src/_scss/ -o src/assets/stylesheets/",
     "watch-css": "nodemon -e scss -x \"npm run build-css\"",
-    "dev": "ng build --watch --poll & npm run watch-css"
+    "dev": "ng build --watch --poll & npm run watch-css",
+    "serve": "node-sass --w src/_scss/ -o src/assets/stylesheets/ & ng serve"
   },
   "private": true,
   "dependencies": {
