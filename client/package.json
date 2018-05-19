@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build": "ng build --prod",
-    "build-css": "node-sass src/app/_scss/ -o src/assets/stylesheets/",
+    "build-css": "node-sass src/_scss/ -o src/assets/stylesheets/",
     "watch-css": "nodemon -e scss -x \"npm run build-css\"",
     "dev": "ng build --watch --poll & npm run watch-css"
   },
