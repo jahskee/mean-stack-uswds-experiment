@@ -1,5 +1,8 @@
 # MEAN Stack USWDS & RWD - Containerized
 
+## export NODE_ENV to “production”
+   this enables Express.js to cache files.
+   
 ## Generic CRUD Lib for mongoDB
    https://www.npmjs.com/package/node-express-crud-router
 
