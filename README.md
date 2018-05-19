@@ -4,7 +4,7 @@
    this enables Express.js to cache files.
 
 ## run build 
-      server - npm run dev
+      server - npm run serve (uses ng serve, it auto loads browser upon  code change)
       client - npm run dev
 
 ## Process Managers
