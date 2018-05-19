@@ -3,14 +3,20 @@
 ## export NODE_ENV to “production”
    this enables Express.js to cache files.
    
+## Process Managers
+      StrongLoop Process Manager
+      PM2
+      Forever
+
+   
 ## Generic CRUD Lib for mongoDB
-   https://www.npmjs.com/package/node-express-crud-router
+     https://www.npmjs.com/package/node-express-crud-router
 
 ## RWD Checker on localhost and live site
-   http://responsivedesignchecker.com
+     http://responsivedesignchecker.com
 
 ## Website prototype
-   https://www.stratteos.us
+     https://www.stratteos.us
 
 ## Install google cloud sdk
    curl https://sdk.cloud.google.com | bash
@@ -25,13 +31,13 @@
       CMD npm start
    
 ## Build doc search database from html files
-   https://www.mathworks.com/help/matlab/ref/builddocsearchdb.html
+     https://www.mathworks.com/help/matlab/ref/builddocsearchdb.html
 
 ## USWDS Website
-   https://designsystem.digital.gov/
+      https://designsystem.digital.gov/
 
 ## Force redirect to https://www
-   https://www.npmjs.com/package/node-force-domain
+     https://www.npmjs.com/package/node-force-domain
    
 ## Angular2 click to next page
 
