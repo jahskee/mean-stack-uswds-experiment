@@ -63,7 +63,10 @@
     access client: https://localhost
     
 ## View components CSS
-  https://components.designsystem.digital.gov/
+     https://components.designsystem.digital.gov/
 
 ## Base documentation
-  https://github.com/jahskee/mean-stack-with-ssl-gzip-jwt-jest-travis-docker
+      https://github.com/jahskee/mean-stack-with-ssl-gzip-jwt-jest-travis-docker
+  
+## ExpressJS in dev & production
+      https://expressjs.com/en/advanced/best-practice-performance.html
