@@ -2,7 +2,11 @@
 
 ## export NODE_ENV to “production”
    this enables Express.js to cache files.
-   
+
+## run build 
+      server - npm run dev
+      client - npm run dev
+
 ## Process Managers
       StrongLoop Process Manager
       PM2
