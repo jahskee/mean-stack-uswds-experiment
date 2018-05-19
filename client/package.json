@@ -4,14 +4,14 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build2": "ng build --prod",
-    "build": "ng build --watch --poll & npm run watch-css",
+    "start": "ng serve",   
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "build": "ng build --prod",
     "build-css": "node-sass --include-path scss src/app/_scss/styles.scss src/assets/stylesheets/styles.css",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "dev": "ng build --watch --poll & npm run watch-css"
   },
   "private": true,
   "dependencies": {

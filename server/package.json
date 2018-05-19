@@ -7,9 +7,7 @@
   "scripts": {
     "test": "jest --coverage",
     "start": "node ./bin/www",
-    "start-dev": "nodemon --inspect ./bin/www",
-    "watch-scss": "node-sass --recursive --watch --include-path scss src/scss/styles.scss --output public/stylesheets/",
-    "watch": "npm run start-dev & npm run watch-scss &"
+    "dev": "nodemon --inspect ./bin/www"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
