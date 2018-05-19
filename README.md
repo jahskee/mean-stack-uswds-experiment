@@ -8,6 +8,9 @@
 
 ## Website prototype
    https://www.stratteos.us
+
+## Install google cloud sdk
+   curl https://sdk.cloud.google.com | bash
    
 ## Basic Dockerfile
 
