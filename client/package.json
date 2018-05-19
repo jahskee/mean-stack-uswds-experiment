@@ -10,7 +10,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build-css": "node-sass --include-path scss src/app/_scss/styles.scss dist/assets/stylesheets/styles.css",
+    "build-css": "node-sass --include-path scss src/app/_scss/styles.scss src/assets/stylesheets/styles.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "private": true,

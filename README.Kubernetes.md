@@ -8,6 +8,10 @@
 ## install minikube
     curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.27.0/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
 
+ ## run minikube
+    disable bios secure boot
+    minikube start   
+
 ## etcd
     ### Overview
     etcd is a distributed key value store that provides a reliable way to store data across a cluster of machines. It’s open-source and available on GitHub. etcd gracefully handles leader elections during network partitions and will tolerate machine failure, including the leader.
