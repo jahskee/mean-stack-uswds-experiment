@@ -9,7 +9,7 @@
     </div>
 
     <div id='grp2' style='margin: 2rem 0'>
-      <input-password1 [group]="customer"></input-password1>
+      <input-password [formGroup]="customer" [placeholder]="Password"></input-password>
       
       <input formControlName='password2' id="password2" placeholder='Confirm Password' name="password2" type="password" required>
     </div>
