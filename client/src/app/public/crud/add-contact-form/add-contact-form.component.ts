@@ -27,16 +27,27 @@ export class AddContactFormComponent {
   }
   
   onSubmit() {   
+
+    if (!this.contact.valid) {
+      this.message = "Contact creation error.";
+      this.isShowMessage = true;
+      console.log(this.message);
+      return 
+    }
+
     const contactObj = this.contact.value;
-    
-    this.crudService.create('Contact', contactObj).subscribe(data => {
-      this.addContactEvent.emit();
-      console.log('create new contact success!');
-      this.contact.reset();
-    });
-    this.message = 'Contact created.'
-    this.isShowMessage = true;
-    console.log('contact: '+JSON.stringify(contactObj))
+    try {
+      this.crudService.create('Contact', contactObj).subscribe(data => {
+        this.addContactEvent.emit();
+        console.log('create new contact success!');
+        this.contact.reset();
+      });
+      this.message = 'Contact created.'
+      this.isShowMessage = true;
+      console.log('contact: '+JSON.stringify(contactObj))
+    } catch (err) {
+      console.error(err)
+    }    
   }
 
   formClick(){
