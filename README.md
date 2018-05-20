@@ -2,7 +2,12 @@
 
 ## export NODE_ENV to “production”
    this enables Express.js to cache files.
+   
+## Angular 2 Notes
 
+   Pass parent data to child uses @Input() varname
+   Pass child to Parent is thru @Output EventEmitter
+   
 ## run build 
       server - npm run serve (uses ng serve, it auto loads browser upon  code change)
       client - npm run dev
