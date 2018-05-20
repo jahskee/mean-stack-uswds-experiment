@@ -13,5 +13,6 @@ export class AppInput {
     @Input() controlName: string;
     @Input() type: string;
     @Input() iconUrl: string;
+    @Input() isInvalid: string;
   
 }

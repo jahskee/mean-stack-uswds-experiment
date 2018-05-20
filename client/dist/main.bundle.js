@@ -852,14 +852,14 @@ var SigninComponent = /** @class */ (function () {
 /***/ "./src/app/public/signup/components/app.input.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class='form-control-group' [formGroup]='formGroup'>\n            \n        <div class=\"input-icon-container\">\n            <input class='input-icon' formControlName='{{controlName}}' id='{{controlName}}' placeholder='{{placeHolder}}' name=\"{{controlName}}\" type=\"{{type}}\" required aria-required='true'>\n           <span *ngIf=\"iconUrl\">\n                <img class=\"input-icon-img\" src=\"{{iconUrl}}\" >\n           </span>\n          \n        </div>\n        <!--\n        <small class=\"text-danger\" \n            *ngIf=\"formGroup.get(controlName).hasError('required') && formGroup.get(controlName).touched\">\n            {{placeHolder}} is required!\n        </small> -->\n</div>"
+module.exports = "<div class='form-control-group' [formGroup]='formGroup'>\n\n    <div class=\"input-icon-container\">\n        <input class='input-icon' formControlName='{{controlName}}' id='{{controlName}}' placeholder='{{placeHolder}}' name=\"{{controlName}}\"\n            type=\"{{type}}\" required aria-required='true'>\n        <span *ngIf=\"iconUrl\">\n            <img class=\"input-icon-img\" src=\"{{iconUrl}}\">\n        </span>\n        <span  *ngIf=\"formGroup.get(controlName).hasError('required') && formGroup.get(controlName).touched\">\n            <img class=\"input-error-img\" src=\"https://cdn1.iconfinder.com/data/icons/Koloria-Icon-Set/21/Error_Symbol.png\">\n        </span>\n        <span  *ngIf=\"!formGroup.get(controlName).hasError('required') && formGroup.get(controlName).touched\">\n                <img class=\"input-error-img\" src=\"https://cdn4.iconfinder.com/data/icons/icocentre-free-icons/137/f-check_256-16.png\">\n                \n            </span>\n    </div>\n    <!--\n        <small class=\"text-danger\" \n            *ngIf=\"formGroup.get(controlName).hasError('required') && formGroup.get(controlName).touched\">\n            {{placeHolder}} is required!\n        </small> -->\n</div>"
 
 /***/ }),
 
 /***/ "./src/app/public/signup/components/app.input.scss":
 /***/ (function(module, exports) {
 
-module.exports = ".input-icon-container {\n  position: relative;\n  padding: 0;\n  margin: 0; }\n\n.input-icon {\n  border-radius: 10px;\n  margin: 0;\n  padding-left: 35px; }\n\n.input-icon-img {\n  position: absolute;\n  top: 15px;\n  left: 10px;\n  width: 14px;\n  height: 14px; }\n\n.form-control-group {\n  padding-bottom: 5px; }\n"
+module.exports = ".input-icon-container {\n  position: relative;\n  padding: 0;\n  margin: 0; }\n\n.input-icon {\n  border-radius: 10px;\n  margin: 0;\n  padding-left: 35px; }\n\n.input-icon-img {\n  position: absolute;\n  top: 15px;\n  left: 10px;\n  width: 14px;\n  height: 14px; }\n\n.input-error-img {\n  position: absolute;\n  top: 15px;\n  right: 15px;\n  width: 14px;\n  height: 14px; }\n\n.form-control-group {\n  padding-bottom: 5px; }\n"
 
 /***/ }),
 
@@ -904,6 +904,10 @@ var AppInput = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
         __metadata("design:type", String)
     ], AppInput.prototype, "iconUrl", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", String)
+    ], AppInput.prototype, "isInvalid", void 0);
     AppInput = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: "app-input",
