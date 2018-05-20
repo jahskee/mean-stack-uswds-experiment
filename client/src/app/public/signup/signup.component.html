@@ -2,10 +2,10 @@
   <fieldset>
     <legend class="usa-drop_text">Sign Up</legend>
     <div id='grp1'>
-      <input formControlName='firstname' id="first-name" placeholder='First Name' name="first-name" type="text" required aria-required="true">
-      <input formControlName='lastname' id="last-name" placeholder='Last Name' name="last-name" type="text" required aria-required="true">
-      <input formControlName='email' id="email" placeholder='Email' name="email" type="email" required aria-required="true">
-      <input formControlName='phone' id="phone" placeholder='Phone' name="phone" type="text" required aria-required="true">
+      <app-input [formGroup]="customer" [controlName]="'firstname'" [placeHolder]="'First Name'"  [type]="'text'"> </app-input> 
+      <app-input [formGroup]="customer" [controlName]="'lastname'" [placeHolder]="'Last Name'"  [type]="'text'"> </app-input> 
+      <app-input [formGroup]="customer" [controlName]="'email'" [placeHolder]="'Email'"  [type]="'email'"> </app-input> 
+      <app-input [formGroup]="customer" [controlName]="'phone'" [placeHolder]="'Phone'"  [type]="'text'"> </app-input>      
     </div>
 
     <div id='grp2' style='margin: 2rem 0'>      
