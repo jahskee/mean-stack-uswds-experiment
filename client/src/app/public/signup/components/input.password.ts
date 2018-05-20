@@ -5,14 +5,17 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
   selector: "input-password",
   template: `
     <div class='form-control-group' [formGroup]="formGroup">
-        <input formControlName="password1" id="password1" placeholder='Password' name="password1" type="password" required>
-       
+        <input formControlName="{{controlName}}" id="{{controlName}}" placeholder='{{placeholder}}' name="{{controlName}}" type="{{type}}" required>
     </div>
     `
 })
 
 export class InputPassword {
     @Input() formGroup: FormGroup;
+    //@Input() placeHolder1: string;
+    placeHolder: string ='Password wee';
     @Input() placeholder: string;
-
+    @Input() controlName: string;
+    @Input() type: string;
+  
 }
