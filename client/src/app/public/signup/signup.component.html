@@ -8,12 +8,9 @@
       <input formControlName='phone' id="phone" placeholder='Phone' name="phone" type="text" required aria-required="true">
     </div>
 
-    <div id='grp2' style='margin: 2rem 0'>
-      <app-input  
-          [formGroup]="customer" [placeHolder]="'Password'" [controlName]="'password1'" [type]="'password'">
-      </app-input>
-      
-      <input formControlName='password2' id="password2" placeholder='Confirm Password' name="password2" type="password" required>
+    <div id='grp2' style='margin: 2rem 0'>      
+      <app-input [formGroup]="customer" [controlName]="'password1'" [placeHolder]="'Password'"  [type]="'password'"> </app-input>      
+      <app-input [formGroup]="customer" [controlName]="'password2'" [placeHolder]="'Confirm Password'" [type]="'password'"> </app-input>     
     </div>
 
     <button type='submit'> Submit </button>
