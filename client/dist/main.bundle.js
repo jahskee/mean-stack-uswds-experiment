@@ -859,7 +859,7 @@ module.exports = "<div class='form-control-group' [formGroup]='formGroup'>\n    
 /***/ "./src/app/public/signup/components/app.input.scss":
 /***/ (function(module, exports) {
 
-module.exports = ".input-icon-container {\n  position: relative;\n  padding: 0;\n  margin: 0; }\n\n.input-icon {\n  border-radius: 10px;\n  margin: 0;\n  padding-left: 40px; }\n\n.input-icon-img {\n  position: absolute;\n  top: 10px;\n  left: 10px;\n  width: 20px;\n  height: 20px; }\n\n.form-control-group {\n  padding-bottom: 5px; }\n"
+module.exports = ".input-icon-container {\n  position: relative;\n  padding: 0;\n  margin: 0; }\n\n.input-icon {\n  border-radius: 10px;\n  margin: 0;\n  padding-left: 35px; }\n\n.input-icon-img {\n  position: absolute;\n  top: 15px;\n  left: 10px;\n  width: 16px;\n  height: 16px; }\n\n.form-control-group {\n  padding-bottom: 5px; }\n"
 
 /***/ }),
 
