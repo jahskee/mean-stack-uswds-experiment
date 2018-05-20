@@ -9,12 +9,9 @@
     </div>
 
     <div id='grp2' style='margin: 2rem 0'>
-      <input-password 
-          [formGroup]="customer" 
-          [placeholder]="'Password'" 
-          [controlName]="'password1'"
-          [type]="'password'">
-      </input-password>
+      <app-input  
+          [formGroup]="customer" [placeHolder]="'Password'" [controlName]="'password1'" [type]="'password'">
+      </app-input>
       
       <input formControlName='password2' id="password2" placeholder='Confirm Password' name="password2" type="password" required>
     </div>

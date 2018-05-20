@@ -21,7 +21,7 @@ import { HomeComponent } from './public/home/home.component';
 import { CrudComponent } from './public/crud/crud.component';
 import { SignupComponent } from './public/signup/signup.component';
 import { ContactusComponent } from './public/contactus/contactus.component';
-import { InputPassword } from './public/signup/components/input.password';
+import { AppInput } from './public/signup/components/app.input';
 
 const routes: Routes = [
   { path: 'signin', component: SigninComponent },
@@ -52,7 +52,7 @@ const routes: Routes = [
     CrudComponent,
     SignupComponent,
     ContactusComponent,
-    InputPassword,
+    AppInput,
   ],
   imports: [
     BrowserModule,
