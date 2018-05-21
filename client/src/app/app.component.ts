@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-
-declare var $: JQueryStatic;
+import * as $ from "jquery";
 
 @Component({
   selector: "app-root",
@@ -10,11 +9,11 @@ declare var $: JQueryStatic;
 export class AppComponent implements OnInit {
   title = "Contacts App";
 
-  constructor() {}
+  constructor() {
+    
+  }
 
   ngOnInit() {
-    $(document).ready(function() {
-      console.log("Jquery 3.3.1 Initialized...");
-    });
+   
   }
 }
