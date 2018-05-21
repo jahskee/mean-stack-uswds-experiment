@@ -34,7 +34,11 @@ input, table, tr, th, td {
 /* query for mobile devices */
 @media only screen and (max-width: 599px) {
   html, body {
-    width: 80vh; }
+    width: 95vw; }
+  #my-header {
+    width: 100%;
+    margin: 0;
+    padding: 0; }
   body {
     margin: 0;
     padding: 0; }
