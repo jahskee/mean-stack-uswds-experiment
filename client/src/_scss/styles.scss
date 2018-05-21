@@ -47,7 +47,6 @@ input, table, tr, th, td {
     width: 100%;
     overflow:hidden;
   }
-
 }
 
 /*
@@ -57,9 +56,6 @@ input, table, tr, th, td {
 /* query for mobile devices */
 @media only screen and (max-width: 599px) {
   html, body, #my-header  {
-    position: absolute;
-    top: 0;
-    left: 0;
     margin: 0;
     padding: 0;
     width: 100%;
