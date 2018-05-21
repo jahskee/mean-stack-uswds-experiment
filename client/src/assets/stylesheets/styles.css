@@ -34,7 +34,7 @@ input, table, tr, th, td {
 /* query for mobile devices */
 @media only screen and (max-width: 599px) {
   html, body {
-    width: 450px; }
+    width: 100vh; }
   body {
     margin: 0;
     padding: 0;
