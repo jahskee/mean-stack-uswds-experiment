@@ -2,12 +2,12 @@ import { Component, Input } from "@angular/core";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 
 @Component({
-  selector: "app-input",
-  styleUrls: ["./input.text.scss"],
-  templateUrl: "./input.text.html"
+  selector: "app-input-text",
+  styleUrls: ["./input-text.scss"],
+  templateUrl: "./input-text.html"
 })
 
-export class AppInput {
+export class InputText {
     @Input() formGroup: FormGroup;
     @Input() placeHolder: string;
     @Input() controlName: string;

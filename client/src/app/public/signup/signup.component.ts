@@ -2,8 +2,8 @@ import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 import { CrudService } from "../../services/crud.service";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { passwordMatchValidator } from "../../validators/password.validator";
-import { AppInput } from "./components/input-text/input.text";
-
+import { InputText } from "./components/input-text/input-text";
+import { InputPhone } from "./components/input-phone/input-phone";
 @Component({
   selector: "app-signup",
   templateUrl: "./signup.component.html",

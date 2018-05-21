@@ -5,64 +5,65 @@
     <div id='grp1'>
 
       <!-- firstname -->
-      <app-input 
+      <app-input-text
         [validationMsg]="'Required, min 2, max 8 chars.'"
         [formGroup]="customer" 
         [controlName]="'firstname'" 
         [placeHolder]="'First Name'"     
         [type]="'text'" 
         [iconUrl]="'https://cdn3.iconfinder.com/data/icons/faticons/32/user-01-20.png'">
-      </app-input>
+      </app-input-text>
 
       <!-- lastname -->
-      <app-input 
+      <app-input-text
         [validationMsg]="'Required, min 2, max 8 chars.'"
         [formGroup]="customer" 
         [controlName]="'lastname'" 
         [placeHolder]="'Last Name'" 
         [type]="'text'" 
         [iconUrl]="''">
-      </app-input>
+      </app-input-text>
      
       <!-- email -->
-      <app-input 
+      <app-input-text
         [validationMsg]="'Required.'"
         [formGroup]="customer" 
         [controlName]="'email'" 
         [placeHolder]="'Email'" 
         [type]="'email'" 
         [iconUrl]="'https://cdn3.iconfinder.com/data/icons/multi-media-set-2-2/65/77-20.png'">
-      </app-input>
+      </app-input-text>
 
       <!-- phone -->
-      <app-input 
+      <app-input-text 
         [validationMsg]="'Required.'"
         [formGroup]="customer" 
         [controlName]="'phone'" 
         [placeHolder]="'Phone'" 
         [type]="'tel'" 
         [iconUrl]="'https://cdn4.iconfinder.com/data/icons/social-communication/142/phone-20.png'">
-      </app-input>
+      </app-input-text>
     </div>
 
     <!-- password -->
     <div id='grp2' style='margin: 2rem 0'>
-      <app-input 
+      <app-input-text 
         [validationMsg]="'Required, must match Confirm Password.'"
         [formGroup]="customer" 
         [controlName]="'password1'" 
         [placeHolder]="'Password'" 
         [type]="'password'" 
         [iconUrl]="'https://cdn2.iconfinder.com/data/icons/oxygen/22x22/apps/preferences-desktop-cryptography.png'">
-      </app-input>
+      </app-input-text>
 
       <!-- confirm password -->
-      <app-input
+      <app-input-text
         [validationMsg]="'Required, must match Password.'" 
         [formGroup]="customer" 
         [controlName]="'password2'" 
         [placeHolder]="'Confirm Password'" 
-        [type]="'password'"> </app-input>
+        [type]="'password'"> 
+      </app-input-text>
     </div>
 
     <button type='submit'> Submit </button>
