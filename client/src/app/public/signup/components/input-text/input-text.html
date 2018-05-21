@@ -7,11 +7,11 @@
             <img class="input-icon-img" src="{{iconUrl}}">
         </span>
 
-        <span *ngIf="!formGroup.get(controlName).hasError('required') && formGroup.get(controlName).touched">
+        <span *ngIf="formGroup.get(controlName).valid && formGroup.get(controlName).touched">
             <img class="input-error-img" src="https://cdn4.iconfinder.com/data/icons/icocentre-free-icons/137/f-check_256-16.png">
 
         </span>
-        <span *ngIf="formGroup.get(controlName).hasError('required') && formGroup.get(controlName).touched">
+        <span *ngIf="formGroup.get(controlName).invalid && formGroup.get(controlName).touched">
             <img class="input-error-img" src="https://cdn1.iconfinder.com/data/icons/Koloria-Icon-Set/21/Error_Symbol.png">
             
             <small style="padding-left: 1rem;">
