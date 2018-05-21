@@ -6,7 +6,6 @@ import { InputText } from "./components/input-text/input-text";
 import { InputPhone } from "./components/input-phone/input-phone";
 import { InputPasswordConfirm } from "./components/input-password-confirm/input-password-confirm";
 
-
 @Component({
   selector: "app-signup",
   templateUrl: "./signup.component.html",
@@ -16,7 +15,7 @@ export class SignupComponent implements OnInit {
   constructor(private crudService: CrudService) {}
 
   @Output() addCustomerEvent = new EventEmitter();
-   
+
   message = "";
   isShowSuccessMessage = false;
   isShowErrorMessage = false;
@@ -25,8 +24,14 @@ export class SignupComponent implements OnInit {
   ngOnInit() {
     this.customer = new FormGroup(
       {
-        firstname: new FormControl("",Validators.pattern("^[a-zA-z ,']{1,30}$")),
-        lastname: new FormControl("", Validators.pattern("^[a-zA-z ,']{1,30}$")),
+        firstname: new FormControl(
+          "",
+          Validators.pattern("^[a-zA-z ,']{1,30}$")
+        ),
+        lastname: new FormControl(
+          "",
+          Validators.pattern("^[a-zA-z ,']{1,30}$")
+        ),
         email: new FormControl("", Validators.pattern("")),
         phone: new FormControl("", Validators.required),
         password1: new FormControl("", Validators.required),
@@ -35,14 +40,7 @@ export class SignupComponent implements OnInit {
       passwordMatchValidator
     );
 
-
-    $(document).ready(function () {
-     
-        $(".input-icon").dblclick(function () {
-            alert("ready!");
-        });
-    });
-
+   
   }
 
   onSubmit() {
@@ -72,7 +70,7 @@ export class SignupComponent implements OnInit {
         this.customer.reset();
       });
       this.message = "Customer created.";
-      this.isShowSuccessMessage = true;    
+      this.isShowSuccessMessage = true;
     } catch (err) {
       // console.error(err);
       return false;
