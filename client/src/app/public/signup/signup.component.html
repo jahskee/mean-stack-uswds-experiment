@@ -48,7 +48,7 @@
     <!-- password -->
     <div id='grp2' style='margin: 2rem 0'>
       <app-input 
-        [validationMsg]="'Password is required and must match Confirm Password.'"
+        [validationMsg]="'Password required, must match Confirm Password.'"
         [formGroup]="customer" 
         [controlName]="'password1'" 
         [placeHolder]="'Password'" 
@@ -58,7 +58,7 @@
 
       <!-- confirm password -->
       <app-input
-        [validationMsg]="'Confirm Password is required and must match Password.'" 
+        [validationMsg]="'Confirm Password required, must match Password.'" 
         [formGroup]="customer" 
         [controlName]="'password2'" 
         [placeHolder]="'Confirm Password'" 

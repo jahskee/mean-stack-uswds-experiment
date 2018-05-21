@@ -13,6 +13,5 @@ export class AppInput {
     @Input() controlName: string;
     @Input() type: string;
     @Input() iconUrl: string; 
-    @Input() validationMsg: string;
-  
+    @Input() validationMsg: string;  
 }

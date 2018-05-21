@@ -14,7 +14,7 @@
         <span *ngIf="formGroup.get(controlName).hasError('required') && formGroup.get(controlName).touched">
             <img class="input-error-img" src="https://cdn1.iconfinder.com/data/icons/Koloria-Icon-Set/21/Error_Symbol.png">
             
-            <small>
+            <small style="padding-left: 1rem;">
                 {{validationMsg}}
             </small>
         </span>
