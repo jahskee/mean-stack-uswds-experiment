@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiurl: 'https://localhost'
+  apiurl: 'https://stratteos.us'
 };
