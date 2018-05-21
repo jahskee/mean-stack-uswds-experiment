@@ -2,7 +2,7 @@ import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 import { CrudService } from "../../services/crud.service";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { passwordMatchValidator } from "../../validators/password.validator";
-import { AppInput } from "./components/app.input";
+import { AppInput } from "./components/input-text/input.text";
 
 @Component({
   selector: "app-signup",
