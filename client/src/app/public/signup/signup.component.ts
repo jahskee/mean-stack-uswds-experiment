@@ -41,7 +41,7 @@ export class SignupComponent implements OnInit {
     if (!this.customer.valid) {
       this.message = "Customer creation error.";
       this.isShowErrorMessage = true;
-      return;
+      return false;
     }
 
     // reshape customerObj obj literal
