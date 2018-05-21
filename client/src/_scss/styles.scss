@@ -52,13 +52,14 @@ input, table, tr, th, td {
 
 /* query for mobile devices */
 @media only screen and (max-width: 599px) {
+
   body {
    // background: green;
    margin: 0;
    padding: 0;
    margin-left: 0.5rem;
    margin-right: 0.5rem;
-   
+   width: 600px; 
   }
 
   #page1 {

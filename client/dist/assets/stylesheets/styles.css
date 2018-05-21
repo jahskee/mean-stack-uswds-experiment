@@ -37,7 +37,8 @@ input, table, tr, th, td {
     margin: 0;
     padding: 0;
     margin-left: 0.5rem;
-    margin-right: 0.5rem; }
+    margin-right: 0.5rem;
+    width: 600px; }
   #page1 {
     display: block !important; } }
 
