@@ -4,6 +4,8 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { passwordMatchValidator } from "../../validators/password.validator";
 import { InputText } from "./components/input-text/input-text";
 import { InputPhone } from "./components/input-phone/input-phone";
+import { InputPasswordConfirm } from "./components/input-password-confirm/input-password-confirm";
+
 @Component({
   selector: "app-signup",
   templateUrl: "./signup.component.html",
