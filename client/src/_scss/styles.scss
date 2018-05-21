@@ -54,7 +54,9 @@ input, table, tr, th, td {
 @media only screen and (max-width: 599px) {
   body {
    // background: green;
+   margin: 0;
    margin-left: 2rem;
+   margin-right: 1rem;
   }
 
   #page1 {

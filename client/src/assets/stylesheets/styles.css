@@ -34,7 +34,9 @@ input, table, tr, th, td {
 /* query for mobile devices */
 @media only screen and (max-width: 599px) {
   body {
-    margin-left: 2rem; }
+    margin: 0;
+    margin-left: 2rem;
+    margin-right: 1rem; }
   #page1 {
     display: block !important; } }
 
