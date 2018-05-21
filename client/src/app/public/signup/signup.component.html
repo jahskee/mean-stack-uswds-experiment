@@ -1,22 +1,22 @@
 <form class="usa-form" style="margin: 0 auto" (ngSubmit)='onSubmit(customer)' [formGroup]='customer'>
-  <fieldset>
+  <fieldset style='text-align: left'>
  
     <legend class="usa-drop_text">Sign Up</legend>
     <div id='grp1'>
 
       <!-- firstname -->
       <app-input 
-        title="Firstname is required, max 8 characters."
+        [validationMsg]="'Firstname required, max 8 characters.'"
         [formGroup]="customer" 
         [controlName]="'firstname'" 
-        [placeHolder]="'First Name'"       
-       
-        [type]="'text'" [iconUrl]="'https://cdn3.iconfinder.com/data/icons/faticons/32/user-01-20.png'">
+        [placeHolder]="'First Name'"     
+        [type]="'text'" 
+        [iconUrl]="'https://cdn3.iconfinder.com/data/icons/faticons/32/user-01-20.png'">
       </app-input>
 
       <!-- lastname -->
       <app-input 
-        title="Lastname is required, max 8 characters."
+        [validationMsg]="'Lastname required, max 8 characters.'"
         [formGroup]="customer" 
         [controlName]="'lastname'" 
         [placeHolder]="'Last Name'" 
@@ -26,7 +26,7 @@
      
       <!-- email -->
       <app-input 
-        title="Email is required."
+        [validationMsg]="'Email required.'"
         [formGroup]="customer" 
         [controlName]="'email'" 
         [placeHolder]="'Email'" 
@@ -36,7 +36,7 @@
 
       <!-- phone -->
       <app-input 
-        title="Phone is required."
+        [validationMsg]="'Phone required.'"
         [formGroup]="customer" 
         [controlName]="'phone'" 
         [placeHolder]="'Phone'" 
@@ -48,7 +48,7 @@
     <!-- password -->
     <div id='grp2' style='margin: 2rem 0'>
       <app-input 
-        title="Password is required and must match Confirm Password."
+        [validationMsg]="'Password is required and must match Confirm Password.'"
         [formGroup]="customer" 
         [controlName]="'password1'" 
         [placeHolder]="'Password'" 
@@ -58,7 +58,7 @@
 
       <!-- confirm password -->
       <app-input
-        title="Confirm Password is required and must match Password." 
+        [validationMsg]="'Confirm Password is required and must match Password.'" 
         [formGroup]="customer" 
         [controlName]="'password2'" 
         [placeHolder]="'Confirm Password'" 

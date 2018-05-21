@@ -12,8 +12,7 @@ export class AppInput {
     @Input() placeHolder: string;
     @Input() controlName: string;
     @Input() type: string;
-    @Input() iconUrl: string;
-    @Input() isInvalid: string;
-    @Input() toolTip: string;
+    @Input() iconUrl: string; 
+    @Input() validationMsg: string;
   
 }
