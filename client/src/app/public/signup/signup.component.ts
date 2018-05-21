@@ -6,6 +6,7 @@ import { InputText } from "./components/input-text/input-text";
 import { InputPhone } from "./components/input-phone/input-phone";
 import { InputPasswordConfirm } from "./components/input-password-confirm/input-password-confirm";
 
+
 @Component({
   selector: "app-signup",
   templateUrl: "./signup.component.html",
@@ -15,7 +16,7 @@ export class SignupComponent implements OnInit {
   constructor(private crudService: CrudService) {}
 
   @Output() addCustomerEvent = new EventEmitter();
-
+   
   message = "";
   isShowSuccessMessage = false;
   isShowErrorMessage = false;
@@ -26,13 +27,22 @@ export class SignupComponent implements OnInit {
       {
         firstname: new FormControl("",Validators.pattern("^[a-zA-z ,']{1,30}$")),
         lastname: new FormControl("", Validators.pattern("^[a-zA-z ,']{1,30}$")),
-        email: new FormControl("", Validators.required),
+        email: new FormControl("", Validators.pattern("")),
         phone: new FormControl("", Validators.required),
         password1: new FormControl("", Validators.required),
         password2: new FormControl("", Validators.required)
       },
       passwordMatchValidator
     );
+
+
+    $(document).ready(function () {
+     
+        $(".input-icon").dblclick(function () {
+            alert("ready!");
+        });
+    });
+
   }
 
   onSubmit() {

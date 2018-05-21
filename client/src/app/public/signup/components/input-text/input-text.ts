@@ -1,6 +1,8 @@
 import { Component, Input } from "@angular/core";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 
+declare var $:JQueryStatic;
+
 @Component({
   selector: "app-input-text",
   styleUrls: ["./input-text.scss"],
