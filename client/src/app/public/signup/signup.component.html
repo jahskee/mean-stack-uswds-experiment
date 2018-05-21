@@ -35,14 +35,23 @@
       </app-input-text>
 
       <!-- phone -->
-      <app-input-text 
+      <app-input-phone
         [validationMsg]="'Required.'"
         [formGroup]="customer" 
         [controlName]="'phone'" 
         [placeHolder]="'Phone'" 
         [type]="'tel'" 
         [iconUrl]="'https://cdn4.iconfinder.com/data/icons/social-communication/142/phone-20.png'">
-      </app-input-text>
+      </app-input-phone>
+    </div>
+
+    <div id="mobile_phone" style="display: inline">
+          <select>
+            <option value='US'>US</option>
+            <option value='CA'>CA</option>
+          </select>
+          <input type='tel' size='3' maxlength='3' placeholder="###" >
+          <input type='tel' size='4' maxlength='4' placeholder="####" >
     </div>
 
     <!-- password -->

@@ -3,8 +3,8 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
 
 @Component({
   selector: "app-input-phone",
-  styleUrls: ["./app.input.scss"],
-  templateUrl: "./app.input.html"
+  styleUrls: ["./input-phone.scss"],
+  templateUrl: "./input-phone.html"
 })
 
 export class InputPhone {
