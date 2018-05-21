@@ -6,21 +6,23 @@
 
       <!-- firstname -->
       <app-input-text
-        [validationMsg]="'Required, min 2, max 8 chars.'"
+        [validationMsg]="'Letters, min 1, max 30 chars.'"
         [formGroup]="customer" 
         [controlName]="'firstname'" 
         [placeHolder]="'First Name'"         
         [type]="'text'"        
+        [maxlength] = "'30'"
         [iconUrl]="'https://cdn3.iconfinder.com/data/icons/faticons/32/user-01-20.png'">
       </app-input-text>
 
       <!-- lastname -->
       <app-input-text
-        [validationMsg]="'Required, min 2, max 8 chars.'"
+        [validationMsg]="'Letters, min 1, max 30 chars.'"
         [formGroup]="customer" 
         [controlName]="'lastname'" 
         [placeHolder]="'Last Name'" 
         [type]="'text'" 
+        [maxlength] = "'30'"
         [iconUrl]="''">
       </app-input-text>
      

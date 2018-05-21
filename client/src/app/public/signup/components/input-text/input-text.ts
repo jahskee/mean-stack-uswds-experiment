@@ -13,5 +13,6 @@ export class InputText {
     @Input() controlName: string;
     @Input() type: string;
     @Input() iconUrl: string;    
+    @Input() maxlength: number;
     @Input() validationMsg: string;  
 }
