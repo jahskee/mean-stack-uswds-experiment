@@ -33,12 +33,13 @@ input, table, tr, th, td {
 */
 /* query for mobile devices */
 @media only screen and (max-width: 599px) {
+  html, body {
+    width: 450px; }
   body {
     margin: 0;
     padding: 0;
     margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    width: 599px; }
+    margin-right: 0.5rem; }
   #page1 {
     display: block !important; } }
 
