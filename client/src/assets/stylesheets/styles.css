@@ -33,8 +33,15 @@ input, table, tr, th, td {
 */
 /* query for mobile devices */
 @media only screen and (max-width: 599px) {
+  body {
+    margin-left: 5rem; }
   #page1 {
     display: block !important; } }
 
 #sign-in-form #username {
   margin-top: 2rem; }
+
+input[title] {
+  font-style: italic;
+  color: gray;
+  background: lightgreen; }
