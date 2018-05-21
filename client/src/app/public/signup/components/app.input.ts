@@ -14,5 +14,6 @@ export class AppInput {
     @Input() type: string;
     @Input() iconUrl: string;
     @Input() isInvalid: string;
+    @Input() toolTip: string;
   
 }

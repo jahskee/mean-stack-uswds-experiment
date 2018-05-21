@@ -1,17 +1,61 @@
 <form class="usa-form" style="margin: 0 auto" (ngSubmit)='onSubmit(customer)' [formGroup]='customer'>
   <fieldset>
-  
+    <style>
+     input[title]:hover:after {
+      content: attr(title);
+      color: blue;
+      position: absolute;
+    }
+
+      </style>
     <legend class="usa-drop_text">Sign Up</legend>
     <div id='grp1'>
-      <app-input [formGroup]="customer" [controlName]="'firstname'" [placeHolder]="'First Name'"  [type]="'text'"  [iconUrl]="'https://cdn3.iconfinder.com/data/icons/faticons/32/user-01-20.png'" > </app-input> 
-      <app-input [formGroup]="customer" [controlName]="'lastname'" [placeHolder]="'Last Name'"  [type]="'text'" [iconUrl]="''"> </app-input> 
-      <app-input [formGroup]="customer" [controlName]="'email'" [placeHolder]="'Email'"  [type]="'email'" [iconUrl]="'https://cdn3.iconfinder.com/data/icons/multi-media-set-2-2/65/77-20.png'"> </app-input> 
-      <app-input [formGroup]="customer" [controlName]="'phone'" [placeHolder]="'Phone'"  [type]="'text'" [iconUrl]="'https://cdn4.iconfinder.com/data/icons/social-communication/142/phone-20.png'"> </app-input>      
+
+      <!-- firstname-->
+      <app-input 
+        title="Firstname is required, max 8 characters."
+        [formGroup]="customer" 
+        [controlName]="'firstname'" 
+        [placeHolder]="'First Name'"       
+       
+        [type]="'text'" [iconUrl]="'https://cdn3.iconfinder.com/data/icons/faticons/32/user-01-20.png'">
+      </app-input>
+
+      <!-- lastname-->
+      <app-input 
+        title="Lastname is required, max 8 characters."
+        [formGroup]="customer" 
+        [controlName]="'lastname'" 
+        [placeHolder]="'Last Name'" 
+        [type]="'text'" 
+        [iconUrl]="''">
+      </app-input>
+     
+      <!-- email-->
+      <app-input 
+        title="Email is required."
+        [formGroup]="customer" 
+        [controlName]="'email'" 
+        [placeHolder]="'Email'" 
+        [type]="'email'" 
+        [iconUrl]="'https://cdn3.iconfinder.com/data/icons/multi-media-set-2-2/65/77-20.png'">
+      </app-input>
+
+      <!-- phone-->
+      <app-input 
+        title="Phone is required."
+        [formGroup]="customer" 
+        [controlName]="'phone'" 
+        [placeHolder]="'Phone'" 
+        [type]="'text'" 
+        [iconUrl]="'https://cdn4.iconfinder.com/data/icons/social-communication/142/phone-20.png'">
+      </app-input>
     </div>
 
-    <div id='grp2' style='margin: 2rem 0'>      
-      <app-input [formGroup]="customer" [controlName]="'password1'" [placeHolder]="'Password'"  [type]="'password'" [iconUrl]="'https://cdn2.iconfinder.com/data/icons/oxygen/22x22/apps/preferences-desktop-cryptography.png'"> </app-input>      
-      <app-input [formGroup]="customer" [controlName]="'password2'" [placeHolder]="'Confirm Password'" [type]="'password'"> </app-input>     
+    <div id='grp2' style='margin: 2rem 0'>
+      <app-input [formGroup]="customer" [controlName]="'password1'" [placeHolder]="'Password'" [type]="'password'" [iconUrl]="'https://cdn2.iconfinder.com/data/icons/oxygen/22x22/apps/preferences-desktop-cryptography.png'">
+      </app-input>
+      <app-input [formGroup]="customer" [controlName]="'password2'" [placeHolder]="'Confirm Password'" [type]="'password'"> </app-input>
     </div>
 
     <button type='submit'> Submit </button>

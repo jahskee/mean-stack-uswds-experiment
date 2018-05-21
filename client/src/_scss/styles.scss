@@ -67,3 +67,9 @@ input, table, tr, th, td {
     margin-top: 2rem
   }  
 }
+
+input[title] {
+  font-style: italic;
+  color: gray;
+  background: lightgreen;
+}
