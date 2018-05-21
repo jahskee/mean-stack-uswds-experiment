@@ -6,7 +6,7 @@
 
       <!-- firstname -->
       <app-input 
-        [validationMsg]="'Firstname required, max 8 characters.'"
+        [validationMsg]="'Required, min 2, max 8 chars.'"
         [formGroup]="customer" 
         [controlName]="'firstname'" 
         [placeHolder]="'First Name'"     
@@ -16,7 +16,7 @@
 
       <!-- lastname -->
       <app-input 
-        [validationMsg]="'Lastname required, max 8 characters.'"
+        [validationMsg]="'Required, min 2, max 8 chars.'"
         [formGroup]="customer" 
         [controlName]="'lastname'" 
         [placeHolder]="'Last Name'" 
@@ -26,7 +26,7 @@
      
       <!-- email -->
       <app-input 
-        [validationMsg]="'Email required.'"
+        [validationMsg]="'Required.'"
         [formGroup]="customer" 
         [controlName]="'email'" 
         [placeHolder]="'Email'" 
@@ -36,11 +36,11 @@
 
       <!-- phone -->
       <app-input 
-        [validationMsg]="'Phone required.'"
+        [validationMsg]="'Required.'"
         [formGroup]="customer" 
         [controlName]="'phone'" 
         [placeHolder]="'Phone'" 
-        [type]="'text'" 
+        [type]="'tel'" 
         [iconUrl]="'https://cdn4.iconfinder.com/data/icons/social-communication/142/phone-20.png'">
       </app-input>
     </div>
@@ -48,7 +48,7 @@
     <!-- password -->
     <div id='grp2' style='margin: 2rem 0'>
       <app-input 
-        [validationMsg]="'Password required, must match Confirm Password.'"
+        [validationMsg]="'Required, must match Confirm Password.'"
         [formGroup]="customer" 
         [controlName]="'password1'" 
         [placeHolder]="'Password'" 
@@ -58,7 +58,7 @@
 
       <!-- confirm password -->
       <app-input
-        [validationMsg]="'Confirm Password required, must match Password.'" 
+        [validationMsg]="'Required, must match Password.'" 
         [formGroup]="customer" 
         [controlName]="'password2'" 
         [placeHolder]="'Confirm Password'" 
