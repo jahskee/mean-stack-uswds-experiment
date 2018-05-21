@@ -53,12 +53,13 @@ input, table, tr, th, td {
 /* query for mobile devices */
 @media only screen and (max-width: 599px) {
   html, body  {
-    width: 95vw;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
   }
   #my-header {
     width: 100%;
-    margin: 0;
-    padding: 0;
+   
   }
   body {
    // background: green;
