@@ -12,6 +12,6 @@ export class InputText {
     @Input() placeHolder: string;
     @Input() controlName: string;
     @Input() type: string;
-    @Input() iconUrl: string; 
+    @Input() iconUrl: string;    
     @Input() validationMsg: string;  
 }
