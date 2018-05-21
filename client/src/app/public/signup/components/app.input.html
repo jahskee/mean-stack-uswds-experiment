@@ -1,22 +1,17 @@
-<div class='form-control-group' [formGroup]='formGroup' >
+<div class='form-control-group' [formGroup]='formGroup'>
 
     <div class="input-icon-container">
-        <input  class='input-icon' formControlName='{{controlName}}' id='{{controlName}}' placeholder='{{placeHolder}}' name="{{controlName}}"
+        <input class='input-icon' formControlName='{{controlName}}' id='{{controlName}}' placeholder='{{placeHolder}}' name="{{controlName}}"
             type="{{type}}" required aria-required='true'>
         <span *ngIf="iconUrl">
             <img class="input-icon-img" src="{{iconUrl}}">
         </span>
-        <span  *ngIf="formGroup.get(controlName).hasError('required') && formGroup.get(controlName).touched">
+        <span *ngIf="formGroup.get(controlName).hasError('required') && formGroup.get(controlName).touched">
             <img class="input-error-img" src="https://cdn1.iconfinder.com/data/icons/Koloria-Icon-Set/21/Error_Symbol.png">
         </span>
-        <span  *ngIf="!formGroup.get(controlName).hasError('required') && formGroup.get(controlName).touched">
-                <img class="input-error-img" src="https://cdn4.iconfinder.com/data/icons/icocentre-free-icons/137/f-check_256-16.png">
-                
-            </span>
-    </div>
-    <!--
-        <small class="text-danger" 
-            *ngIf="formGroup.get(controlName).hasError('required') && formGroup.get(controlName).touched">
-            {{placeHolder}} is required!
-        </small> -->
+        <span *ngIf="!formGroup.get(controlName).hasError('required') && formGroup.get(controlName).touched">
+            <img class="input-error-img" src="https://cdn4.iconfinder.com/data/icons/icocentre-free-icons/137/f-check_256-16.png">
+
+        </span>
+    </div> 
 </div>

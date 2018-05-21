@@ -1,17 +1,10 @@
 <form class="usa-form" style="margin: 0 auto" (ngSubmit)='onSubmit(customer)' [formGroup]='customer'>
   <fieldset>
-    <style>
-     input[title]:hover:after {
-      content: attr(title);
-      color: blue;
-      position: absolute;
-    }
-
-      </style>
+ 
     <legend class="usa-drop_text">Sign Up</legend>
     <div id='grp1'>
 
-      <!-- firstname-->
+      <!-- firstname -->
       <app-input 
         title="Firstname is required, max 8 characters."
         [formGroup]="customer" 
@@ -21,7 +14,7 @@
         [type]="'text'" [iconUrl]="'https://cdn3.iconfinder.com/data/icons/faticons/32/user-01-20.png'">
       </app-input>
 
-      <!-- lastname-->
+      <!-- lastname -->
       <app-input 
         title="Lastname is required, max 8 characters."
         [formGroup]="customer" 
@@ -31,7 +24,7 @@
         [iconUrl]="''">
       </app-input>
      
-      <!-- email-->
+      <!-- email -->
       <app-input 
         title="Email is required."
         [formGroup]="customer" 
@@ -41,7 +34,7 @@
         [iconUrl]="'https://cdn3.iconfinder.com/data/icons/multi-media-set-2-2/65/77-20.png'">
       </app-input>
 
-      <!-- phone-->
+      <!-- phone -->
       <app-input 
         title="Phone is required."
         [formGroup]="customer" 
@@ -52,10 +45,24 @@
       </app-input>
     </div>
 
+    <!-- password -->
     <div id='grp2' style='margin: 2rem 0'>
-      <app-input [formGroup]="customer" [controlName]="'password1'" [placeHolder]="'Password'" [type]="'password'" [iconUrl]="'https://cdn2.iconfinder.com/data/icons/oxygen/22x22/apps/preferences-desktop-cryptography.png'">
+      <app-input 
+        title="Password is required and must match Confirm Password."
+        [formGroup]="customer" 
+        [controlName]="'password1'" 
+        [placeHolder]="'Password'" 
+        [type]="'password'" 
+        [iconUrl]="'https://cdn2.iconfinder.com/data/icons/oxygen/22x22/apps/preferences-desktop-cryptography.png'">
       </app-input>
-      <app-input [formGroup]="customer" [controlName]="'password2'" [placeHolder]="'Confirm Password'" [type]="'password'"> </app-input>
+
+      <!-- confirm password -->
+      <app-input
+        title="Confirm Password is required and must match Password." 
+        [formGroup]="customer" 
+        [controlName]="'password2'" 
+        [placeHolder]="'Confirm Password'" 
+        [type]="'password'"> </app-input>
     </div>
 
     <button type='submit'> Submit </button>
