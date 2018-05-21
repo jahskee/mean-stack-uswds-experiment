@@ -22,6 +22,7 @@ import { CrudComponent } from './public/crud/crud.component';
 import { SignupComponent } from './public/signup/signup.component';
 import { ContactusComponent } from './public/contactus/contactus.component';
 import { InputText } from './public/signup/components/input-text/input-text';
+import { InputEmail } from './public/signup/components/input-email/input-email';
 import { InputPhone } from './public/signup/components/input-phone/input-phone';
 import { InputPasswordConfirm } from './public/signup/components/input-password-confirm/input-password-confirm';
 
@@ -54,7 +55,7 @@ const routes: Routes = [
     CrudComponent,
     SignupComponent,
     ContactusComponent,
-    InputText, InputPhone, InputPasswordConfirm,
+    InputText, InputPhone, InputPasswordConfirm, InputEmail,
   ],
   imports: [
     BrowserModule,

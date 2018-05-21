@@ -38,15 +38,7 @@
 
   <header id='my-header1' class="usa-header usa-header-basic" role="banner">
 
-    <form class="usa-search usa-search-small" style="padding: 5px 5px 0 0">
-      <div role="search">
-        <label class="usa-sr-only" for="basic-search-field-small">Search small</label>
-        <input id="basic-search-field-small" type="search" name="search">
-        <button type="submit">
-          <span class="usa-sr-only">Search</span>
-        </button>
-      </div>
-    </form>
+
 
     <div id='my-top-menu'>
       <div style='display: flex; flex-direction: row'>
@@ -61,53 +53,68 @@
   <div class="usa-overlay"></div>
 </div>
 
-<div class="usa-nav-container">
-  <div class="usa-navbar">
+<div style="display: flex; flex-direction: row">
 
-    <button class="usa-menu-btn">Menu</button>
+
+  <div class="usa-nav-container">
+    <div class="usa-navbar">
+
+      <button class="usa-menu-btn">Menu</button>
+    </div>
+
+    <nav role="navigation" class="usa-nav">
+
+      <button class="usa-nav-close">
+        <img src="/assets/uswds-1.6.3/img/close.svg" alt="close">
+      </button>
+      <ul class="usa-nav-primary usa-accordion">
+        <li>
+          <a class="usa-nav-link" routerLink="/">
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a class="usa-nav-link" routerLink="/service">
+            <span>Services</span>
+          </a>
+
+        </li>
+        <!--
+        <li>
+          <a class="usa-nav-link" routerLink="/crud">
+            <span>CRUD</span>
+          </a>
+        </li>
+        -->
+        <li>
+          <a class="usa-nav-link" routerLink="/contactus">
+            <span>Contact Us</span>
+          </a>
+        </li>
+        <li>
+          <a class="usa-nav-link" routerLink="/signin">
+            <span>Sign In</span>
+          </a>
+        </li>
+        <li>
+          <a class="usa-nav-link" routerLink="/signup">
+            <span>Sign Up</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
   </div>
 
-  <nav role="navigation" class="usa-nav">
-
-    <button class="usa-nav-close">
-      <img src="/assets/uswds-1.6.3/img/close.svg" alt="close">
-    </button>
-    <ul class="usa-nav-primary usa-accordion">
-      <li>
-        <a class="usa-nav-link" routerLink="/">
-          <span>Home</span>
-        </a>
-      </li>
-      <li>
-        <a class="usa-nav-link" routerLink="/service">
-          <span>Services</span>
-        </a>
-
-      </li>
-      <!--
-      <li>
-        <a class="usa-nav-link" routerLink="/crud">
-          <span>CRUD</span>
-        </a>
-      </li>
-      -->
-      <li>
-        <a class="usa-nav-link" routerLink="/contactus">
-          <span>Contact Us</span>
-        </a>
-      </li>
-      <li>
-        <a class="usa-nav-link" routerLink="/signin">
-          <span>Sign In</span>
-        </a>
-      </li>
-      <li>
-        <a class="usa-nav-link" routerLink="/signup">
-          <span>Sign Up</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
+  <form class="usa-search usa-search-small" style="padding: 5px 5px 0 0">
+    <div role="search">
+      <label class="usa-sr-only" for="basic-search-field-small">Search small</label>
+      <input id="basic-search-field-small" type="search" name="search">
+      <button type="submit">
+        <span class="usa-sr-only">Search</span>
+      </button>
+    </div>
+  </form>
 </div>
+
 
 <main id="main-content"></main>
