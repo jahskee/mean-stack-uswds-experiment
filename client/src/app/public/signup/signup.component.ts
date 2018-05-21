@@ -20,6 +20,7 @@ export class SignupComponent implements OnInit {
   isShowSuccessMessage = false;
   isShowErrorMessage = false;
 
+  emailRegex = /\(\d{3}\)\s\d{3}\-\d{4}/;
   customer: FormGroup;
   ngOnInit() {
     this.customer = new FormGroup(
@@ -33,7 +34,7 @@ export class SignupComponent implements OnInit {
           Validators.pattern("^[a-zA-z ,']{1,30}$")
         ),
         email: new FormControl("", Validators.pattern("")),
-        phone: new FormControl("", Validators.required),
+        phone: new FormControl("", Validators.pattern(this.emailRegex)),
         password1: new FormControl("", Validators.required),
         password2: new FormControl("", Validators.required)
       },
