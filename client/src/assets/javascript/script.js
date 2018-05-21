@@ -3,7 +3,7 @@ $(document).ready(function () {
       alert("ready!");
     });
 
-    $(".input-phone")
+    $(".jz-input-phone")
       .keydown(function (e) {
       
         var key = e.charCode || e.keyCode || 0;
@@ -11,6 +11,9 @@ $(document).ready(function () {
 
         // Auto-format- do not expose the mask as the user begins to type
         if (key !== 8 && key !== 9) {
+          if (phone.val().length === 0) {
+            phone.val("("+phone.val());
+          }
           if (phone.val().length === 4) {
             phone.val(phone.val() + ")");
           }
@@ -19,10 +22,7 @@ $(document).ready(function () {
           }
           if (phone.val().length === 9) {
             phone.val(phone.val() + "-");
-          }
-          if (phone.val().length === 14) {
-            return;
-          }
+          }        
         }
 
         // Allow numeric (and tab, backspace, delete) keys only
@@ -48,7 +48,7 @@ $(document).ready(function () {
 
       .blur(function () {
         let phone = $(this);
-
+        
         if (phone.val() === "(") {
           phone.val("");
         }
