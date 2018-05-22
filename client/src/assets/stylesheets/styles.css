@@ -60,12 +60,14 @@ my-logo {
 #logo_text1 {
   margin: 0;
   text-align: left;
-  padding-top: 15px; }
+  padding-top: 15px;
+  font-family: arial; }
 
 #logo_text2 {
   margin: 0;
   text-align: left;
-  padding-top: 5px; }
+  padding-top: 5px;
+  font-family: arial; }
 
 /* query for tablet devices */
 @media only screen and (min-width: 600px) and (max-width: 1024px) {
@@ -80,7 +82,7 @@ my-logo {
 /* query for mobile devices */
 @media only screen and (max-width: 599px) {
   html,
-  body {
+  body, #my_header {
     margin: 0 4px;
     padding: 0;
     width: 98%;
@@ -93,8 +95,11 @@ my-logo {
   #nav-container {
     margin-right: 0; }
   #usda_logo {
-    margin-top: 2px;
-    margin-left: 2px; }
+    margin-left: 2px;
+    width: 60px;
+    height: 60px;
+    margin-top: 3px;
+    margin-bottom: 3px; }
   button.usa-menu-btn {
     margin-top: 5px;
     height: 33px;
@@ -106,4 +111,5 @@ my-logo {
   #page1 {
     display: block !important; }
   #logo_text1 {
-    padding-top: 5px; } }
+    padding-top: 5px;
+    font-size: 1.6rem; } }
