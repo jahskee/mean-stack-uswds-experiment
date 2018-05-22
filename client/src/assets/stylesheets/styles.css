@@ -84,6 +84,9 @@ my-logo {
   html,
   body,
   #my-header {
+    position: absolute;
+    left: 0;
+    top: 0;
     margin: 0;
     padding: 0;
     width: 100%;
