@@ -24,12 +24,34 @@ legend {
   padding-top: 5rem;
   padding-bottom: 2rem; }
 
-input, table, tr, th, td {
+input,
+table,
+tr,
+th,
+td {
   border: 1px solid lightgray; }
+
+body > app-root > div > app-header > div:nth-child(2) > div {
+  margin-right: 15%; }
+
+#sign-in-form #username {
+  margin-top: 2rem; }
+
+input[title] {
+  font-style: italic;
+  color: gray;
+  background: lightgreen; }
+
+#menu-search {
+  display: flex; 
+  flex-direction: row;
+}
 
 /* query for tablet devices */
 @media only screen and (min-width: 600px) and (max-width: 1024px) {
-  html, body, #my-header {
+  html,
+  body,
+  #my-header {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -40,21 +62,26 @@ input, table, tr, th, td {
 */
 /* query for mobile devices */
 @media only screen and (max-width: 599px) {
-  html, body, #my-header {
+  html,
+  body,
+  #my-header {
     margin: 0;
     padding: 0;
     width: 100%;
     overflow: hidden; }
-  body {
-    margin: 0;
-    padding: 0; }
+  #menu-search {
+    display: flex;
+    flex-direction: row-reverse;
+   }
+  #nav-container {
+    margin-right: 0;
+  }
+
+  button.usa-menu-btn {
+    margin-top: 5px;
+    height: 33px;
+    margin-right: 10px;
+    border-radius: 4px;
+  }
   #page1 {
     display: block !important; } }
-
-#sign-in-form #username {
-  margin-top: 2rem; }
-
-input[title] {
-  font-style: italic;
-  color: gray;
-  background: lightgreen; }

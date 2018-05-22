@@ -36,16 +36,40 @@ legend {
   padding-bottom: 2rem;
 }
 
-input, table, tr, th, td {
+input,
+table,
+tr,
+th,
+td {
   border: 1px solid lightgray;
 }
+
+body > app-root > div > app-header > div:nth-child(2) > div {
+  margin-right: 15%;
+}
+
+#sign-in-form {
+  #username {
+    margin-top: 2rem;
+  }
+}
+
+input[title] {
+  font-style: italic;
+  color: gray;
+  background: lightgreen;
+}
+
+
 /* query for tablet devices */
 @media only screen and (min-width: 600px) and (max-width: 1024px) {
-  html, body, #my-header  {
+  html,
+  body,
+  #my-header {
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow:hidden;
+    overflow: hidden;
   }
 }
 
@@ -55,20 +79,19 @@ input, table, tr, th, td {
 
 /* query for mobile devices */
 @media only screen and (max-width: 599px) {
-  html, body, #my-header  {
+  html,
+  body,
+  #my-header {
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow:hidden;
+    overflow: hidden;
   }
 
-  body {
-   // background: green;
-   margin: 0;
-   padding: 0;
-   //margin-left: 0.5rem;
-  // margin-right: 0.5rem;
-  
+  #menu-search {
+    display: flex;
+    flex-direction: row-reverse;
+    background: red;
   }
 
   #page1 {
@@ -77,14 +100,3 @@ input, table, tr, th, td {
   }
 }
 
-#sign-in-form {
-  #username {
-    margin-top: 2rem
-  }  
-}
-
-input[title] {
-  font-style: italic;
-  color: gray;
-  background: lightgreen;
-}
