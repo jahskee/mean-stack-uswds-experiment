@@ -12,10 +12,7 @@
   #my-top-menu {
     padding: 5px;
   }
-  #menu-search {
-    display: flex;
-    flex-direction: row-reverse;
-  }
+ 
   #nav-container {
     margin-right: 0;
   }
@@ -48,5 +45,10 @@
   #logo_text1 {
     padding-top: 5px;
     font-size: 1.6rem;
+  }
+
+  #menu-search {
+    display: flex;
+    flex-direction: row-reverse;
   }
 }

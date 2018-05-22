@@ -8,5 +8,10 @@
       width: 100%;
       overflow: hidden;
     }
+
+    #menu-search {
+      display: flex;
+      flex-direction: row-reverse;
+    }
 }
   

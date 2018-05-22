@@ -1,3 +1,10 @@
 @import 'parts/01-desktop';
 @import 'parts/02-tablet';
 @import 'parts/03-mobile';
+
+#my-top-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
