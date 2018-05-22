@@ -77,7 +77,7 @@ module.exports = "<div id='my-header'>\n  <div class=\"usa-banner\">\n    <div c
 /***/ "./src/app/_common/header/header.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = "my-logo {\n  margin: 0;\n  text-align: left; }\n\n#my-top-menu {\n  width: 100vw;\n  background-color: #006747;\n  color: white;\n  padding: 10px;\n  padding-left: 30px; }\n\n#usda_logo {\n  width: 80px;\n  height: 80px;\n  text-align: left;\n  margin-right: 10px;\n  vertical-align: middle; }\n\n#logo_text1 {\n  margin: 0;\n  text-align: left;\n  padding-top: 15px; }\n\n#logo_text2 {\n  margin: 0;\n  text-align: left;\n  padding-top: 5px; }\n"
+module.exports = ""
 
 /***/ }),
 

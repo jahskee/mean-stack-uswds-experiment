@@ -1,0 +1,91 @@
+//@import 'parts/02-header';
+footer {
+  color: white;
+}
+
+.usa-banner-inner {
+}
+
+.usa-nav {
+  padding-top: 0;
+}
+
+#page2 {
+  margin-top: 0;
+}
+
+.usa-nav-container {
+  height: 50px;
+}
+
+body {
+  background-color: lightblue;
+}
+
+#page1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+legend {
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+}
+
+input,
+table,
+tr,
+th,
+td {
+  border: 1px solid lightgray;
+}
+
+body > app-root > div > app-header > div:nth-child(2) > div {
+  margin-right: 15%;
+}
+
+#sign-in-form {
+  #username {
+    margin-top: 2rem;
+  }
+}
+
+input[title] {
+  font-style: italic;
+  color: gray;
+  background: lightgreen;
+}
+
+#my-header {
+  background: darkgreen;
+  color: snow;
+}
+
+my-logo {
+    margin: 0;
+    text-align: left;
+  }
+    
+  #usda_logo {
+    width: 80px;
+    height: 80px;
+    text-align: left;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  
+  #logo_text1 {
+    margin: 0;
+    text-align: left;
+    padding-top: 15px;
+  }
+  
+  #logo_text2 {
+    margin: 0;
+    text-align: left;
+    padding-top: 5px;
+  }
+  
