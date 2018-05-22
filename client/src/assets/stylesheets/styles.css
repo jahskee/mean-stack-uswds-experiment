@@ -82,10 +82,11 @@ my-logo {
 /* query for mobile devices */
 @media only screen and (max-width: 599px) {
   html,
-  body, #my-header {
-    margin: 0 4px;
+  body,
+  #my-header {
+    margin: 0;
     padding: 0;
-    width: 98%;
+    width: 100%;
     overflow: hidden; }
   #my-top-menu {
     padding: 5px; }
