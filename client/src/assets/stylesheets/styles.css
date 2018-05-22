@@ -82,7 +82,7 @@ my-logo {
 /* query for mobile devices */
 @media only screen and (max-width: 599px) {
   html,
-  body, #my_header {
+  body, #my-header {
     margin: 0 4px;
     padding: 0;
     width: 98%;
