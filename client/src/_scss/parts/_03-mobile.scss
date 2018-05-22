@@ -1,49 +1,51 @@
 /* query for mobile devices */
 @media only screen and (max-width: 599px) {
-    html,
-    body{
-      margin: 0 4px;
-      padding: 0;
-      width: 98%;
-      overflow: hidden;
-    }
-  
-    #my-top-menu {
-      padding: 5px;
-    }
-    #menu-search {
-      display: flex;
-      flex-direction: row-reverse;
-     }
-    #nav-container {
-      margin-right: 0;
-    }
-    #usda_logo {
-      margin-top: 2px;
-      margin-left: 2px;
-    }
-  
-    button.usa-menu-btn {
-      margin-top: 5px;
-      height: 33px;
-      //margin-right: 10px;
-      border-radius: 4px;
-    }
-    legend.usa-drop_text {
-      padding: 5px 0 5px;
-    }
-    .usa-search {
-      width: 95vw;
-    }
-  
-    #page1 {
-      display: block !important;
-      //align-items: inherit !;
-    }
-  
-    #logo_text1 {
-      padding-top: 5px;
-    }
- }
-  
-  
+  html,
+  body {
+    margin: 0 4px;
+    padding: 0;
+    width: 98%;
+    overflow: hidden;
+  }
+
+  #my-top-menu {
+    padding: 5px;
+  }
+  #menu-search {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  #nav-container {
+    margin-right: 0;
+  }
+  #usda_logo {
+    margin-left: 2px;
+    width: 60px;
+    height: 60px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+
+  button.usa-menu-btn {
+    margin-top: 5px;
+    height: 33px;
+    //margin-right: 10px;
+    border-radius: 4px;
+  }
+  legend.usa-drop_text {
+    padding: 5px 0 5px;
+  }
+  .usa-search {
+    width: 95vw;
+  }
+
+  #page1 {
+    display: block !important;
+    //align-items: inherit !;
+  }
+
+  #logo_text1 {
+    padding-top: 5px;
+    font-size: 1.6rem;
+  }
+}
