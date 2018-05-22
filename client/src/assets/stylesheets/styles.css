@@ -63,19 +63,20 @@ my-logo {
 #logo_text1 {
   margin: 0;
   text-align: left;
-  padding-top: 15px;
   font-family: arial; }
 
 #logo_text2 {
   margin: 0;
   text-align: left;
-  padding-top: 5px;
   font-family: arial; }
 
-#my-top-menu {
+#my-top-header {
   display: flex;
   flex-direction: row;
-  align-items: center; }
+  align-items: center;
+  padding: 1rem;
+  border-top: 1px solid snow;
+  border-bottom: 1px solid snow; }
 
 /* query for tablet devices */
 @media only screen and (min-width: 600px) and (max-width: 1024px) {
@@ -123,8 +124,3 @@ my-logo {
   #menu-search {
     display: flex;
     flex-direction: row-reverse; } }
-
-#my-top-menu {
-  display: flex;
-  flex-direction: row;
-  align-items: center; }
