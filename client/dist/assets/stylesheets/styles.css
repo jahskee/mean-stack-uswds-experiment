@@ -69,9 +69,6 @@ my-logo {
   padding-top: 5px;
   font-family: arial; }
 
-#menu-search {
-  position: absolute; }
-
 /* query for tablet devices */
 @media only screen and (min-width: 600px) and (max-width: 1024px) {
   html,
