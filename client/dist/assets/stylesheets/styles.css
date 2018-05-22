@@ -46,26 +46,23 @@ input[title] {
   background: darkgreen;
   color: snow; }
 
-my-logo {
-  margin: 0;
-  text-align: left; }
+  my-logo {
+    margin: 0;
+    text-align: left;
+  }
+  
+  
+  #usda_logo {
+    width: 80px;
+    height: 80px;
+    text-align: left;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  
+  
 
-#usda_logo {
-  width: 80px;
-  height: 80px;
-  text-align: left;
-  margin-right: 10px;
-  vertical-align: middle; }
-
-#logo_text1 {
-  margin: 0;
-  text-align: left;
-  padding-top: 15px; }
-
-#logo_text2 {
-  margin: 0;
-  text-align: left;
-  padding-top: 5px; }
+  
 
 /* query for tablet devices */
 @media only screen and (min-width: 600px) and (max-width: 1024px) {
@@ -77,13 +74,17 @@ my-logo {
     width: 100%;
     overflow: hidden; } }
 
+/*
+  These styles will be applied after USWDS
+*/
 /* query for mobile devices */
 @media only screen and (max-width: 599px) {
   html,
-  body {
-    margin: 0 4px;
+  body,
+  #my-header {
+    margin: 0;
     padding: 0;
-    width: 98%;
+    width: 100%;
     overflow: hidden; }
   #my-top-menu {
     padding: 5px; }
@@ -93,7 +94,7 @@ my-logo {
   #nav-container {
     margin-right: 0; }
   #usda_logo {
-    margin-top: 2px;
+    margin-top: 8px;
     margin-left: 2px; }
   button.usa-menu-btn {
     margin-top: 5px;
@@ -104,6 +105,4 @@ my-logo {
   .usa-search {
     width: 95vw; }
   #page1 {
-    display: block !important; }
-  #logo_text1 {
-    padding-top: 5px; } }
+    display: block !important; } }
