@@ -87,9 +87,6 @@ my-logo {
   html,
   body,
   #my-header {
-    position: absolute;
-    left: 0;
-    top: 0;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -113,8 +110,6 @@ my-logo {
     border-radius: 4px; }
   legend.usa-drop_text {
     padding: 5px 0 5px; }
-  .usa-search {
-    width: 95vw; }
   #page1 {
     display: block !important; }
   #logo_text1 {
