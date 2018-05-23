@@ -14,9 +14,6 @@ footer {
   margin-top: 0;
 }
 
-.usa-nav-container {
-  height: 50px;
-}
 
 body {
   background-color: lightblue;
@@ -71,39 +68,4 @@ my-logo {
   text-align: left;
 }
 
-#usda_logo {
-  width: 80px;
-  height: 80px;
-  text-align: left;
-  margin-right: 10px;
-  vertical-align: middle;
-}
 
-#logo_text1 {
-  margin: 0;
-  text-align: left;
- // padding-top: 15px;
-  font-family: arial;
-}
-
-#logo_text2 {
-  margin: 0;
-  text-align: left;
-  //padding-top: 5px;
-  font-family: arial;
-}
-
-#my-top-header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 1rem;
-  border-top: 1px solid snow;
-  border-bottom: 1px solid snow;
-}
-
-
-
-#menu-search {
-  //position: absolute;
-}

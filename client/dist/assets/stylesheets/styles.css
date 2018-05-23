@@ -1,3 +1,42 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+#my-header-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem;
+  border-top: 1px solid snow;
+  border-bottom: 1px solid snow; }
+  #my-header-logo #my-logo-image {
+    width: 80px;
+    height: 80px;
+    text-align: left;
+    margin-right: 10px;
+    vertical-align: middle; }
+  #my-header-logo #my-logo-title1 {
+    margin: 0;
+    text-align: left;
+    font-family: 'Roboto+Condensed'; }
+  #my-header-logo #my-logo-title2 {
+    margin: 0;
+    text-align: left; }
+
+#my-menu-search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end; }
+  #my-menu-search #my-menu-small {
+    margin: 0; }
+  #my-menu-search #my-menu-large {
+    margin: 0;
+    padding: 0;
+    height: 50px; }
+  #my-menu-search #my-search-box {
+    display: flex;
+    justify-content: flex-end; }
+    #my-menu-search #my-search-box #my-search-input {
+      padding: 0; }
+
 footer {
   color: white; }
 
@@ -6,9 +45,6 @@ footer {
 
 #page2 {
   margin-top: 0; }
-
-.usa-nav-container {
-  height: 50px; }
 
 body {
   background-color: lightblue; }
@@ -53,31 +89,6 @@ my-logo {
   margin: 0;
   text-align: left; }
 
-#usda_logo {
-  width: 80px;
-  height: 80px;
-  text-align: left;
-  margin-right: 10px;
-  vertical-align: middle; }
-
-#logo_text1 {
-  margin: 0;
-  text-align: left;
-  font-family: arial; }
-
-#logo_text2 {
-  margin: 0;
-  text-align: left;
-  font-family: arial; }
-
-#my-top-header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 1rem;
-  border-top: 1px solid snow;
-  border-bottom: 1px solid snow; }
-
 /* query for tablet devices */
 @media only screen and (min-width: 600px) and (max-width: 1024px) {
   html,
@@ -87,8 +98,7 @@ my-logo {
     padding: 0;
     width: 100%;
     overflow: hidden; }
-  #menu-search {
-    display: flex;
+  #my-menu-search {
     flex-direction: row-reverse; } }
 
 /* query for mobile devices */
@@ -104,7 +114,7 @@ my-logo {
     padding: 5px; }
   #nav-container {
     margin-right: 0; }
-  #usda_logo {
+  #my-logo-image {
     margin-left: 2px;
     width: 60px;
     height: 60px;
@@ -121,6 +131,5 @@ my-logo {
   #logo_text1 {
     padding-top: 5px;
     font-size: 1.6rem; }
-  #menu-search {
-    display: flex;
+  #my-menu-search {
     flex-direction: row-reverse; } }
