@@ -17,12 +17,10 @@ body {
     vertical-align: middle; }
   #my-header-logo #my-logo-title1 {
     margin: 0;
-    text-align: left;
-    font-family: 'Roboto+Condensed'; }
+    text-align: left; }
   #my-header-logo #my-logo-title2 {
     margin: 0;
-    text-align: left;
-    font-family: 'Roboto+Condensed'; }
+    text-align: left; }
 
 #my-menu-search {
   display: flex;
