@@ -112,7 +112,7 @@ input[title] {
       display: block;
       flex-grow: 2; }
     #my-menu-search #my-search-box {
-      flex-grow: 9; } }
+      flex-grow: 8; } }
 
 /* query for mobile devices */
 @media only screen and (max-width: 599px) {
