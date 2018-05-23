@@ -4,6 +4,7 @@
   body,
   #my-header {
     margin: 0;
+    margin-left: 2px;
     padding: 0;
     width: 100%;
     overflow: hidden;
@@ -33,22 +34,26 @@
   legend.usa-drop_text {
     padding: 5px 0 5px;
   }
-  .usa-search {
-    //width: 95vw;
+  #my-logo-title1 {
+    font-size: 1.8rem;
   }
-
-  #page1 {
-    display: block !important;
-    //align-items: inherit !;
-  }
-
-  #logo_text1 {
-    padding-top: 5px;
-    font-size: 1.6rem;
-  }
-
-
   #my-menu-search {
     flex-direction: row-reverse;
+    justify-content: flex-start;
+    
+    //--- altering menus ----
+    #my-menu-large {
+      display: none;
+    }
+    #my-menu-small {
+      display: block;
+      flex-grow: 2;
+    }
+
+    //--- top search  box ----
+    #my-search-box  {
+      flex-grow: 8;
+    }
   }
+
 }

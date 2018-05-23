@@ -1,5 +1,6 @@
 /* query for tablet devices */
-@media only screen and (min-width: 600px) and (max-width: 1024px) {
+@media only screen and (min-width: 600px) and (max-width: 950px) {
+
     html,
     body,
     #my-header {
@@ -11,6 +12,23 @@
 
     #my-menu-search {
       flex-direction: row-reverse;
+      justify-content: flex-start;
+      
+      //--- altering menus ----
+      #my-menu-large {
+        display: none;
+      }
+      #my-menu-small {
+        display: block;
+        flex-grow: 2;
+      }
+  
+      //--- top search  box ----
+      #my-search-box  {
+        flex-grow: 9;
+      }
     }
+
+  
 }
   

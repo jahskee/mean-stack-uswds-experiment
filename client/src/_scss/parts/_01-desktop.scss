@@ -1,71 +1,139 @@
 //@import 'parts/02-header';
-footer {
-  color: white;
-}
-
-.usa-banner-inner {
-}
-
-.usa-nav {
-  padding-top: 0;
-}
-
-#page2 {
-  margin-top: 0;
-}
-
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
 
 body {
-  background-color: lightblue;
+  margin: 0;
 }
 
-#page1 {
+#my-header-logo {
   display: flex;
-  display: -webkit-box; /* NEW */
-  flex-direction: column;
-  -webkit-flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
-  margin: 0 auto;
-}
+  padding: 1rem;
+  border-top: 1px solid snow;
+  border-bottom: 1px solid snow;
+ 
+  
 
-legend {
-  padding-top: 5rem;
-  padding-bottom: 2rem;
-}
+  #my-logo-image {
+    width: 80px;
+    height: 80px;
+    text-align: left;
+    margin-right: 10px;
+    vertical-align: middle;
+    
+  }
 
-input,
-table,
-tr,
-th,
-td {
-  border: 1px solid lightgray;
-}
+  #my-logo-title1 {
+    margin: 0;
+    text-align: left;
+    font-family: 'Roboto+Condensed';
+    
+    
+  }
 
-body > app-root > div > app-header > div:nth-child(2) > div {
-  margin-right: 15%;
-}
-
-#sign-in-form {
-  #username {
-    margin-top: 2rem;
+  #my-logo-title2 {
+    margin: 0;
+    text-align: left;
+    font-family: 'Roboto+Condensed';
   }
 }
 
-input[title] {
-  font-style: italic;
-  color: gray;
-  background: lightgreen;
-}
 
-#my-header {
-  background: darkgreen;
-  color: snow;
-}
+#my-menu-search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
 
-my-logo {
-  margin: 0;
-  text-align: left;
-}
+  #my-menu-small {
+    margin: 0;
+    display: none;
+  }
+  
+  #my-menu-large {
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    margin-right: 10%;
+    display: block;
+   
+  }
 
+
+  #my-search-box {
+    display: flex; 
+    justify-content: flex-end;
+    margin-right: 4px;
+    
+
+    #my-search-input {
+      padding: 0;
+      flex: 1;
+    }
+  }
+
+}
+  footer {
+    color: white;
+  }
+
+  .usa-banner-inner {
+  }
+
+  .usa-nav {
+    padding-top: 0;
+  }
+
+  #page2 {
+    margin-top: 0;
+  }
+
+  body {
+    background-color: lightblue;
+  }
+
+  #page1 {
+    display: flex;
+    display: -webkit-box; /* NEW */
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  legend {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+  }
+
+  input,
+  table,
+  tr,
+  th,
+  td {
+    border: 1px solid lightgray;
+  }
+
+  body > app-root > div > app-header > div:nth-child(2) > div {
+    margin-right: 15%;
+  }
+
+  #sign-in-form {
+    #username {
+      margin-top: 2rem;
+    }
+  }
+
+  input[title] {
+    font-style: italic;
+    color: gray;
+    background: lightgreen;
+  }
+
+  #my-header {
+    background: darkgreen;
+    color: snow;
+  }
 

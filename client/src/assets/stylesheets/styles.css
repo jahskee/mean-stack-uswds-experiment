@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+body {
+  margin: 0; }
+
 #my-header-logo {
   display: flex;
   flex-direction: row;
@@ -18,7 +21,8 @@
     font-family: 'Roboto+Condensed'; }
   #my-header-logo #my-logo-title2 {
     margin: 0;
-    text-align: left; }
+    text-align: left;
+    font-family: 'Roboto+Condensed'; }
 
 #my-menu-search {
   display: flex;
@@ -26,16 +30,21 @@
   align-items: center;
   justify-content: flex-end; }
   #my-menu-search #my-menu-small {
-    margin: 0; }
+    margin: 0;
+    display: none; }
   #my-menu-search #my-menu-large {
     margin: 0;
     padding: 0;
-    height: 50px; }
+    height: 50px;
+    margin-right: 10%;
+    display: block; }
   #my-menu-search #my-search-box {
     display: flex;
-    justify-content: flex-end; }
+    justify-content: flex-end;
+    margin-right: 4px; }
     #my-menu-search #my-search-box #my-search-input {
-      padding: 0; }
+      padding: 0;
+      flex: 1; }
 
 footer {
   color: white; }
@@ -85,12 +94,8 @@ input[title] {
   background: darkgreen;
   color: snow; }
 
-my-logo {
-  margin: 0;
-  text-align: left; }
-
 /* query for tablet devices */
-@media only screen and (min-width: 600px) and (max-width: 1024px) {
+@media only screen and (min-width: 600px) and (max-width: 950px) {
   html,
   body,
   #my-header {
@@ -99,7 +104,15 @@ my-logo {
     width: 100%;
     overflow: hidden; }
   #my-menu-search {
-    flex-direction: row-reverse; } }
+    flex-direction: row-reverse;
+    justify-content: flex-start; }
+    #my-menu-search #my-menu-large {
+      display: none; }
+    #my-menu-search #my-menu-small {
+      display: block;
+      flex-grow: 2; }
+    #my-menu-search #my-search-box {
+      flex-grow: 9; } }
 
 /* query for mobile devices */
 @media only screen and (max-width: 599px) {
@@ -107,6 +120,7 @@ my-logo {
   body,
   #my-header {
     margin: 0;
+    margin-left: 2px;
     padding: 0;
     width: 100%;
     overflow: hidden; }
@@ -126,10 +140,15 @@ my-logo {
     border-radius: 4px; }
   legend.usa-drop_text {
     padding: 5px 0 5px; }
-  #page1 {
-    display: block !important; }
-  #logo_text1 {
-    padding-top: 5px;
-    font-size: 1.6rem; }
+  #my-logo-title1 {
+    font-size: 1.8rem; }
   #my-menu-search {
-    flex-direction: row-reverse; } }
+    flex-direction: row-reverse;
+    justify-content: flex-start; }
+    #my-menu-search #my-menu-large {
+      display: none; }
+    #my-menu-search #my-menu-small {
+      display: block;
+      flex-grow: 2; }
+    #my-menu-search #my-search-box {
+      flex-grow: 8; } }
