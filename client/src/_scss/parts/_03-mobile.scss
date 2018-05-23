@@ -4,10 +4,13 @@
   body,
   #my-header {
     margin: 0;
-    margin-left: 2px;
     padding: 0;
     width: 100%;
     overflow: hidden;
+  }
+
+  body {
+    margin: 0 2px;
   }
 
   #my-top-menu {
@@ -40,6 +43,7 @@
   #my-menu-search {
     flex-direction: row-reverse;
     justify-content: flex-start;
+    padding: 4px 0;
     
     //--- altering menus ----
     #my-menu-large {
