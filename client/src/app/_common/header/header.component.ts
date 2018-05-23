@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
       });
 
       $(".usa-overlay, .usa-nav").scroll(function(event) {
-        event.stopImmediatePropagation();
+        alert('hello')
       })
     });
   }
