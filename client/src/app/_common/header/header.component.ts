@@ -19,9 +19,10 @@ export class HeaderComponent implements OnInit {
          $(".usa-nav").attr("class", "usa-nav")
          $("body").attr("class", "vsc-initialized")
          $(".usa-overlay").attr("class", "usa-overlay")
+         $(".usa-nav").click = dfunc;
       });
 
-      $(".usa-nav").click = dfunc;
+     
 
        
     });
