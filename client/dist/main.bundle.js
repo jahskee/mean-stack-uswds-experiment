@@ -111,9 +111,6 @@ var HeaderComponent = /** @class */ (function () {
                 $(".usa-overlay").attr("class", "usa-overlay");
                 event.stopImmediatePropagation();
             });
-            $(".usa-overlay, .usa-nav").scroll(function (event) {
-                alert('hello');
-            });
         });
     };
     HeaderComponent.prototype.clickSignIn = function () {

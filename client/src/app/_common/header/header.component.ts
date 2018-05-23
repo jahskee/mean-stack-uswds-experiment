@@ -19,10 +19,6 @@ export class HeaderComponent implements OnInit {
          $(".usa-overlay").attr("class", "usa-overlay")
          event.stopImmediatePropagation();     
       });
-
-      $(".usa-overlay, .usa-nav").scroll(function(event) {
-        alert('hello')
-      })
     });
   }
   
