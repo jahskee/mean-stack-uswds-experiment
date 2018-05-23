@@ -27,28 +27,6 @@ body,
     margin: 0;
     text-align: left; }
 
-#my-menu-search {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end; }
-  #my-menu-search #my-menu-small {
-    margin: 0;
-    display: none; }
-  #my-menu-search #my-menu-large {
-    margin: 0;
-    padding: 0;
-    height: 50px;
-    margin-right: 10%;
-    display: block; }
-  #my-menu-search #my-search-box {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 4px; }
-    #my-menu-search #my-search-box #my-search-input {
-      padding: 0;
-      flex: 1; }
-
 footer {
   color: white; }
 
@@ -97,6 +75,23 @@ input[title] {
   background: darkgreen;
   color: snow; }
 
+#my-menu-search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end; }
+  #my-menu-search #my-menu-mobile {
+    margin: 0;
+    display: none; }
+  #my-menu-search #my-search-box {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 4px;
+    margin-left: 10%; }
+    #my-menu-search #my-search-box #my-search-input {
+      padding: 0;
+      flex: 1; }
+
 /* query for tablet devices */
 @media only screen and (min-width: 600px) and (max-width: 950px) {
   html,
@@ -109,9 +104,7 @@ input[title] {
   #my-menu-search {
     flex-direction: row-reverse;
     justify-content: flex-start; }
-    #my-menu-search #my-menu-large {
-      display: none; }
-    #my-menu-search #my-menu-small {
+    #my-menu-search #my-menu-mobile {
       display: block;
       flex-grow: 2; }
     #my-menu-search #my-search-box {
@@ -148,9 +141,7 @@ input[title] {
     flex-direction: row-reverse;
     justify-content: flex-start;
     padding: 4px 0; }
-    #my-menu-search #my-menu-large {
-      display: none; }
-    #my-menu-search #my-menu-small {
+    #my-menu-search #my-menu-mobile {
       display: block;
       flex-grow: 2; }
     #my-menu-search #my-search-box {

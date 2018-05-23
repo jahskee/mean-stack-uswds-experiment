@@ -14,11 +14,7 @@
       flex-direction: row-reverse;
       justify-content: flex-start;
       
-      //--- altering menus ----
-      #my-menu-large {
-        display: none;
-      }
-      #my-menu-small {
+      #my-menu-mobile {
         display: block;
         flex-grow: 2;
       }

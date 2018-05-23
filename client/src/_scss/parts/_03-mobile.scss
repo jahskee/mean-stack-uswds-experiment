@@ -41,11 +41,8 @@
     justify-content: flex-start;
     padding: 4px 0;
     
-    //--- altering menus ----
-    #my-menu-large {
-      display: none;
-    }
-    #my-menu-small {
+    // ------- hide and show menu for mobile ---------
+    #my-menu-mobile {
       display: block;
       flex-grow: 2;
     }
