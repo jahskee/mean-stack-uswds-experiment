@@ -106,7 +106,8 @@ var HeaderComponent = /** @class */ (function () {
     HeaderComponent.prototype.ngOnInit = function () {
         $(document).ready(function () {
             var dfunc = $("#usa-nav").click;
-            $(".usa-nav").click(function (event) {
+            //$(".usa-nav").click(function(event){
+            $("body").click(function (event) {
                 $(".usa-nav").attr("class", "usa-nav");
                 $("body").attr("class", "vsc-initialized");
                 $(".usa-overlay").attr("class", "usa-overlay");
