@@ -1,5 +1,8 @@
 # MEAN Stack USWDS & RWD - Containerized
 
+## upload image for development (temp)
+   https://image.ibb.co
+
 ## export NODE_ENV to “production”
    this enables Express.js to cache files.
    
