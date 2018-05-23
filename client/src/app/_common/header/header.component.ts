@@ -14,8 +14,10 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     $(document).ready(function () {
       $(".usa-nav").click(()=>{
-        $(".usa-nav").attr("class", "usa-nav");
         $("body").attr("class", "vsc-initialized");
+        $(".usa-nav").attr("class", "usa-nav");
+        $(".usa-overlay").attr("class", "usa-overlay");
+       
       })
     });
   }
