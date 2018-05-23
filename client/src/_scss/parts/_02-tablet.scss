@@ -2,7 +2,7 @@
 @media only screen and (min-width: 600px) and (max-width: 950px) {
 
     html,
-    body,
+    body,    
     #my-header {
       margin: 0;
       padding: 0;
@@ -11,9 +11,12 @@
     }
 
     #my-menu-search {
+      display: flex;
       flex-direction: row-reverse;
       justify-content: flex-start;
+      padding: 4px 0;
       
+      // ------- hide and show menu for mobile ---------
       #my-menu-mobile {
         display: block;
         flex-grow: 2;

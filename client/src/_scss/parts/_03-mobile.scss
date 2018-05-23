@@ -36,7 +36,9 @@
   #my-logo-title1 {
     font-size: 1.8rem;
   }
+  
   #my-menu-search {
+    display: flex;
     flex-direction: row-reverse;
     justify-content: flex-start;
     padding: 4px 0;
