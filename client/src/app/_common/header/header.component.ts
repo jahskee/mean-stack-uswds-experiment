@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   
   ngOnInit() {
     $(document).ready(function () {
-      const dfunc = $("#usa-nav").click;
+      const dfunc = $(".usa-nav").click;
      
       $(".usa-nav").click(function(event){   
          $(".usa-nav").attr("class", "usa-nav")
