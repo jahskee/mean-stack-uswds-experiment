@@ -104,6 +104,12 @@ var HeaderComponent = /** @class */ (function () {
         this.router = router;
     }
     HeaderComponent.prototype.ngOnInit = function () {
+        $(document).ready(function () {
+            $(".usa-nav").click(function () {
+                $(".usa-nav").attr("class", "usa-nav");
+                $("body").attr("class", "vsc-initialized");
+            });
+        });
     };
     HeaderComponent.prototype.clickSignIn = function () {
         this.router.navigateByUrl('/login');
