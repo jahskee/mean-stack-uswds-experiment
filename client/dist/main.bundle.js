@@ -105,13 +105,14 @@ var HeaderComponent = /** @class */ (function () {
     }
     HeaderComponent.prototype.ngOnInit = function () {
         $(document).ready(function () {
-            var dfunc = $(".usa-nav").click;
-            $(".usa-overlay").click(function (event) {
+            $(".usa-overlay, .usa-nav").click(function (event) {
                 $(".usa-nav").attr("class", "usa-nav");
                 $("body").attr("class", "vsc-initialized");
                 $(".usa-overlay").attr("class", "usa-overlay");
                 event.stopImmediatePropagation();
-                //   $(".usa-nav").click = dfunc;
+            });
+            $(".usa-overlay, .usa-nav").scroll(function (event) {
+                event.stopImmediatePropagation();
             });
         });
     };

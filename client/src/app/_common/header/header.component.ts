@@ -12,17 +12,17 @@ export class HeaderComponent implements OnInit {
   }
   
   ngOnInit() {
-    $(document).ready(function () {
-      const dfunc = $(".usa-nav").click;
-     
-      $(".usa-overlay").click(function(event){   
-  
+    $(document).ready(function () {         
+      $(".usa-overlay, .usa-nav").click(function(event){     
          $(".usa-nav").attr("class", "usa-nav")
          $("body").attr("class", "vsc-initialized")
          $(".usa-overlay").attr("class", "usa-overlay")
-         event.stopImmediatePropagation();
-      //   $(".usa-nav").click = dfunc;
+         event.stopImmediatePropagation();     
       });
+
+      $(".usa-overlay, .usa-nav").scroll(function(event) {
+        event.stopImmediatePropagation();
+      })
     });
   }
   
