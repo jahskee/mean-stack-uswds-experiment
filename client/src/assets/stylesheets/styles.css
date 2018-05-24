@@ -89,8 +89,7 @@ input[title] {
     margin-right: 4px;
     margin-left: 10%; }
     #my-menu-search #my-search-box #my-search-input {
-      padding: 0;
-      flex: 1; }
+      padding: 0; }
 
 /* query for tablet devices */
 @media only screen and (min-width: 600px) and (max-width: 950px) {
@@ -101,6 +100,10 @@ input[title] {
     padding: 0;
     width: 100%;
     overflow: hidden; }
+  button.usa-menu-btn {
+    margin-top: 5px;
+    height: 33px;
+    border-radius: 4px; }
   #my-menu-search {
     display: flex;
     flex-direction: row-reverse;
@@ -110,7 +113,10 @@ input[title] {
       display: block;
       flex-grow: 2; }
     #my-menu-search #my-search-box {
-      flex-grow: 8; } }
+      flex-grow: 8;
+      margin-left: 0; }
+      #my-menu-search #my-search-box #my-search-input {
+        max-width: 100%; } }
 
 /* query for mobile devices */
 @media only screen and (max-width: 599px) {
@@ -148,4 +154,5 @@ input[title] {
       display: block;
       flex-grow: 2; }
     #my-menu-search #my-search-box {
-      flex-grow: 8; } }
+      flex-grow: 8;
+      margin-left: 0; } }

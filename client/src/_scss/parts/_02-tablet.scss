@@ -10,6 +10,13 @@
       overflow: hidden;
     }
 
+    button.usa-menu-btn {
+      margin-top: 5px;
+      height: 33px;
+      //margin-right: 10px;
+      border-radius: 4px;
+    }
+    
     #my-menu-search {
       display: flex;
       flex-direction: row-reverse;
@@ -25,6 +32,11 @@
       //--- top search  box ----
       #my-search-box  {
         flex-grow: 8;
+        margin-left: 0;
+
+        #my-search-input {
+          max-width:  100%;
+        }
       }
     }
 
