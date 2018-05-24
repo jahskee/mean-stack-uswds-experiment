@@ -94,6 +94,10 @@ body > app-root > div > app-header > div:nth-child(2) > div {
   }
 }
 
+input {
+  border: 1px solid darkgray;
+}
+
 input[title] {
   font-style: italic;
   color: gray;
