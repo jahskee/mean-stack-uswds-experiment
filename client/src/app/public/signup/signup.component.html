@@ -27,14 +27,15 @@
       </app-input-text>
      
       <!-- email -->
-      <app-input-text
+      <app-input-email
         [validationMsg]="'Required.'"
         [formGroup]="customer" 
         [controlName]="'email'" 
         [placeHolder]="'Email'" 
         [type]="'email'" 
+        [maxlength] = "'50'"
         [iconUrl]="'https://cdn3.iconfinder.com/data/icons/multi-media-set-2-2/65/77-20.png'">
-      </app-input-text>
+      </app-input-email>
 
       <!-- phone -->
       <app-input-phone
