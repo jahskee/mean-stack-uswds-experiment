@@ -6,6 +6,10 @@ body,
   width: 100%;
   overflow: hidden; }
 
+legend.usa-drop_text {
+  padding: 5px 0 5px;
+  text-align: center; }
+
 #my-header-logo {
   display: flex;
   flex-direction: row;
@@ -144,7 +148,8 @@ input[title] {
     height: 33px;
     border-radius: 4px; }
   legend.usa-drop_text {
-    padding: 5px 0 5px; }
+    padding: 5px 0 5px;
+    text-align: center; }
   #my-logo-title1 {
     font-size: 1.8rem; }
   #my-menu-search {

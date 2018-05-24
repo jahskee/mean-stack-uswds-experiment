@@ -7,6 +7,11 @@ body,
   overflow: hidden;
 }
 
+legend.usa-drop_text {
+  padding: 5px 0 5px;
+  text-align: center;
+}
+
 #my-header-logo {
   display: flex;
   flex-direction: row;
