@@ -83,6 +83,8 @@ input[title] {
   #my-menu-search #my-menu-mobile {
     margin: 0;
     display: none; }
+  #my-menu-search button.usa-menu-btn {
+    line-height: 0; }
   #my-menu-search #my-search-box {
     display: flex;
     justify-content: flex-end;
@@ -103,6 +105,7 @@ input[title] {
   button.usa-menu-btn {
     margin-top: 5px;
     height: 33px;
+    line-height: 0;
     border-radius: 4px; }
   #my-menu-search {
     display: flex;

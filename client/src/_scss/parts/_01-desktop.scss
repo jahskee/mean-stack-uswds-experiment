@@ -115,6 +115,10 @@ input[title] {
     display: none;
   }
 
+  button.usa-menu-btn {    
+    line-height: 0;
+  }
+
   #my-search-box {
     display: flex;
     justify-content: flex-end;
