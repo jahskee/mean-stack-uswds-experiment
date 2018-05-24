@@ -1,6 +1,6 @@
 # MEAN Stack USWDS & RWD - Containerized
 
-## Live website of this project, one code-base for laptop, tablet and mobile 
+## Live website of this project, one code-base for desktop, tablet and mobile 
 
    https://www.stratteos.us
 
