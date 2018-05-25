@@ -37,8 +37,8 @@ export class InputPhone {
         $('#'+this.controlName+"-error-img").show();
       })
     
-      $('#'+this.controlName).keyup(()=>{
-        let phone =  $(this)
+      $('#'+this.controlName).keyup(() => {
+        let phone = $('#'+this.controlName)
 
          let str = phone.val()
          if(str.toString().length === 1 && str !== '(') {      

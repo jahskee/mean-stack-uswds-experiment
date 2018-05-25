@@ -371,7 +371,7 @@ var InputPhone = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName + "-error-img").show();
             });
             __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName).keyup(function () {
-                var phone = __WEBPACK_IMPORTED_MODULE_2_jquery__(_this);
+                var phone = __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName);
                 var str = phone.val();
                 if (str.toString().length === 1 && str !== '(') {
                     phone.val('(' + str);
