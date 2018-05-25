@@ -1,5 +1,9 @@
 # MEAN Stack USWDS & RWD - Containerized
 
+## Live website of this project, one code-base for desktop, tablet and mobile 
+
+   https://www.stratteos.us
+
 ## upload image for development (temp)
    https://image.ibb.co
 
