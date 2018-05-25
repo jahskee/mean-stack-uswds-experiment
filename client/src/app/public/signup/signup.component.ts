@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from "@angular/core";
-import { CrudService } from "../../_services/crud.service";
+import { CrudService } from "../../_services/_crud-service/crud.service";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { passwordMatchValidator } from "../../_validators/password.validator";
 import { InputText } from "../../_components/input-text/input-text";
@@ -54,36 +54,39 @@ export class SignupComponent implements OnInit {
   }
 
   onSubmit() {
-    this.clearMessages();
-
-    if (!this.customer.valid) {
-      this.message = "Customer creation error.";
-      this.isShowErrorMessage = true;
-      return false;
-    }
-
-    // reshape customerObj obj literal
-    let customerObj = this.customer.value;
-    customerObj = {
-      ...customerObj,
-      password: customerObj.password1,
-      createdAt: null,
-      updatedAt: null
-    };
-    delete customerObj.password1;
-    delete customerObj.password2;
-
     try {
+      this.clearMessages();
+
+      if (!this.customer.valid) {
+        this.message = "Customer creation error.";
+        this.isShowErrorMessage = true;
+        return false;
+      }
+
+      // reshape customerObj obj literal
+      let customerObj = this.customer.value;
+      customerObj = {
+        ...customerObj,
+        password: customerObj.password1,
+        createdAt: null,
+        updatedAt: null
+      };
+      delete customerObj.password1;
+      delete customerObj.password2;
+
+  
       this._crudService.create("Customer", customerObj).subscribe(data => {
         this.addCustomerEvent.emit();
         console.log("create new customer success!");
         this.customer.reset();
       });
-      this.message = "Customer created.";
-      this._cookieService.put("test", "test")
+      this.message = "Customer create success.";   
       this.isShowSuccessMessage = true;
+      localStorage.setItem("hello", "world")
+      
     } catch (err) {
-      // console.error(err);
+      this.message = "Customer create failed.";
+ 
       return false;
     }
   }

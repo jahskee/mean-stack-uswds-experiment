@@ -13,7 +13,10 @@ import { AddContactFormComponent } from './public/_crud/add-contact-form/add-con
 import { ContactListComponent } from './public/_crud/contact-list/contact-list.component';
 import { Page2Component } from './public/page2/page2.component';
 
-import { CrudService } from './_services/crud.service';
+import { CrudService } from './_services/_crud-service/crud.service';
+import { AppService } from './_services/app-service/app.service';
+
+
 import { ReactiveFormsModule } from '@angular/forms';
 import { SigninComponent } from './public/signin/signin.component';
 import { ServicepageComponent } from './public/servicepage/servicepage.component';

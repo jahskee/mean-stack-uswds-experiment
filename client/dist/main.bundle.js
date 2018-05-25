@@ -549,7 +549,7 @@ exports.InputText = InputText;
 
 /***/ }),
 
-/***/ "./src/app/_services/crud.service.ts":
+/***/ "./src/app/_services/_crud-service/crud.service.ts":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -696,7 +696,7 @@ var footer_component_1 = __webpack_require__("./src/app/_common/footer/footer.co
 var add_contact_form_component_1 = __webpack_require__("./src/app/public/_crud/add-contact-form/add-contact-form.component.ts");
 var contact_list_component_1 = __webpack_require__("./src/app/public/_crud/contact-list/contact-list.component.ts");
 var page2_component_1 = __webpack_require__("./src/app/public/page2/page2.component.ts");
-var crud_service_1 = __webpack_require__("./src/app/_services/crud.service.ts");
+var crud_service_1 = __webpack_require__("./src/app/_services/_crud-service/crud.service.ts");
 var forms_2 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
 var signin_component_1 = __webpack_require__("./src/app/public/signin/signin.component.ts");
 var servicepage_component_1 = __webpack_require__("./src/app/public/servicepage/servicepage.component.ts");
@@ -789,7 +789,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var crud_service_1 = __webpack_require__("./src/app/_services/crud.service.ts");
+var crud_service_1 = __webpack_require__("./src/app/_services/_crud-service/crud.service.ts");
 var forms_1 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
 var AddContactFormComponent = /** @class */ (function () {
     function AddContactFormComponent(crudService) {
@@ -933,7 +933,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var crud_service_1 = __webpack_require__("./src/app/_services/crud.service.ts");
+var crud_service_1 = __webpack_require__("./src/app/_services/_crud-service/crud.service.ts");
 var CrudComponent = /** @class */ (function () {
     function CrudComponent(crudService) {
         this.crudService = crudService;
@@ -1103,7 +1103,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var router_1 = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-var crud_service_1 = __webpack_require__("./src/app/_services/crud.service.ts");
+var crud_service_1 = __webpack_require__("./src/app/_services/_crud-service/crud.service.ts");
 var forms_1 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
 var Page2Component = /** @class */ (function () {
     function Page2Component(crudService, route) {
@@ -1364,7 +1364,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var crud_service_1 = __webpack_require__("./src/app/_services/crud.service.ts");
+var crud_service_1 = __webpack_require__("./src/app/_services/_crud-service/crud.service.ts");
 var forms_1 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
 var password_validator_1 = __webpack_require__("./src/app/_validators/password.validator.ts");
 var cookies_service_1 = __webpack_require__("./node_modules/angular2-cookie/services/cookies.service.js");
@@ -1389,29 +1389,29 @@ var SignupComponent = /** @class */ (function () {
     };
     SignupComponent.prototype.onSubmit = function () {
         var _this = this;
-        this.clearMessages();
-        if (!this.customer.valid) {
-            this.message = "Customer creation error.";
-            this.isShowErrorMessage = true;
-            return false;
-        }
-        // reshape customerObj obj literal
-        var customerObj = this.customer.value;
-        customerObj = __assign({}, customerObj, { password: customerObj.password1, createdAt: null, updatedAt: null });
-        delete customerObj.password1;
-        delete customerObj.password2;
         try {
+            this.clearMessages();
+            if (!this.customer.valid) {
+                this.message = "Customer creation error.";
+                this.isShowErrorMessage = true;
+                return false;
+            }
+            // reshape customerObj obj literal
+            var customerObj = this.customer.value;
+            customerObj = __assign({}, customerObj, { password: customerObj.password1, createdAt: null, updatedAt: null });
+            delete customerObj.password1;
+            delete customerObj.password2;
             this._crudService.create("Customer", customerObj).subscribe(function (data) {
                 _this.addCustomerEvent.emit();
                 console.log("create new customer success!");
                 _this.customer.reset();
             });
-            this.message = "Customer created.";
-            this._cookieService.put("test", "test");
+            this.message = "Customer create success.";
             this.isShowSuccessMessage = true;
+            localStorage.setItem("hello", "world");
         }
         catch (err) {
-            // console.error(err);
+            this.message = "Customer create failed.";
             return false;
         }
     };

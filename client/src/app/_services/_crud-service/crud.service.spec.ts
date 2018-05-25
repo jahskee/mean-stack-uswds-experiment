@@ -1,7 +1,7 @@
 import { TestBed, inject } from '@angular/core/testing';
 import { CrudService } from './crud.service';
 
-describe('Crud Service', () => {
+describe('App Service', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [CrudService]
