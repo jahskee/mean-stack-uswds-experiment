@@ -53,7 +53,7 @@ var FooterComponent = /** @class */ (function () {
     FooterComponent.prototype.ngOnInit = function () {
     };
     FooterComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-footer',
             template: __webpack_require__("./src/app/_common/footer/footer.component.html"),
             styles: [__webpack_require__("./src/app/_common/footer/footer.component.scss")]
@@ -70,7 +70,7 @@ var FooterComponent = /** @class */ (function () {
 /***/ "./src/app/_common/header/header.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"my-header\">\n  <div id='my-header-gov' class=\"usa-banner\">\n    <div class=\"usa-accordion\">\n      <header class=\"usa-banner-header\">\n        <div class=\"usa-grid usa-banner-inner\" style='width: 600px; margin-left:0; text-align: left'>\n          <img src=\"/assets/uswds-1.6.3/img/favicons/favicon-57.png\" alt=\"U.S. flag\">\n          <span>An official website of the United States government</span>\n          <button class=\"usa-accordion-button usa-banner-button\" aria-expanded=\"false\" aria-controls=\"gov-banner\">\n            <span class=\"usa-banner-button-text\">Here's how you know</span>\n          </button>\n        </div>\n      </header>\n      <div class=\"usa-banner-content usa-grid usa-accordion-content\" id=\"gov-banner\">\n        <div class=\"usa-banner-guidance-gov usa-width-one-half\">\n          <img class=\"usa-banner-icon usa-media_block-img\" src=\"/assets/uswds-1.6.3/img/icon-dot-gov.svg\" alt=\"Dot gov\">\n          <div class=\"usa-media_block-body\">\n            <p>\n              <strong>The .gov means it’s official.</strong>\n              <br> Federal government websites often end in .gov or .mil. Before sharing sensitive information, make sure you’re\n              on a federal government site.\n            </p>\n          </div>\n        </div>\n        <div class=\"usa-banner-guidance-ssl usa-width-one-half\">\n          <img class=\"usa-banner-icon usa-media_block-img\" src=\"/assets/uswds-1.6.3/img/icon-https.svg\" alt=\"Https\">\n          <div class=\"usa-media_block-body\">\n            <p>\n              <strong>The site is secure.</strong>\n              <br> The\n              <strong>https://</strong> ensures that you are connecting to the official website and that any information you provide\n              is encrypted and transmitted securely.\n            </p>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<header id='my-header' class=\"usa-header usa-header-basic\" role=\"banner\">\n  <div id='my-header-logo'>   \n      <img id='my-logo-image'src='/assets/images/logo/usda-circle.png' >\n      <div>\n        <h2 id='my-logo-title1' class=\"usa-hero-callout-alt\">U.S. Department of Agriculture</h2>\n        <h4 id='my-logo-title2'>eAuthentication</h4>\n      </div>     \n  </div>\n</header>\n\n<div id=\"my-menu-search\">\n     <button id=\"my-menu-mobile\" class=\"usa-menu-btn\" role=\"menu\">Menu</button>\n \n     <nav class=\"usa-nav\" role=\"navigation\">\n       <!-- <button class=\"usa-nav-close\">\n          <img src=\"/assets/uswds-1.6.3/img/close.svg\" alt=\"close\">\n        </button> -->\n        <ul class=\"usa-nav-primary usa-accordion\">\n          <li>\n            <a class=\"usa-nav-link\" routerLink=\"/\">\n              <span>Home</span>\n            </a>\n          </li>\n          <li>\n            <a class=\"usa-nav-link\" routerLink=\"/service\">\n              <span>Services</span>\n            </a>\n    \n          </li>\n          <!--\n          <li>\n            <a class=\"usa-nav-link\" routerLink=\"/crud\">\n              <span>CRUD</span>\n            </a>\n          </li>\n          -->\n          <li>\n            <a class=\"usa-nav-link\" routerLink=\"/contactus\">\n              <span>Contact Us</span>\n            </a>\n          </li>\n          <li>\n            <a class=\"usa-nav-link\" routerLink=\"/signin\">\n              <span>Sign In</span>\n            </a>\n          </li>\n          <li>\n            <a class=\"usa-nav-link\" routerLink=\"/signup\">\n              <span>Sign Up</span>\n            </a>\n          </li>\n        </ul>\n      </nav>\n  <form id='my-search-box' class=\"usa-search usa-search-small\"  role=\"search\">   \n   \n      <input id=\"my-search-input\" type=\"search\" name=\"search\">\n      <button type=\"submit\">\n        <span class=\"usa-sr-only\">Search</span>\n      </button>\n   \n  </form>\n</div> <!-- end menu-search-->\n\n<div class=\"usa-overlay\"></div>\n<main id=\"main-content\"></main>\n"
+module.exports = "<div id=\"my-header\">\n  <div id='my-header-gov' class=\"usa-banner\">\n    <div class=\"usa-accordion\">\n      <header class=\"usa-banner-header\">\n        <div class=\"usa-grid usa-banner-inner\" style='width: 600px; margin-left:0; text-align: left'>\n          <img src=\"/assets/uswds-1.6.3/img/favicons/favicon-57.png\" alt=\"U.S. flag\">\n          <span>An official website of the United States government</span>\n          <button class=\"usa-accordion-button usa-banner-button\" aria-expanded=\"false\" aria-controls=\"gov-banner\">\n            <span class=\"usa-banner-button-text\">Here's how you know</span>\n          </button>\n        </div>\n      </header>\n      <div class=\"usa-banner-content usa-grid usa-accordion-content\" id=\"gov-banner\">\n        <div class=\"usa-banner-guidance-gov usa-width-one-half\">\n          <img class=\"usa-banner-icon usa-media_block-img\" src=\"/assets/uswds-1.6.3/img/icon-dot-gov.svg\" alt=\"Dot gov\">\n          <div class=\"usa-media_block-body\">\n            <p>\n              <strong>The .gov means it’s official.</strong>\n              <br> Federal government websites often end in .gov or .mil. Before sharing sensitive information, make sure you’re\n              on a federal government site.\n            </p>\n          </div>\n        </div>\n        <div class=\"usa-banner-guidance-ssl usa-width-one-half\">\n          <img class=\"usa-banner-icon usa-media_block-img\" src=\"/assets/uswds-1.6.3/img/icon-https.svg\" alt=\"Https\">\n          <div class=\"usa-media_block-body\">\n            <p>\n              <strong>The site is secure.</strong>\n              <br> The\n              <strong>https://</strong> ensures that you are connecting to the official website and that any information you provide\n              is encrypted and transmitted securely.\n            </p>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<header id='my-header' class=\"usa-header usa-header-basic\" role=\"banner\">\n  <div id='my-header-logo'>   \n      <img id='my-logo-image'src='/assets/images/logo/usda-circle.png' >\n      <div>\n        <h2 id='my-logo-title1' class=\"usa-hero-callout-alt\">KickStart MEAN</h2>\n        <h4 id='my-logo-title2'>MEAN Stack, Responsive Web Design</h4>\n      </div>     \n  </div>\n</header>\n\n<div id=\"my-menu-search\">\n     <button id=\"my-menu-mobile\" class=\"usa-menu-btn\" role=\"menu\">Menu</button>\n \n     <nav class=\"usa-nav\" role=\"navigation\">\n       <!-- <button class=\"usa-nav-close\">\n          <img src=\"/assets/uswds-1.6.3/img/close.svg\" alt=\"close\">\n        </button> -->\n        <ul class=\"usa-nav-primary usa-accordion\">\n          <li>\n            <a class=\"usa-nav-link\" routerLink=\"/\">\n              <span>Home</span>\n            </a>\n          </li>\n          <li>\n            <a class=\"usa-nav-link\" routerLink=\"/service\">\n              <span>Services</span>\n            </a>\n    \n          </li>\n          <!--\n          <li>\n            <a class=\"usa-nav-link\" routerLink=\"/crud\">\n              <span>CRUD</span>\n            </a>\n          </li>\n          -->\n          <li>\n            <a class=\"usa-nav-link\" routerLink=\"/contactus\">\n              <span>Contact Us</span>\n            </a>\n          </li>\n          <li>\n            <a class=\"usa-nav-link\" routerLink=\"/signin\">\n              <span>Sign In</span>\n            </a>\n          </li>\n          <li>\n            <a class=\"usa-nav-link\" routerLink=\"/signup\">\n              <span>Sign Up</span>\n            </a>\n          </li>\n        </ul>\n      </nav>\n  <form id='my-search-box' class=\"usa-search usa-search-small\"  role=\"search\">   \n   \n      <input id=\"my-search-input\" type=\"search\" name=\"search\">\n      <button type=\"submit\">\n        <span class=\"usa-sr-only\">Search</span>\n      </button>\n   \n  </form>\n</div> <!-- end menu-search-->\n\n<div class=\"usa-overlay\"></div>\n<main id=\"main-content\"></main>\n"
 
 /***/ }),
 
@@ -117,7 +117,7 @@ var HeaderComponent = /** @class */ (function () {
         this.router.navigateByUrl('/login');
     };
     HeaderComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-header',
             template: __webpack_require__("./src/app/_common/header/header.component.html"),
             styles: [__webpack_require__("./src/app/_common/header/header.component.scss")]
@@ -134,14 +134,14 @@ var HeaderComponent = /** @class */ (function () {
 /***/ "./src/app/_components/input-email/input-email.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class='form-control-group' [formGroup]='formGroup' title=\"{{validationMsg}}\">\n\n    <div class=\"input-icon-container\">\n        <input class='input-icon' formControlName='{{controlName}}' id='{{controlName}}' placeholder='{{placeHolder}}' name=\"{{controlName}}\"\n            type=\"{{type}}\" required aria-required='true' style=\"text-transform: lowercase;\" maxlength=\"{{maxlength}}\">\n        <span *ngIf=\"iconUrl\">\n            <img class=\"input-icon-img\" src=\"{{iconUrl}}\">\n        </span>\n\n        <span *ngIf=\"formGroup.get(controlName).valid && formGroup.get(controlName).touched\">\n            <img class=\"input-error-img\" src=\"https://cdn4.iconfinder.com/data/icons/icocentre-free-icons/137/f-check_256-16.png\">\n\n        </span>\n        <span *ngIf=\"formGroup.get(controlName).invalid && formGroup.get(controlName).touched\">\n            <img \n                class=\"input-error-img\" \n                id=\"{{controlName}}-error-img\" \n                src=\"https://cdn0.iconfinder.com/data/icons/basic-ui-elements-colored/700/05_exclamation-3-16.png\"\n             >\n            <small style=\"padding-left: 1rem;\">\n                {{validationMsg}}\n            </small>\n        </span>\n    </div>\n</div>\n"
+module.exports = "<div class='form-control-group' [formGroup]='formGroup' title=\"{{validationMsg}}\">\n\n    <div class=\"input-icon-container\">\n        <input class='input' formControlName='{{controlName}}' id='{{controlName}}' placeholder='{{placeHolder}}' name=\"{{controlName}}\"\n            type=\"{{type}}\" required aria-required='true' style=\"text-transform: lowercase;\" maxlength=\"{{maxlength}}\">\n        <span *ngIf=\"iconUrl\">\n            <img class=\"input-icon-img\" src=\"{{iconUrl}}\">\n        </span>\n\n        <span *ngIf=\"formGroup.get(controlName).valid && formGroup.get(controlName).touched\">\n            <img class=\"input-error-img\" src=\"https://cdn4.iconfinder.com/data/icons/icocentre-free-icons/137/f-check_256-16.png\">\n\n        </span>\n        <span *ngIf=\"formGroup.get(controlName).invalid && formGroup.get(controlName).touched\">\n            <img \n                class=\"input-error-img\" \n                id=\"{{controlName}}-error-img\" \n                src=\"https://cdn0.iconfinder.com/data/icons/basic-ui-elements-colored/700/05_exclamation-3-16.png\"\n             >\n            <small style=\"padding-left: 1rem;\">\n                {{validationMsg}}\n            </small>\n        </span>\n    </div>\n</div>\n"
 
 /***/ }),
 
 /***/ "./src/app/_components/input-email/input-email.scss":
 /***/ (function(module, exports) {
 
-module.exports = ".input-icon-container {\n  position: relative;\n  padding: 0;\n  margin: 0; }\n\n.input-icon {\n  border-radius: 10px;\n  margin: 0;\n  padding-left: 35px; }\n\n.input-icon-img {\n  position: absolute;\n  top: 15px;\n  left: 10px;\n  width: 14px;\n  height: 14px; }\n\n.input-error-img {\n  position: absolute;\n  top: 15px;\n  right: 15px;\n  width: 16px;\n  height: 16px;\n  opacity: 0.7;\n  filter: alpha(opacity=70);\n  /* For IE8 and earlier */ }\n\n.form-control-group {\n  padding-bottom: 5px; }\n"
+module.exports = ".input-icon-container {\n  position: relative;\n  padding: 0;\n  margin: 0; }\n\n.input {\n  border-radius: 10px;\n  margin: 0;\n  padding-left: 35px; }\n\n.input-error {\n  border: 1px solid red; }\n\n.input-icon-img {\n  position: absolute;\n  top: 15px;\n  left: 10px;\n  width: 14px;\n  height: 14px; }\n\n.input-error-img {\n  position: absolute;\n  top: 15px;\n  right: 15px;\n  width: 16px;\n  height: 16px;\n  opacity: 0.7;\n  filter: alpha(opacity=70);\n  /* For IE8 and earlier */ }\n\n.form-control-group {\n  padding-bottom: 5px; }\n"
 
 /***/ }),
 
@@ -188,35 +188,35 @@ var InputEmail = /** @class */ (function () {
         });
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormGroup */])
     ], InputEmail.prototype, "formGroup", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", String)
     ], InputEmail.prototype, "placeHolder", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", String)
     ], InputEmail.prototype, "controlName", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", String)
     ], InputEmail.prototype, "type", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", String)
     ], InputEmail.prototype, "iconUrl", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", Number)
     ], InputEmail.prototype, "maxlength", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", String)
     ], InputEmail.prototype, "validationMsg", void 0);
     InputEmail = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "app-input-email",
             styles: [__webpack_require__("./src/app/_components/input-email/input-email.scss")],
             template: __webpack_require__("./src/app/_components/input-email/input-email.html")
@@ -232,14 +232,14 @@ var InputEmail = /** @class */ (function () {
 /***/ "./src/app/_components/input-password-confirm/input-password-confirm.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class='form-control-group' [formGroup]='formGroup' title=\"{{validationMsg}}\">\n\n    <div class=\"input-icon-container\">\n        <input class='input-icon' formControlName='{{controlName}}' id='{{controlName}}' placeholder='{{placeHolder}}' name=\"{{controlName}}\"\n            type=\"{{type}}\" required aria-required='true'>\n        <span *ngIf=\"iconUrl\">\n            <img class=\"input-icon-img\" src=\"{{iconUrl}}\">\n        </span>\n        <span *ngIf=\"(!formGroup.hasError('mismatch') || formGroup.get(controlName).valid) && formGroup.get(controlName).touched\">\n            <img class=\"input-error-img\" src=\"https://cdn4.iconfinder.com/data/icons/icocentre-free-icons/137/f-check_256-16.png\">\n\n        </span>\n        <span *ngIf=\"(formGroup.hasError('mismatch') || (formGroup.get(controlName).invalid) && formGroup.get(controlName).touched)\">\n            <img \n                class=\"input-error-img\" \n                id=\"{{controlName}}-error-img\" \n                src=\"https://cdn0.iconfinder.com/data/icons/basic-ui-elements-colored/700/05_exclamation-3-16.png\"\n            >\n            <small style=\"padding-left: 1rem;\">\n                {{validationMsg}}\n            </small>\n        </span>\n    </div>\n</div>"
+module.exports = "<div class='form-control-group' [formGroup]='formGroup' title=\"{{validationMsg}}\">\n\n    <div class=\"input-icon-container\">\n        <input class='input' formControlName='{{controlName}}' id='{{controlName}}' placeholder='{{placeHolder}}' name=\"{{controlName}}\"\n            type=\"{{type}}\" required aria-required='true'>\n        <span *ngIf=\"iconUrl\">\n            <img class=\"input-icon-img\" src=\"{{iconUrl}}\">\n        </span>\n        <span *ngIf=\"(!formGroup.hasError('mismatch') || formGroup.get(controlName).valid) && formGroup.get(controlName).touched\">\n            <img class=\"input-error-img\" src=\"https://cdn4.iconfinder.com/data/icons/icocentre-free-icons/137/f-check_256-16.png\">\n\n        </span>\n        <span *ngIf=\"(formGroup.hasError('mismatch') || (formGroup.get(controlName).invalid) && formGroup.get(controlName).touched)\">\n            <img \n                class=\"input-error-img\" \n                id=\"{{controlName}}-error-img\" \n                src=\"https://cdn0.iconfinder.com/data/icons/basic-ui-elements-colored/700/05_exclamation-3-16.png\"\n            >\n            <small style=\"padding-left: 1rem;\">\n                {{validationMsg}}\n            </small>\n        </span>\n    </div>\n</div>"
 
 /***/ }),
 
 /***/ "./src/app/_components/input-password-confirm/input-password-confirm.scss":
 /***/ (function(module, exports) {
 
-module.exports = ".input-icon-container {\n  position: relative;\n  padding: 0;\n  margin: 0; }\n\n.input-icon {\n  border-radius: 10px;\n  margin: 0;\n  padding-left: 35px; }\n\n.input-icon-img {\n  position: absolute;\n  top: 15px;\n  left: 10px;\n  width: 14px;\n  height: 14px; }\n\n.input-error-img {\n  position: absolute;\n  top: 15px;\n  right: 15px;\n  width: 16px;\n  height: 16px;\n  opacity: 0.7;\n  filter: alpha(opacity=70); }\n\n.form-control-group {\n  padding-bottom: 5px; }\n"
+module.exports = ".input-icon-container {\n  position: relative;\n  padding: 0;\n  margin: 0; }\n\n.input {\n  border-radius: 10px;\n  margin: 0;\n  padding-left: 35px; }\n\n.input-error {\n  border: 1px solid red; }\n\n.input-icon-img {\n  position: absolute;\n  top: 15px;\n  left: 10px;\n  width: 14px;\n  height: 14px; }\n\n.input-error-img {\n  position: absolute;\n  top: 15px;\n  right: 15px;\n  width: 16px;\n  height: 16px;\n  opacity: 0.7;\n  filter: alpha(opacity=70);\n  /* For IE8 and earlier */ }\n\n.form-control-group {\n  padding-bottom: 5px; }\n"
 
 /***/ }),
 
@@ -279,31 +279,31 @@ var InputPasswordConfirm = /** @class */ (function () {
         });
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormGroup */])
     ], InputPasswordConfirm.prototype, "formGroup", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", String)
     ], InputPasswordConfirm.prototype, "placeHolder", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", String)
     ], InputPasswordConfirm.prototype, "controlName", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", String)
     ], InputPasswordConfirm.prototype, "type", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", String)
     ], InputPasswordConfirm.prototype, "iconUrl", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", String)
     ], InputPasswordConfirm.prototype, "validationMsg", void 0);
     InputPasswordConfirm = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "app-input-password-confirm",
             styles: [__webpack_require__("./src/app/_components/input-password-confirm/input-password-confirm.scss")],
             template: __webpack_require__("./src/app/_components/input-password-confirm/input-password-confirm.html")
@@ -319,14 +319,14 @@ var InputPasswordConfirm = /** @class */ (function () {
 /***/ "./src/app/_components/input-phone/input-phone.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class='form-control-group' [formGroup]='formGroup' title=\"{{validationMsg}}\">\n\n    <div class=\"input-icon-container\">\n        <input class=\"input-icon my-input-phone\" formControlName=\"{{controlName}}\" id=\"{{controlName}}\" placeholder=\"{{placeHolder}}\" name=\"{{controlName}}\"\n            type=\"{{type}}\" required aria-required=\"true\" maxlength=\"14\">\n        <span *ngIf=\"iconUrl\">\n            <img class=\"input-icon-img\" src=\"{{iconUrl}}\">\n        </span>\n\n        <span *ngIf=\"formGroup.get(controlName).valid && formGroup.get(controlName).touched\">\n            <img class=\"input-error-img\" src=\"https://cdn4.iconfinder.com/data/icons/icocentre-free-icons/137/f-check_256-16.png\">\n\n        </span>\n        <span *ngIf=\"formGroup.get(controlName).invalid && formGroup.get(controlName).touched\">\n            <img \n                class=\"input-error-img\" \n                id=\"{{controlName}}-error-img\" \n                src=\"https://cdn0.iconfinder.com/data/icons/basic-ui-elements-colored/700/05_exclamation-3-16.png\"\n            >\n            \n            <small style=\"padding-left: 1rem;\">\n                {{validationMsg}}\n            </small>\n        </span>\n    </div>\n</div>\n<script src=\"/assets/javascript/script.js\"></script>\n\n"
+module.exports = "<div class='form-control-group' [formGroup]='formGroup' title=\"{{validationMsg}}\">\n\n    <div class=\"input-icon-container\">\n        <input class=\"input my-input-phone\" formControlName=\"{{controlName}}\" id=\"{{controlName}}\" placeholder=\"{{placeHolder}}\" name=\"{{controlName}}\"\n            type=\"{{type}}\" required aria-required=\"true\" maxlength=\"14\">\n        <span *ngIf=\"iconUrl\">\n            <img class=\"input-icon-img\" src=\"{{iconUrl}}\">\n        </span>\n\n        <span *ngIf=\"formGroup.get(controlName).valid && formGroup.get(controlName).touched\">\n            <img class=\"input-error-img\" src=\"https://cdn4.iconfinder.com/data/icons/icocentre-free-icons/137/f-check_256-16.png\">\n\n        </span>\n        <span *ngIf=\"formGroup.get(controlName).invalid && formGroup.get(controlName).touched\">\n            <img \n                class=\"input-error-img\" \n                id=\"{{controlName}}-error-img\" \n                src=\"https://cdn0.iconfinder.com/data/icons/basic-ui-elements-colored/700/05_exclamation-3-16.png\"\n            >\n            \n            <small style=\"padding-left: 1rem;\">\n                {{validationMsg}}\n            </small>\n        </span>\n    </div>\n</div>\n<script src=\"/assets/javascript/script.js\"></script>\n\n"
 
 /***/ }),
 
 /***/ "./src/app/_components/input-phone/input-phone.scss":
 /***/ (function(module, exports) {
 
-module.exports = ".input-icon-container {\n  position: relative;\n  padding: 0;\n  margin: 0; }\n\n.input-icon {\n  border-radius: 10px;\n  margin: 0;\n  padding-left: 35px; }\n\n.input-icon-img {\n  position: absolute;\n  top: 15px;\n  left: 10px;\n  width: 14px;\n  height: 14px; }\n\n.input-error-img {\n  position: absolute;\n  top: 15px;\n  right: 15px;\n  width: 16px;\n  height: 16px;\n  opacity: 0.7;\n  filter: alpha(opacity=70); }\n\n.form-control-group {\n  padding-bottom: 5px; }\n"
+module.exports = ".input-icon-container {\n  position: relative;\n  padding: 0;\n  margin: 0; }\n\n.input {\n  border-radius: 10px;\n  margin: 0;\n  padding-left: 35px; }\n\n.input-error {\n  border: 1px solid red; }\n\n.input-icon-img {\n  position: absolute;\n  top: 15px;\n  left: 10px;\n  width: 14px;\n  height: 14px; }\n\n.input-error-img {\n  position: absolute;\n  top: 15px;\n  right: 15px;\n  width: 16px;\n  height: 16px;\n  opacity: 0.7;\n  filter: alpha(opacity=70);\n  /* For IE8 and earlier */ }\n\n.form-control-group {\n  padding-bottom: 5px; }\n"
 
 /***/ }),
 
@@ -425,31 +425,31 @@ var InputPhone = /** @class */ (function () {
         });
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormGroup */])
     ], InputPhone.prototype, "formGroup", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", String)
     ], InputPhone.prototype, "placeHolder", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", String)
     ], InputPhone.prototype, "controlName", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", String)
     ], InputPhone.prototype, "type", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", String)
     ], InputPhone.prototype, "iconUrl", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", String)
     ], InputPhone.prototype, "validationMsg", void 0);
     InputPhone = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "app-input-phone",
             styles: [__webpack_require__("./src/app/_components/input-phone/input-phone.scss")],
             template: __webpack_require__("./src/app/_components/input-phone/input-phone.html")
@@ -466,7 +466,7 @@ var InputPhone = /** @class */ (function () {
 /***/ "./src/app/_components/input-text/input-text.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class='form-control-group' [formGroup]='formGroup' title=\"{{validationMsg}}\">\n\n    <div class=\"input-icon-container\">\n        \n        <input class='input' formControlName='{{controlName}}' id='{{controlName}}' placeholder='{{placeHolder}}' name=\"{{controlName}}\"\n            type=\"{{type}}\" required aria-required='true' style=\"text-transform: capitalize;\" maxlength=\"{{maxlength}}\"\n            autocomplete=\"off\">\n       \n       \n        <span *ngIf=\"iconUrl\">\n            <img class=\"input-icon-img\" src=\"{{iconUrl}}\">\n        </span>\n\n        <span *ngIf=\"formGroup.get(controlName).valid && formGroup.get(controlName).touched\">\n            <img class=\"input-error-img\" src=\"https://cdn4.iconfinder.com/data/icons/icocentre-free-icons/137/f-check_256-16.png\">\n\n        </span>\n        <span *ngIf=\"formGroup.get(controlName).invalid && formGroup.get(controlName).touched\">\n            <img class=\"input-error-img\" \n                 id=\"{{controlName}}-error-img\" \n                 src=\"https://cdn0.iconfinder.com/data/icons/basic-ui-elements-colored/700/05_exclamation-3-16.png\"\n            >\n\n            <small style=\"padding-left: 1rem;\">\n                {{validationMsg}}\n            </small>\n        </span>\n    </div>\n</div>\n\n"
+module.exports = "<div class='form-control-group' [formGroup]='formGroup' title=\"{{validationMsg}}\">\n\n    <div class=\"input-icon-container\">\n        \n        <input class='input' formControlName='{{controlName}}' id='{{controlName}}' placeholder='{{placeHolder}}' name=\"{{controlName}}\"\n            type=\"{{type}}\" required aria-required='true' style=\"text-transform: capitalize;\" maxlength=\"{{maxlength}}\"\n            autocomplete=\"off\">\n        <span *ngIf=\"iconUrl\">\n            <img class=\"input-icon-img\" src=\"{{iconUrl}}\">\n        </span>\n\n\n        <span *ngIf=\"formGroup.get(controlName).valid && formGroup.get(controlName).touched\">\n            <img class=\"input-error-img\" src=\"https://cdn4.iconfinder.com/data/icons/icocentre-free-icons/137/f-check_256-16.png\">\n\n        </span>\n        <span *ngIf=\"formGroup.get(controlName).invalid && formGroup.get(controlName).touched\">\n            <img class=\"input-error-img\" \n                 id=\"{{controlName}}-error-img\" \n                 src=\"https://cdn0.iconfinder.com/data/icons/basic-ui-elements-colored/700/05_exclamation-3-16.png\"\n            >\n\n            <small style=\"padding-left: 1rem;\">\n                {{validationMsg}}\n            </small>\n        </span>\n    </div>\n</div>\n\n"
 
 /***/ }),
 
@@ -520,35 +520,35 @@ var InputText = /** @class */ (function () {
         });
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormGroup */])
     ], InputText.prototype, "formGroup", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", String)
     ], InputText.prototype, "placeHolder", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", String)
     ], InputText.prototype, "controlName", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", String)
     ], InputText.prototype, "type", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", String)
     ], InputText.prototype, "iconUrl", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", Number)
     ], InputText.prototype, "maxlength", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", String)
     ], InputText.prototype, "validationMsg", void 0);
     InputText = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "app-input-text",
             styles: [__webpack_require__("./src/app/_components/input-text/input-text.scss")],
             template: __webpack_require__("./src/app/_components/input-text/input-text.html")
@@ -608,7 +608,7 @@ var CrudService = /** @class */ (function () {
         return this.http.delete(this.apiurl + "/api/" + modelName.toLowerCase() + "s/" + id + "?token=" + this.token);
     };
     CrudService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
     ], CrudService);
     return CrudService;
@@ -670,7 +670,7 @@ var AppComponent = /** @class */ (function () {
     AppComponent.prototype.ngOnInit = function () {
     };
     AppComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "app-root",
             template: __webpack_require__("./src/app/app.component.html"),
             styles: [__webpack_require__("./src/app/app.component.scss")]
@@ -694,24 +694,26 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__("./src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__common_header_header_component__ = __webpack_require__("./src/app/_common/header/header.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__common_footer_footer_component__ = __webpack_require__("./src/app/_common/footer/footer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__public_crud_add_contact_form_add_contact_form_component__ = __webpack_require__("./src/app/public/_crud/add-contact-form/add-contact-form.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__public_crud_contact_list_contact_list_component__ = __webpack_require__("./src/app/public/_crud/contact-list/contact-list.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__public_page2_page2_component__ = __webpack_require__("./src/app/public/page2/page2.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_crud_service__ = __webpack_require__("./src/app/_services/crud.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__public_signin_signin_component__ = __webpack_require__("./src/app/public/signin/signin.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__public_servicepage_servicepage_component__ = __webpack_require__("./src/app/public/servicepage/servicepage.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__public_password_reset_password_reset_component__ = __webpack_require__("./src/app/public/password-reset/password-reset.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__public_home_home_component__ = __webpack_require__("./src/app/public/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__public_crud_crud_component__ = __webpack_require__("./src/app/public/_crud/crud.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__public_signup_signup_component__ = __webpack_require__("./src/app/public/signup/signup.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__public_contactus_contactus_component__ = __webpack_require__("./src/app/public/contactus/contactus.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_input_text_input_text__ = __webpack_require__("./src/app/_components/input-text/input-text.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_input_email_input_email__ = __webpack_require__("./src/app/_components/input-email/input-email.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_input_phone_input_phone__ = __webpack_require__("./src/app/_components/input-phone/input-phone.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_input_password_confirm_input_password_confirm__ = __webpack_require__("./src/app/_components/input-password-confirm/input-password-confirm.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_cookie_services_cookies_service__ = __webpack_require__("./node_modules/angular2-cookie/services/cookies.service.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_cookie_services_cookies_service___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_angular2_cookie_services_cookies_service__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__("./src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__common_header_header_component__ = __webpack_require__("./src/app/_common/header/header.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__common_footer_footer_component__ = __webpack_require__("./src/app/_common/footer/footer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__public_crud_add_contact_form_add_contact_form_component__ = __webpack_require__("./src/app/public/_crud/add-contact-form/add-contact-form.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__public_crud_contact_list_contact_list_component__ = __webpack_require__("./src/app/public/_crud/contact-list/contact-list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__public_page2_page2_component__ = __webpack_require__("./src/app/public/page2/page2.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__services_crud_service__ = __webpack_require__("./src/app/_services/crud.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__public_signin_signin_component__ = __webpack_require__("./src/app/public/signin/signin.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__public_servicepage_servicepage_component__ = __webpack_require__("./src/app/public/servicepage/servicepage.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__public_password_reset_password_reset_component__ = __webpack_require__("./src/app/public/password-reset/password-reset.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__public_home_home_component__ = __webpack_require__("./src/app/public/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__public_crud_crud_component__ = __webpack_require__("./src/app/public/_crud/crud.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__public_signup_signup_component__ = __webpack_require__("./src/app/public/signup/signup.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__public_contactus_contactus_component__ = __webpack_require__("./src/app/public/contactus/contactus.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_input_text_input_text__ = __webpack_require__("./src/app/_components/input-text/input-text.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_input_email_input_email__ = __webpack_require__("./src/app/_components/input-email/input-email.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_input_phone_input_phone__ = __webpack_require__("./src/app/_components/input-phone/input-phone.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__components_input_password_confirm_input_password_confirm__ = __webpack_require__("./src/app/_components/input-password-confirm/input-password-confirm.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -742,37 +744,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var routes = [
-    { path: 'signin', component: __WEBPACK_IMPORTED_MODULE_12__public_signin_signin_component__["a" /* SigninComponent */] },
-    { path: 'signup', component: __WEBPACK_IMPORTED_MODULE_17__public_signup_signup_component__["a" /* SignupComponent */] },
-    { path: 'contactus', component: __WEBPACK_IMPORTED_MODULE_18__public_contactus_contactus_component__["a" /* ContactusComponent */] },
-    { path: 'service', component: __WEBPACK_IMPORTED_MODULE_13__public_servicepage_servicepage_component__["a" /* ServicepageComponent */] },
-    { path: 'crud', component: __WEBPACK_IMPORTED_MODULE_16__public_crud_crud_component__["a" /* CrudComponent */] },
-    { path: 'page2/:contactId', component: __WEBPACK_IMPORTED_MODULE_10__public_page2_page2_component__["a" /* Page2Component */] },
-    { path: 'passwordreset', component: __WEBPACK_IMPORTED_MODULE_14__public_password_reset_password_reset_component__["a" /* PasswordResetComponent */] },
-    { path: 'home', component: __WEBPACK_IMPORTED_MODULE_15__public_home_home_component__["a" /* HomeComponent */] },
-    { path: '**', component: __WEBPACK_IMPORTED_MODULE_15__public_home_home_component__["a" /* HomeComponent */] },
+    { path: 'signin', component: __WEBPACK_IMPORTED_MODULE_13__public_signin_signin_component__["a" /* SigninComponent */] },
+    { path: 'signup', component: __WEBPACK_IMPORTED_MODULE_18__public_signup_signup_component__["a" /* SignupComponent */] },
+    { path: 'contactus', component: __WEBPACK_IMPORTED_MODULE_19__public_contactus_contactus_component__["a" /* ContactusComponent */] },
+    { path: 'service', component: __WEBPACK_IMPORTED_MODULE_14__public_servicepage_servicepage_component__["a" /* ServicepageComponent */] },
+    { path: 'crud', component: __WEBPACK_IMPORTED_MODULE_17__public_crud_crud_component__["a" /* CrudComponent */] },
+    { path: 'page2/:contactId', component: __WEBPACK_IMPORTED_MODULE_11__public_page2_page2_component__["a" /* Page2Component */] },
+    { path: 'passwordreset', component: __WEBPACK_IMPORTED_MODULE_15__public_password_reset_password_reset_component__["a" /* PasswordResetComponent */] },
+    { path: 'home', component: __WEBPACK_IMPORTED_MODULE_16__public_home_home_component__["a" /* HomeComponent */] },
+    { path: '**', component: __WEBPACK_IMPORTED_MODULE_16__public_home_home_component__["a" /* HomeComponent */] },
 ];
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_6__common_header_header_component__["a" /* HeaderComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__common_footer_footer_component__["a" /* FooterComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__public_crud_add_contact_form_add_contact_form_component__["a" /* AddContactFormComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__public_crud_contact_list_contact_list_component__["a" /* ContactListComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__public_page2_page2_component__["a" /* Page2Component */],
-                __WEBPACK_IMPORTED_MODULE_12__public_signin_signin_component__["a" /* SigninComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__public_servicepage_servicepage_component__["a" /* ServicepageComponent */],
-                __WEBPACK_IMPORTED_MODULE_14__public_password_reset_password_reset_component__["a" /* PasswordResetComponent */],
-                __WEBPACK_IMPORTED_MODULE_15__public_home_home_component__["a" /* HomeComponent */],
-                __WEBPACK_IMPORTED_MODULE_16__public_crud_crud_component__["a" /* CrudComponent */],
-                __WEBPACK_IMPORTED_MODULE_17__public_signup_signup_component__["a" /* SignupComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__public_contactus_contactus_component__["a" /* ContactusComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__components_input_text_input_text__["a" /* InputText */], __WEBPACK_IMPORTED_MODULE_21__components_input_phone_input_phone__["a" /* InputPhone */], __WEBPACK_IMPORTED_MODULE_22__components_input_password_confirm_input_password_confirm__["a" /* InputPasswordConfirm */], __WEBPACK_IMPORTED_MODULE_20__components_input_email_input_email__["a" /* InputEmail */],
+                __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__common_header_header_component__["a" /* HeaderComponent */],
+                __WEBPACK_IMPORTED_MODULE_8__common_footer_footer_component__["a" /* FooterComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__public_crud_add_contact_form_add_contact_form_component__["a" /* AddContactFormComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__public_crud_contact_list_contact_list_component__["a" /* ContactListComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__public_page2_page2_component__["a" /* Page2Component */],
+                __WEBPACK_IMPORTED_MODULE_13__public_signin_signin_component__["a" /* SigninComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__public_servicepage_servicepage_component__["a" /* ServicepageComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__public_password_reset_password_reset_component__["a" /* PasswordResetComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__public_home_home_component__["a" /* HomeComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__public_crud_crud_component__["a" /* CrudComponent */],
+                __WEBPACK_IMPORTED_MODULE_18__public_signup_signup_component__["a" /* SignupComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__public_contactus_contactus_component__["a" /* ContactusComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__components_input_text_input_text__["a" /* InputText */], __WEBPACK_IMPORTED_MODULE_22__components_input_phone_input_phone__["a" /* InputPhone */], __WEBPACK_IMPORTED_MODULE_23__components_input_password_confirm_input_password_confirm__["a" /* InputPasswordConfirm */], __WEBPACK_IMPORTED_MODULE_21__components_input_email_input_email__["a" /* InputEmail */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -781,8 +784,8 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_4__angular_forms__["c" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* RouterModule */].forRoot(routes),
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_11__services_crud_service__["a" /* CrudService */]],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
+            providers: [__WEBPACK_IMPORTED_MODULE_5_angular2_cookie_services_cookies_service__["CookieService"], __WEBPACK_IMPORTED_MODULE_12__services_crud_service__["a" /* CrudService */]],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
@@ -829,7 +832,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var AddContactFormComponent = /** @class */ (function () {
     function AddContactFormComponent(crudService) {
         this.crudService = crudService;
-        this.addContactEvent = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
+        this.addContactEvent = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.message = '';
         this.isShowMessage = false;
     }
@@ -868,11 +871,11 @@ var AddContactFormComponent = /** @class */ (function () {
         this.isShowMessage = false;
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
         __metadata("design:type", Object)
     ], AddContactFormComponent.prototype, "addContactEvent", void 0);
     AddContactFormComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-add-contact-form',
             template: __webpack_require__("./src/app/public/_crud/add-contact-form/add-contact-form.component.html"),
             styles: [__webpack_require__("./src/app/public/_crud/add-contact-form/add-contact-form.component.scss")],
@@ -920,11 +923,11 @@ var ContactListComponent = /** @class */ (function () {
     function ContactListComponent() {
     }
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", Object)
     ], ContactListComponent.prototype, "contacts", void 0);
     ContactListComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-contact-list',
             template: __webpack_require__("./src/app/public/_crud/contact-list/contact-list.component.html"),
             styles: [__webpack_require__("./src/app/public/_crud/contact-list/contact-list.component.scss")]
@@ -985,7 +988,7 @@ var CrudComponent = /** @class */ (function () {
         });
     };
     CrudComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-crud',
             template: __webpack_require__("./src/app/public/_crud/crud.component.html"),
             styles: [__webpack_require__("./src/app/public/_crud/crud.component.scss")]
@@ -1035,7 +1038,7 @@ var ContactusComponent = /** @class */ (function () {
     ContactusComponent.prototype.ngOnInit = function () {
     };
     ContactusComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-contactus',
             template: __webpack_require__("./src/app/public/contactus/contactus.component.html"),
             styles: [__webpack_require__("./src/app/public/contactus/contactus.component.scss")]
@@ -1052,7 +1055,7 @@ var ContactusComponent = /** @class */ (function () {
 /***/ "./src/app/public/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<main>\n    <!-- <div class=\"usa-overlay\"></div> -->\n\n\n    <main id=\"main-content\"></main>\n\n\n    <section class=\"usa-hero\">\n        <div class=\"usa-grid\">\n            <div class=\"usa-hero-callout usa-section-dark\">\n                <h2>\n\n                    <span class=\"usa-hero-callout-alt\">Hero callout:</span>\n\n                    Call attention to a current priority\n                </h2>\n\n\n                <p>Support the callout with some short explanatory text. You don't need more than a couple of sentences.</p>\n\n\n\n                <a class=\"usa-button\" href=\"javascript:void(0)\">Learn about what we do</a>\n\n            </div>\n        </div>\n    </section>\n\n\n    <section class=\"usa-grid usa-section\">\n        <div class=\"usa-width-one-third\">\n            <h2>A tagline highlights your approach.</h2>\n        </div>\n        <div class=\"usa-width-two-thirds\">\n            <p>The tagline should inspire confidence and interest, focusing on the value that your overall approach offers to\n                your audience. Use a heading typeface and keep your tagline to just a few words, and don’t confuse or mystify.</p>\n            <p>Use the right side of the grid to explain the tagline a bit more. What are your goals? How do you do your work?\n                Write in the present tense, and stay brief here. People who are interested can find details on internal pages.</p>\n        </div>\n    </section>\n\n\n    <section class=\"usa-section usa-section-dark usa-graphic_list\">\n        <div class=\"usa-grid usa-graphic_list-row\">\n            <div class=\"usa-width-one-half usa-media_block\">\n                <img class=\"usa-media_block-img\" src=\"/assets/uswds-1.6.3/img/circle-124.png\" alt=\"Alt text\">\n                <div class=\"usa-media_block-body\">\n                    <h3>Graphic headings can vary.</h3>\n                    <p>Graphic headings can be used a few different ways, depending on what your landing page is for. Highlight\n                        your values, specific program areas, or results.</p>\n                </div>\n            </div>\n            <div class=\"usa-width-one-half usa-media_block\">\n                <img class=\"usa-media_block-img\" src=\"/assets/uswds-1.6.3/img/circle-124.png\" alt=\"Alt text\">\n                <div class=\"usa-media_block-body\">\n                    <h3>Stick to 6 or fewer words.</h3>\n                    <p>Keep body text to about 30. They can be shorter, but try to be somewhat balanced across all four. It\n                        creates a clean appearance with good spacing.</p>\n                </div>\n            </div>\n        </div>\n        <div class=\"usa-grid usa-graphic_list-row\">\n            <div class=\"usa-width-one-half usa-media_block\">\n                <img class=\"usa-media_block-img\" src=\"/assets/uswds-1.6.3/img/circle-124.png\" alt=\"Alt text\">\n                <div class=\"usa-media_block-body\">\n                    <h3>Never highlight anything without a goal.</h3>\n                    <p>For anything you want to highlight here, understand what your users know now, and what activity or impression\n                        you want from them after they see it.</p>\n                </div>\n            </div>\n            <div class=\"usa-width-one-half usa-media_block\">\n                <img class=\"usa-media_block-img\" src=\"/assets/uswds-1.6.3/img/circle-124.png\" alt=\"Alt text\">\n                <div class=\"usa-media_block-body\">\n                    <h3>Could also have 2 or 6.</h3>\n                    <p>In addition to your goal, find out your users’ goals. What do they want to know or do that supports your\n                        mission? Use these headings to show those.</p>\n                </div>\n            </div>\n        </div>\n    </section>\n\n\n    <section class=\"usa-section\">\n        <div class=\"usa-grid\">\n            <h2>Section heading</h2>\n            <p class=\"usa-font-lead\">Everything up to this point should help people understand your agency or project: who you are, your goal or mission,\n                and how you approach it. Use this section to encourage them to act. Describe why they should get in touch\n                here, and use an active verb on the button below. “Get in touch,” “Learn more,” and so on.</p>\n            <a class=\"usa-button usa-button-big\" href=\"#\">Call to action</a>\n        </div>\n    </section>\n</main>\n\n<div class=\"usa-grid usa-footer-return-to-top\">\n    <a href=\"/#\">Return to top</a>\n</div>"
+module.exports = "<main>\n    <!-- <div class=\"usa-overlay\"></div> -->\n\n    <main id=\"main-content\"></main>\n\n    <section class=\"usa-hero\">\n        <div class=\"usa-grid\">\n            <div class=\"usa-hero-callout usa-section-dark\">\n                <h2>\n                <span class=\"usa-hero-callout-alt\">Hero callout:</span>\n                    Call attention to a current priority\n                </h2>\n                <p>Support the callout with some short explanatory text. You don't need more than a couple of sentences.</p>\n                <a class=\"usa-button\" href=\"javascript:void(0)\">Learn about what we do</a>\n            </div>\n        </div>\n    </section>\n\n    <section class=\"usa-grid usa-section\">\n        <div class=\"usa-width-one-third\">\n            <h2>A tagline highlights your approach.</h2>\n        </div>\n        <div class=\"usa-width-two-thirds\">\n            <p>The tagline should inspire confidence and interest, focusing on the value that your overall approach offers to\n                your audience. Use a heading typeface and keep your tagline to just a few words, and don’t confuse or mystify.</p>\n            <p>Use the right side of the grid to explain the tagline a bit more. What are your goals? How do you do your work?\n                Write in the present tense, and stay brief here. People who are interested can find details on internal pages.</p>\n        </div>\n    </section>\n\n\n    <section class=\"usa-section usa-section-dark usa-graphic_list\">\n        <div class=\"usa-grid usa-graphic_list-row\">\n            <div class=\"usa-width-one-half usa-media_block\">\n                <img class=\"usa-media_block-img\" src=\"/assets/uswds-1.6.3/img/circle-124.png\" alt=\"Alt text\">\n                <div class=\"usa-media_block-body\">\n                    <h3>Graphic headings can vary.</h3>\n                    <p>Graphic headings can be used a few different ways, depending on what your landing page is for. Highlight\n                        your values, specific program areas, or results.</p>\n                </div>\n            </div>\n            <div class=\"usa-width-one-half usa-media_block\">\n                <img class=\"usa-media_block-img\" src=\"/assets/uswds-1.6.3/img/circle-124.png\" alt=\"Alt text\">\n                <div class=\"usa-media_block-body\">\n                    <h3>Stick to 6 or fewer words.</h3>\n                    <p>Keep body text to about 30. They can be shorter, but try to be somewhat balanced across all four. It\n                        creates a clean appearance with good spacing.</p>\n                </div>\n            </div>\n        </div>\n        <div class=\"usa-grid usa-graphic_list-row\">\n            <div class=\"usa-width-one-half usa-media_block\">\n                <img class=\"usa-media_block-img\" src=\"/assets/uswds-1.6.3/img/circle-124.png\" alt=\"Alt text\">\n                <div class=\"usa-media_block-body\">\n                    <h3>Never highlight anything without a goal.</h3>\n                    <p>For anything you want to highlight here, understand what your users know now, and what activity or impression\n                        you want from them after they see it.</p>\n                </div>\n            </div>\n            <div class=\"usa-width-one-half usa-media_block\">\n                <img class=\"usa-media_block-img\" src=\"/assets/uswds-1.6.3/img/circle-124.png\" alt=\"Alt text\">\n                <div class=\"usa-media_block-body\">\n                    <h3>Could also have 2 or 6.</h3>\n                    <p>In addition to your goal, find out your users’ goals. What do they want to know or do that supports your\n                        mission? Use these headings to show those.</p>\n                </div>\n            </div>\n        </div>\n    </section>\n\n\n    <section class=\"usa-section\">\n        <div class=\"usa-grid\">\n            <h2>Section heading</h2>\n            <p class=\"usa-font-lead\">Everything up to this point should help people understand your agency or project: who you are, your goal or mission,\n                and how you approach it. Use this section to encourage them to act. Describe why they should get in touch\n                here, and use an active verb on the button below. “Get in touch,” “Learn more,” and so on.</p>\n            <a class=\"usa-button usa-button-big\" href=\"#\">Call to action</a>\n        </div>\n    </section>\n</main>\n\n<div class=\"usa-grid usa-footer-return-to-top\">\n    <a href=\"/#\">Return to top</a>\n</div>"
 
 /***/ }),
 
@@ -1086,7 +1089,7 @@ var HomeComponent = /** @class */ (function () {
     HomeComponent.prototype.ngOnInit = function () {
     };
     HomeComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-home',
             template: __webpack_require__("./src/app/public/home/home.component.html"),
             styles: [__webpack_require__("./src/app/public/home/home.component.scss")]
@@ -1203,7 +1206,7 @@ var Page2Component = /** @class */ (function () {
         this.contactForm.setValue(contactObj);
     };
     Page2Component = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-page2',
             template: __webpack_require__("./src/app/public/page2/page2.component.html"),
             styles: [__webpack_require__("./src/app/public/page2/page2.component.scss")],
@@ -1254,7 +1257,7 @@ var PasswordResetComponent = /** @class */ (function () {
     PasswordResetComponent.prototype.ngOnInit = function () {
     };
     PasswordResetComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-password-reset',
             template: __webpack_require__("./src/app/public/password-reset/password-reset.component.html"),
             styles: [__webpack_require__("./src/app/public/password-reset/password-reset.component.scss")]
@@ -1302,7 +1305,7 @@ var ServicepageComponent = /** @class */ (function () {
     ServicepageComponent.prototype.ngOnInit = function () {
     };
     ServicepageComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-servicepage',
             template: __webpack_require__("./src/app/public/servicepage/servicepage.component.html"),
             styles: [__webpack_require__("./src/app/public/servicepage/servicepage.component.scss")]
@@ -1351,7 +1354,7 @@ var SigninComponent = /** @class */ (function () {
     SigninComponent.prototype.ngOnInit = function () {
     };
     SigninComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-signin',
             template: __webpack_require__("./src/app/public/signin/signin.component.html"),
             styles: [__webpack_require__("./src/app/public/signin/signin.component.scss")]
@@ -1388,6 +1391,8 @@ module.exports = "button[type=submit] {\n  text-align: center;\n  margin: 0 auto
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_crud_service__ = __webpack_require__("./src/app/_services/crud.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__validators_password_validator__ = __webpack_require__("./src/app/_validators/password.validator.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_cookie_services_cookies_service__ = __webpack_require__("./node_modules/angular2-cookie/services/cookies.service.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_cookie_services_cookies_service___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular2_cookie_services_cookies_service__);
 var __assign = (this && this.__assign) || Object.assign || function(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
         s = arguments[i];
@@ -1409,10 +1414,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var SignupComponent = /** @class */ (function () {
-    function SignupComponent(crudService) {
-        this.crudService = crudService;
-        this.addCustomerEvent = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
+    function SignupComponent(_cookieService, _crudService) {
+        this._cookieService = _cookieService;
+        this._crudService = _crudService;
+        this.addCustomerEvent = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.message = "";
         this.isShowSuccessMessage = false;
         this.isShowErrorMessage = false;
@@ -1441,12 +1448,13 @@ var SignupComponent = /** @class */ (function () {
         delete customerObj.password1;
         delete customerObj.password2;
         try {
-            this.crudService.create("Customer", customerObj).subscribe(function (data) {
+            this._crudService.create("Customer", customerObj).subscribe(function (data) {
                 _this.addCustomerEvent.emit();
                 console.log("create new customer success!");
                 _this.customer.reset();
             });
             this.message = "Customer created.";
+            this._cookieService.put("test", "test");
             this.isShowSuccessMessage = true;
         }
         catch (err) {
@@ -1463,16 +1471,17 @@ var SignupComponent = /** @class */ (function () {
         this.isShowErrorMessage = false;
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
         __metadata("design:type", Object)
     ], SignupComponent.prototype, "addCustomerEvent", void 0);
     SignupComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "app-signup",
             template: __webpack_require__("./src/app/public/signup/signup.component.html"),
             styles: [__webpack_require__("./src/app/public/signup/signup.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_crud_service__["a" /* CrudService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_angular2_cookie_services_cookies_service__["CookieService"],
+            __WEBPACK_IMPORTED_MODULE_1__services_crud_service__["a" /* CrudService */]])
     ], SignupComponent);
     return SignupComponent;
 }());
@@ -1512,7 +1521,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* enableProdMode */])();
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["enableProdMode"])();
 }
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
     .catch(function (err) { return console.log(err); });

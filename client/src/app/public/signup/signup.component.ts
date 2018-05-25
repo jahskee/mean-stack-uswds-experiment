@@ -5,6 +5,7 @@ import { passwordMatchValidator } from "../../_validators/password.validator";
 import { InputText } from "../../_components/input-text/input-text";
 import { InputPhone } from "../../_components/input-phone/input-phone";
 import { InputPasswordConfirm } from "../../_components/input-password-confirm/input-password-confirm";
+import { CookieService } from 'angular2-cookie/services/cookies.service';
 
 @Component({
   selector: "app-signup",
@@ -12,7 +13,9 @@ import { InputPasswordConfirm } from "../../_components/input-password-confirm/i
   styleUrls: ["./signup.component.scss"]
 })
 export class SignupComponent implements OnInit {
-  constructor(private crudService: CrudService) {}
+  constructor(
+    private _cookieService:CookieService, 
+    private _crudService: CrudService) {}
 
   @Output() addCustomerEvent = new EventEmitter();
 
@@ -71,12 +74,13 @@ export class SignupComponent implements OnInit {
     delete customerObj.password2;
 
     try {
-      this.crudService.create("Customer", customerObj).subscribe(data => {
+      this._crudService.create("Customer", customerObj).subscribe(data => {
         this.addCustomerEvent.emit();
         console.log("create new customer success!");
         this.customer.reset();
       });
       this.message = "Customer created.";
+      this._cookieService.put("test", "test")
       this.isShowSuccessMessage = true;
     } catch (err) {
       // console.error(err);
