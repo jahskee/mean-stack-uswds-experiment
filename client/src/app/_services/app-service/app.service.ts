@@ -1,16 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
-import { CrudService } from "../_crud-service/crud.service";
 
 @Injectable()
 export class AppService {
     
-  constructor(private http: HttpClient, private crudService: CrudService) {}
+  constructor(
+    private http: HttpClient) {}
 
   private apiurl = environment.apiurl;  
 
   getToken() {
+    alert(`${this.apiurl}/token`)
     return this.http.get(`${this.apiurl}/token`)
   }
   

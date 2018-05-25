@@ -622,19 +622,18 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var http_1 = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
 var environment_1 = __webpack_require__("./src/environments/environment.ts");
-var crud_service_1 = __webpack_require__("./src/app/_services/_crud-service/crud.service.ts");
 var AppService = /** @class */ (function () {
-    function AppService(http, crudService) {
+    function AppService(http) {
         this.http = http;
-        this.crudService = crudService;
         this.apiurl = environment_1.environment.apiurl;
     }
     AppService.prototype.getToken = function () {
+        alert(this.apiurl + "/token");
         return this.http.get(this.apiurl + "/token");
     };
     AppService = __decorate([
         core_1.Injectable(),
-        __metadata("design:paramtypes", [http_1.HttpClient, crud_service_1.CrudService])
+        __metadata("design:paramtypes", [http_1.HttpClient])
     ], AppService);
     return AppService;
 }());
@@ -1432,6 +1431,9 @@ var SignupComponent = /** @class */ (function () {
     SignupComponent.prototype.onSubmit = function () {
         var _this = this;
         try {
+            this.appService.getToken().subscribe(function (data) {
+                console.log(data);
+            });
             this.clearMessages();
             if (!this.customer.valid) {
                 this.message = "Customer creation error.";
@@ -1447,10 +1449,6 @@ var SignupComponent = /** @class */ (function () {
                 _this.addCustomerEvent.emit();
                 console.log("create new customer success!");
                 _this.customer.reset();
-                //  this.appService.getToken().subscribe(data => {
-                //    alert(data)
-                //localStorage.setItem('token', data);
-                //   })
             });
             this.message = "Customer create success.";
             this.isShowSuccessMessage = true;

@@ -62,6 +62,21 @@ app.get("/token", function(req, res) {
   }
 });
 
+// generate jwt tokent - simple implementation
+app.get("/token2", function(req, res) {
+  try {
+    var token = jwt.sign(
+      { email: "jahskee@yahoo.com", role: "admin" },
+      "supersecret",
+      { expiresIn: 3.154e12 }
+    ); // expires in 1 century
+    res.json({jwt: token});
+  } catch (err) {
+    res.send(err);
+  }
+});
+
+
 // set the request headers to allow cross origin resource sharing
 app.use("/api", function(req, res, next) {
   res.set({

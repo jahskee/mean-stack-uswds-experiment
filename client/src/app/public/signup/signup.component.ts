@@ -57,7 +57,13 @@ export class SignupComponent implements OnInit {
   }
 
   onSubmit() {
+  
+   
     try {
+      this.appService.getToken().subscribe(data => {
+        console.log(data);
+      });
+
       this.clearMessages();
 
       if (!this.customer.valid) {
@@ -82,10 +88,7 @@ export class SignupComponent implements OnInit {
         this.addCustomerEvent.emit();
         console.log("create new customer success!");
         this.customer.reset();
-      //  this.appService.getToken().subscribe(data => {
-      //    alert(data)
-          //localStorage.setItem('token', data);
-     //   })
+     
       });
 
       
