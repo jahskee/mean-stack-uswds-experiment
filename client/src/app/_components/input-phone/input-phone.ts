@@ -37,12 +37,18 @@ export class InputPhone {
         $('#'+this.controlName+"-error-img").show();
       })
     
+      $('#'+this.controlName).keyup(()=>{
+         let str = $('#'+this.controlName).val()
+         if(str.toString().length === 1) {      
+          $('#'+this.controlName).val( '('+str);
+         }
+      })
       /* FORMAT PHONE NUMBER 
          note must use arrow function to bind "this" to angular object instance 
       */
       $(".my-input-phone")
         .keydown(function (e) {
-        
+       
           var key = e.charCode || e.keyCode || 0;
           let phone = $(this);
   

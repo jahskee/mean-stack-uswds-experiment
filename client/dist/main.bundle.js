@@ -131,6 +131,435 @@ var HeaderComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/_components/input-email/input-email.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class='form-control-group' [formGroup]='formGroup' title=\"{{validationMsg}}\">\n\n    <div class=\"input-icon-container\">\n        <input class='input-icon' formControlName='{{controlName}}' id='{{controlName}}' placeholder='{{placeHolder}}' name=\"{{controlName}}\"\n            type=\"{{type}}\" required aria-required='true' style=\"text-transform: lowercase;\" maxlength=\"{{maxlength}}\">\n        <span *ngIf=\"iconUrl\">\n            <img class=\"input-icon-img\" src=\"{{iconUrl}}\">\n        </span>\n\n        <span *ngIf=\"formGroup.get(controlName).valid && formGroup.get(controlName).touched\">\n            <img class=\"input-error-img\" src=\"https://cdn4.iconfinder.com/data/icons/icocentre-free-icons/137/f-check_256-16.png\">\n\n        </span>\n        <span *ngIf=\"formGroup.get(controlName).invalid && formGroup.get(controlName).touched\">\n            <img \n                class=\"input-error-img\" \n                id=\"{{controlName}}-error-img\" \n                src=\"https://cdn0.iconfinder.com/data/icons/basic-ui-elements-colored/700/05_exclamation-3-16.png\"\n             >\n            <small style=\"padding-left: 1rem;\">\n                {{validationMsg}}\n            </small>\n        </span>\n    </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/_components/input-email/input-email.scss":
+/***/ (function(module, exports) {
+
+module.exports = ".input-icon-container {\n  position: relative;\n  padding: 0;\n  margin: 0; }\n\n.input-icon {\n  border-radius: 10px;\n  margin: 0;\n  padding-left: 35px; }\n\n.input-icon-img {\n  position: absolute;\n  top: 15px;\n  left: 10px;\n  width: 14px;\n  height: 14px; }\n\n.input-error-img {\n  position: absolute;\n  top: 15px;\n  right: 15px;\n  width: 16px;\n  height: 16px;\n  opacity: 0.7;\n  filter: alpha(opacity=70);\n  /* For IE8 and earlier */ }\n\n.form-control-group {\n  padding-bottom: 5px; }\n"
+
+/***/ }),
+
+/***/ "./src/app/_components/input-email/input-email.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InputEmail; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__("./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var InputEmail = /** @class */ (function () {
+    function InputEmail() {
+    }
+    InputEmail.prototype.ngOnInit = function () {
+        var _this = this;
+        __WEBPACK_IMPORTED_MODULE_2_jquery__(document).ready(function () {
+            /* click error icon image:
+               note must use arrow function to bind "this" to angular object instance
+            */
+            __WEBPACK_IMPORTED_MODULE_2_jquery__("body").on("click", '#' + _this.controlName + "-error-img", function () {
+                __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName + "-error-img").hide();
+                __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName).focus();
+            });
+            __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName).focusin(function () {
+                __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName + "-error-img").hide();
+            });
+            __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName).focusout(function () {
+                __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName + "-error-img").show();
+            });
+        });
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormGroup */])
+    ], InputEmail.prototype, "formGroup", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", String)
+    ], InputEmail.prototype, "placeHolder", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", String)
+    ], InputEmail.prototype, "controlName", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", String)
+    ], InputEmail.prototype, "type", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", String)
+    ], InputEmail.prototype, "iconUrl", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", Number)
+    ], InputEmail.prototype, "maxlength", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", String)
+    ], InputEmail.prototype, "validationMsg", void 0);
+    InputEmail = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: "app-input-email",
+            styles: [__webpack_require__("./src/app/_components/input-email/input-email.scss")],
+            template: __webpack_require__("./src/app/_components/input-email/input-email.html")
+        })
+    ], InputEmail);
+    return InputEmail;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/_components/input-password-confirm/input-password-confirm.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class='form-control-group' [formGroup]='formGroup' title=\"{{validationMsg}}\">\n\n    <div class=\"input-icon-container\">\n        <input class='input-icon' formControlName='{{controlName}}' id='{{controlName}}' placeholder='{{placeHolder}}' name=\"{{controlName}}\"\n            type=\"{{type}}\" required aria-required='true'>\n        <span *ngIf=\"iconUrl\">\n            <img class=\"input-icon-img\" src=\"{{iconUrl}}\">\n        </span>\n        <span *ngIf=\"(!formGroup.hasError('mismatch') || formGroup.get(controlName).valid) && formGroup.get(controlName).touched\">\n            <img class=\"input-error-img\" src=\"https://cdn4.iconfinder.com/data/icons/icocentre-free-icons/137/f-check_256-16.png\">\n\n        </span>\n        <span *ngIf=\"(formGroup.hasError('mismatch') || (formGroup.get(controlName).invalid) && formGroup.get(controlName).touched)\">\n            <img \n                class=\"input-error-img\" \n                id=\"{{controlName}}-error-img\" \n                src=\"https://cdn0.iconfinder.com/data/icons/basic-ui-elements-colored/700/05_exclamation-3-16.png\"\n            >\n            <small style=\"padding-left: 1rem;\">\n                {{validationMsg}}\n            </small>\n        </span>\n    </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/_components/input-password-confirm/input-password-confirm.scss":
+/***/ (function(module, exports) {
+
+module.exports = ".input-icon-container {\n  position: relative;\n  padding: 0;\n  margin: 0; }\n\n.input-icon {\n  border-radius: 10px;\n  margin: 0;\n  padding-left: 35px; }\n\n.input-icon-img {\n  position: absolute;\n  top: 15px;\n  left: 10px;\n  width: 14px;\n  height: 14px; }\n\n.input-error-img {\n  position: absolute;\n  top: 15px;\n  right: 15px;\n  width: 16px;\n  height: 16px;\n  opacity: 0.7;\n  filter: alpha(opacity=70); }\n\n.form-control-group {\n  padding-bottom: 5px; }\n"
+
+/***/ }),
+
+/***/ "./src/app/_components/input-password-confirm/input-password-confirm.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InputPasswordConfirm; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__("./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var InputPasswordConfirm = /** @class */ (function () {
+    function InputPasswordConfirm() {
+    }
+    InputPasswordConfirm.prototype.ngOnInit = function () {
+        var _this = this;
+        __WEBPACK_IMPORTED_MODULE_2_jquery__(document).ready(function () {
+            /* click error icon image:
+               note must use arrow function to bind "this" to angular object instance
+            */
+            __WEBPACK_IMPORTED_MODULE_2_jquery__("body").on("click", '#' + _this.controlName + "-error-img", function () {
+                //alert(this.controlName+" clicked");
+            });
+        });
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormGroup */])
+    ], InputPasswordConfirm.prototype, "formGroup", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", String)
+    ], InputPasswordConfirm.prototype, "placeHolder", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", String)
+    ], InputPasswordConfirm.prototype, "controlName", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", String)
+    ], InputPasswordConfirm.prototype, "type", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", String)
+    ], InputPasswordConfirm.prototype, "iconUrl", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", String)
+    ], InputPasswordConfirm.prototype, "validationMsg", void 0);
+    InputPasswordConfirm = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: "app-input-password-confirm",
+            styles: [__webpack_require__("./src/app/_components/input-password-confirm/input-password-confirm.scss")],
+            template: __webpack_require__("./src/app/_components/input-password-confirm/input-password-confirm.html")
+        })
+    ], InputPasswordConfirm);
+    return InputPasswordConfirm;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/_components/input-phone/input-phone.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class='form-control-group' [formGroup]='formGroup' title=\"{{validationMsg}}\">\n\n    <div class=\"input-icon-container\">\n        <input class=\"input-icon my-input-phone\" formControlName=\"{{controlName}}\" id=\"{{controlName}}\" placeholder=\"{{placeHolder}}\" name=\"{{controlName}}\"\n            type=\"{{type}}\" required aria-required=\"true\" maxlength=\"14\">\n        <span *ngIf=\"iconUrl\">\n            <img class=\"input-icon-img\" src=\"{{iconUrl}}\">\n        </span>\n\n        <span *ngIf=\"formGroup.get(controlName).valid && formGroup.get(controlName).touched\">\n            <img class=\"input-error-img\" src=\"https://cdn4.iconfinder.com/data/icons/icocentre-free-icons/137/f-check_256-16.png\">\n\n        </span>\n        <span *ngIf=\"formGroup.get(controlName).invalid && formGroup.get(controlName).touched\">\n            <img \n                class=\"input-error-img\" \n                id=\"{{controlName}}-error-img\" \n                src=\"https://cdn0.iconfinder.com/data/icons/basic-ui-elements-colored/700/05_exclamation-3-16.png\"\n            >\n            \n            <small style=\"padding-left: 1rem;\">\n                {{validationMsg}}\n            </small>\n        </span>\n    </div>\n</div>\n<script src=\"/assets/javascript/script.js\"></script>\n\n"
+
+/***/ }),
+
+/***/ "./src/app/_components/input-phone/input-phone.scss":
+/***/ (function(module, exports) {
+
+module.exports = ".input-icon-container {\n  position: relative;\n  padding: 0;\n  margin: 0; }\n\n.input-icon {\n  border-radius: 10px;\n  margin: 0;\n  padding-left: 35px; }\n\n.input-icon-img {\n  position: absolute;\n  top: 15px;\n  left: 10px;\n  width: 14px;\n  height: 14px; }\n\n.input-error-img {\n  position: absolute;\n  top: 15px;\n  right: 15px;\n  width: 16px;\n  height: 16px;\n  opacity: 0.7;\n  filter: alpha(opacity=70); }\n\n.form-control-group {\n  padding-bottom: 5px; }\n"
+
+/***/ }),
+
+/***/ "./src/app/_components/input-phone/input-phone.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InputPhone; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__("./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var InputPhone = /** @class */ (function () {
+    function InputPhone() {
+    }
+    InputPhone.prototype.ngOnInit = function () {
+        var _this = this;
+        __WEBPACK_IMPORTED_MODULE_2_jquery__(document).ready(function () {
+            /* CLICK ERROR ICON IMAGE:
+               note must use arrow function to bind "this" to angular object instance
+            */
+            __WEBPACK_IMPORTED_MODULE_2_jquery__("body").on("click", '#' + _this.controlName + "-error-img", function () {
+                __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName + "-error-img").hide();
+                __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName).focus();
+            });
+            __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName).focusin(function () {
+                __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName + "-error-img").hide();
+            });
+            __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName).focusout(function () {
+                __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName + "-error-img").show();
+            });
+            __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName).keyup(function () {
+                var str = __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName).val();
+                if (str.toString().length === 1) {
+                    __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName).val('(' + str);
+                }
+            });
+            /* FORMAT PHONE NUMBER
+               note must use arrow function to bind "this" to angular object instance
+            */
+            __WEBPACK_IMPORTED_MODULE_2_jquery__(".my-input-phone")
+                .keydown(function (e) {
+                var key = e.charCode || e.keyCode || 0;
+                var phone = __WEBPACK_IMPORTED_MODULE_2_jquery__(this);
+                // Auto-format- do not expose the mask as the user begins to type
+                if (key !== 8 && key !== 9) {
+                    if (phone.val().toString().length === 0) {
+                        phone.val("(" + phone.val());
+                    }
+                    if (phone.val().toString().length === 4) {
+                        phone.val(phone.val() + ")");
+                    }
+                    if (phone.val().toString().length === 5) {
+                        phone.val(phone.val() + " ");
+                    }
+                    if (phone.val().toString().length === 9) {
+                        phone.val(phone.val() + "-");
+                    }
+                }
+                // Allow numeric (and tab, backspace, delete) keys only
+                return (key == 8 ||
+                    key == 9 ||
+                    key == 46 ||
+                    (key >= 48 && key <= 57) ||
+                    (key >= 96 && key <= 105));
+            })
+                .bind("focus click", function () {
+                var phone = __WEBPACK_IMPORTED_MODULE_2_jquery__(this);
+                if (phone.val().toString().length === 0) {
+                    phone.val("(");
+                }
+                else {
+                    var val = phone.val();
+                    phone.val("").val(val); // Ensure cursor remains at the end
+                }
+            })
+                .blur(function () {
+                var phone = __WEBPACK_IMPORTED_MODULE_2_jquery__(this);
+                if (phone.val() === "(") {
+                    phone.val("");
+                }
+            });
+        });
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormGroup */])
+    ], InputPhone.prototype, "formGroup", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", String)
+    ], InputPhone.prototype, "placeHolder", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", String)
+    ], InputPhone.prototype, "controlName", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", String)
+    ], InputPhone.prototype, "type", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", String)
+    ], InputPhone.prototype, "iconUrl", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", String)
+    ], InputPhone.prototype, "validationMsg", void 0);
+    InputPhone = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: "app-input-phone",
+            styles: [__webpack_require__("./src/app/_components/input-phone/input-phone.scss")],
+            template: __webpack_require__("./src/app/_components/input-phone/input-phone.html")
+        }),
+        __metadata("design:paramtypes", [])
+    ], InputPhone);
+    return InputPhone;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/_components/input-text/input-text.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class='form-control-group' [formGroup]='formGroup' title=\"{{validationMsg}}\">\n\n    <div class=\"input-icon-container\">\n        \n        <input class='input' formControlName='{{controlName}}' id='{{controlName}}' placeholder='{{placeHolder}}' name=\"{{controlName}}\"\n            type=\"{{type}}\" required aria-required='true' style=\"text-transform: capitalize;\" maxlength=\"{{maxlength}}\">\n       \n       \n        <span *ngIf=\"iconUrl\">\n            <img class=\"input-icon-img\" src=\"{{iconUrl}}\">\n        </span>\n\n        <span *ngIf=\"formGroup.get(controlName).valid && formGroup.get(controlName).touched\">\n            <img class=\"input-error-img\" src=\"https://cdn4.iconfinder.com/data/icons/icocentre-free-icons/137/f-check_256-16.png\">\n\n        </span>\n        <span *ngIf=\"formGroup.get(controlName).invalid && formGroup.get(controlName).touched\">\n            <img class=\"input-error-img\" \n                 id=\"{{controlName}}-error-img\" \n                 src=\"https://cdn0.iconfinder.com/data/icons/basic-ui-elements-colored/700/05_exclamation-3-16.png\"\n            >\n\n            <small style=\"padding-left: 1rem;\">\n                {{validationMsg}}\n            </small>\n        </span>\n    </div>\n</div>\n\n"
+
+/***/ }),
+
+/***/ "./src/app/_components/input-text/input-text.scss":
+/***/ (function(module, exports) {
+
+module.exports = ".input-icon-container {\n  position: relative;\n  padding: 0;\n  margin: 0; }\n\n.input {\n  border-radius: 10px;\n  margin: 0;\n  padding-left: 35px; }\n\n.input-error {\n  border: 1px solid red; }\n\n.input-icon-img {\n  position: absolute;\n  top: 15px;\n  left: 10px;\n  width: 14px;\n  height: 14px; }\n\n.input-error-img {\n  position: absolute;\n  top: 15px;\n  right: 15px;\n  width: 16px;\n  height: 16px;\n  opacity: 0.7;\n  filter: alpha(opacity=70);\n  /* For IE8 and earlier */ }\n\n.form-control-group {\n  padding-bottom: 5px; }\n"
+
+/***/ }),
+
+/***/ "./src/app/_components/input-text/input-text.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InputText; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__("./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var InputText = /** @class */ (function () {
+    function InputText() {
+    }
+    InputText.prototype.ngOnInit = function () {
+        var _this = this;
+        __WEBPACK_IMPORTED_MODULE_2_jquery__(document).ready(function () {
+            /* click error icon image:
+            note must use arrow function to bind "this" to angular object instance
+            */
+            __WEBPACK_IMPORTED_MODULE_2_jquery__("body").on("click", '#' + _this.controlName + "-error-img", function () {
+                __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName + "-error-img").hide();
+                __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName).focus();
+            });
+            __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName).focusin(function () {
+                __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName + "-error-img").hide();
+            });
+            __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName).focusout(function () {
+                __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName + "-error-img").show();
+            });
+        });
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormGroup */])
+    ], InputText.prototype, "formGroup", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", String)
+    ], InputText.prototype, "placeHolder", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", String)
+    ], InputText.prototype, "controlName", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", String)
+    ], InputText.prototype, "type", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", String)
+    ], InputText.prototype, "iconUrl", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", Number)
+    ], InputText.prototype, "maxlength", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", String)
+    ], InputText.prototype, "validationMsg", void 0);
+    InputText = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: "app-input-text",
+            styles: [__webpack_require__("./src/app/_components/input-text/input-text.scss")],
+            template: __webpack_require__("./src/app/_components/input-text/input-text.html")
+        })
+    ], InputText);
+    return InputText;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
@@ -206,10 +635,10 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__public_crud_crud_component__ = __webpack_require__("./src/app/public/crud/crud.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__public_signup_signup_component__ = __webpack_require__("./src/app/public/signup/signup.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__public_contactus_contactus_component__ = __webpack_require__("./src/app/public/contactus/contactus.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__public_signup_components_input_text_input_text__ = __webpack_require__("./src/app/public/signup/components/input-text/input-text.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__public_signup_components_input_email_input_email__ = __webpack_require__("./src/app/public/signup/components/input-email/input-email.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__public_signup_components_input_phone_input_phone__ = __webpack_require__("./src/app/public/signup/components/input-phone/input-phone.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__public_signup_components_input_password_confirm_input_password_confirm__ = __webpack_require__("./src/app/public/signup/components/input-password-confirm/input-password-confirm.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_input_text_input_text__ = __webpack_require__("./src/app/_components/input-text/input-text.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_input_email_input_email__ = __webpack_require__("./src/app/_components/input-email/input-email.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_input_phone_input_phone__ = __webpack_require__("./src/app/_components/input-phone/input-phone.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_input_password_confirm_input_password_confirm__ = __webpack_require__("./src/app/_components/input-password-confirm/input-password-confirm.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -270,7 +699,7 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_16__public_crud_crud_component__["a" /* CrudComponent */],
                 __WEBPACK_IMPORTED_MODULE_17__public_signup_signup_component__["a" /* SignupComponent */],
                 __WEBPACK_IMPORTED_MODULE_18__public_contactus_contactus_component__["a" /* ContactusComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__public_signup_components_input_text_input_text__["a" /* InputText */], __WEBPACK_IMPORTED_MODULE_21__public_signup_components_input_phone_input_phone__["a" /* InputPhone */], __WEBPACK_IMPORTED_MODULE_22__public_signup_components_input_password_confirm_input_password_confirm__["a" /* InputPasswordConfirm */], __WEBPACK_IMPORTED_MODULE_20__public_signup_components_input_email_input_email__["a" /* InputEmail */],
+                __WEBPACK_IMPORTED_MODULE_19__components_input_text_input_text__["a" /* InputText */], __WEBPACK_IMPORTED_MODULE_21__components_input_phone_input_phone__["a" /* InputPhone */], __WEBPACK_IMPORTED_MODULE_22__components_input_password_confirm_input_password_confirm__["a" /* InputPasswordConfirm */], __WEBPACK_IMPORTED_MODULE_20__components_input_email_input_email__["a" /* InputEmail */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -857,429 +1286,6 @@ var SigninComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], SigninComponent);
     return SigninComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/public/signup/components/input-email/input-email.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class='form-control-group' [formGroup]='formGroup' title=\"{{validationMsg}}\">\n\n    <div class=\"input-icon-container\">\n        <input class='input-icon' formControlName='{{controlName}}' id='{{controlName}}' placeholder='{{placeHolder}}' name=\"{{controlName}}\"\n            type=\"{{type}}\" required aria-required='true' style=\"text-transform: lowercase;\" maxlength=\"{{maxlength}}\">\n        <span *ngIf=\"iconUrl\">\n            <img class=\"input-icon-img\" src=\"{{iconUrl}}\">\n        </span>\n\n        <span *ngIf=\"formGroup.get(controlName).valid && formGroup.get(controlName).touched\">\n            <img class=\"input-error-img\" src=\"https://cdn4.iconfinder.com/data/icons/icocentre-free-icons/137/f-check_256-16.png\">\n\n        </span>\n        <span *ngIf=\"formGroup.get(controlName).invalid && formGroup.get(controlName).touched\">\n            <img \n                class=\"input-error-img\" \n                id=\"{{controlName}}-error-img\" \n                src=\"https://cdn0.iconfinder.com/data/icons/basic-ui-elements-colored/700/05_exclamation-3-16.png\"\n             >\n            <small style=\"padding-left: 1rem;\">\n                {{validationMsg}}\n            </small>\n        </span>\n    </div>\n</div>\n"
-
-/***/ }),
-
-/***/ "./src/app/public/signup/components/input-email/input-email.scss":
-/***/ (function(module, exports) {
-
-module.exports = ".input-icon-container {\n  position: relative;\n  padding: 0;\n  margin: 0; }\n\n.input-icon {\n  border-radius: 10px;\n  margin: 0;\n  padding-left: 35px; }\n\n.input-icon-img {\n  position: absolute;\n  top: 15px;\n  left: 10px;\n  width: 14px;\n  height: 14px; }\n\n.input-error-img {\n  position: absolute;\n  top: 15px;\n  right: 15px;\n  width: 16px;\n  height: 16px;\n  opacity: 0.7;\n  filter: alpha(opacity=70);\n  /* For IE8 and earlier */ }\n\n.form-control-group {\n  padding-bottom: 5px; }\n"
-
-/***/ }),
-
-/***/ "./src/app/public/signup/components/input-email/input-email.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InputEmail; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__("./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var InputEmail = /** @class */ (function () {
-    function InputEmail() {
-    }
-    InputEmail.prototype.ngOnInit = function () {
-        var _this = this;
-        __WEBPACK_IMPORTED_MODULE_2_jquery__(document).ready(function () {
-            /* click error icon image:
-               note must use arrow function to bind "this" to angular object instance
-            */
-            __WEBPACK_IMPORTED_MODULE_2_jquery__("body").on("click", '#' + _this.controlName + "-error-img", function () {
-                __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName + "-error-img").hide();
-                __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName).focus();
-            });
-            __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName).focusin(function () {
-                __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName + "-error-img").hide();
-            });
-            __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName).focusout(function () {
-                __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName + "-error-img").show();
-            });
-        });
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormGroup */])
-    ], InputEmail.prototype, "formGroup", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", String)
-    ], InputEmail.prototype, "placeHolder", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", String)
-    ], InputEmail.prototype, "controlName", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", String)
-    ], InputEmail.prototype, "type", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", String)
-    ], InputEmail.prototype, "iconUrl", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", Number)
-    ], InputEmail.prototype, "maxlength", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", String)
-    ], InputEmail.prototype, "validationMsg", void 0);
-    InputEmail = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: "app-input-email",
-            styles: [__webpack_require__("./src/app/public/signup/components/input-email/input-email.scss")],
-            template: __webpack_require__("./src/app/public/signup/components/input-email/input-email.html")
-        })
-    ], InputEmail);
-    return InputEmail;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/public/signup/components/input-password-confirm/input-password-confirm.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class='form-control-group' [formGroup]='formGroup' title=\"{{validationMsg}}\">\n\n    <div class=\"input-icon-container\">\n        <input class='input-icon' formControlName='{{controlName}}' id='{{controlName}}' placeholder='{{placeHolder}}' name=\"{{controlName}}\"\n            type=\"{{type}}\" required aria-required='true'>\n        <span *ngIf=\"iconUrl\">\n            <img class=\"input-icon-img\" src=\"{{iconUrl}}\">\n        </span>\n\n        <span *ngIf=\"(!formGroup.hasError('mismatch') || formGroup.get(controlName).valid) && formGroup.get(controlName).touched\">\n            <img class=\"input-error-img\" src=\"https://cdn4.iconfinder.com/data/icons/icocentre-free-icons/137/f-check_256-16.png\">\n\n        </span>\n        <span *ngIf=\"(formGroup.hasError('mismatch') || (formGroup.get(controlName).invalid) && formGroup.get(controlName).touched)\">\n            <img \n                class=\"input-error-img\" \n                id=\"{{controlName}}-error-img\" \n                src=\"https://cdn0.iconfinder.com/data/icons/basic-ui-elements-colored/700/05_exclamation-3-16.png\"\n            >\n\n            <small style=\"padding-left: 1rem;\">\n                {{validationMsg}}\n            </small>\n        </span>\n    </div>\n</div>"
-
-/***/ }),
-
-/***/ "./src/app/public/signup/components/input-password-confirm/input-password-confirm.scss":
-/***/ (function(module, exports) {
-
-module.exports = ".input-icon-container {\n  position: relative;\n  padding: 0;\n  margin: 0; }\n\n.input-icon {\n  border-radius: 10px;\n  margin: 0;\n  padding-left: 35px; }\n\n.input-icon-img {\n  position: absolute;\n  top: 15px;\n  left: 10px;\n  width: 14px;\n  height: 14px; }\n\n.input-error-img {\n  position: absolute;\n  top: 15px;\n  right: 15px;\n  width: 16px;\n  height: 16px;\n  opacity: 0.7;\n  filter: alpha(opacity=70); }\n\n.form-control-group {\n  padding-bottom: 5px; }\n"
-
-/***/ }),
-
-/***/ "./src/app/public/signup/components/input-password-confirm/input-password-confirm.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InputPasswordConfirm; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__("./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var InputPasswordConfirm = /** @class */ (function () {
-    function InputPasswordConfirm() {
-    }
-    InputPasswordConfirm.prototype.ngOnInit = function () {
-        var _this = this;
-        __WEBPACK_IMPORTED_MODULE_2_jquery__(document).ready(function () {
-            /* click error icon image:
-               note must use arrow function to bind "this" to angular object instance
-            */
-            __WEBPACK_IMPORTED_MODULE_2_jquery__("body").on("click", '#' + _this.controlName + "-error-img", function () {
-                //alert(this.controlName+" clicked");
-            });
-        });
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormGroup */])
-    ], InputPasswordConfirm.prototype, "formGroup", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", String)
-    ], InputPasswordConfirm.prototype, "placeHolder", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", String)
-    ], InputPasswordConfirm.prototype, "controlName", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", String)
-    ], InputPasswordConfirm.prototype, "type", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", String)
-    ], InputPasswordConfirm.prototype, "iconUrl", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", String)
-    ], InputPasswordConfirm.prototype, "validationMsg", void 0);
-    InputPasswordConfirm = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: "app-input-password-confirm",
-            styles: [__webpack_require__("./src/app/public/signup/components/input-password-confirm/input-password-confirm.scss")],
-            template: __webpack_require__("./src/app/public/signup/components/input-password-confirm/input-password-confirm.html")
-        })
-    ], InputPasswordConfirm);
-    return InputPasswordConfirm;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/public/signup/components/input-phone/input-phone.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class='form-control-group' [formGroup]='formGroup' title=\"{{validationMsg}}\">\n\n    <div class=\"input-icon-container\">\n        <input class=\"input-icon my-input-phone\" formControlName=\"{{controlName}}\" id=\"{{controlName}}\" placeholder=\"{{placeHolder}}\" name=\"{{controlName}}\"\n            type=\"{{type}}\" required aria-required=\"true\" maxlength=\"14\">\n        <span *ngIf=\"iconUrl\">\n            <img class=\"input-icon-img\" src=\"{{iconUrl}}\">\n        </span>\n\n        <span *ngIf=\"formGroup.get(controlName).valid && formGroup.get(controlName).touched\">\n            <img class=\"input-error-img\" src=\"https://cdn4.iconfinder.com/data/icons/icocentre-free-icons/137/f-check_256-16.png\">\n\n        </span>\n        <span *ngIf=\"formGroup.get(controlName).invalid && formGroup.get(controlName).touched\">\n            <img \n                class=\"input-error-img\" \n                id=\"{{controlName}}-error-img\" \n                src=\"https://cdn0.iconfinder.com/data/icons/basic-ui-elements-colored/700/05_exclamation-3-16.png\"\n            >\n            \n            <small style=\"padding-left: 1rem;\">\n                {{validationMsg}}\n            </small>\n        </span>\n    </div>\n</div>\n<script src=\"/assets/javascript/script.js\"></script>\n\n"
-
-/***/ }),
-
-/***/ "./src/app/public/signup/components/input-phone/input-phone.scss":
-/***/ (function(module, exports) {
-
-module.exports = ".input-icon-container {\n  position: relative;\n  padding: 0;\n  margin: 0; }\n\n.input-icon {\n  border-radius: 10px;\n  margin: 0;\n  padding-left: 35px; }\n\n.input-icon-img {\n  position: absolute;\n  top: 15px;\n  left: 10px;\n  width: 14px;\n  height: 14px; }\n\n.input-error-img {\n  position: absolute;\n  top: 15px;\n  right: 15px;\n  width: 16px;\n  height: 16px;\n  opacity: 0.7;\n  filter: alpha(opacity=70); }\n\n.form-control-group {\n  padding-bottom: 5px; }\n"
-
-/***/ }),
-
-/***/ "./src/app/public/signup/components/input-phone/input-phone.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InputPhone; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__("./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var InputPhone = /** @class */ (function () {
-    function InputPhone() {
-    }
-    InputPhone.prototype.ngOnInit = function () {
-        var _this = this;
-        __WEBPACK_IMPORTED_MODULE_2_jquery__(document).ready(function () {
-            /* CLICK ERROR ICON IMAGE:
-               note must use arrow function to bind "this" to angular object instance
-            */
-            __WEBPACK_IMPORTED_MODULE_2_jquery__("body").on("click", '#' + _this.controlName + "-error-img", function () {
-                __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName + "-error-img").hide();
-                __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName).focus();
-            });
-            __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName).focusin(function () {
-                __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName + "-error-img").hide();
-            });
-            __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName).focusout(function () {
-                __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName + "-error-img").show();
-            });
-            /* FORMAT PHONE NUMBER
-               note must use arrow function to bind "this" to angular object instance
-            */
-            __WEBPACK_IMPORTED_MODULE_2_jquery__(".my-input-phone")
-                .keydown(function (e) {
-                var key = e.charCode || e.keyCode || 0;
-                var phone = __WEBPACK_IMPORTED_MODULE_2_jquery__(this);
-                // Auto-format- do not expose the mask as the user begins to type
-                if (key !== 8 && key !== 9) {
-                    if (phone.val().toString().length === 0) {
-                        phone.val("(" + phone.val());
-                    }
-                    if (phone.val().toString().length === 4) {
-                        phone.val(phone.val() + ")");
-                    }
-                    if (phone.val().toString().length === 5) {
-                        phone.val(phone.val() + " ");
-                    }
-                    if (phone.val().toString().length === 9) {
-                        phone.val(phone.val() + "-");
-                    }
-                }
-                // Allow numeric (and tab, backspace, delete) keys only
-                return (key == 8 ||
-                    key == 9 ||
-                    key == 46 ||
-                    (key >= 48 && key <= 57) ||
-                    (key >= 96 && key <= 105));
-            })
-                .bind("focus click", function () {
-                var phone = __WEBPACK_IMPORTED_MODULE_2_jquery__(this);
-                if (phone.val().toString().length === 0) {
-                    phone.val("(");
-                }
-                else {
-                    var val = phone.val();
-                    phone.val("").val(val); // Ensure cursor remains at the end
-                }
-            })
-                .blur(function () {
-                var phone = __WEBPACK_IMPORTED_MODULE_2_jquery__(this);
-                if (phone.val() === "(") {
-                    phone.val("");
-                }
-            });
-        });
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormGroup */])
-    ], InputPhone.prototype, "formGroup", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", String)
-    ], InputPhone.prototype, "placeHolder", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", String)
-    ], InputPhone.prototype, "controlName", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", String)
-    ], InputPhone.prototype, "type", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", String)
-    ], InputPhone.prototype, "iconUrl", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", String)
-    ], InputPhone.prototype, "validationMsg", void 0);
-    InputPhone = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: "app-input-phone",
-            styles: [__webpack_require__("./src/app/public/signup/components/input-phone/input-phone.scss")],
-            template: __webpack_require__("./src/app/public/signup/components/input-phone/input-phone.html")
-        }),
-        __metadata("design:paramtypes", [])
-    ], InputPhone);
-    return InputPhone;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/public/signup/components/input-text/input-text.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class='form-control-group' [formGroup]='formGroup' title=\"{{validationMsg}}\">\n\n    <div class=\"input-icon-container\">\n        \n        <input class='input' formControlName='{{controlName}}' id='{{controlName}}' placeholder='{{placeHolder}}' name=\"{{controlName}}\"\n            type=\"{{type}}\" required aria-required='true' style=\"text-transform: capitalize;\" maxlength=\"{{maxlength}}\">\n       \n       \n        <span *ngIf=\"iconUrl\">\n            <img class=\"input-icon-img\" src=\"{{iconUrl}}\">\n        </span>\n\n        <span *ngIf=\"formGroup.get(controlName).valid && formGroup.get(controlName).touched\">\n            <img class=\"input-error-img\" src=\"https://cdn4.iconfinder.com/data/icons/icocentre-free-icons/137/f-check_256-16.png\">\n\n        </span>\n        <span *ngIf=\"formGroup.get(controlName).invalid && formGroup.get(controlName).touched\">\n            <img class=\"input-error-img\" \n                 id=\"{{controlName}}-error-img\" \n                 src=\"https://cdn0.iconfinder.com/data/icons/basic-ui-elements-colored/700/05_exclamation-3-16.png\"\n            >\n\n            <small style=\"padding-left: 1rem;\">\n                {{validationMsg}}\n            </small>\n        </span>\n    </div>\n</div>\n\n"
-
-/***/ }),
-
-/***/ "./src/app/public/signup/components/input-text/input-text.scss":
-/***/ (function(module, exports) {
-
-module.exports = ".input-icon-container {\n  position: relative;\n  padding: 0;\n  margin: 0; }\n\n.input {\n  border-radius: 10px;\n  margin: 0;\n  padding-left: 35px; }\n\n.input-error {\n  border: 1px solid red; }\n\n.input-icon-img {\n  position: absolute;\n  top: 15px;\n  left: 10px;\n  width: 14px;\n  height: 14px; }\n\n.input-error-img {\n  position: absolute;\n  top: 15px;\n  right: 15px;\n  width: 16px;\n  height: 16px;\n  opacity: 0.7;\n  filter: alpha(opacity=70);\n  /* For IE8 and earlier */ }\n\n.form-control-group {\n  padding-bottom: 5px; }\n"
-
-/***/ }),
-
-/***/ "./src/app/public/signup/components/input-text/input-text.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InputText; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__("./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var InputText = /** @class */ (function () {
-    function InputText() {
-    }
-    InputText.prototype.ngOnInit = function () {
-        var _this = this;
-        __WEBPACK_IMPORTED_MODULE_2_jquery__(document).ready(function () {
-            /* click error icon image:
-            note must use arrow function to bind "this" to angular object instance
-            */
-            __WEBPACK_IMPORTED_MODULE_2_jquery__("body").on("click", '#' + _this.controlName + "-error-img", function () {
-                __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName + "-error-img").hide();
-                __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName).focus();
-            });
-            __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName).focusin(function () {
-                __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName + "-error-img").hide();
-            });
-            __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName).focusout(function () {
-                __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName + "-error-img").show();
-            });
-        });
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormGroup */])
-    ], InputText.prototype, "formGroup", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", String)
-    ], InputText.prototype, "placeHolder", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", String)
-    ], InputText.prototype, "controlName", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", String)
-    ], InputText.prototype, "type", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", String)
-    ], InputText.prototype, "iconUrl", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", Number)
-    ], InputText.prototype, "maxlength", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", String)
-    ], InputText.prototype, "validationMsg", void 0);
-    InputText = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: "app-input-text",
-            styles: [__webpack_require__("./src/app/public/signup/components/input-text/input-text.scss")],
-            template: __webpack_require__("./src/app/public/signup/components/input-text/input-text.html")
-        })
-    ], InputText);
-    return InputText;
 }());
 
 
