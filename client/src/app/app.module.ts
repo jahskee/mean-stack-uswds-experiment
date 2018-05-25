@@ -8,8 +8,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './_common/header/header.component';
 import { FooterComponent } from './_common/footer/footer.component';
 
-import { AddContactFormComponent } from './public/crud/add-contact-form/add-contact-form.component';
-import { ContactListComponent } from './public/crud/contact-list/contact-list.component';
+import { AddContactFormComponent } from './public/_crud/add-contact-form/add-contact-form.component';
+import { ContactListComponent } from './public/_crud/contact-list/contact-list.component';
 import { Page2Component } from './public/page2/page2.component';
 
 import { CrudService } from './_services/crud.service';
@@ -18,7 +18,7 @@ import { SigninComponent } from './public/signin/signin.component';
 import { ServicepageComponent } from './public/servicepage/servicepage.component';
 import { PasswordResetComponent } from './public/password-reset/password-reset.component';
 import { HomeComponent } from './public/home/home.component';
-import { CrudComponent } from './public/crud/crud.component';
+import { CrudComponent } from './public/_crud/crud.component';
 import { SignupComponent } from './public/signup/signup.component';
 import { ContactusComponent } from './public/contactus/contactus.component';
 import { InputText } from './_components/input-text/input-text';

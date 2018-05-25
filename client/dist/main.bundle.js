@@ -697,15 +697,15 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__("./src/app/app.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__common_header_header_component__ = __webpack_require__("./src/app/_common/header/header.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__common_footer_footer_component__ = __webpack_require__("./src/app/_common/footer/footer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__public_crud_add_contact_form_add_contact_form_component__ = __webpack_require__("./src/app/public/crud/add-contact-form/add-contact-form.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__public_crud_contact_list_contact_list_component__ = __webpack_require__("./src/app/public/crud/contact-list/contact-list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__public_crud_add_contact_form_add_contact_form_component__ = __webpack_require__("./src/app/public/_crud/add-contact-form/add-contact-form.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__public_crud_contact_list_contact_list_component__ = __webpack_require__("./src/app/public/_crud/contact-list/contact-list.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__public_page2_page2_component__ = __webpack_require__("./src/app/public/page2/page2.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_crud_service__ = __webpack_require__("./src/app/_services/crud.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__public_signin_signin_component__ = __webpack_require__("./src/app/public/signin/signin.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__public_servicepage_servicepage_component__ = __webpack_require__("./src/app/public/servicepage/servicepage.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__public_password_reset_password_reset_component__ = __webpack_require__("./src/app/public/password-reset/password-reset.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__public_home_home_component__ = __webpack_require__("./src/app/public/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__public_crud_crud_component__ = __webpack_require__("./src/app/public/crud/crud.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__public_crud_crud_component__ = __webpack_require__("./src/app/public/_crud/crud.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__public_signup_signup_component__ = __webpack_require__("./src/app/public/signup/signup.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__public_contactus_contactus_component__ = __webpack_require__("./src/app/public/contactus/contactus.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_input_text_input_text__ = __webpack_require__("./src/app/_components/input-text/input-text.ts");
@@ -792,71 +792,21 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/public/contactus/contactus.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<form class=\"usa-form\" style=\"margin: 0 auto\" (ngSubmit)='onSubmit(contactus)' [formGroup]='contactus'>\n  <fieldset>\n      <legend class=\"usa-drop_text\">Contact Us</legend>\n      <input formControlName='firstname' id=\"first-name\" placeholder='First Name' name=\"first-name\" type=\"text\" required aria-required=\"true\">\n      <input formControlName='lastname' id=\"last-name\" placeholder='Last Name' name=\"last-name\" type=\"text\" required aria-required=\"true\">\n      <input formControlName='email' id=\"email\" name=\"email\" placeholder='Email' type=\"text\">\n      <input formControlName='phone' id=\"phone\" placeholder='Phone' name=\"phone\" type=\"text\" required aria-required=\"true\">   \n  </fieldset>\n  <input type=\"submit\" value=\"Submit\">\n</form>\n<div class=\"usa-grid usa-footer-return-to-top\">\n  <a href=\"/contactus#\">Return to top</a>\n</div>"
-
-/***/ }),
-
-/***/ "./src/app/public/contactus/contactus.component.scss":
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/public/contactus/contactus.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactusComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var ContactusComponent = /** @class */ (function () {
-    function ContactusComponent() {
-    }
-    ContactusComponent.prototype.ngOnInit = function () {
-    };
-    ContactusComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'app-contactus',
-            template: __webpack_require__("./src/app/public/contactus/contactus.component.html"),
-            styles: [__webpack_require__("./src/app/public/contactus/contactus.component.scss")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], ContactusComponent);
-    return ContactusComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/public/crud/add-contact-form/add-contact-form.component.html":
+/***/ "./src/app/public/_crud/add-contact-form/add-contact-form.component.html":
 /***/ (function(module, exports) {
 
 module.exports = "<div id=\"add-contact-form\" (click)='formClick()' style=\"margin-right: 1rem; margin-top: 1rem\">\n  \n    <div>\n        <form class=\"usa-form\" (ngSubmit)='onSubmit(contact)' [formGroup]='contact'>\n            \n            <fieldset>\n                <div>\n                    <div class='form-group'>\n                        <input type='text' placeholder=\"Firstname\" formControlName='firstname'  />\n                        <small class=\"form-text text-danger\" *ngIf=\"contact.get('firstname').hasError('required') && contact.get('firstname').touched\">\n                            Firstname is required!\n                        </small>\n                    </div>\n\n                    <div class='form-group'>\n                        <input type='text' placeholder=\"Lastname\" formControlName='lastname' class='form-control' />\n                        <small class=\"form-text text-danger\" *ngIf=\"contact.get('lastname').hasError('required') && contact.get('lastname').touched\">\n                            Lastname is required!\n                        </small>\n                    </div>\n\n                    <div class='form-group'>\n                        <input type='text' placeholder=\"Phone\" formControlName='phone' class='form-control' />\n                        <small class=\"form-text text-danger\" *ngIf=\"contact.get('phone').hasError('required') && contact.get('phone').touched\">\n                            Phone is required!\n                        </small>\n                    </div>\n                </div>\n                \n                <div class='alert alert-success' style='margin: 0;margin-bottom: 5px;' *ngIf=\"isShowMessage\">\n                    {{message}}\n                </div>\n                <button type='submit'> Add Contact </button>\n            </fieldset>\n        </form>\n\n    </div>\n\n</div>"
 
 /***/ }),
 
-/***/ "./src/app/public/crud/add-contact-form/add-contact-form.component.scss":
+/***/ "./src/app/public/_crud/add-contact-form/add-contact-form.component.scss":
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ "./src/app/public/crud/add-contact-form/add-contact-form.component.ts":
+/***/ "./src/app/public/_crud/add-contact-form/add-contact-form.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -924,8 +874,8 @@ var AddContactFormComponent = /** @class */ (function () {
     AddContactFormComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-add-contact-form',
-            template: __webpack_require__("./src/app/public/crud/add-contact-form/add-contact-form.component.html"),
-            styles: [__webpack_require__("./src/app/public/crud/add-contact-form/add-contact-form.component.scss")],
+            template: __webpack_require__("./src/app/public/_crud/add-contact-form/add-contact-form.component.html"),
+            styles: [__webpack_require__("./src/app/public/_crud/add-contact-form/add-contact-form.component.scss")],
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_crud_service__["a" /* CrudService */]])
     ], AddContactFormComponent);
@@ -936,21 +886,21 @@ var AddContactFormComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/public/crud/contact-list/contact-list.component.html":
+/***/ "./src/app/public/_crud/contact-list/contact-list.component.html":
 /***/ (function(module, exports) {
 
 module.exports = "<div id=\"contact-list\">\n       <table style='margin-top:1rem'>\n          <caption style='margin-bottom:5px'>Bordered table</caption>\n          <thead>\n              <tr>\n                  <th scope=\"col\">ID</th>\n                  <th scope=\"col\">First</th>\n                  <th scope=\"col\">Last</th>\n                  <th scope=\"col\">Phone</th>\n                  <th scope=\"col\">Action</th>\n                </tr>\n          \n          </thead>\n          <tbody>\n              <tr *ngFor='let contact of contacts' >\n                  <th scope=\"row\">{{contact._id}}</th>\n                  <td>{{contact.firstname}}</td>\n                  <td>{{contact.lastname}}</td>\n                  <td>{{contact.phone}}</td>\n                  <td><a routerLink='/page2/{{contact._id}}' routerLinkActive='active'>Edit/Del</a></td>\n              </tr>\n            </tbody>\n      </table>\n      \n</div>"
 
 /***/ }),
 
-/***/ "./src/app/public/crud/contact-list/contact-list.component.scss":
+/***/ "./src/app/public/_crud/contact-list/contact-list.component.scss":
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ "./src/app/public/crud/contact-list/contact-list.component.ts":
+/***/ "./src/app/public/_crud/contact-list/contact-list.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -976,8 +926,8 @@ var ContactListComponent = /** @class */ (function () {
     ContactListComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-contact-list',
-            template: __webpack_require__("./src/app/public/crud/contact-list/contact-list.component.html"),
-            styles: [__webpack_require__("./src/app/public/crud/contact-list/contact-list.component.scss")]
+            template: __webpack_require__("./src/app/public/_crud/contact-list/contact-list.component.html"),
+            styles: [__webpack_require__("./src/app/public/_crud/contact-list/contact-list.component.scss")]
         }),
         __metadata("design:paramtypes", [])
     ], ContactListComponent);
@@ -988,21 +938,21 @@ var ContactListComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/public/crud/crud.component.html":
+/***/ "./src/app/public/_crud/crud.component.html":
 /***/ (function(module, exports) {
 
 module.exports = "<div id=\"page1\" >\n        <legend class=\"usa-drop_text\">New Contact</legend>\n    <app-add-contact-form (addContactEvent)=\"updateContactList()\"></app-add-contact-form>\n    <app-contact-list [contacts]=\"contacts\" > </app-contact-list>\n</div>\n<div class=\"usa-grid usa-footer-return-to-top\">\n    <a href=\"/crud#\">Return to top</a>\n</div>"
 
 /***/ }),
 
-/***/ "./src/app/public/crud/crud.component.scss":
+/***/ "./src/app/public/_crud/crud.component.scss":
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ "./src/app/public/crud/crud.component.ts":
+/***/ "./src/app/public/_crud/crud.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1037,12 +987,62 @@ var CrudComponent = /** @class */ (function () {
     CrudComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-crud',
-            template: __webpack_require__("./src/app/public/crud/crud.component.html"),
-            styles: [__webpack_require__("./src/app/public/crud/crud.component.scss")]
+            template: __webpack_require__("./src/app/public/_crud/crud.component.html"),
+            styles: [__webpack_require__("./src/app/public/_crud/crud.component.scss")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_crud_service__["a" /* CrudService */]])
     ], CrudComponent);
     return CrudComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/public/contactus/contactus.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<form class=\"usa-form\" style=\"margin: 0 auto\" (ngSubmit)='onSubmit(contactus)' [formGroup]='contactus'>\n  <fieldset>\n      <legend class=\"usa-drop_text\">Contact Us</legend>\n      <input formControlName='firstname' id=\"first-name\" placeholder='First Name' name=\"first-name\" type=\"text\" required aria-required=\"true\">\n      <input formControlName='lastname' id=\"last-name\" placeholder='Last Name' name=\"last-name\" type=\"text\" required aria-required=\"true\">\n      <input formControlName='email' id=\"email\" name=\"email\" placeholder='Email' type=\"text\">\n      <input formControlName='phone' id=\"phone\" placeholder='Phone' name=\"phone\" type=\"text\" required aria-required=\"true\">   \n  </fieldset>\n  <input type=\"submit\" value=\"Submit\">\n</form>\n<div class=\"usa-grid usa-footer-return-to-top\">\n  <a href=\"/contactus#\">Return to top</a>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/public/contactus/contactus.component.scss":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/public/contactus/contactus.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactusComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ContactusComponent = /** @class */ (function () {
+    function ContactusComponent() {
+    }
+    ContactusComponent.prototype.ngOnInit = function () {
+    };
+    ContactusComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-contactus',
+            template: __webpack_require__("./src/app/public/contactus/contactus.component.html"),
+            styles: [__webpack_require__("./src/app/public/contactus/contactus.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], ContactusComponent);
+    return ContactusComponent;
 }());
 
 
