@@ -23,7 +23,7 @@ export class InputPasswordConfirm {
            note must use arrow function to bind "this" to angular object instance 
         */
         $("body").on("click", '#'+this.controlName+"-error-img", () => {
-            alert(this.controlName+" clicked");
+            //alert(this.controlName+" clicked");
         });
 
                

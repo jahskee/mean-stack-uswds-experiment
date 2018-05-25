@@ -24,7 +24,8 @@ export class InputEmail {
            note must use arrow function to bind "this" to angular object instance 
         */
         $("body").on("click", '#'+this.controlName+"-error-img", () => {
-            alert(this.controlName+" clicked");
+          $('#'+this.controlName+"-error-img").hide();
+          $('#'+this.controlName).focus();
         });
 
         $('#'+this.controlName).focusin(()=> {

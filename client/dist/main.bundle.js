@@ -908,7 +908,8 @@ var InputEmail = /** @class */ (function () {
                note must use arrow function to bind "this" to angular object instance
             */
             __WEBPACK_IMPORTED_MODULE_2_jquery__("body").on("click", '#' + _this.controlName + "-error-img", function () {
-                alert(_this.controlName + " clicked");
+                __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName + "-error-img").hide();
+                __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName).focus();
             });
             __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName).focusin(function () {
                 __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName + "-error-img").hide();
@@ -1005,7 +1006,7 @@ var InputPasswordConfirm = /** @class */ (function () {
                note must use arrow function to bind "this" to angular object instance
             */
             __WEBPACK_IMPORTED_MODULE_2_jquery__("body").on("click", '#' + _this.controlName + "-error-img", function () {
-                alert(_this.controlName + " clicked");
+                //alert(this.controlName+" clicked");
             });
         });
     };
@@ -1092,7 +1093,8 @@ var InputPhone = /** @class */ (function () {
                note must use arrow function to bind "this" to angular object instance
             */
             __WEBPACK_IMPORTED_MODULE_2_jquery__("body").on("click", '#' + _this.controlName + "-error-img", function () {
-                alert(_this.controlName + " clicked");
+                __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName + "-error-img").hide();
+                __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName).focus();
             });
             __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName).focusin(function () {
                 __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName + "-error-img").hide();
@@ -1189,7 +1191,7 @@ var InputPhone = /** @class */ (function () {
 /***/ "./src/app/public/signup/components/input-text/input-text.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class='form-control-group' [formGroup]='formGroup' title=\"{{validationMsg}}\">\n\n    <div class=\"input-icon-container\">\n        <input class='input' formControlName='{{controlName}}' id='{{controlName}}' placeholder='{{placeHolder}}' name=\"{{controlName}}\"\n            type=\"{{type}}\" required aria-required='true' style=\"text-transform: capitalize;\" maxlength=\"{{maxlength}}\">\n       \n       \n        <span *ngIf=\"iconUrl\">\n            <img class=\"input-icon-img\" src=\"{{iconUrl}}\">\n        </span>\n\n        <span *ngIf=\"formGroup.get(controlName).valid && formGroup.get(controlName).touched\">\n            <img class=\"input-error-img\" src=\"https://cdn4.iconfinder.com/data/icons/icocentre-free-icons/137/f-check_256-16.png\">\n\n        </span>\n        <span *ngIf=\"formGroup.get(controlName).invalid && formGroup.get(controlName).touched\">\n            <img class=\"input-error-img\" \n                 id=\"{{controlName}}-error-img\" \n                 src=\"https://cdn0.iconfinder.com/data/icons/basic-ui-elements-colored/700/05_exclamation-3-16.png\"\n            >\n\n            <small style=\"padding-left: 1rem;\">\n                {{validationMsg}}\n            </small>\n        </span>\n    </div>\n</div>\n\n"
+module.exports = "<div class='form-control-group' [formGroup]='formGroup' title=\"{{validationMsg}}\">\n\n    <div class=\"input-icon-container\">\n        \n        <input class='input' formControlName='{{controlName}}' id='{{controlName}}' placeholder='{{placeHolder}}' name=\"{{controlName}}\"\n            type=\"{{type}}\" required aria-required='true' style=\"text-transform: capitalize;\" maxlength=\"{{maxlength}}\">\n       \n       \n        <span *ngIf=\"iconUrl\">\n            <img class=\"input-icon-img\" src=\"{{iconUrl}}\">\n        </span>\n\n        <span *ngIf=\"formGroup.get(controlName).valid && formGroup.get(controlName).touched\">\n            <img class=\"input-error-img\" src=\"https://cdn4.iconfinder.com/data/icons/icocentre-free-icons/137/f-check_256-16.png\">\n\n        </span>\n        <span *ngIf=\"formGroup.get(controlName).invalid && formGroup.get(controlName).touched\">\n            <img class=\"input-error-img\" \n                 id=\"{{controlName}}-error-img\" \n                 src=\"https://cdn0.iconfinder.com/data/icons/basic-ui-elements-colored/700/05_exclamation-3-16.png\"\n            >\n\n            <small style=\"padding-left: 1rem;\">\n                {{validationMsg}}\n            </small>\n        </span>\n    </div>\n</div>\n\n"
 
 /***/ }),
 
@@ -1231,7 +1233,8 @@ var InputText = /** @class */ (function () {
             note must use arrow function to bind "this" to angular object instance
             */
             __WEBPACK_IMPORTED_MODULE_2_jquery__("body").on("click", '#' + _this.controlName + "-error-img", function () {
-                alert(_this.controlName + " clicked");
+                __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName + "-error-img").hide();
+                __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName).focus();
             });
             __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName).focusin(function () {
                 __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName + "-error-img").hide();
