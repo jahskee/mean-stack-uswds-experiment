@@ -1,11 +1,13 @@
 import { Component, OnInit, Output, EventEmitter } from "@angular/core";
-import { CrudService } from "../../_services/_crud-service/crud.service";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { passwordMatchValidator } from "../../_validators/password.validator";
 import { InputText } from "../../_components/input-text/input-text";
 import { InputPhone } from "../../_components/input-phone/input-phone";
 import { InputPasswordConfirm } from "../../_components/input-password-confirm/input-password-confirm";
 import { CookieService } from 'angular2-cookie/services/cookies.service';
+
+import { CrudService } from  "../../_services/_crud-service/crud.service";
+import { AppService } from  "../../_services/app-service/app.service";
 
 @Component({
   selector: "app-signup",
@@ -15,7 +17,8 @@ import { CookieService } from 'angular2-cookie/services/cookies.service';
 export class SignupComponent implements OnInit {
   constructor(
     private _cookieService:CookieService, 
-    private _crudService: CrudService) {}
+    private _crudService: CrudService,
+    private appService: AppService) {}
 
   @Output() addCustomerEvent = new EventEmitter();
 
@@ -79,10 +82,16 @@ export class SignupComponent implements OnInit {
         this.addCustomerEvent.emit();
         console.log("create new customer success!");
         this.customer.reset();
+      //  this.appService.getToken().subscribe(data => {
+      //    alert(data)
+          //localStorage.setItem('token', data);
+     //   })
       });
+
+      
       this.message = "Customer create success.";   
       this.isShowSuccessMessage = true;
-      localStorage.setItem("hello", "world")
+      //localStorage.setItem("hello", "world")
       
     } catch (err) {
       this.message = "Customer create failed.";

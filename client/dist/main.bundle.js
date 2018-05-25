@@ -604,6 +604,45 @@ exports.CrudService = CrudService;
 
 /***/ }),
 
+/***/ "./src/app/_services/app-service/app.service.ts":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var http_1 = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+var environment_1 = __webpack_require__("./src/environments/environment.ts");
+var crud_service_1 = __webpack_require__("./src/app/_services/_crud-service/crud.service.ts");
+var AppService = /** @class */ (function () {
+    function AppService(http, crudService) {
+        this.http = http;
+        this.crudService = crudService;
+        this.apiurl = environment_1.environment.apiurl;
+    }
+    AppService.prototype.getToken = function () {
+        return this.http.get(this.apiurl + "/token");
+    };
+    AppService = __decorate([
+        core_1.Injectable(),
+        __metadata("design:paramtypes", [http_1.HttpClient, crud_service_1.CrudService])
+    ], AppService);
+    return AppService;
+}());
+exports.AppService = AppService;
+
+
+/***/ }),
+
 /***/ "./src/app/_validators/password.validator.ts":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -697,6 +736,7 @@ var add_contact_form_component_1 = __webpack_require__("./src/app/public/_crud/a
 var contact_list_component_1 = __webpack_require__("./src/app/public/_crud/contact-list/contact-list.component.ts");
 var page2_component_1 = __webpack_require__("./src/app/public/page2/page2.component.ts");
 var crud_service_1 = __webpack_require__("./src/app/_services/_crud-service/crud.service.ts");
+var app_service_1 = __webpack_require__("./src/app/_services/app-service/app.service.ts");
 var forms_2 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
 var signin_component_1 = __webpack_require__("./src/app/public/signin/signin.component.ts");
 var servicepage_component_1 = __webpack_require__("./src/app/public/servicepage/servicepage.component.ts");
@@ -748,7 +788,7 @@ var AppModule = /** @class */ (function () {
                 forms_1.FormsModule,
                 router_1.RouterModule.forRoot(routes),
             ],
-            providers: [cookies_service_1.CookieService, crud_service_1.CrudService],
+            providers: [cookies_service_1.CookieService, crud_service_1.CrudService, app_service_1.AppService],
             bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);
@@ -1364,14 +1404,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var crud_service_1 = __webpack_require__("./src/app/_services/_crud-service/crud.service.ts");
 var forms_1 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
 var password_validator_1 = __webpack_require__("./src/app/_validators/password.validator.ts");
 var cookies_service_1 = __webpack_require__("./node_modules/angular2-cookie/services/cookies.service.js");
+var crud_service_1 = __webpack_require__("./src/app/_services/_crud-service/crud.service.ts");
+var app_service_1 = __webpack_require__("./src/app/_services/app-service/app.service.ts");
 var SignupComponent = /** @class */ (function () {
-    function SignupComponent(_cookieService, _crudService) {
+    function SignupComponent(_cookieService, _crudService, appService) {
         this._cookieService = _cookieService;
         this._crudService = _crudService;
+        this.appService = appService;
         this.addCustomerEvent = new core_1.EventEmitter();
         this.message = "";
         this.isShowSuccessMessage = false;
@@ -1405,10 +1447,14 @@ var SignupComponent = /** @class */ (function () {
                 _this.addCustomerEvent.emit();
                 console.log("create new customer success!");
                 _this.customer.reset();
+                //  this.appService.getToken().subscribe(data => {
+                //    alert(data)
+                //localStorage.setItem('token', data);
+                //   })
             });
             this.message = "Customer create success.";
             this.isShowSuccessMessage = true;
-            localStorage.setItem("hello", "world");
+            //localStorage.setItem("hello", "world")
         }
         catch (err) {
             this.message = "Customer create failed.";
@@ -1434,7 +1480,8 @@ var SignupComponent = /** @class */ (function () {
             styles: [__webpack_require__("./src/app/public/signup/signup.component.scss")]
         }),
         __metadata("design:paramtypes", [cookies_service_1.CookieService,
-            crud_service_1.CrudService])
+            crud_service_1.CrudService,
+            app_service_1.AppService])
     ], SignupComponent);
     return SignupComponent;
 }());

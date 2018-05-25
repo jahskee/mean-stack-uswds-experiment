@@ -9,5 +9,9 @@ export class AppService {
   constructor(private http: HttpClient, private crudService: CrudService) {}
 
   private apiurl = environment.apiurl;  
+
+  getToken() {
+    return this.http.get(`${this.apiurl}/token`)
+  }
   
 }

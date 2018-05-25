@@ -68,7 +68,7 @@ const routes: Routes = [
     FormsModule,
     RouterModule.forRoot(routes),
   ],
-  providers: [CookieService, CrudService],
+  providers: [CookieService, CrudService, AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
