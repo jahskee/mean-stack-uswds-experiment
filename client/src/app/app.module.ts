@@ -12,7 +12,7 @@ import { AddContactFormComponent } from './public/crud/add-contact-form/add-cont
 import { ContactListComponent } from './public/crud/contact-list/contact-list.component';
 import { Page2Component } from './public/page2/page2.component';
 
-import { CrudService } from './services/crud.service';
+import { CrudService } from './_services/crud.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SigninComponent } from './public/signin/signin.component';
 import { ServicepageComponent } from './public/servicepage/servicepage.component';

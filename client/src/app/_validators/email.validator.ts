@@ -4,7 +4,7 @@ function emailDomainValidator(control: FormControl) {
     let email = control.value; 
     if (email && email.indexOf("@") != -1) { 
       let [_, domain] = email.split("@"); 
-      if (domain !== "codecraft.tv") { 
+      if (domain !== "gmail.com") { 
         return {
           emailDomain: {
             parsedDomain: domain

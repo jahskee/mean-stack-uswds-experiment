@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { CrudService } from '../../services/crud.service';
+import { CrudService } from '../../_services/crud.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({

@@ -1,7 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from "@angular/core";
-import { CrudService } from "../../services/crud.service";
+import { CrudService } from "../../_services/crud.service";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
-import { passwordMatchValidator } from "../../validators/password.validator";
+import { passwordMatchValidator } from "../../_validators/password.validator";
 import { InputText } from "../../_components/input-text/input-text";
 import { InputPhone } from "../../_components/input-phone/input-phone";
 import { InputPasswordConfirm } from "../../_components/input-password-confirm/input-password-confirm";
