@@ -38,7 +38,7 @@ export class InputPhone {
       })
     
       $('#'+this.controlName).keyup(()=>{
-        let phone =  $('#'+this.controlName)
+        let phone =  $(this)
 
          let str = phone.val()
          if(str.toString().length === 1 && str !== '(') {      
