@@ -372,7 +372,7 @@ var InputPhone = /** @class */ (function () {
             });
             __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName).keyup(function () {
                 var str = __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName).val();
-                if (str.toString().length === 1) {
+                if (str.toString().length === 1 && str !== '(') {
                     __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName).val('(' + str);
                 }
             });

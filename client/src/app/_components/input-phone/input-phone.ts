@@ -39,7 +39,7 @@ export class InputPhone {
     
       $('#'+this.controlName).keyup(()=>{
          let str = $('#'+this.controlName).val()
-         if(str.toString().length === 1) {      
+         if(str.toString().length === 1 && str !== '(') {      
           $('#'+this.controlName).val( '('+str);
          }
       })
