@@ -38,9 +38,11 @@ export class InputPhone {
       })
     
       $('#'+this.controlName).keyup(()=>{
-         let str = $('#'+this.controlName).val()
+        let phone =  $('#'+this.controlName)
+
+         let str = phone.val()
          if(str.toString().length === 1 && str !== '(') {      
-          $('#'+this.controlName).val( '('+str);
+            phone.val( '('+str);
          }
       })
       /* FORMAT PHONE NUMBER 

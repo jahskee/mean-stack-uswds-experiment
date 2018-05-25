@@ -371,9 +371,10 @@ var InputPhone = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName + "-error-img").show();
             });
             __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName).keyup(function () {
-                var str = __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName).val();
+                var phone = __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName);
+                var str = phone.val();
                 if (str.toString().length === 1 && str !== '(') {
-                    __WEBPACK_IMPORTED_MODULE_2_jquery__('#' + _this.controlName).val('(' + str);
+                    phone.val('(' + str);
                 }
             });
             /* FORMAT PHONE NUMBER
