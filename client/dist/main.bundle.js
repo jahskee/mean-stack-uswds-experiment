@@ -98,6 +98,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var router_1 = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+//import * as $ from "jquery";
 var HeaderComponent = /** @class */ (function () {
     function HeaderComponent(router) {
         this.router = router;
@@ -161,7 +162,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var forms_1 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
-var $ = __webpack_require__("./node_modules/jquery/dist/jquery.js");
+//import * as $ from "jquery";
 var InputEmail = /** @class */ (function () {
     function InputEmail() {
     }
@@ -256,7 +257,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var forms_1 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
-var $ = __webpack_require__("./node_modules/jquery/dist/jquery.js");
+//import * as $ from "jquery";
 var InputPasswordConfirm = /** @class */ (function () {
     function InputPasswordConfirm() {
     }
@@ -340,7 +341,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var forms_1 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
-var $ = __webpack_require__("./node_modules/jquery/dist/jquery.js");
+//import * as $ from "jquery";
 var InputPhone = /** @class */ (function () {
     function InputPhone() {
     }
@@ -484,7 +485,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var forms_1 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
-var $ = __webpack_require__("./node_modules/jquery/dist/jquery.js");
+//import * as $ from "jquery";
 var InputText = /** @class */ (function () {
     function InputText() {
     }

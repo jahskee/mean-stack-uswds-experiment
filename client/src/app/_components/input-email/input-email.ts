@@ -1,6 +1,6 @@
 import { Component, Input } from "@angular/core";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
-import * as $ from "jquery";
+//import * as $ from "jquery";
 
 @Component({
   selector: "app-input-email",
