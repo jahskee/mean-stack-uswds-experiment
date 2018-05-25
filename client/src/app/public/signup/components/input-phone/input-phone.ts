@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 import * as $ from "jquery";
-//declare var $: JQueryStatic;
 
 @Component({
   selector: "app-input-phone",
@@ -19,12 +18,28 @@ export class InputPhone {
   constructor() {}
   
   ngOnInit() {
-    $(document).ready(function () {
-      $(".input-icon").dblclick(function () {
-        alert("ready!");
+    $(document).ready(() => {
+    
+      /* CLICK ERROR ICON IMAGE: 
+         note must use arrow function to bind "this" to angular object instance 
+      */
+      $("body").on("click", '#'+this.controlName+"-error-img", () => {
+          alert(this.controlName+" clicked");
       });
-  
-      $(".ez-input-phone")
+
+
+      $('#'+this.controlName).focusin(()=> {
+        $('#'+this.controlName+"-error-img").hide();
+      })
+
+      $('#'+this.controlName).focusout(()=> {
+        $('#'+this.controlName+"-error-img").show();
+      })
+    
+      /* FORMAT PHONE NUMBER 
+         note must use arrow function to bind "this" to angular object instance 
+      */
+      $(".my-input-phone")
         .keydown(function (e) {
         
           var key = e.charCode || e.keyCode || 0;

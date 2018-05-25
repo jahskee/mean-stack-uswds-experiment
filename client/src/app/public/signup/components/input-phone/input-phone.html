@@ -1,7 +1,7 @@
 <div class='form-control-group' [formGroup]='formGroup' title="{{validationMsg}}">
 
     <div class="input-icon-container">
-        <input class="input-icon ez-input-phone" formControlName="{{controlName}}" id="{{controlName}}" placeholder="{{placeHolder}}" name="{{controlName}}"
+        <input class="input-icon my-input-phone" formControlName="{{controlName}}" id="{{controlName}}" placeholder="{{placeHolder}}" name="{{controlName}}"
             type="{{type}}" required aria-required="true" maxlength="14">
         <span *ngIf="iconUrl">
             <img class="input-icon-img" src="{{iconUrl}}">
@@ -12,7 +12,11 @@
 
         </span>
         <span *ngIf="formGroup.get(controlName).invalid && formGroup.get(controlName).touched">
-            <img class="input-error-img" src="https://cdn1.iconfinder.com/data/icons/Koloria-Icon-Set/21/Error_Symbol.png">
+            <img 
+                class="input-error-img" 
+                id="{{controlName}}-error-img" 
+                src="https://cdn0.iconfinder.com/data/icons/basic-ui-elements-colored/700/05_exclamation-3-16.png"
+            >
             
             <small style="padding-left: 1rem;">
                 {{validationMsg}}
