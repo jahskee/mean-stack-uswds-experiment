@@ -634,7 +634,8 @@ var AppService = /** @class */ (function () {
                 'Authorization': 'my-auth-token'
             })
         };
-        return this.http.post(this.apiurl + "/token", { key: 'hello' }, httpOptions);
+        var data = JSON.stringify({ key: 'hello' });
+        return this.http.post(this.apiurl + "/token", data, httpOptions);
     };
     AppService = __decorate([
         core_1.Injectable(),

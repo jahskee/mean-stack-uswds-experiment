@@ -17,8 +17,11 @@ export class AppService {
         'Authorization': 'my-auth-token'
       })
     };
+   
+    const data = JSON.stringify({key: 'hello'});
 
-   return this.http.post(`${this.apiurl}/token`, {key: 'hello'}, httpOptions);
+
+   return this.http.post(`${this.apiurl}/token`, data, httpOptions);
   }
   
 }
