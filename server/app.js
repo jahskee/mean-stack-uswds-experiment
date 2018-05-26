@@ -8,8 +8,8 @@ const path = require("path");
 const favicon = require("serve-favicon");
 const logger = require("morgan");
 const bodyparser = require("body-parser");
-const cookieparser = require("cookie-parser");
-const session = require("express-session");
+//const cookieparser = require("cookie-parser");
+//const session = require("express-session");
 const jwt = require("jsonwebtoken");
 
 // initialize express app
@@ -30,7 +30,7 @@ app.use(forceDomain({
 // connect to database with mongoose
 require("./components/utils/dbconnect");
 
-app.use(cookieparser("secret"));
+//app.use(cookieparser("secret"));
 
 app.use(logger("dev"));
 app.use(bodyparser.urlencoded({ extended: true }));
