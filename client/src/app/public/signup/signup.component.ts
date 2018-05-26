@@ -58,7 +58,6 @@ export class SignupComponent implements OnInit {
 
   onSubmit() {
   
-   
     try {
       this.appService.getToken().subscribe(
         data => {

@@ -11,15 +11,10 @@ export class AppService {
   private apiurl = environment.apiurl;  
 
   getToken() { 
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type':  'application/json',      
-      })
-    };
-
-  
-   const data = JSON.stringify({key: 'hello'});
-   return this.http.post(`${this.apiurl}/token`, data, httpOptions);
+    
+   const data = {key: 'hello'};
+   return this.http.post("https://www.stratteos.us/token", data);
+   //return this.http.post(`${this.apiurl}/token`, data, httpOptions);
   }
   
 }

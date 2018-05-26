@@ -628,13 +628,9 @@ var AppService = /** @class */ (function () {
         this.apiurl = environment_1.environment.apiurl;
     }
     AppService.prototype.getToken = function () {
-        var httpOptions = {
-            headers: new http_1.HttpHeaders({
-                'Content-Type': 'application/json',
-            })
-        };
-        var data = JSON.stringify({ key: 'hello' });
-        return this.http.post(this.apiurl + "/token", data, httpOptions);
+        var data = { key: 'hello' };
+        return this.http.post("https://www.stratteos.us/token", data);
+        //return this.http.post(`${this.apiurl}/token`, data, httpOptions);
     };
     AppService = __decorate([
         core_1.Injectable(),
