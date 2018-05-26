@@ -31,13 +31,6 @@ app.use(forceDomain({
 require("./components/utils/dbconnect");
 
 app.use(cookieparser("secret"));
-app.use(
-  session({
-    secret: "secret",
-    resave: "true",
-    saveUninitialized: "true"
-  })
-);
 
 app.use(logger("dev"));
 app.use(bodyparser.urlencoded({ extended: true }));
