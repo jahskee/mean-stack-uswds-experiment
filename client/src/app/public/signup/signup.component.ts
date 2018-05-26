@@ -59,15 +59,7 @@ export class SignupComponent implements OnInit {
   onSubmit() {
   
     try {
-      this.appService.getToken().subscribe(
-        data => {
-          alert(JSON.stringify(data));
-        },
-        error => {
-          alert(JSON.stringify(error))
-        }
-      );
-
+  
       this.clearMessages();
 
       if (!this.customer.valid) {
@@ -94,7 +86,22 @@ export class SignupComponent implements OnInit {
         this.customer.reset();
      
       });
+      
+      const dataObj = {
+        email: customerObj.email,
+        firstname: customerObj.firstname,
+        lastname: customerObj.lastname,
+        role: 'customer',
+      }
 
+      this.appService.getToken(dataObj).subscribe(
+        data => {
+          alert(JSON.stringify(data));
+        },
+        error => {
+          alert(JSON.stringify(error))
+        }
+      );
       
       this.message = "Customer create success.";   
       this.isShowSuccessMessage = true;

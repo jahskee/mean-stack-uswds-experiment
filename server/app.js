@@ -97,7 +97,6 @@ const setupCrud = require('./components/models/_setup-crud');
 setupCrud(app)
 
 
-
 // add angular files
 app.use("/", express.static(path.join(__dirname, "../client/dist")));
 

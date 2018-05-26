@@ -627,10 +627,8 @@ var AppService = /** @class */ (function () {
         this.http = http;
         this.apiurl = environment_1.environment.apiurl;
     }
-    AppService.prototype.getToken = function () {
-        var data = { key: 'hello' };
-        return this.http.post("https://www.stratteos.us/token", data);
-        //return this.http.post(`${this.apiurl}/token`, data, httpOptions);
+    AppService.prototype.getToken = function (dataObj) {
+        return this.http.post(this.apiurl + "/token", dataObj);
     };
     AppService = __decorate([
         core_1.Injectable(),
@@ -1432,11 +1430,6 @@ var SignupComponent = /** @class */ (function () {
     SignupComponent.prototype.onSubmit = function () {
         var _this = this;
         try {
-            this.appService.getToken().subscribe(function (data) {
-                alert(JSON.stringify(data));
-            }, function (error) {
-                alert(JSON.stringify(error));
-            });
             this.clearMessages();
             if (!this.customer.valid) {
                 this.message = "Customer creation error.";
@@ -1452,6 +1445,17 @@ var SignupComponent = /** @class */ (function () {
                 _this.addCustomerEvent.emit();
                 console.log("create new customer success!");
                 _this.customer.reset();
+            });
+            var dataObj = {
+                email: customerObj.email,
+                firstname: customerObj.firstname,
+                lastname: customerObj.lastname,
+                role: 'customer',
+            };
+            this.appService.getToken(dataObj).subscribe(function (data) {
+                alert(JSON.stringify(data));
+            }, function (error) {
+                alert(JSON.stringify(error));
             });
             this.message = "Customer create success.";
             this.isShowSuccessMessage = true;
