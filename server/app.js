@@ -66,7 +66,7 @@ app.use(["/api", "/token"], function(req, res, next) {
 
 // generate jwt tokent - simple implementation
 app.post("/token", function(req, res) {
- 
+  console.log(req.body);
   try {
     var token = jwt.sign(
       { email: "jahskee@yahoo.com", role: "admin" },
