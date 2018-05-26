@@ -628,8 +628,13 @@ var AppService = /** @class */ (function () {
         this.apiurl = environment_1.environment.apiurl;
     }
     AppService.prototype.getToken = function () {
-        alert(this.apiurl + "/token");
-        return this.http.get(this.apiurl + "/token");
+        var httpOptions = {
+            headers: new http_1.HttpHeaders({
+                'Content-Type': 'application/json',
+                'Authorization': 'my-auth-token'
+            })
+        };
+        return this.http.post(this.apiurl + "/token", { key: 'hello' }, httpOptions);
     };
     AppService = __decorate([
         core_1.Injectable(),
@@ -1432,7 +1437,9 @@ var SignupComponent = /** @class */ (function () {
         var _this = this;
         try {
             this.appService.getToken().subscribe(function (data) {
-                console.log(data);
+                alert(JSON.stringify(data));
+            }, function (error) {
+                alert(JSON.stringify(error));
             });
             this.clearMessages();
             if (!this.customer.valid) {

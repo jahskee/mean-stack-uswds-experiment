@@ -49,21 +49,16 @@ app.set("view engine", "html");
 console.log('Environment: ' + process.env.APP_ENVIRONMENT)
 
 // generate jwt tokent - simple implementation
-app.get("/token", function(req, res) {
-  try {
-    var token = jwt.sign(
-      { email: "jahskee@yahoo.com", role: "admin" },
-      "supersecret",
-      { expiresIn: 3.154e12 }
-    ); // expires in 1 century
-    res.send('?token='+token);
-  } catch (err) {
-    res.send(err);
-  }
-});
-
-// generate jwt tokent - simple implementation
-app.get("/token2", function(req, res) {
+app.post("/token", function(req, res) {
+  let dataObj = req.body; 
+  alert(dataObj)
+  res.set({
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Headers":
+      "Origin, X-Requested-With, Content-Type, Accept",
+    "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, OPTIONS",
+    "Content-type": "application/json"
+  });
   try {
     var token = jwt.sign(
       { email: "jahskee@yahoo.com", role: "admin" },
@@ -92,6 +87,8 @@ app.use("/api", function(req, res, next) {
   }
   next();
 });
+
+
 
 // Protect route with JWT Token
 app.use("/api/*", function(req, res, next) {

@@ -60,9 +60,14 @@ export class SignupComponent implements OnInit {
   
    
     try {
-      this.appService.getToken().subscribe(data => {
-        console.log(data);
-      });
+      this.appService.getToken().subscribe(
+        data => {
+          alert(JSON.stringify(data));
+        },
+        error => {
+          alert(JSON.stringify(error))
+        }
+      );
 
       this.clearMessages();
 
