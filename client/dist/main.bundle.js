@@ -630,7 +630,7 @@ var AppService = /** @class */ (function () {
     AppService.prototype.getToken = function () {
         var httpOptions = {
             headers: new http_1.HttpHeaders({
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
             })
         };
         var data = JSON.stringify({ key: 'hello' });

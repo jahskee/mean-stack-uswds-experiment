@@ -50,8 +50,6 @@ console.log('Environment: ' + process.env.APP_ENVIRONMENT)
 
 // generate jwt tokent - simple implementation
 app.post("/token", function(req, res) {
-  let dataObj = req.body; 
-  alert(dataObj)
   res.set({
     "Access-Control-Allow-Origin": "*",
     "Access-Control-Allow-Headers":

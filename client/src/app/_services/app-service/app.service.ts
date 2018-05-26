@@ -13,13 +13,12 @@ export class AppService {
   getToken() { 
     const httpOptions = {
       headers: new HttpHeaders({
-        'Content-Type':  'application/json'
+        'Content-Type':  'application/json',      
       })
     };
-   
-    const data = JSON.stringify({key: 'hello'});
 
-
+  
+   const data = JSON.stringify({key: 'hello'});
    return this.http.post(`${this.apiurl}/token`, data, httpOptions);
   }
   
