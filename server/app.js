@@ -48,31 +48,8 @@ app.set("view engine", "html");
 
 console.log('Environment: ' + process.env.APP_ENVIRONMENT)
 
-// generate jwt tokent - simple implementation
-app.post("/token", function(req, res) {
- 
-  res.set({
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Headers":
-      "Origin, X-Requested-With, Content-Type, Accept",
-    "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, OPTIONS",
-    "Content-type": "application/json"
-  });
-  try {
-    var token = jwt.sign(
-      { email: "jahskee@yahoo.com", role: "admin" },
-      "supersecret",
-      { expiresIn: 3.154e12 }
-    ); // expires in 1 century
-    res.json({jwt: token});
-  } catch (err) {
-    res.send(err);
-  }
-});
-
-
 // set the request headers to allow cross origin resource sharing
-app.use("/api", function(req, res, next) {
+app.use(["/api", "/token"], function(req, res, next) {
   res.set({
     "Access-Control-Allow-Origin": "*",
     "Access-Control-Allow-Headers":
@@ -87,7 +64,20 @@ app.use("/api", function(req, res, next) {
   next();
 });
 
-
+// generate jwt tokent - simple implementation
+app.post("/token", function(req, res) {
+ 
+  try {
+    var token = jwt.sign(
+      { email: "jahskee@yahoo.com", role: "admin" },
+      "supersecret",
+      { expiresIn: 3.154e12 }
+    ); // expires in 1 century
+    res.json({jwt: token});
+  } catch (err) {
+    res.send(err);
+  }
+});
 
 // Protect route with JWT Token
 app.use("/api/*", function(req, res, next) {
