@@ -5,11 +5,7 @@ import { InputText } from "../../_components/input-text/input-text";
 import { InputPhone } from "../../_components/input-phone/input-phone";
 import { InputPasswordConfirm } from "../../_components/input-password-confirm/input-password-confirm";
 import { CookieService } from 'angular2-cookie/services/cookies.service';
-import {
-  CanActivate, Router, 
-  ActivatedRouteSnapshot,
-  RouterStateSnapshot
-}                           from '@angular/router';
+import { Router, NavigationExtras } from '@angular/router';
 
 import { CrudService } from  "../../_services/_crud-service/crud.service";
 import { AppService } from  "../../_services/app-service/app.service";
@@ -111,9 +107,14 @@ export class SignupComponent implements OnInit {
       
       this.message = "Customer create success.";   
       this.isShowSuccessMessage = true;
-      //localStorage.setItem("hello", "world")
-    // Navigate to the login page with extras
-      this.router.navigate(['/signin2']);
+    
+      let navigationExtras: NavigationExtras = {
+        queryParams: {
+            "email": customerObj.email,         
+        }
+      };
+
+      this.router.navigate(['/signin2'], navigationExtras);
       
     } catch (err) {
       this.message = "Customer create failed.";

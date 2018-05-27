@@ -1370,7 +1370,7 @@ exports.SigninComponent = SigninComponent;
 /***/ "./src/app/public/signin2/signin2.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div style='background: lightgreen; width: 20%; padding: 10px; margin: 0 auto; margin-top:15px; border: 1px solid green'>\n  <h3 style='margin: 0'>Account was successfully created!</h3></div>\n<form id='sign-in-form' class=\"usa-form\" style='margin: 0 auto; margin-bottom: 5rem'>\n    <fieldset  >\n      <legend class=\"usa-drop_text\" >Please Sign In</legend>\n       \n      <div style='display:flex; flex-direction: row; padding-top: 10px;'>\n          <input style='margin-top: 0; margin-right: 5px' id=\"username\" placeholder=\"Username\" name=\"username\" type=\"text\" autocapitalize=\"off\" autocorrect=\"off\">\n         \n          <div>\n            <input style='margin-top: 0;' id=\"password-sign-in\" placeholder=\"Password\" name=\"password\" type=\"password\">\n            <p class=\"usa-form-note\">\n              <a title=\"Show password\" href=\"javascript:void(0);\"\n                class=\"usa-show_password\"\n                aria-controls=\"password-sign-in\">Show password</a>\n            </p>\n          </div>\n       </div>\n      <input type=\"submit\" value=\"Sign in\">\n      <p>\n      \n        <a class=\"usa-nav-link\"  title=\"Password Reset\" routerLink=\"/passwordreset\">Forgot Password</a></p>\n     \n    </fieldset>\n  </form>\n  <div class=\"usa-grid usa-footer-return-to-top\">\n      <a href=\"/signin#\">Return to top</a>\n  </div>"
+module.exports = "<div style='background: lightgreen; width: 20%; padding: 10px; margin: 0 auto; margin-top:15px; border: 1px solid green'>\n  <h3 style='margin: 0'>Account was successfully created!</h3></div>\n<form id='sign-in-form' class=\"usa-form\" style='margin: 0 auto; margin-bottom: 5rem'>\n    <fieldset  >\n      <legend class=\"usa-drop_text\" >Please Sign In</legend>\n       \n      <div style='display:flex; flex-direction: row; padding-top: 10px;'>\n          <input style='margin-top: 0; margin-right: 5px' id=\"username\" value='{{email}}' placeholder=\"Username\" name=\"username\" type=\"text\" autocapitalize=\"off\" autocorrect=\"off\">\n         \n          <div>\n            <input style='margin-top: 0;' id=\"password-sign-in\" placeholder=\"Password\" name=\"password\" type=\"password\">\n            <p class=\"usa-form-note\">\n              <a title=\"Show password\" href=\"javascript:void(0);\"\n                class=\"usa-show_password\"\n                aria-controls=\"password-sign-in\">Show password</a>\n            </p>\n          </div>\n       </div>\n      <input type=\"submit\" value=\"Sign in\">\n      <p>\n      \n        <a class=\"usa-nav-link\"  title=\"Password Reset\" routerLink=\"/passwordreset\">Forgot Password</a></p>\n     \n    </fieldset>\n  </form>\n  <div class=\"usa-grid usa-footer-return-to-top\">\n      <a href=\"/signin#\">Return to top</a>\n  </div>"
 
 /***/ }),
 
@@ -1397,8 +1397,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var router_1 = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
 var Signin2Component = /** @class */ (function () {
-    function Signin2Component() {
+    function Signin2Component(route) {
+        var _this = this;
+        this.route = route;
+        this.route.queryParams.subscribe(function (params) {
+            _this.email = params["email"];
+        });
     }
     Signin2Component.prototype.ngOnInit = function () {
     };
@@ -1408,7 +1414,7 @@ var Signin2Component = /** @class */ (function () {
             template: __webpack_require__("./src/app/public/signin2/signin2.component.html"),
             styles: [__webpack_require__("./src/app/public/signin2/signin2.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [router_1.ActivatedRoute])
     ], Signin2Component);
     return Signin2Component;
 }());
@@ -1515,9 +1521,12 @@ var SignupComponent = /** @class */ (function () {
             });
             this.message = "Customer create success.";
             this.isShowSuccessMessage = true;
-            //localStorage.setItem("hello", "world")
-            // Navigate to the login page with extras
-            this.router.navigate(['/signin2']);
+            var navigationExtras = {
+                queryParams: {
+                    "email": customerObj.email,
+                }
+            };
+            this.router.navigate(['/signin2'], navigationExtras);
         }
         catch (err) {
             this.message = "Customer create failed.";

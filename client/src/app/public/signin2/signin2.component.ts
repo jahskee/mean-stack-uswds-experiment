@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-signin2',
@@ -7,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Signin2Component implements OnInit {
 
-  constructor() { }
+  public email: string;
 
+  public constructor(private route: ActivatedRoute) {
+    this.route.queryParams.subscribe(params => {
+        this.email = params["email"];       
+    });
+  }
+  
   ngOnInit() {
   }
 
