@@ -3,11 +3,11 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
 //import * as $ from "jquery";
 
 @Component({
-  selector: "app-input-password-confirm",
-  styleUrls: ["./input-password-confirm.scss"],
-  templateUrl: "./input-password-confirm.html"
+  selector: "app-input-password-and-confirm",
+  styleUrls: ["./input-password-and-confirm.scss"],
+  templateUrl: "./input-password-and-confirm.html",
 })
-export class InputPasswordConfirm {
+export class InputPasswordAndConfirm {
   @Input() formGroup: FormGroup;
   @Input() type: string;
   @Input() iconUrl: string;

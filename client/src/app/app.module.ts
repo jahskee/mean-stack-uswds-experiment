@@ -29,7 +29,7 @@ import { ContactusComponent } from './public/contactus/contactus.component';
 import { InputText } from './_components/input-text/input-text';
 import { InputEmail } from './_components/input-email/input-email';
 import { InputPhone } from './_components/input-phone/input-phone';
-import { InputPasswordConfirm } from './_components/input-password-confirm/input-password-confirm';
+import { InputPasswordAndConfirm } from './_components/input-password-and-confirm/input-password-and-confirm';
 
 const routes: Routes = [
   { path: 'signin', component: SigninComponent },
@@ -62,7 +62,7 @@ const routes: Routes = [
     CrudComponent,
     SignupComponent,
     ContactusComponent,
-    InputText, InputPhone, InputPasswordConfirm, InputEmail,
+    InputText, InputPhone, InputPasswordAndConfirm, InputEmail,
   ],
   imports: [
     BrowserModule,
