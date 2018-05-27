@@ -266,18 +266,16 @@ var InputPasswordConfirm = /** @class */ (function () {
         var _this = this;
         $(document).ready(function () {
             /* click error icon image:
-               note must use arrow function to bind "this" to angular object instance
-            */
-            // $(`#${this.controlName}`).focus();
-            //s  $(`#${this.controlName}-error-img`).hide();
-            $('#password1').focus(function () {
+                 note must use arrow function to bind "this" to angular object instance
+              */
+            $("#password1").focus(function () {
                 if (!_this.isTouchedPassword2) {
-                    $('#password2').focus();
-                    $('#password1').focus();
+                    $("#password2").focus();
+                    $("#password1").focus();
                     _this.isTouchedPassword2 = true;
                 }
             });
-            $("body").on("click", '#' + _this.controlName + "-error-img", function () {
+            $("body").on("click", "#" + _this.controlName + "-error-img", function () {
                 //alert(this.controlName+" clicked");
             });
         });
