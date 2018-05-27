@@ -15,7 +15,9 @@ export class InputPasswordConfirm {
     @Input() type: string;
     @Input() iconUrl: string; 
     @Input() validationMsg: string;  
-
+    
+    isTouchedPassword2 = false;
+    
     ngOnInit() {
       $(document).ready(() => {
       
@@ -23,8 +25,15 @@ export class InputPasswordConfirm {
            note must use arrow function to bind "this" to angular object instance 
         */
        // $(`#${this.controlName}`).focus();
-        $(`#${this.controlName}-error-img`).hide();
-       // $('.input-error-img').hide();
+      //s  $(`#${this.controlName}-error-img`).hide();
+      
+       $('#password1').focus(()=> {
+          if (!this.isTouchedPassword2) {
+            $('#password2').focus();
+            $('#password1').focus();           
+            this.isTouchedPassword2 = true;
+          }
+       })
         $("body").on("click", '#'+this.controlName+"-error-img", () => {
           //alert(this.controlName+" clicked");
         });

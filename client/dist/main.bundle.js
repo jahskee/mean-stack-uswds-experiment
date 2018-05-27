@@ -260,6 +260,7 @@ var forms_1 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js")
 //import * as $ from "jquery";
 var InputPasswordConfirm = /** @class */ (function () {
     function InputPasswordConfirm() {
+        this.isTouchedPassword2 = false;
     }
     InputPasswordConfirm.prototype.ngOnInit = function () {
         var _this = this;
@@ -268,8 +269,14 @@ var InputPasswordConfirm = /** @class */ (function () {
                note must use arrow function to bind "this" to angular object instance
             */
             // $(`#${this.controlName}`).focus();
-            $("#" + _this.controlName + "-error-img").hide();
-            // $('.input-error-img').hide();
+            //s  $(`#${this.controlName}-error-img`).hide();
+            $('#password1').focus(function () {
+                if (!_this.isTouchedPassword2) {
+                    $('#password2').focus();
+                    $('#password1').focus();
+                    _this.isTouchedPassword2 = true;
+                }
+            });
             $("body").on("click", '#' + _this.controlName + "-error-img", function () {
                 //alert(this.controlName+" clicked");
             });
