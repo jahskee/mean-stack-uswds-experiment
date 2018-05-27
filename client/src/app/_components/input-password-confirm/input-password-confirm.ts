@@ -22,10 +22,11 @@ export class InputPasswordConfirm {
         /* click error icon image: 
            note must use arrow function to bind "this" to angular object instance 
         */
+        $('.input-error-img').hide();
+     
         $("body").on("click", '#'+this.controlName+"-error-img", () => {
-            //alert(this.controlName+" clicked");
+          //alert(this.controlName+" clicked");
         });
-
                
       });
     }  
