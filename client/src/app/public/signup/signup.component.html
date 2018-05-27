@@ -48,23 +48,20 @@
       </app-input-phone>
     </div>
    
-     <!-- password -->
+    <!-- password and confirm password -->
     <div id='grp2' style='margin: 2rem 0'>
       <app-input-password-and-confirm
         [formGroup]="customer" 
-      
+        [type]="'password'" 
+        [iconUrl]="'https://cdn2.iconfinder.com/data/icons/oxygen/22x22/apps/preferences-desktop-cryptography.png'"
         [password1]="'password1'" 
         [placeHolder1]="'Password'" 
         [validationMsg1]="'Required, must match Confirm Password.'"
 
         [password2]="'password2'" 
         [placeHolder2]="'Confirm Password'" 
-        [validationMsg2]="'Required, must match Password.'"
-      
-        [type]="'password'" 
-        [iconUrl]="'https://cdn2.iconfinder.com/data/icons/oxygen/22x22/apps/preferences-desktop-cryptography.png'">
+        [validationMsg2]="'Required, must match Password.'">
       </app-input-password-and-confirm>
-
     </div>
     
     <div>
