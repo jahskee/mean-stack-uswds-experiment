@@ -267,7 +267,9 @@ var InputPasswordConfirm = /** @class */ (function () {
             /* click error icon image:
                note must use arrow function to bind "this" to angular object instance
             */
-            $('.input-error-img').hide();
+            // $(`#${this.controlName}`).focus();
+            $("#" + _this.controlName + "-error-img").hide();
+            // $('.input-error-img').hide();
             $("body").on("click", '#' + _this.controlName + "-error-img", function () {
                 //alert(this.controlName+" clicked");
             });
@@ -642,7 +644,7 @@ exports.AppService = AppService;
 
 /***/ }),
 
-/***/ "./src/app/_validators/password.validator.ts":
+/***/ "./src/app/_validators/password.match.validator.ts":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1463,7 +1465,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var forms_1 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
-var password_validator_1 = __webpack_require__("./src/app/_validators/password.validator.ts");
+var password_match_validator_1 = __webpack_require__("./src/app/_validators/password.match.validator.ts");
 var cookies_service_1 = __webpack_require__("./node_modules/angular2-cookie/services/cookies.service.js");
 var router_1 = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
 var crud_service_1 = __webpack_require__("./src/app/_services/_crud-service/crud.service.ts");
@@ -1487,7 +1489,7 @@ var SignupComponent = /** @class */ (function () {
             phone: new forms_1.FormControl("", forms_1.Validators.pattern(/^\(\d{3}\)\s\d{3}\-\d{4}$/)),
             password1: new forms_1.FormControl("", forms_1.Validators.required),
             password2: new forms_1.FormControl("", forms_1.Validators.required)
-        }, password_validator_1.passwordMatchValidator);
+        }, password_match_validator_1.passwordMatchValidator);
     };
     SignupComponent.prototype.onSubmit = function () {
         var _this = this;
