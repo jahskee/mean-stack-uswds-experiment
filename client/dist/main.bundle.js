@@ -268,10 +268,10 @@ var InputPasswordAndConfirm = /** @class */ (function () {
             /* click error icon image:
                  note must use arrow function to bind "this" to angular object instance
               */
-            $("#password1").focus(function () {
+            $("#" + _this.password1).focus(function () {
                 if (!_this.isTouchedPassword2) {
-                    $("#password2").focus();
-                    $("#password1").focus();
+                    $("#" + _this.password2).focus();
+                    $("#" + _this.password1).focus();
                     _this.isTouchedPassword2 = true;
                 }
             });

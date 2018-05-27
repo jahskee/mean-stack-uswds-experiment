@@ -27,14 +27,13 @@ export class InputPasswordAndConfirm {
       /* click error icon image: 
            note must use arrow function to bind "this" to angular object instance 
         */
-      $("#password1").focus(() => {
+      $("#"+this.password1).focus(() => {
         if (!this.isTouchedPassword2) {
-          $("#password2").focus();
-          $("#password1").focus();
+          $("#"+this.password2).focus();
+          $("#"+this.password1).focus();
           this.isTouchedPassword2 = true;
         }
-      });
-   
+      });   
     });
   }
 }
