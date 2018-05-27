@@ -16,7 +16,6 @@ export class InputPasswordAndConfirm {
   @Input() validationMsg1: string;
   @Input() placeHolder1: string;
 
-
   @Input() password2: string;
   @Input() validationMsg2: string;
   @Input() placeHolder2: string;
