@@ -229,7 +229,7 @@ exports.InputEmail = InputEmail;
 /***/ "./src/app/_components/input-password-confirm/input-password-confirm.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class='form-control-group' [formGroup]='formGroup' title=\"{{validationMsg}}\">\n\n    <div class=\"input-icon-container\">\n        <input class='input' formControlName='{{controlName}}' id='{{controlName}}' placeholder='{{placeHolder}}' name=\"{{controlName}}\"\n            type=\"{{type}}\" required aria-required='true'>\n        <span *ngIf=\"iconUrl\">\n            <img class=\"input-icon-img\" src=\"{{iconUrl}}\">\n        </span>\n        <span *ngIf=\"(!formGroup.hasError('mismatch') || formGroup.get(controlName).valid) && formGroup.get(controlName).touched\">\n            <img \n                class=\"input-error-img\" \n                id=\"{{controlName}}-check-img\" \n                src=\"https://cdn4.iconfinder.com/data/icons/icocentre-free-icons/137/f-check_256-16.png\">\n\n        </span>\n        <span *ngIf=\"(formGroup.hasError('mismatch') || (formGroup.get(controlName).invalid) && formGroup.get(controlName).touched)\">\n            <img \n                class=\"input-error-img\" \n                id=\"{{controlName}}-error-img\" \n                src=\"https://cdn0.iconfinder.com/data/icons/basic-ui-elements-colored/700/05_exclamation-3-16.png\"\n            >\n            <small style=\"padding-left: 1rem;\">\n                {{validationMsg}}\n            </small>\n        </span>\n    </div>\n</div>"
+module.exports = "<div class='form-control-group' [formGroup]='formGroup' title=\"{{validationMsg1}}\">\n\n    <div class=\"input-icon-container\">\n        <input class='input' formControlName='{{password1}}' id='{{password1}}' placeholder='{{placeHolder1}}' name=\"{{password1}}\"\n            type=\"{{type}}\" required aria-required='true'>\n        <span *ngIf=\"iconUrl\">\n            <img class=\"input-icon-img\" src=\"{{iconUrl}}\">\n        </span>\n        <span *ngIf=\"(!formGroup.hasError('mismatch') || formGroup.get(password1).valid) && formGroup.get(password1).touched\">\n            <img \n                class=\"input-error-img\" \n                id=\"{{password1}}-check-img\" \n                src=\"https://cdn4.iconfinder.com/data/icons/icocentre-free-icons/137/f-check_256-16.png\">\n\n        </span>\n        <span *ngIf=\"(formGroup.hasError('mismatch') || (formGroup.get(password1).invalid) && formGroup.get(password1).touched)\">\n            <img \n                class=\"input-error-img\" \n                id=\"{{password1}}-error-img\" \n                src=\"https://cdn0.iconfinder.com/data/icons/basic-ui-elements-colored/700/05_exclamation-3-16.png\"\n            >\n            <small style=\"padding-left: 1rem;\">\n                {{validationMsg1}}\n            </small>\n        </span>\n    </div>\n</div>\n\n<div class='form-control-group' [formGroup]='formGroup' title=\"{{validationMsg2}}\">\n\n        <div class=\"input-icon-container\">\n            <input class='input' formControlName='{{password2}}' id='{{password2}}' placeholder='{{placeHolder2}}' name=\"{{password2}}\"\n                type=\"{{type}}\" required aria-required='true'>\n            <span *ngIf=\"iconUrl\">\n                <!-- <img class=\"input-icon-img\" src=\"{{iconUrl}}\"> -->\n            </span>\n            <span *ngIf=\"(!formGroup.hasError('mismatch') || formGroup.get(password2).valid) && formGroup.get(password2).touched\">\n                <img \n                    class=\"input-error-img\" \n                    id=\"{{password2}}-check-img\" \n                    src=\"https://cdn4.iconfinder.com/data/icons/icocentre-free-icons/137/f-check_256-16.png\">\n    \n            </span>\n            <span *ngIf=\"(formGroup.hasError('mismatch') || (formGroup.get(password2).invalid) && formGroup.get(password2).touched)\">\n                <img \n                    class=\"input-error-img\" \n                    id=\"{{password2}}-error-img\" \n                    src=\"https://cdn0.iconfinder.com/data/icons/basic-ui-elements-colored/700/05_exclamation-3-16.png\"\n                >\n                <small style=\"padding-left: 1rem;\">\n                    {{validationMsg2}}\n                </small>\n            </span>\n        </div>\n    </div>"
 
 /***/ }),
 
@@ -275,23 +275,12 @@ var InputPasswordConfirm = /** @class */ (function () {
                     _this.isTouchedPassword2 = true;
                 }
             });
-            $("body").on("click", "#" + _this.controlName + "-error-img", function () {
-                //alert(this.controlName+" clicked");
-            });
         });
     };
     __decorate([
         core_1.Input(),
         __metadata("design:type", forms_1.FormGroup)
     ], InputPasswordConfirm.prototype, "formGroup", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], InputPasswordConfirm.prototype, "placeHolder", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], InputPasswordConfirm.prototype, "controlName", void 0);
     __decorate([
         core_1.Input(),
         __metadata("design:type", String)
@@ -303,7 +292,27 @@ var InputPasswordConfirm = /** @class */ (function () {
     __decorate([
         core_1.Input(),
         __metadata("design:type", String)
-    ], InputPasswordConfirm.prototype, "validationMsg", void 0);
+    ], InputPasswordConfirm.prototype, "password1", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], InputPasswordConfirm.prototype, "validationMsg1", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], InputPasswordConfirm.prototype, "placeHolder1", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], InputPasswordConfirm.prototype, "password2", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], InputPasswordConfirm.prototype, "validationMsg2", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], InputPasswordConfirm.prototype, "placeHolder2", void 0);
     InputPasswordConfirm = __decorate([
         core_1.Component({
             selector: "app-input-password-confirm",
@@ -1434,7 +1443,7 @@ exports.Signin2Component = Signin2Component;
 /***/ "./src/app/public/signup/signup.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<form class=\"usa-form\" style=\"margin: 0 auto\" (ngSubmit)='onSubmit(customer)' [formGroup]='customer'>\n  <fieldset>\n \n    <legend class=\"usa-drop_text\">Sign Up</legend>\n    <div id='grp1'>\n\n      <!-- firstname -->\n      <app-input-text\n        [validationMsg]=\"'Letters, min 1, max 30 chars.'\"\n        [formGroup]=\"customer\" \n        [controlName]=\"'firstname'\" \n        [placeHolder]=\"'First Name'\"         \n        [type]=\"'text'\"        \n        [maxlength] = \"'30'\"\n        [iconUrl]=\"'https://cdn3.iconfinder.com/data/icons/faticons/32/user-01-20.png'\">\n      </app-input-text>\n\n      <!-- lastname -->\n      <app-input-text\n        [validationMsg]=\"'Letters, min 1, max 30 chars.'\"\n        [formGroup]=\"customer\" \n        [controlName]=\"'lastname'\" \n        [placeHolder]=\"'Last Name'\" \n        [type]=\"'text'\" \n        [maxlength] = \"'30'\"\n        [iconUrl]=\"''\">\n      </app-input-text>\n     \n      <!-- email -->\n      <app-input-email\n        [validationMsg]=\"'Must be user@domain.com'\"\n        [formGroup]=\"customer\" \n        [controlName]=\"'email'\" \n        [placeHolder]=\"'Email'\" \n        [type]=\"'email'\" \n        [maxlength] = \"'50'\"\n        [iconUrl]=\"'https://cdn3.iconfinder.com/data/icons/multi-media-set-2-2/65/77-20.png'\">\n      </app-input-email>\n\n      <!-- phone -->\n      <app-input-phone\n        [validationMsg]=\"'Required.'\"\n        [formGroup]=\"customer\" \n        [controlName]=\"'phone'\" \n        [placeHolder]=\"'Phone'\" \n        [type]=\"'tel'\" \n        [iconUrl]=\"'https://cdn4.iconfinder.com/data/icons/social-communication/142/phone-20.png'\">\n      </app-input-phone>\n    </div>\n   \n     <!-- password -->\n    <div id='grp2' style='margin: 2rem 0'>\n      <app-input-password-confirm\n        [validationMsg]=\"'Required, must match Confirm Password.'\"\n        [formGroup]=\"customer\" \n        [controlName]=\"'password1'\" \n        [placeHolder]=\"'Password'\" \n        [type]=\"'password'\" \n        [iconUrl]=\"'https://cdn2.iconfinder.com/data/icons/oxygen/22x22/apps/preferences-desktop-cryptography.png'\">\n      </app-input-password-confirm>\n\n      <!-- confirm password -->\n      <app-input-password-confirm\n        [validationMsg]=\"'Required, must match Password.'\" \n        [formGroup]=\"customer\" \n        [controlName]=\"'password2'\" \n        [placeHolder]=\"'Confirm Password'\" \n        [type]=\"'password'\"> \n      </app-input-password-confirm>\n    </div>\n    \n    <div>\n      <div class=\"usa-alert usa-alert-success\" *ngIf=\"isShowSuccessMessage\">\n        <div class=\"usa-alert-body\">\n          <h3 class=\"usa-alert-heading\"> {{message}}</h3>\n        </div>\n      </div>\n      <div class=\"usa-alert usa-alert-error\" *ngIf=\"isShowErrorMessage\">\n        <div class=\"usa-alert-body\">\n          <h3 class=\"usa-alert-heading\"> {{message}}</h3>\n        </div>\n      </div>\n    </div>\n\n    <button type='submit'> Submit </button>\n\n  </fieldset>\n\n</form>\n\n\n<div class=\"usa-grid usa-footer-return-to-top\">\n  <a href=\"/signup#\">Return to top</a>\n</div>\n\n"
+module.exports = "<form class=\"usa-form\" style=\"margin: 0 auto\" (ngSubmit)='onSubmit(customer)' [formGroup]='customer'>\n  <fieldset>\n \n    <legend class=\"usa-drop_text\">Sign Up</legend>\n    <div id='grp1'>\n\n      <!-- firstname -->\n      <app-input-text\n        [validationMsg]=\"'Letters, min 1, max 30 chars.'\"\n        [formGroup]=\"customer\" \n        [controlName]=\"'firstname'\" \n        [placeHolder]=\"'First Name'\"         \n        [type]=\"'text'\"        \n        [maxlength] = \"'30'\"\n        [iconUrl]=\"'https://cdn3.iconfinder.com/data/icons/faticons/32/user-01-20.png'\">\n      </app-input-text>\n\n      <!-- lastname -->\n      <app-input-text\n        [validationMsg]=\"'Letters, min 1, max 30 chars.'\"\n        [formGroup]=\"customer\" \n        [controlName]=\"'lastname'\" \n        [placeHolder]=\"'Last Name'\" \n        [type]=\"'text'\" \n        [maxlength] = \"'30'\"\n        [iconUrl]=\"''\">\n      </app-input-text>\n     \n      <!-- email -->\n      <app-input-email\n        [validationMsg]=\"'Must be user@domain.com'\"\n        [formGroup]=\"customer\" \n        [controlName]=\"'email'\" \n        [placeHolder]=\"'Email'\" \n        [type]=\"'email'\" \n        [maxlength] = \"'50'\"\n        [iconUrl]=\"'https://cdn3.iconfinder.com/data/icons/multi-media-set-2-2/65/77-20.png'\">\n      </app-input-email>\n\n      <!-- phone -->\n      <app-input-phone\n        [validationMsg]=\"'Required.'\"\n        [formGroup]=\"customer\" \n        [controlName]=\"'phone'\" \n        [placeHolder]=\"'Phone'\" \n        [type]=\"'tel'\" \n        [iconUrl]=\"'https://cdn4.iconfinder.com/data/icons/social-communication/142/phone-20.png'\">\n      </app-input-phone>\n    </div>\n   \n     <!-- password -->\n    <div id='grp2' style='margin: 2rem 0'>\n      <app-input-password-confirm\n        [formGroup]=\"customer\" \n      \n        [password1]=\"'password1'\" \n        [placeHolder1]=\"'Password'\" \n        [validationMsg1]=\"'Required, must match Confirm Password.'\"\n\n        [password2]=\"'password2'\" \n        [placeHolder2]=\"'Confirm Password'\" \n        [validationMsg2]=\"'Required, must match Password.'\"\n      \n        [type]=\"'password'\" \n        [iconUrl]=\"'https://cdn2.iconfinder.com/data/icons/oxygen/22x22/apps/preferences-desktop-cryptography.png'\">\n      </app-input-password-confirm>\n\n    </div>\n    \n    <div>\n      <div class=\"usa-alert usa-alert-success\" *ngIf=\"isShowSuccessMessage\">\n        <div class=\"usa-alert-body\">\n          <h3 class=\"usa-alert-heading\"> {{message}}</h3>\n        </div>\n      </div>\n      <div class=\"usa-alert usa-alert-error\" *ngIf=\"isShowErrorMessage\">\n        <div class=\"usa-alert-body\">\n          <h3 class=\"usa-alert-heading\"> {{message}}</h3>\n        </div>\n      </div>\n    </div>\n\n    <button type='submit'> Submit </button>\n\n  </fieldset>\n\n</form>\n\n\n<div class=\"usa-grid usa-footer-return-to-top\">\n  <a href=\"/signup#\">Return to top</a>\n</div>\n\n"
 
 /***/ }),
 

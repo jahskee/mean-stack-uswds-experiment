@@ -9,11 +9,17 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
 })
 export class InputPasswordConfirm {
   @Input() formGroup: FormGroup;
-  @Input() placeHolder: string;
-  @Input() controlName: string;
   @Input() type: string;
   @Input() iconUrl: string;
-  @Input() validationMsg: string;
+
+  @Input() password1: string;
+  @Input() validationMsg1: string;
+  @Input() placeHolder1: string;
+
+
+  @Input() password2: string;
+  @Input() validationMsg2: string;
+  @Input() placeHolder2: string;
 
   isTouchedPassword2 = false;
 
@@ -29,9 +35,7 @@ export class InputPasswordConfirm {
           this.isTouchedPassword2 = true;
         }
       });
-      $("body").on("click", "#" + this.controlName + "-error-img", () => {
-        //alert(this.controlName+" clicked");
-      });
+   
     });
   }
 }

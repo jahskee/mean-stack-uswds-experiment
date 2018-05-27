@@ -51,22 +51,20 @@
      <!-- password -->
     <div id='grp2' style='margin: 2rem 0'>
       <app-input-password-confirm
-        [validationMsg]="'Required, must match Confirm Password.'"
         [formGroup]="customer" 
-        [controlName]="'password1'" 
-        [placeHolder]="'Password'" 
+      
+        [password1]="'password1'" 
+        [placeHolder1]="'Password'" 
+        [validationMsg1]="'Required, must match Confirm Password.'"
+
+        [password2]="'password2'" 
+        [placeHolder2]="'Confirm Password'" 
+        [validationMsg2]="'Required, must match Password.'"
+      
         [type]="'password'" 
         [iconUrl]="'https://cdn2.iconfinder.com/data/icons/oxygen/22x22/apps/preferences-desktop-cryptography.png'">
       </app-input-password-confirm>
 
-      <!-- confirm password -->
-      <app-input-password-confirm
-        [validationMsg]="'Required, must match Password.'" 
-        [formGroup]="customer" 
-        [controlName]="'password2'" 
-        [placeHolder]="'Confirm Password'" 
-        [type]="'password'"> 
-      </app-input-password-confirm>
     </div>
     
     <div>
