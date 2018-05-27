@@ -85,7 +85,7 @@ export class SignupComponent implements OnInit {
         this.addCustomerEvent.emit();
         console.log("create new customer success!");
         this.customer.reset();
-     
+        sessionStorage.setItem('email', customerObj.email)     
       });
       
       const jwtPayload = {
@@ -98,7 +98,8 @@ export class SignupComponent implements OnInit {
       this.appService.getToken(jwtPayload).subscribe(
         jwtToken => {
          //alert(JSON.stringify(jwtToken));
-          localStorage.setItem('jwtToken', JSON.stringify(jwtToken));
+         sessionStorage.setItem('jwtToken', JSON.stringify(jwtToken));
+         
         },
         error => {
           alert(JSON.stringify(error))
@@ -108,13 +109,7 @@ export class SignupComponent implements OnInit {
       this.message = "Customer create success.";   
       this.isShowSuccessMessage = true;
     
-      let navigationExtras: NavigationExtras = {
-        queryParams: {
-            "email": customerObj.email,         
-        }
-      };
-
-      this.router.navigate(['/signin2'], navigationExtras);
+      this.router.navigate(['/signin2']);
       
     } catch (err) {
       this.message = "Customer create failed.";

@@ -1,28 +1,55 @@
-<div style='background: lightgreen; width: 20%; padding: 10px; margin: 0 auto; margin-top:15px; border: 1px solid green'>
-  <h3 style='margin: 0'>Account was successfully created!</h3></div>
-<form id='sign-in-form' class="usa-form" style='margin: 0 auto; margin-bottom: 5rem'>
-    <fieldset  >
-      <legend class="usa-drop_text" >Please Sign In</legend>
-       
-      <div style='display:flex; flex-direction: row; padding-top: 10px;'>
-          <input style='margin-top: 0; margin-right: 5px' id="username" value='{{email}}' placeholder="Username" name="username" type="text" autocapitalize="off" autocorrect="off">
-         
+<div id='signin2-container'>
+  <div id='message'>
+    <h3 style='margin: 0'>Account was successfully created!</h3>
+  </div>
+
+  <form id='sign-in-form' class="usa-form">
+      <fieldset>
+          <legend class="usa-drop_text">Please Sign In</legend>
+
+          <input id="username" value='{{email}}' placeholder="Username" name="username" type="text" autocapitalize="off" autocorrect="off">
+     
           <div>
-            <input style='margin-top: 0;' id="password-sign-in" placeholder="Password" name="password" type="password">
-            <p class="usa-form-note">
-              <a title="Show password" href="javascript:void(0);"
-                class="usa-show_password"
-                aria-controls="password-sign-in">Show password</a>
-            </p>
-          </div>
-       </div>
+              <input id="password-sign-in" placeholder="Password" name="password" type="password">
+              <p class="usa-form-note">
+                <a title="Show password" href="javascript:void(0);" class="usa-show_password" aria-controls="password-sign-in">Show password</a>
+              </p>
+            </div>
+         
+        </fieldset>
+        <input type="submit" value="Sign in">
+        <p>
+
+            <a class="usa-nav-link" title="Password Reset" routerLink="/passwordreset">Forgot Password</a>
+          </p>
+    
+  </form>
+  <!--
+      <form id='sign-in-form' class="usa-form">
+ 
+    <fieldset>
+      <legend class="usa-drop_text">Please Sign In</legend>
+
+      <div id='input-container'>
+        <input id="username" value='{{email}}' placeholder="Username" name="username" type="text" autocapitalize="off" autocorrect="off">
+
+        <div>
+          <input id="password-sign-in" placeholder="Password" name="password" type="password">
+          <p class="usa-form-note">
+            <a title="Show password" href="javascript:void(0);" class="usa-show_password" aria-controls="password-sign-in">Show password</a>
+          </p>
+        </div>
+      </div>
       <input type="submit" value="Sign in">
       <p>
-      
-        <a class="usa-nav-link"  title="Password Reset" routerLink="/passwordreset">Forgot Password</a></p>
-     
+
+        <a class="usa-nav-link" title="Password Reset" routerLink="/passwordreset">Forgot Password</a>
+      </p>
+
     </fieldset>
   </form>
   <div class="usa-grid usa-footer-return-to-top">
-      <a href="/signin#">Return to top</a>
+    <a href="/signin#">Return to top</a>
   </div>
+-->
+</div>

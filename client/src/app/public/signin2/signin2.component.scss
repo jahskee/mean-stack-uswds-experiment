@@ -1,0 +1,45 @@
+#signin2-container {
+  #message {
+    background: #caeac5;
+    width: 20%;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 15px;
+    border: 1px solid lightgreen;
+  }
+
+  #sign-in-form {
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    width:300px;
+    fieldset {
+        display: flex;
+        justify-content: center;
+        width: 300px;
+        margin: 0;
+        text-align: center;
+    }
+    #input-container {
+      display: flex;
+      flex-direction: row;
+      padding-top: 10px;
+    }
+
+   
+
+  
+
+    input[type='submit'] {
+        margin-top: 5px;
+    }
+    #password-sign-in {
+      margin-top: 0;
+    }
+  }
+
+  input {
+    margin: 0;
+    margin-bottom: 5px;
+    //width: auto;
+    }
+}

@@ -1387,14 +1387,14 @@ exports.SigninComponent = SigninComponent;
 /***/ "./src/app/public/signin2/signin2.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div style='background: lightgreen; width: 20%; padding: 10px; margin: 0 auto; margin-top:15px; border: 1px solid green'>\n  <h3 style='margin: 0'>Account was successfully created!</h3></div>\n<form id='sign-in-form' class=\"usa-form\" style='margin: 0 auto; margin-bottom: 5rem'>\n    <fieldset  >\n      <legend class=\"usa-drop_text\" >Please Sign In</legend>\n       \n      <div style='display:flex; flex-direction: row; padding-top: 10px;'>\n          <input style='margin-top: 0; margin-right: 5px' id=\"username\" value='{{email}}' placeholder=\"Username\" name=\"username\" type=\"text\" autocapitalize=\"off\" autocorrect=\"off\">\n         \n          <div>\n            <input style='margin-top: 0;' id=\"password-sign-in\" placeholder=\"Password\" name=\"password\" type=\"password\">\n            <p class=\"usa-form-note\">\n              <a title=\"Show password\" href=\"javascript:void(0);\"\n                class=\"usa-show_password\"\n                aria-controls=\"password-sign-in\">Show password</a>\n            </p>\n          </div>\n       </div>\n      <input type=\"submit\" value=\"Sign in\">\n      <p>\n      \n        <a class=\"usa-nav-link\"  title=\"Password Reset\" routerLink=\"/passwordreset\">Forgot Password</a></p>\n     \n    </fieldset>\n  </form>\n  <div class=\"usa-grid usa-footer-return-to-top\">\n      <a href=\"/signin#\">Return to top</a>\n  </div>"
+module.exports = "<div id='signin2-container'>\n  <div id='message'>\n    <h3 style='margin: 0'>Account was successfully created!</h3>\n  </div>\n\n  <form id='sign-in-form' class=\"usa-form\">\n      <fieldset>\n          <legend class=\"usa-drop_text\">Please Sign In</legend>\n\n          <input id=\"username\" value='{{email}}' placeholder=\"Username\" name=\"username\" type=\"text\" autocapitalize=\"off\" autocorrect=\"off\">\n     \n          <div>\n              <input id=\"password-sign-in\" placeholder=\"Password\" name=\"password\" type=\"password\">\n              <p class=\"usa-form-note\">\n                <a title=\"Show password\" href=\"javascript:void(0);\" class=\"usa-show_password\" aria-controls=\"password-sign-in\">Show password</a>\n              </p>\n            </div>\n         \n        </fieldset>\n        <input type=\"submit\" value=\"Sign in\">\n        <p>\n\n            <a class=\"usa-nav-link\" title=\"Password Reset\" routerLink=\"/passwordreset\">Forgot Password</a>\n          </p>\n    \n  </form>\n  <!--\n      <form id='sign-in-form' class=\"usa-form\">\n \n    <fieldset>\n      <legend class=\"usa-drop_text\">Please Sign In</legend>\n\n      <div id='input-container'>\n        <input id=\"username\" value='{{email}}' placeholder=\"Username\" name=\"username\" type=\"text\" autocapitalize=\"off\" autocorrect=\"off\">\n\n        <div>\n          <input id=\"password-sign-in\" placeholder=\"Password\" name=\"password\" type=\"password\">\n          <p class=\"usa-form-note\">\n            <a title=\"Show password\" href=\"javascript:void(0);\" class=\"usa-show_password\" aria-controls=\"password-sign-in\">Show password</a>\n          </p>\n        </div>\n      </div>\n      <input type=\"submit\" value=\"Sign in\">\n      <p>\n\n        <a class=\"usa-nav-link\" title=\"Password Reset\" routerLink=\"/passwordreset\">Forgot Password</a>\n      </p>\n\n    </fieldset>\n  </form>\n  <div class=\"usa-grid usa-footer-return-to-top\">\n    <a href=\"/signin#\">Return to top</a>\n  </div>\n-->\n</div>"
 
 /***/ }),
 
 /***/ "./src/app/public/signin2/signin2.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "#signin2-container #message {\n  background: #caeac5;\n  width: 20%;\n  padding: 10px;\n  margin: 0 auto;\n  margin-top: 15px;\n  border: 1px solid lightgreen; }\n\n#signin2-container #sign-in-form {\n  margin: 0 auto;\n  margin-bottom: 5rem;\n  width: 300px; }\n\n#signin2-container #sign-in-form fieldset {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    width: 300px;\n    margin: 0;\n    text-align: center; }\n\n#signin2-container #sign-in-form #input-container {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    padding-top: 10px; }\n\n#signin2-container #sign-in-form input[type='submit'] {\n    margin-top: 5px; }\n\n#signin2-container #sign-in-form #password-sign-in {\n    margin-top: 0; }\n\n#signin2-container input {\n  margin: 0;\n  margin-bottom: 5px; }\n"
 
 /***/ }),
 
@@ -1414,24 +1414,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var router_1 = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
 var Signin2Component = /** @class */ (function () {
-    function Signin2Component(route) {
-        var _this = this;
-        this.route = route;
-        this.route.queryParams.subscribe(function (params) {
-            _this.email = params["email"];
-        });
+    function Signin2Component() {
     }
     Signin2Component.prototype.ngOnInit = function () {
+        this.email = sessionStorage.getItem("email");
+        $(document).ready(function () {
+            $("#password-sign-in").focus();
+        });
     };
     Signin2Component = __decorate([
         core_1.Component({
-            selector: 'app-signin2',
+            selector: "app-signin2",
             template: __webpack_require__("./src/app/public/signin2/signin2.component.html"),
             styles: [__webpack_require__("./src/app/public/signin2/signin2.component.scss")]
         }),
-        __metadata("design:paramtypes", [router_1.ActivatedRoute])
+        __metadata("design:paramtypes", [])
     ], Signin2Component);
     return Signin2Component;
 }());
@@ -1515,35 +1513,31 @@ var SignupComponent = /** @class */ (function () {
                 return false;
             }
             // reshape customerObj obj literal
-            var customerObj = this.customer.value;
-            customerObj = __assign({}, customerObj, { password: customerObj.password1, createdAt: null, updatedAt: null });
-            delete customerObj.password1;
-            delete customerObj.password2;
-            this._crudService.create("Customer", customerObj).subscribe(function (data) {
+            var customerObj_1 = this.customer.value;
+            customerObj_1 = __assign({}, customerObj_1, { password: customerObj_1.password1, createdAt: null, updatedAt: null });
+            delete customerObj_1.password1;
+            delete customerObj_1.password2;
+            this._crudService.create("Customer", customerObj_1).subscribe(function (data) {
                 _this.addCustomerEvent.emit();
                 console.log("create new customer success!");
                 _this.customer.reset();
+                sessionStorage.setItem('email', customerObj_1.email);
             });
             var jwtPayload = {
-                email: customerObj.email,
-                firstname: customerObj.firstname,
-                lastname: customerObj.lastname,
+                email: customerObj_1.email,
+                firstname: customerObj_1.firstname,
+                lastname: customerObj_1.lastname,
                 role: 'customer',
             };
             this.appService.getToken(jwtPayload).subscribe(function (jwtToken) {
                 //alert(JSON.stringify(jwtToken));
-                localStorage.setItem('jwtToken', JSON.stringify(jwtToken));
+                sessionStorage.setItem('jwtToken', JSON.stringify(jwtToken));
             }, function (error) {
                 alert(JSON.stringify(error));
             });
             this.message = "Customer create success.";
             this.isShowSuccessMessage = true;
-            var navigationExtras = {
-                queryParams: {
-                    "email": customerObj.email,
-                }
-            };
-            this.router.navigate(['/signin2'], navigationExtras);
+            this.router.navigate(['/signin2']);
         }
         catch (err) {
             this.message = "Customer create failed.";
