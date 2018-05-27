@@ -627,8 +627,8 @@ var AppService = /** @class */ (function () {
         this.http = http;
         this.apiurl = environment_1.environment.apiurl;
     }
-    AppService.prototype.getToken = function (dataObj) {
-        return this.http.post(this.apiurl + "/token", dataObj);
+    AppService.prototype.getToken = function (jwtPayload) {
+        return this.http.post(this.apiurl + "/token", jwtPayload);
     };
     AppService = __decorate([
         core_1.Injectable(),
@@ -737,6 +737,7 @@ var crud_service_1 = __webpack_require__("./src/app/_services/_crud-service/crud
 var app_service_1 = __webpack_require__("./src/app/_services/app-service/app.service.ts");
 var forms_2 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
 var signin_component_1 = __webpack_require__("./src/app/public/signin/signin.component.ts");
+var signin2_component_1 = __webpack_require__("./src/app/public/signin2/signin2.component.ts");
 var servicepage_component_1 = __webpack_require__("./src/app/public/servicepage/servicepage.component.ts");
 var password_reset_component_1 = __webpack_require__("./src/app/public/password-reset/password-reset.component.ts");
 var home_component_1 = __webpack_require__("./src/app/public/home/home.component.ts");
@@ -749,6 +750,7 @@ var input_phone_1 = __webpack_require__("./src/app/_components/input-phone/input
 var input_password_confirm_1 = __webpack_require__("./src/app/_components/input-password-confirm/input-password-confirm.ts");
 var routes = [
     { path: 'signin', component: signin_component_1.SigninComponent },
+    { path: 'signin2', component: signin2_component_1.Signin2Component },
     { path: 'signup', component: signup_component_1.SignupComponent },
     { path: 'contactus', component: contactus_component_1.ContactusComponent },
     { path: 'service', component: servicepage_component_1.ServicepageComponent },
@@ -771,6 +773,7 @@ var AppModule = /** @class */ (function () {
                 contact_list_component_1.ContactListComponent,
                 page2_component_1.Page2Component,
                 signin_component_1.SigninComponent,
+                signin2_component_1.Signin2Component,
                 servicepage_component_1.ServicepageComponent,
                 password_reset_component_1.PasswordResetComponent,
                 home_component_1.HomeComponent,
@@ -1364,10 +1367,60 @@ exports.SigninComponent = SigninComponent;
 
 /***/ }),
 
+/***/ "./src/app/public/signin2/signin2.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div style='background: lightgreen; width: 20%; padding: 10px; margin: 0 auto; margin-top:15px; border: 1px solid green'>\n  <h3 style='margin: 0'>Account was successfully created!</h3></div>\n<form id='sign-in-form' class=\"usa-form\" style='margin: 0 auto; margin-bottom: 5rem'>\n    <fieldset  >\n      <legend class=\"usa-drop_text\" >Please Sign In</legend>\n       \n      <div style='display:flex; flex-direction: row; padding-top: 10px;'>\n          <input style='margin-top: 0; margin-right: 5px' id=\"username\" placeholder=\"Username\" name=\"username\" type=\"text\" autocapitalize=\"off\" autocorrect=\"off\">\n         \n          <div>\n            <input style='margin-top: 0;' id=\"password-sign-in\" placeholder=\"Password\" name=\"password\" type=\"password\">\n            <p class=\"usa-form-note\">\n              <a title=\"Show password\" href=\"javascript:void(0);\"\n                class=\"usa-show_password\"\n                aria-controls=\"password-sign-in\">Show password</a>\n            </p>\n          </div>\n       </div>\n      <input type=\"submit\" value=\"Sign in\">\n      <p>\n      \n        <a class=\"usa-nav-link\"  title=\"Password Reset\" routerLink=\"/passwordreset\">Forgot Password</a></p>\n     \n    </fieldset>\n  </form>\n  <div class=\"usa-grid usa-footer-return-to-top\">\n      <a href=\"/signin#\">Return to top</a>\n  </div>"
+
+/***/ }),
+
+/***/ "./src/app/public/signin2/signin2.component.scss":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/public/signin2/signin2.component.ts":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var Signin2Component = /** @class */ (function () {
+    function Signin2Component() {
+    }
+    Signin2Component.prototype.ngOnInit = function () {
+    };
+    Signin2Component = __decorate([
+        core_1.Component({
+            selector: 'app-signin2',
+            template: __webpack_require__("./src/app/public/signin2/signin2.component.html"),
+            styles: [__webpack_require__("./src/app/public/signin2/signin2.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], Signin2Component);
+    return Signin2Component;
+}());
+exports.Signin2Component = Signin2Component;
+
+
+/***/ }),
+
 /***/ "./src/app/public/signup/signup.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<form class=\"usa-form\" style=\"margin: 0 auto\" (ngSubmit)='onSubmit(customer)' [formGroup]='customer'>\n  <fieldset>\n \n    <legend class=\"usa-drop_text\">Sign Up</legend>\n    <div id='grp1'>\n\n      <!-- firstname -->\n      <app-input-text\n        [validationMsg]=\"'Letters, min 1, max 30 chars.'\"\n        [formGroup]=\"customer\" \n        [controlName]=\"'firstname'\" \n        [placeHolder]=\"'First Name'\"         \n        [type]=\"'text'\"        \n        [maxlength] = \"'30'\"\n        [iconUrl]=\"'https://cdn3.iconfinder.com/data/icons/faticons/32/user-01-20.png'\">\n      </app-input-text>\n\n      <!-- lastname -->\n      <app-input-text\n        [validationMsg]=\"'Letters, min 1, max 30 chars.'\"\n        [formGroup]=\"customer\" \n        [controlName]=\"'lastname'\" \n        [placeHolder]=\"'Last Name'\" \n        [type]=\"'text'\" \n        [maxlength] = \"'30'\"\n        [iconUrl]=\"''\">\n      </app-input-text>\n     \n      <!-- email -->\n      <app-input-email\n        [validationMsg]=\"'Must be user@domain.com'\"\n        [formGroup]=\"customer\" \n        [controlName]=\"'email'\" \n        [placeHolder]=\"'Email'\" \n        [type]=\"'email'\" \n        [maxlength] = \"'50'\"\n        [iconUrl]=\"'https://cdn3.iconfinder.com/data/icons/multi-media-set-2-2/65/77-20.png'\">\n      </app-input-email>\n\n      <!-- phone -->\n      <app-input-phone\n        [validationMsg]=\"'Required.'\"\n        [formGroup]=\"customer\" \n        [controlName]=\"'phone'\" \n        [placeHolder]=\"'Phone'\" \n        [type]=\"'tel'\" \n        [iconUrl]=\"'https://cdn4.iconfinder.com/data/icons/social-communication/142/phone-20.png'\">\n      </app-input-phone>\n    </div>\n   \n     <!-- password -->\n    <div id='grp2' style='margin: 2rem 0'>\n      <app-input-password-confirm\n        [validationMsg]=\"'Required, must match Confirm Password.'\"\n        [formGroup]=\"customer\" \n        [controlName]=\"'password1'\" \n        [placeHolder]=\"'Password'\" \n        [type]=\"'password'\" \n        [iconUrl]=\"'https://cdn2.iconfinder.com/data/icons/oxygen/22x22/apps/preferences-desktop-cryptography.png'\">\n      </app-input-password-confirm>\n\n      <!-- confirm password -->\n      <app-input-password-confirm\n        [validationMsg]=\"'Required, must match Password.'\" \n        [formGroup]=\"customer\" \n        [controlName]=\"'password2'\" \n        [placeHolder]=\"'Confirm Password'\" \n        [type]=\"'password'\"> \n      </app-input-password-confirm>\n    </div>\n\n    <button type='submit'> Submit </button>\n    <div>\n      <div class=\"usa-alert usa-alert-success\" *ngIf=\"isShowSuccessMessage\">\n        <div class=\"usa-alert-body\">\n          <h3 class=\"usa-alert-heading\"> {{message}}</h3>\n        </div>\n      </div>\n      <div class=\"usa-alert usa-alert-error\" *ngIf=\"isShowErrorMessage\">\n        <div class=\"usa-alert-body\">\n          <h3 class=\"usa-alert-heading\"> {{message}}</h3>\n        </div>\n      </div>\n    </div>\n\n  </fieldset>\n\n</form>\n\n\n<div class=\"usa-grid usa-footer-return-to-top\">\n  <a href=\"/signup#\">Return to top</a>\n</div>\n\n"
+module.exports = "<form class=\"usa-form\" style=\"margin: 0 auto\" (ngSubmit)='onSubmit(customer)' [formGroup]='customer'>\n  <fieldset>\n \n    <legend class=\"usa-drop_text\">Sign Up</legend>\n    <div id='grp1'>\n\n      <!-- firstname -->\n      <app-input-text\n        [validationMsg]=\"'Letters, min 1, max 30 chars.'\"\n        [formGroup]=\"customer\" \n        [controlName]=\"'firstname'\" \n        [placeHolder]=\"'First Name'\"         \n        [type]=\"'text'\"        \n        [maxlength] = \"'30'\"\n        [iconUrl]=\"'https://cdn3.iconfinder.com/data/icons/faticons/32/user-01-20.png'\">\n      </app-input-text>\n\n      <!-- lastname -->\n      <app-input-text\n        [validationMsg]=\"'Letters, min 1, max 30 chars.'\"\n        [formGroup]=\"customer\" \n        [controlName]=\"'lastname'\" \n        [placeHolder]=\"'Last Name'\" \n        [type]=\"'text'\" \n        [maxlength] = \"'30'\"\n        [iconUrl]=\"''\">\n      </app-input-text>\n     \n      <!-- email -->\n      <app-input-email\n        [validationMsg]=\"'Must be user@domain.com'\"\n        [formGroup]=\"customer\" \n        [controlName]=\"'email'\" \n        [placeHolder]=\"'Email'\" \n        [type]=\"'email'\" \n        [maxlength] = \"'50'\"\n        [iconUrl]=\"'https://cdn3.iconfinder.com/data/icons/multi-media-set-2-2/65/77-20.png'\">\n      </app-input-email>\n\n      <!-- phone -->\n      <app-input-phone\n        [validationMsg]=\"'Required.'\"\n        [formGroup]=\"customer\" \n        [controlName]=\"'phone'\" \n        [placeHolder]=\"'Phone'\" \n        [type]=\"'tel'\" \n        [iconUrl]=\"'https://cdn4.iconfinder.com/data/icons/social-communication/142/phone-20.png'\">\n      </app-input-phone>\n    </div>\n   \n     <!-- password -->\n    <div id='grp2' style='margin: 2rem 0'>\n      <app-input-password-confirm\n        [validationMsg]=\"'Required, must match Confirm Password.'\"\n        [formGroup]=\"customer\" \n        [controlName]=\"'password1'\" \n        [placeHolder]=\"'Password'\" \n        [type]=\"'password'\" \n        [iconUrl]=\"'https://cdn2.iconfinder.com/data/icons/oxygen/22x22/apps/preferences-desktop-cryptography.png'\">\n      </app-input-password-confirm>\n\n      <!-- confirm password -->\n      <app-input-password-confirm\n        [validationMsg]=\"'Required, must match Password.'\" \n        [formGroup]=\"customer\" \n        [controlName]=\"'password2'\" \n        [placeHolder]=\"'Confirm Password'\" \n        [type]=\"'password'\"> \n      </app-input-password-confirm>\n    </div>\n    \n    <div>\n      <div class=\"usa-alert usa-alert-success\" *ngIf=\"isShowSuccessMessage\">\n        <div class=\"usa-alert-body\">\n          <h3 class=\"usa-alert-heading\"> {{message}}</h3>\n        </div>\n      </div>\n      <div class=\"usa-alert usa-alert-error\" *ngIf=\"isShowErrorMessage\">\n        <div class=\"usa-alert-body\">\n          <h3 class=\"usa-alert-heading\"> {{message}}</h3>\n        </div>\n      </div>\n    </div>\n\n    <button type='submit'> Submit </button>\n\n  </fieldset>\n\n</form>\n\n\n<div class=\"usa-grid usa-footer-return-to-top\">\n  <a href=\"/signup#\">Return to top</a>\n</div>\n\n"
 
 /***/ }),
 
@@ -1405,13 +1458,15 @@ var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var forms_1 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
 var password_validator_1 = __webpack_require__("./src/app/_validators/password.validator.ts");
 var cookies_service_1 = __webpack_require__("./node_modules/angular2-cookie/services/cookies.service.js");
+var router_1 = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
 var crud_service_1 = __webpack_require__("./src/app/_services/_crud-service/crud.service.ts");
 var app_service_1 = __webpack_require__("./src/app/_services/app-service/app.service.ts");
 var SignupComponent = /** @class */ (function () {
-    function SignupComponent(_cookieService, _crudService, appService) {
+    function SignupComponent(_cookieService, _crudService, appService, router) {
         this._cookieService = _cookieService;
         this._crudService = _crudService;
         this.appService = appService;
+        this.router = router;
         this.addCustomerEvent = new core_1.EventEmitter();
         this.message = "";
         this.isShowSuccessMessage = false;
@@ -1446,20 +1501,23 @@ var SignupComponent = /** @class */ (function () {
                 console.log("create new customer success!");
                 _this.customer.reset();
             });
-            var dataObj = {
+            var jwtPayload = {
                 email: customerObj.email,
                 firstname: customerObj.firstname,
                 lastname: customerObj.lastname,
                 role: 'customer',
             };
-            this.appService.getToken(dataObj).subscribe(function (data) {
-                alert(JSON.stringify(data));
+            this.appService.getToken(jwtPayload).subscribe(function (jwtToken) {
+                //alert(JSON.stringify(jwtToken));
+                localStorage.setItem('jwtToken', JSON.stringify(jwtToken));
             }, function (error) {
                 alert(JSON.stringify(error));
             });
             this.message = "Customer create success.";
             this.isShowSuccessMessage = true;
             //localStorage.setItem("hello", "world")
+            // Navigate to the login page with extras
+            this.router.navigate(['/signin2']);
         }
         catch (err) {
             this.message = "Customer create failed.";
@@ -1486,7 +1544,8 @@ var SignupComponent = /** @class */ (function () {
         }),
         __metadata("design:paramtypes", [cookies_service_1.CookieService,
             crud_service_1.CrudService,
-            app_service_1.AppService])
+            app_service_1.AppService,
+            router_1.Router])
     ], SignupComponent);
     return SignupComponent;
 }());

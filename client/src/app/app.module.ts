@@ -19,6 +19,7 @@ import { AppService } from './_services/app-service/app.service';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { SigninComponent } from './public/signin/signin.component';
+import { Signin2Component } from './public/signin2/signin2.component';
 import { ServicepageComponent } from './public/servicepage/servicepage.component';
 import { PasswordResetComponent } from './public/password-reset/password-reset.component';
 import { HomeComponent } from './public/home/home.component';
@@ -32,6 +33,7 @@ import { InputPasswordConfirm } from './_components/input-password-confirm/input
 
 const routes: Routes = [
   { path: 'signin', component: SigninComponent },
+  { path: 'signin2', component: Signin2Component },
   { path: 'signup', component: SignupComponent },
   { path: 'contactus', component: ContactusComponent },
   { path: 'service', component: ServicepageComponent },
@@ -53,6 +55,7 @@ const routes: Routes = [
     ContactListComponent,
     Page2Component,
     SigninComponent, 
+    Signin2Component, 
     ServicepageComponent, 
     PasswordResetComponent,
     HomeComponent,

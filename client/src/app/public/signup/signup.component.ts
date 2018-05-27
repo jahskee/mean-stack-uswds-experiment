@@ -5,6 +5,11 @@ import { InputText } from "../../_components/input-text/input-text";
 import { InputPhone } from "../../_components/input-phone/input-phone";
 import { InputPasswordConfirm } from "../../_components/input-password-confirm/input-password-confirm";
 import { CookieService } from 'angular2-cookie/services/cookies.service';
+import {
+  CanActivate, Router, 
+  ActivatedRouteSnapshot,
+  RouterStateSnapshot
+}                           from '@angular/router';
 
 import { CrudService } from  "../../_services/_crud-service/crud.service";
 import { AppService } from  "../../_services/app-service/app.service";
@@ -18,7 +23,8 @@ export class SignupComponent implements OnInit {
   constructor(
     private _cookieService:CookieService, 
     private _crudService: CrudService,
-    private appService: AppService) {}
+    private appService: AppService,
+    private router: Router) {}
 
   @Output() addCustomerEvent = new EventEmitter();
 
@@ -78,7 +84,6 @@ export class SignupComponent implements OnInit {
       };
       delete customerObj.password1;
       delete customerObj.password2;
-
   
       this._crudService.create("Customer", customerObj).subscribe(data => {
         this.addCustomerEvent.emit();
@@ -87,16 +92,17 @@ export class SignupComponent implements OnInit {
      
       });
       
-      const dataObj = {
+      const jwtPayload = {
         email: customerObj.email,
         firstname: customerObj.firstname,
         lastname: customerObj.lastname,
         role: 'customer',
       }
 
-      this.appService.getToken(dataObj).subscribe(
-        data => {
-          alert(JSON.stringify(data));
+      this.appService.getToken(jwtPayload).subscribe(
+        jwtToken => {
+         //alert(JSON.stringify(jwtToken));
+          localStorage.setItem('jwtToken', JSON.stringify(jwtToken));
         },
         error => {
           alert(JSON.stringify(error))
@@ -106,6 +112,8 @@ export class SignupComponent implements OnInit {
       this.message = "Customer create success.";   
       this.isShowSuccessMessage = true;
       //localStorage.setItem("hello", "world")
+    // Navigate to the login page with extras
+      this.router.navigate(['/signin2']);
       
     } catch (err) {
       this.message = "Customer create failed.";

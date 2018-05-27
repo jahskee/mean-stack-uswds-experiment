@@ -8,7 +8,7 @@ export class AppService {
 
   private apiurl = environment.apiurl;
 
-  getToken(dataObj) {
-    return this.http.post(`${this.apiurl}/token`, dataObj);
+  getToken(jwtPayload) {
+    return this.http.post(`${this.apiurl}/token`, jwtPayload);
   }
 }
