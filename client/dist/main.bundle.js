@@ -1337,14 +1337,14 @@ exports.ServicepageComponent = ServicepageComponent;
 /***/ "./src/app/public/signin/signin.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<form id='sign-in-form' class=\"usa-form\" style='margin: 0 auto; margin-bottom: 5rem'>\n    <fieldset  >\n      <legend class=\"usa-drop_text\" >Sign in</legend>\n      <span>or  <a class=\"usa-nav-link\" routerLink=\"/signup\">create an account</a></span>  \n     \n      <input id=\"username\" placeholder=\"Username\" name=\"username\" type=\"text\" autocapitalize=\"off\" autocorrect=\"off\">\n  \n    \n      <input id=\"password-sign-in\" placeholder=\"Password\" name=\"password\" type=\"password\">\n      <p class=\"usa-form-note\">\n        <a title=\"Show password\" href=\"javascript:void(0);\"\n          class=\"usa-show_password\"\n          aria-controls=\"password-sign-in\">Show password</a>\n      </p>\n  \n      <input type=\"submit\" value=\"Sign in\">\n      <p>\n      \n        <a class=\"usa-nav-link\"  title=\"Password Reset\" routerLink=\"/passwordreset\">Forgot Password</a></p>\n     \n    </fieldset>\n  </form>\n  <div class=\"usa-grid usa-footer-return-to-top\">\n      <a href=\"/signin#\">Return to top</a>\n  </div>"
+module.exports = "<form id='sign-in-form' class=\"usa-form\" style='margin: 0 auto; margin-bottom: 5rem'>\n    <fieldset  >\n      <legend class=\"usa-drop_text\" >Sign in</legend>\n      <span>or  <a class=\"usa-nav-link\" routerLink=\"/signup\">create an account</a></span>  \n     \n      <input id=\"username\" placeholder=\"Username\" name=\"username\" type=\"text\" autocapitalize=\"off\" autocorrect=\"off\">\n  \n    \n      <input id=\"password-sign-in\" placeholder=\"Password\" name=\"password\" type=\"password\">\n      <p class=\"usa-form-note\">\n        <a title=\"Show password\" href=\"javascript:void(0);\"\n          class=\"usa-show_password\"\n          aria-controls=\"password-sign-in\">Show password</a>\n      </p>\n  \n    \n    \n    </fieldset>\n    <input type=\"submit\" value=\"Sign in\">\n    <p>\n      \n        <a class=\"usa-nav-link\"  title=\"Password Reset\" routerLink=\"/passwordreset\">Forgot Password</a></p>\n     \n  </form>\n  <div class=\"usa-grid usa-footer-return-to-top\">\n      <a href=\"/signin#\">Return to top</a>\n  </div>"
 
 /***/ }),
 
 /***/ "./src/app/public/signin/signin.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "input[type='submit'] {\n  margin: 0;\n  margin-top: 5px; }\n"
 
 /***/ }),
 
