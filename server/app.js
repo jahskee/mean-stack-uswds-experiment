@@ -36,8 +36,8 @@ app.use(logger("dev"));
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(bodyparser.json());
 
-app.engine("html", require("ejs").renderFile);
-app.set("view engine", "html");
+//app.engine("html", require("ejs").renderFile);
+//app.set("view engine", "html");
 
 console.log('Environment: ' + process.env.APP_ENVIRONMENT)
 
@@ -94,9 +94,12 @@ app.use("/api/*", function(req, res, next) {
 });
 
 /* ============= API Routes =============*/
-const setupCrud = require('./components/models/_setup-crud');
-setupCrud(app)
+const crudRoutes = require('./components/routes/_crud-routes');
+crudRoutes(app)
 
+// setup routes
+const apiQuestions = require("./components/routes/api-questions");
+app.use("/api/questions", apiQuestions);
 
 // add angular files
 app.use("/", express.static(path.join(__dirname, "../client/dist")));
